@@ -11,8 +11,16 @@ config_version=5
 [application]
 
 config/name="Wasteful Fellas"
+run/main_scene="uid://c6yrxw5htidt6"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/stretch/mode="viewport"
+window/stretch/aspect="ignore"
 
 [physics]
 
@@ -21,3 +29,4 @@ config/icon="res://icon.svg"
 [rendering]
 
 rendering_device/driver.windows="d3d12"
+environment/defaults/default_clear_color=Color(0.9406359, 0.94063586, 0.94063574, 1)

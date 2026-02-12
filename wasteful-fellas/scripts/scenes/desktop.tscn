@@ -1,0 +1,122 @@
+[gd_scene format=3 uid="uid://c6yrxw5htidt6"]
+
+[ext_resource type="Texture2D" uid="uid://crirfntjncgti" path="res://art/wallpaper_placeholder.png" id="1_fgoco"]
+[ext_resource type="Texture2D" uid="uid://bqkd53kw1ml2y" path="res://art/home_button.png" id="2_1ovop"]
+[ext_resource type="Texture2D" uid="uid://dxape1mb8kkh3" path="res://art/browser_button.png" id="3_ff6s3"]
+[ext_resource type="Texture2D" uid="uid://dxk1ybnasuwot" path="res://art/recycle_button.png" id="4_qrswn"]
+[ext_resource type="Texture2D" uid="uid://b7wv2ntcdqryi" path="res://art/dot.png" id="5_67y07"]
+[ext_resource type="Texture2D" uid="uid://b1k8xs7mv8y7s" path="res://art/folder_button.webp" id="5_nf8vl"]
+[ext_resource type="Texture2D" uid="uid://vqsu7s0vi3c3" path="res://art/blur_black.png" id="6_qrswn"]
+
+[sub_resource type="Gradient" id="Gradient_fgoco"]
+colors = PackedColorArray(0.05490196, 0.14117648, 0.3372549, 0.7921569, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_1ovop"]
+gradient = SubResource("Gradient_fgoco")
+width = 51
+
+[node name="Desktop" type="Node2D" unique_id=669669927]
+
+[node name="WallpaperPlaceholder" type="Sprite2D" parent="." unique_id=1075045478]
+position = Vector2(960.00006, 540)
+scale = Vector2(3.3333337, 3.3333335)
+texture = ExtResource("1_fgoco")
+
+[node name="TextureRect" type="TextureRect" parent="WallpaperPlaceholder" unique_id=29705110]
+offset_left = -288.00003
+offset_top = 162.0
+offset_right = -189.81438
+offset_bottom = 737.99725
+rotation = -1.5707964
+texture = SubResource("GradientTexture1D_1ovop")
+
+[node name="Toolbar" type="Control" parent="." unique_id=769076459]
+layout_mode = 3
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(1.0022538, 1)
+
+[node name="ColorRect" type="ColorRect" parent="Toolbar" unique_id=1018605583]
+layout_mode = 0
+offset_top = 997.0
+offset_right = 1915.6825
+offset_bottom = 1080.0
+color = Color(1, 1, 1, 0.6666667)
+
+[node name="HomeButton" type="Sprite2D" parent="Toolbar" unique_id=1599328967]
+modulate = Color(0.24332309, 0.8726737, 0.9534431, 1)
+position = Vector2(54.876328, 1040)
+scale = Vector2(0.044690944, 0.04479167)
+texture = ExtResource("2_1ovop")
+
+[node name="BrowserButton" type="Sprite2D" parent="Toolbar" unique_id=1990060908]
+position = Vector2(273.1344, 1038.25)
+scale = Vector2(0.04335931, 0.04345703)
+texture = ExtResource("3_ff6s3")
+
+[node name="RecycleButton" type="Sprite2D" parent="Toolbar" unique_id=1872791979]
+position = Vector2(342.54962, 1040.3438)
+scale = Vector2(0.038941007, 0.03902877)
+texture = ExtResource("4_qrswn")
+
+[node name="Dot" type="Sprite2D" parent="Toolbar/RecycleButton" unique_id=1013967292]
+modulate = Color(0.33607247, 0.37250945, 0.5441873, 0.7294118)
+position = Vector2(17.38086, 708.6094)
+scale = Vector2(0.6755877, 0.6755877)
+texture = ExtResource("5_67y07")
+
+[node name="FolderButton" type="Sprite2D" parent="Toolbar" unique_id=702143739]
+position = Vector2(198.80191, 1038.25)
+scale = Vector2(0.11594965, 0.116210975)
+texture = ExtResource("5_nf8vl")
+
+[node name="Window" type="Control" parent="." unique_id=573675526]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+
+[node name="BlurBlack" type="Sprite2D" parent="Window" unique_id=1678017623]
+modulate = Color(1, 1, 1, 0.5764706)
+position = Vector2(750, 519.99994)
+scale = Vector2(2.4299998, 3.4199388)
+texture = ExtResource("6_qrswn")
+
+[node name="ColorRect" type="ColorRect" parent="Window" unique_id=2078505328]
+layout_mode = 0
+offset_left = 124.0
+offset_top = 80.0
+offset_right = 1370.0
+offset_bottom = 928.0
+color = Color(0.1254902, 0.6431373, 1, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="Window" unique_id=2090548642]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 80.0
+offset_right = 1366.0
+offset_bottom = 924.0
+
+[node name="TopArea" type="ColorRect" parent="Window" unique_id=854209330]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 80.0
+offset_right = 1366.0
+offset_bottom = 132.0
+color = Color(0.13057339, 0.64200526, 1, 1)
+
+[node name="Window2" type="Window" parent="." unique_id=91366786]
+oversampling_override = 1.0
+title = "No to waste!"
+position = Vector2i(123, 119)
+size = Vector2i(1250, 800)
+
+[node name="TextEdit" type="TextEdit" parent="Window2" unique_id=836274732]
+offset_left = 52.0
+offset_top = 607.0
+offset_right = 879.0
+offset_bottom = 762.0
+placeholder_text = "Lorem"
