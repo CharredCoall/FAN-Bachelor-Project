@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://tdmoocyuagw6"]
+
+[ext_resource type="Script" uid="uid://bqsf8ax0k1ojp" path="res://scripts/send_message.gd" id="1_0e48y"]
+[ext_resource type="Theme" uid="uid://df5fxua1sy8no" path="res://Themes/node_2_Theme.tres" id="1_wtcfe"]
+
+[node name="Node2D" type="Node2D" unique_id=1123737834]
+
+[node name="Panel" type="Panel" parent="." unique_id=895868117]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_right = 1920.0
+offset_bottom = 1080.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0e48y")
+
+[node name="TextEdit" type="TextEdit" parent="Panel" unique_id=1910779412]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 200.0
+offset_top = -241.0
+offset_right = -350.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("1_wtcfe")
+placeholder_text = "Enter text here"
+
+[node name="Button" type="Button" parent="Panel" unique_id=1299243121]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1570.0
+offset_top = -241.0
+offset_right = -249.99976
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("1_wtcfe")
+text = "Send"
+
+[node name="Panel" type="Panel" parent="Panel" unique_id=98124195]
+layout_mode = 0
+offset_left = 450.0
+offset_top = 157.0
+offset_right = 1491.0
+offset_bottom = 683.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/Panel" unique_id=1159673636]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_wtcfe")
+text = "--Start of conversation--"
+
+[node name="HTTPRequest" type="HTTPRequest" parent="Panel" unique_id=1659308348]
+
+[connection signal="pressed" from="Panel/Button" to="Panel" method="SendServerMessage"]
