@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dxk1ybnasuwot" path="res://art/recycle_button.png" id="4_qrswn"]
 [ext_resource type="Texture2D" uid="uid://b7wv2ntcdqryi" path="res://art/dot.png" id="5_67y07"]
 [ext_resource type="Texture2D" uid="uid://b1k8xs7mv8y7s" path="res://art/folder_button.webp" id="5_nf8vl"]
-[ext_resource type="Texture2D" uid="uid://vqsu7s0vi3c3" path="res://art/blur_black.png" id="6_qrswn"]
+[ext_resource type="Script" uid="uid://bqsf8ax0k1ojp" path="res://scripts/send_message.gd" id="7_bqgb8"]
 
 [sub_resource type="Gradient" id="Gradient_fgoco"]
 colors = PackedColorArray(0.05490196, 0.14117648, 0.3372549, 0.7921569, 1, 1, 1, 0)
@@ -14,6 +14,55 @@ colors = PackedColorArray(0.05490196, 0.14117648, 0.3372549, 0.7921569, 1, 1, 1,
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_1ovop"]
 gradient = SubResource("Gradient_fgoco")
 width = 51
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nf8vl"]
+bg_color = Color(0.64792037, 0.8080021, 0.8462041, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(2.4065375e-06, 0.5276297, 0.69911206, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_left = 20.0
+expand_margin_top = 15.0
+expand_margin_right = 20.0
+expand_margin_bottom = 15.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nf8vl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_67y07"]
+bg_color = Color(0, 0.5294118, 0.69803923, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(2.4065375e-06, 0.5276297, 0.69911206, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bqgb8"]
+bg_color = Color(2.3102762e-06, 0.4629255, 0.61236906, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(2.3102762e-06, 0.4629255, 0.61236906, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="Gradient" id="Gradient_nf8vl"]
+offsets = PackedFloat32Array(0.006024096, 0.28614458)
+colors = PackedColorArray(0.8781551, 0.9477405, 0.9606653, 1, 0.9669389, 0.96693903, 0.9669388, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_67y07"]
+gradient = SubResource("Gradient_nf8vl")
 
 [node name="Desktop" type="Node2D" unique_id=669669927]
 
@@ -44,7 +93,7 @@ scale = Vector2(1.0022538, 1)
 layout_mode = 0
 offset_top = 997.0
 offset_right = 1915.6825
-offset_bottom = 1080.0
+offset_bottom = 1081.0
 color = Color(1, 1, 1, 0.6666667)
 
 [node name="HomeButton" type="Sprite2D" parent="Toolbar" unique_id=1599328967]
@@ -74,49 +123,72 @@ position = Vector2(198.80191, 1038.25)
 scale = Vector2(0.11594965, 0.116210975)
 texture = ExtResource("5_nf8vl")
 
-[node name="Window" type="Control" parent="." unique_id=573675526]
-visible = false
-layout_mode = 3
-anchors_preset = 0
-
-[node name="BlurBlack" type="Sprite2D" parent="Window" unique_id=1678017623]
-modulate = Color(1, 1, 1, 0.5764706)
-position = Vector2(750, 519.99994)
-scale = Vector2(2.4299998, 3.4199388)
-texture = ExtResource("6_qrswn")
-
-[node name="ColorRect" type="ColorRect" parent="Window" unique_id=2078505328]
-layout_mode = 0
-offset_left = 124.0
-offset_top = 80.0
-offset_right = 1370.0
-offset_bottom = 928.0
-color = Color(0.1254902, 0.6431373, 1, 1)
-
-[node name="ColorRect3" type="ColorRect" parent="Window" unique_id=2090548642]
-layout_mode = 0
-offset_left = 128.0
-offset_top = 80.0
-offset_right = 1366.0
-offset_bottom = 924.0
-
-[node name="TopArea" type="ColorRect" parent="Window" unique_id=854209330]
-layout_mode = 0
-offset_left = 128.0
-offset_top = 80.0
-offset_right = 1366.0
-offset_bottom = 132.0
-color = Color(0.13057339, 0.64200526, 1, 1)
-
 [node name="Window2" type="Window" parent="." unique_id=91366786]
 oversampling_override = 1.0
 title = "No to waste!"
 position = Vector2i(123, 119)
 size = Vector2i(1250, 800)
 
-[node name="TextEdit" type="TextEdit" parent="Window2" unique_id=836274732]
-offset_left = 52.0
-offset_top = 607.0
-offset_right = 879.0
-offset_bottom = 762.0
-placeholder_text = "Lorem"
+[node name="WriteMessage" type="TextEdit" parent="Window2" unique_id=836274732]
+offset_left = 67.0
+offset_top = 638.0
+offset_right = 1027.0
+offset_bottom = 750.0
+theme_override_colors/caret_color = Color(0, 0.5294118, 0.69803923, 1)
+theme_override_colors/font_color = Color(0, 0.5294118, 0.69803923, 1)
+theme_override_colors/font_placeholder_color = Color(0.09411765, 0.47058824, 0.654902, 0.6039216)
+theme_override_font_sizes/font_size = 29
+theme_override_styles/normal = SubResource("StyleBoxFlat_nf8vl")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_nf8vl")
+placeholder_text = "Write something..."
+wrap_mode = 1
+script = ExtResource("7_bqgb8")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="Window2/WriteMessage" unique_id=625223138]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Window2/WriteMessage" unique_id=807828102]
+
+[node name="Timer" type="Timer" parent="Window2/WriteMessage" unique_id=1550329490]
+one_shot = true
+
+[node name="Button" type="Button" parent="Window2" unique_id=1199593508]
+offset_left = 1034.0
+offset_top = 623.0
+offset_right = 1201.0
+offset_bottom = 765.0
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_67y07")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_67y07")
+theme_override_styles/hover = SubResource("StyleBoxFlat_bqgb8")
+text = "SEND"
+
+[node name="ColorRect" type="ColorRect" parent="Window2" unique_id=1724080318]
+offset_right = 385.0
+offset_bottom = 585.0
+color = Color(0.519767, 0.79812884, 0.5755315, 1)
+
+[node name="gradient" type="Sprite2D" parent="Window2" unique_id=1942584580]
+position = Vector2(817.31946, 292.12216)
+rotation = -1.5707964
+scale = Vector2(2.2861109, 864.74744)
+texture = SubResource("GradientTexture1D_67y07")
+
+[node name="Line" type="ColorRect" parent="Window2" unique_id=416900403]
+offset_top = 578.0
+offset_right = 1256.0
+offset_bottom = 585.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Window2" unique_id=451774665]
+offset_left = 385.0
+offset_top = -2.0
+offset_right = 1250.0
+offset_bottom = 578.0
+horizontal_scroll_mode = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Window2/ScrollContainer" unique_id=384023497]
+custom_minimum_size = Vector2(800, 5000)
+layout_mode = 2
+
+[connection signal="text_changed" from="Window2/WriteMessage" to="Window2/WriteMessage" method="_on_text_changed"]
+[connection signal="timeout" from="Window2/WriteMessage/Timer" to="Window2/WriteMessage" method="_on_timer_timeout"]
+[connection signal="pressed" from="Window2/Button" to="Window2/WriteMessage" method="SendServerMessage"]

@@ -1,24 +1,68 @@
-extends Panel
-@onready var messageBox = get_node("TextEdit")
-@onready var replyBox = get_node("Panel/RichTextLabel")
+extends TextEdit
+#@onready var messageBox = get_node("TextEdit")
+#@onready var replyBox = get_node("Panel/RichTextLabel")
+
+@onready var green_bubble = preload("res://scripts/scenes/green_bubble.tscn")
+@onready var blue_bubble = preload("res://scripts/scenes/blue_bubble.tscn")
+@onready var vcontainer = get_parent().get_node("ScrollContainer/VBoxContainer")
+
+@onready var clicks_sfx = [preload("res://scripts/click_sfx1.mp3"), preload("res://scripts/click_sfx2.mp3"), preload("res://scripts/click_sfx3.mp3")]
+
+@onready var SFX = $AudioStreamPlayer
 
 func _ready():
-	
 	$HTTPRequest.request_completed.connect(self._http_request_completed)
 
 func SendServerMessage() -> void:
-	var body = JSON.new().stringify({"message": messageBox.text})
-	var error = $HTTPRequest.request("http://127.0.0.1:5000/request_reply", ["Content-type: application/json"], HTTPClient.METHOD_POST, body)
-	if error != OK:
-		push_error("An error occurred in the HTTP request.")
+	var message = text
+	
+	#make blue bubble
+	var blue_bub = blue_bubble.instantiate()
+	blue_bub.prose = text
+	vcontainer.add_child(blue_bub)
+	clear()
+	
+	SFX.stop()
+	SFX.volume_db = 10.0
+	SFX.stream = load("res://art/SFXs/plop_sfx.mp3") 
+	SFX.play()
+	
+	#green bubble for now!
+	$Timer.start()
+	
+	#var body = JSON.new().stringify({"message": text})
+	#var error = $HTTPRequest.request("http://127.0.0.1:5000/request_reply", ["Content-type: application/json"], HTTPClient.METHOD_POST, body)
+	#if error != OK:
+	#	push_error("An error occurred in the HTTP request.")
 	
 func _http_request_completed(result, response_code, headers, body):
+	pass
 	var json = JSON.new()
 	json.parse(body.get_string_from_utf8())
 	var response = json.get_data()
 	
-	replyBox.add_text("\nYou: \n \t\t" + messageBox.text)
-	replyBox.add_text("\nServer: \n" + response)
-	replyBox.scroll_to_line(replyBox.get_line_count())
-	messageBox.clear()
 	
+	#replyBox.add_text("\nYou: \n \t\t" + messageBox.text)
+	#replyBox.add_text("\nServer: \n" + response)
+	#replyBox.scroll_to_line(replyBox.get_line_count())
+	clear() #clear message!
+	
+
+func _on_text_changed() -> void:
+	print("HEYO")
+	SFX.volume_db = 0.0
+	SFX.stop()
+	SFX.stream = clicks_sfx.pick_random()
+	SFX.play()
+
+
+func _on_timer_timeout() -> void:
+	var green_bub = green_bubble.instantiate()
+	green_bub.prose = "Wow that's amazing!"
+	vcontainer.add_child(green_bub)
+	clear()
+	
+	SFX.stop()
+	SFX.volume_db = -10.0
+	SFX.stream = load("res://art/SFXs/ding_sfx.mp3") 
+	SFX.play()

@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://duwng4vkfvl6l"]
+
+[ext_resource type="Script" uid="uid://b6abao6h6hngd" path="res://scripts/text_bubble.gd" id="1_e7bgr"]
+[ext_resource type="Texture2D" uid="uid://lkj8vr34efhx" path="res://art/triangle.png" id="2_dt13y"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jipd7"]
+bg_color = Color(0.4117647, 0.79607844, 0, 1)
+border_color = Color(2.4065375e-06, 0.5276297, 0.69911206, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+expand_margin_left = 35.0
+expand_margin_top = 30.0
+expand_margin_right = 35.0
+expand_margin_bottom = 30.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dt13y"]
+bg_color = Color(0.4117647, 0.79607844, 0, 1)
+border_color = Color(2.4065375e-06, 0.5276297, 0.69911206, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+expand_margin_left = 35.0
+expand_margin_top = 30.0
+expand_margin_right = 35.0
+expand_margin_bottom = 30.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_06csp"]
+bg_color = Color(0.4117647, 0.79607844, 0, 1)
+border_color = Color(2.4065375e-06, 0.5276297, 0.69911206, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+expand_margin_left = 35.0
+expand_margin_top = 30.0
+expand_margin_right = 35.0
+expand_margin_bottom = 30.0
+
+[node name="GreenBubble" type="Control" unique_id=776070160]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_e7bgr")
+
+[node name="Triangle" type="Sprite2D" parent="." unique_id=399943011]
+modulate = Color(0.4117647, 0.79607844, 0, 1)
+position = Vector2(796, 111)
+rotation = 1.5707964
+scale = Vector2(0.01, 0.01)
+texture = ExtResource("2_dt13y")
+
+[node name="TextEdit" type="TextEdit" parent="." unique_id=1695050671]
+custom_minimum_size = Vector2(289, 0)
+layout_mode = 0
+offset_left = 246.0
+offset_top = 87.0
+offset_right = 735.0
+offset_bottom = 127.0
+theme_override_colors/font_color = Color(0.9977897, 0.9977897, 0.9977897, 1)
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxFlat_jipd7")
+theme_override_styles/focus = SubResource("StyleBoxFlat_dt13y")
+theme_override_styles/read_only = SubResource("StyleBoxFlat_06csp")
+text = "GAH"
+wrap_mode = 1
+scroll_fit_content_height = true
