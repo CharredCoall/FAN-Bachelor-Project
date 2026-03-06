@@ -126,7 +126,7 @@ texture = ExtResource("5_nf8vl")
 [node name="Window2" type="Window" parent="." unique_id=91366786]
 oversampling_override = 1.0
 title = "No to waste!"
-position = Vector2i(123, 119)
+position = Vector2i(123, 45)
 size = Vector2i(1250, 800)
 
 [node name="WriteMessage" type="TextEdit" parent="Window2" unique_id=836274732]

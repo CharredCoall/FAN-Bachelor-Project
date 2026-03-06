@@ -17,10 +17,9 @@ func SendServerMessage() -> void:
 	var message = text
 	
 	#make blue bubble
-	var blue_bub = blue_bubble.instantiate()
-	blue_bub.prose = text
-	vcontainer.add_child(blue_bub)
-	clear()
+	var green_bub = green_bubble.instantiate()
+	green_bub.prose = text
+	vcontainer.add_child(green_bub)
 	
 	SFX.stop()
 	SFX.volume_db = 10.0
@@ -28,28 +27,34 @@ func SendServerMessage() -> void:
 	SFX.play()
 	
 	#green bubble for now!
-	$Timer.start()
+	#$Timer.start()
 	
-	#var body = JSON.new().stringify({"message": text})
-	#var error = $HTTPRequest.request("http://127.0.0.1:5000/request_reply", ["Content-type: application/json"], HTTPClient.METHOD_POST, body)
-	#if error != OK:
-	#	push_error("An error occurred in the HTTP request.")
+	var body = JSON.new().stringify({"message": text})
+	var error = $HTTPRequest.request("http://127.0.0.1:5000/request_reply", ["Content-type: application/json"], HTTPClient.METHOD_POST, body)
+	if error != OK:
+		push_error("An error occurred in the HTTP request.")
+	
+	clear()
 	
 func _http_request_completed(result, response_code, headers, body):
 	pass
 	var json = JSON.new()
 	json.parse(body.get_string_from_utf8())
-	var response = json.get_data()
+	var response = str(json.get_data())
 	
+	var blue_bub = blue_bubble.instantiate()
+	blue_bub.prose = response
+	vcontainer.add_child(blue_bub)
+	clear()
 	
-	#replyBox.add_text("\nYou: \n \t\t" + messageBox.text)
-	#replyBox.add_text("\nServer: \n" + response)
-	#replyBox.scroll_to_line(replyBox.get_line_count())
+	SFX.stop()
+	SFX.volume_db = -10.0
+	SFX.stream = load("res://art/SFXs/ding_sfx.mp3") 
+	SFX.play()
 	clear() #clear message!
 	
 
 func _on_text_changed() -> void:
-	print("HEYO")
 	SFX.volume_db = 0.0
 	SFX.stop()
 	SFX.stream = clicks_sfx.pick_random()

@@ -1,4 +1,11 @@
 from flask import Flask, render_template, request, jsonify
+import os
+import sys
+
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(SCRIPT_DIR)
+
+from local_agent.app import agent
 
 app = Flask(__name__)
 
@@ -10,9 +17,11 @@ def show_home():
 def request_reply():
     try :
         message = request.json["message"]
+        print("The recieved message was: " + message)
+        response = agent.run(message)
     except:
         return jsonify("Something didn't work")
-    return jsonify(f'Hi, you just sent me the message "{message}"')
+    return jsonify(response)
 
 
 if __name__ == '__main__' :
