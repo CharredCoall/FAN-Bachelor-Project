@@ -129,13 +129,13 @@ api_key=os.environ["HF_API_TOKEN"]
 # Import tool from Hub
 image_generation_tool = load_tool("agents-course/text-to-image", trust_remote_code=True)
 
-with open(SCRIPT_DIR + "\\" + "prompts.yaml", 'r') as stream:
+with open(SCRIPT_DIR + "\\" + "character.yaml", 'r') as stream:
     prompt_templates = yaml.safe_load(stream)
     
 agent = CodeAgent(
     model=model,
     tools=tool_list, 
-    max_steps=6,
+    max_steps=4,
     verbosity_level=1,
     planning_interval=None,
     name=None,
