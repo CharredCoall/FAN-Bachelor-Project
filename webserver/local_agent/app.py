@@ -110,9 +110,18 @@ def print_fridge_points() -> tuple[dict[str,int], int]:
         # This catches the crash and lets the agent see the error message instead
         return f"Error printing: {str(e)}"
 
+@tool
+def end_conversation() -> str:
+    """This tool allows the model to end the conversation early, if the player makes the character too annoyed or mad. 
+    Another usecase is if the character believes the conversation is over because they have received an appropriete dish. 
+    The function returns a string to be used in the `final_answer` tool.
+    """
+    # Dummy function to end the conversation
+    print("Conversation ended")
+    return "I am ending the conversation here!"
 
 final_answer = FinalAnswerTool()
-tool_list = [final_answer, count_fridge, take_from_fridge, fetch_fridge, calculate_points, print_fridge_points]
+tool_list = [final_answer, count_fridge, take_from_fridge, fetch_fridge, calculate_points, print_fridge_points, end_conversation]
 
 # If the agent does not answer, the model is overloaded, please use another model or the following Hugging Face Endpoint that also contains qwen2.5 coder:
 # model_id='https://pflgm2locj2t89co.us-east-1.aws.endpoints.huggingface.cloud' 
@@ -120,7 +129,7 @@ tool_list = [final_answer, count_fridge, take_from_fridge, fetch_fridge, calcula
 model = InferenceClientModel(
 max_tokens=2096,
 temperature=0.5,
-model_id='Qwen/Qwen2.5-Coder-32B-Instruct',# it is possible that this model may be overloaded
+model_id='Qwen/Qwen2.5-Coder-32B-Instruct',
 custom_role_conversions=None,
 api_key=os.environ["HF_API_TOKEN"]
 )

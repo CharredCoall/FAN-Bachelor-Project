@@ -126,8 +126,13 @@ texture = ExtResource("5_nf8vl")
 [node name="Window2" type="Window" parent="." unique_id=91366786]
 oversampling_override = 1.0
 title = "No to waste!"
-position = Vector2i(123, 45)
+position = Vector2i(0, 36)
 size = Vector2i(1250, 800)
+
+[node name="ColorRect" type="ColorRect" parent="Window2" unique_id=1724080318]
+offset_right = 385.0
+offset_bottom = 585.0
+color = Color(0.519767, 0.79812884, 0.5755315, 1)
 
 [node name="WriteMessage" type="TextEdit" parent="Window2" unique_id=836274732]
 offset_left = 67.0
@@ -162,10 +167,13 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_67y07")
 theme_override_styles/hover = SubResource("StyleBoxFlat_bqgb8")
 text = "SEND"
 
-[node name="ColorRect" type="ColorRect" parent="Window2" unique_id=1724080318]
-offset_right = 385.0
-offset_bottom = 585.0
-color = Color(0.519767, 0.79812884, 0.5755315, 1)
+[node name="EndConvoButton" type="Button" parent="Window2" unique_id=275846984]
+offset_left = 62.0
+offset_top = 253.0
+offset_right = 321.0
+offset_bottom = 366.0
+theme_override_font_sizes/font_size = 32
+text = "End Conversation"
 
 [node name="gradient" type="Sprite2D" parent="Window2" unique_id=1942584580]
 position = Vector2(817.31946, 292.12216)
@@ -192,3 +200,4 @@ layout_mode = 2
 [connection signal="text_changed" from="Window2/WriteMessage" to="Window2/WriteMessage" method="_on_text_changed"]
 [connection signal="timeout" from="Window2/WriteMessage/Timer" to="Window2/WriteMessage" method="_on_timer_timeout"]
 [connection signal="pressed" from="Window2/Button" to="Window2/WriteMessage" method="SendServerMessage"]
+[connection signal="pressed" from="Window2/EndConvoButton" to="Window2/WriteMessage" method="_on_end_convo_button_pressed"]

@@ -71,3 +71,18 @@ func _on_timer_timeout() -> void:
 	SFX.volume_db = -10.0
 	SFX.stream = load("res://art/SFXs/ding_sfx.mp3") 
 	SFX.play()
+
+
+func _on_end_convo_button_pressed() -> void:
+	editable = false
+	
+	$"../Button".disabled = true
+	
+	$"../EndConvoButton".disabled = true
+	
+	var end_label = Label.new()
+	end_label.text = "--- Conversation ended ---"
+	end_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	end_label.add_theme_color_override("font_color", Color.GRAY)
+	
+	vcontainer.add_child(end_label)
