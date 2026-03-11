@@ -37,13 +37,14 @@ func SendServerMessage() -> void:
 	clear()
 	
 func _http_request_completed(result, response_code, headers, body):
-	pass
 	var json = JSON.new()
 	json.parse(body.get_string_from_utf8())
-	var response = str(json.get_data())
+	var response = json.get_data()
+	if response == null:
+		return
 	
 	var blue_bub = blue_bubble.instantiate()
-	blue_bub.prose = response
+	blue_bub.prose = str(response)
 	vcontainer.add_child(blue_bub)
 	clear()
 	
@@ -74,6 +75,10 @@ func _on_timer_timeout() -> void:
 
 
 func _on_end_convo_button_pressed() -> void:
+	var error = $HTTPRequest.request("http://127.0.0.1:5000/end_convo", [], HTTPClient.METHOD_GET)
+	if error != OK:
+		push_error("An error occurred in the HTTP request.")
+	
 	editable = false
 	
 	$"../Button".disabled = true
