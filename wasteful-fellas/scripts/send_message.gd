@@ -80,9 +80,33 @@ func _on_end_convo_button_pressed() -> void:
 	
 	$"../EndConvoButton".disabled = true
 	
+	$"../StartConvo".disabled = false
+	
 	var end_label = Label.new()
 	end_label.text = "--- Conversation ended ---"
 	end_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	end_label.add_theme_color_override("font_color", Color.GRAY)
 	
 	vcontainer.add_child(end_label)
+
+
+func _on_start_convo_pressed() -> void:
+	var error = $HTTPRequest.request("http://127.0.0.1:5000/start_convo", [], HTTPClient.METHOD_GET)
+	if error != OK:
+		push_error("An error occurred in the HTTP request.")
+	
+	editable = true
+	
+	$"../Button".disabled = false
+	
+	$"../EndConvoButton".disabled = false
+	
+	$"../StartConvo".disabled = true
+	
+	var start_label = Label.new()
+	start_label.text = "--- Conversation started ---"
+	start_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	start_label.add_theme_color_override("font_color", Color.GRAY)
+	
+	vcontainer.add_child(start_label)
+	

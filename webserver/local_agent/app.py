@@ -12,12 +12,16 @@ global_fridge = {
     "apple": 3,
     "banana": 8,
     "cucumber": 2,
+    "carrot": 4,
     "bread": 3,
     "chicken breast": 4,
-    "soy sauce": 3,
     "milk": 2,
     "onion": 7,
-    "dragon fruit": 4
+    "steak": 3,
+    "potato": 7,
+    "pasta": 1,
+    "brocolli": 1,
+    "salmon": 1
 }
 
 global_points = 0
@@ -138,7 +142,7 @@ api_key=os.environ["HF_API_TOKEN"]
 # Import tool from Hub
 image_generation_tool = load_tool("agents-course/text-to-image", trust_remote_code=True)
 
-with open(SCRIPT_DIR + "\\" + "character.yaml", 'r') as stream:
+with open(SCRIPT_DIR + "\\" + "character2.yaml", 'r') as stream:
     prompt_templates = yaml.safe_load(stream)
     
 agent = CodeAgent(

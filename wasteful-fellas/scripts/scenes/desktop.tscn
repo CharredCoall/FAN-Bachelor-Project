@@ -146,6 +146,7 @@ theme_override_font_sizes/font_size = 29
 theme_override_styles/normal = SubResource("StyleBoxFlat_nf8vl")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_nf8vl")
 placeholder_text = "Write something..."
+editable = false
 wrap_mode = 1
 script = ExtResource("7_bqgb8")
 
@@ -165,6 +166,7 @@ theme_override_font_sizes/font_size = 36
 theme_override_styles/normal = SubResource("StyleBoxFlat_67y07")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_67y07")
 theme_override_styles/hover = SubResource("StyleBoxFlat_bqgb8")
+disabled = true
 text = "SEND"
 
 [node name="EndConvoButton" type="Button" parent="Window2" unique_id=275846984]
@@ -173,7 +175,16 @@ offset_top = 253.0
 offset_right = 321.0
 offset_bottom = 366.0
 theme_override_font_sizes/font_size = 32
+disabled = true
 text = "End Conversation"
+
+[node name="StartConvo" type="Button" parent="Window2" unique_id=360941018]
+offset_left = 62.0
+offset_top = 114.0
+offset_right = 342.0
+offset_bottom = 233.0
+theme_override_font_sizes/font_size = 30
+text = "Start Conversation"
 
 [node name="gradient" type="Sprite2D" parent="Window2" unique_id=1942584580]
 position = Vector2(817.31946, 292.12216)
@@ -201,3 +212,4 @@ layout_mode = 2
 [connection signal="timeout" from="Window2/WriteMessage/Timer" to="Window2/WriteMessage" method="_on_timer_timeout"]
 [connection signal="pressed" from="Window2/Button" to="Window2/WriteMessage" method="SendServerMessage"]
 [connection signal="pressed" from="Window2/EndConvoButton" to="Window2/WriteMessage" method="_on_end_convo_button_pressed"]
+[connection signal="pressed" from="Window2/StartConvo" to="Window2/WriteMessage" method="_on_start_convo_pressed"]

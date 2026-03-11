@@ -17,12 +17,21 @@ def show_home():
 def request_reply():
     try :
         message = request.json["message"]
-        print("The recieved message was: " + message)
         response = agent.run(message)
     except:
         return jsonify("Something didn't work")
     return jsonify(response)
 
+@app.route("/start_convo", methods=['GET'])
+def start_convo():
+    try :
+        message = """This is a prompt telling you that you have connected to the player. 
+        You can now write a message to them as you need their help reducing waste from your fridge. 
+        So start by introducing yourself to them and telling them that you need help making a meal!"""
+        response = agent.run(message)
+    except:
+        return jsonify("Something didn't work")
+    return jsonify(response)
 
 if __name__ == '__main__' :
     app.run(debug=True)
