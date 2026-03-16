@@ -17,9 +17,9 @@ func SendServerMessage() -> void:
 	var message = text
 	
 	#make blue bubble
-	var green_bub = green_bubble.instantiate()
-	green_bub.prose = text
-	vcontainer.add_child(green_bub)
+	var blue_bub = blue_bubble.instantiate()
+	blue_bub.prose = text
+	vcontainer.add_child(blue_bub)
 	
 	SFX.stop()
 	SFX.volume_db = 10.0
@@ -43,9 +43,9 @@ func _http_request_completed(result, response_code, headers, body):
 	if response == null:
 		return
 	
-	var blue_bub = blue_bubble.instantiate()
-	blue_bub.prose = str(response)
-	vcontainer.add_child(blue_bub)
+	var green_bub = green_bubble.instantiate()
+	green_bub.prose = str(response)
+	vcontainer.add_child(green_bub)
 	clear()
 	
 	SFX.stop()
@@ -83,7 +83,7 @@ func _on_end_convo_button_pressed() -> void:
 	
 	$"../Button".disabled = true
 	
-	$"../EndConvoButton".disabled = true
+	$"../../NPCWindow/EndConvoButton".disabled = true
 	
 	$"../StartConvo".disabled = false
 	
@@ -104,13 +104,14 @@ func _on_start_convo_pressed() -> void:
 	
 	$"../Button".disabled = false
 	
-	$"../EndConvoButton".disabled = false
+	$"../../NPCWindow/EndConvoButton".disabled = false
 	
 	$"../StartConvo".disabled = true
 	
 	var start_label = Label.new()
 	start_label.text = "--- Conversation started ---"
 	start_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	#start_label.pos.y += 50
 	start_label.add_theme_color_override("font_color", Color.GRAY)
 	
 	vcontainer.add_child(start_label)

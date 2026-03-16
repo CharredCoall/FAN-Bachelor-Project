@@ -7,6 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://b7wv2ntcdqryi" path="res://art/dot.png" id="5_67y07"]
 [ext_resource type="Texture2D" uid="uid://b1k8xs7mv8y7s" path="res://art/folder_button.webp" id="5_nf8vl"]
 [ext_resource type="Script" uid="uid://bqsf8ax0k1ojp" path="res://scripts/send_message.gd" id="7_bqgb8"]
+[ext_resource type="Texture2D" uid="uid://dbwid30bnsge7" path="res://art/NPC backgrounds/green_kitchen.jpg" id="8_4v376"]
+[ext_resource type="Texture2D" uid="uid://dqneyg7riylqk" path="res://art/NPCs/old_man_placeholder.png" id="9_nd18o"]
+[ext_resource type="Texture2D" uid="uid://cj0ouujl4f575" path="res://art/hang_up_icon.png" id="10_lexak"]
 
 [sub_resource type="Gradient" id="Gradient_fgoco"]
 colors = PackedColorArray(0.05490196, 0.14117648, 0.3372549, 0.7921569, 1, 1, 1, 0)
@@ -33,6 +36,22 @@ expand_margin_bottom = 15.0
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nf8vl"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4v376"]
+bg_color = Color(0.7612735, 0.7781019, 0.78871465, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.4464777, 0.48987442, 0.5264124, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_left = 20.0
+expand_margin_top = 15.0
+expand_margin_right = 20.0
+expand_margin_bottom = 15.0
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_67y07"]
 bg_color = Color(0, 0.5294118, 0.69803923, 1)
 border_width_left = 5
@@ -52,6 +71,18 @@ border_width_top = 5
 border_width_right = 5
 border_width_bottom = 5
 border_color = Color(2.3102762e-06, 0.4629255, 0.61236906, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nd18o"]
+bg_color = Color(0.44705883, 0.49019608, 0.5254902, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.44705883, 0.49019608, 0.5254902, 1)
 corner_radius_top_left = 5
 corner_radius_top_right = 5
 corner_radius_bottom_right = 5
@@ -123,41 +154,43 @@ position = Vector2(198.80191, 1038.25)
 scale = Vector2(0.11594965, 0.116210975)
 texture = ExtResource("5_nf8vl")
 
-[node name="Window2" type="Window" parent="." unique_id=91366786]
+[node name="GameWindow" type="Window" parent="." unique_id=91366786]
 oversampling_override = 1.0
 title = "No to waste!"
-position = Vector2i(0, 36)
+position = Vector2i(55, 103)
 size = Vector2i(1250, 800)
 
-[node name="ColorRect" type="ColorRect" parent="Window2" unique_id=1724080318]
+[node name="ColorRect" type="ColorRect" parent="GameWindow" unique_id=1724080318]
 offset_right = 385.0
 offset_bottom = 585.0
 color = Color(0.519767, 0.79812884, 0.5755315, 1)
 
-[node name="WriteMessage" type="TextEdit" parent="Window2" unique_id=836274732]
+[node name="WriteMessage" type="TextEdit" parent="GameWindow" unique_id=836274732]
 offset_left = 67.0
 offset_top = 638.0
 offset_right = 1027.0
 offset_bottom = 750.0
 theme_override_colors/caret_color = Color(0, 0.5294118, 0.69803923, 1)
 theme_override_colors/font_color = Color(0, 0.5294118, 0.69803923, 1)
+theme_override_colors/font_readonly_color = Color(0.6019569, 0.6185075, 0.6224806, 1)
 theme_override_colors/font_placeholder_color = Color(0.09411765, 0.47058824, 0.654902, 0.6039216)
 theme_override_font_sizes/font_size = 29
 theme_override_styles/normal = SubResource("StyleBoxFlat_nf8vl")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_nf8vl")
+theme_override_styles/read_only = SubResource("StyleBoxFlat_4v376")
 placeholder_text = "Write something..."
 editable = false
 wrap_mode = 1
 script = ExtResource("7_bqgb8")
 
-[node name="HTTPRequest" type="HTTPRequest" parent="Window2/WriteMessage" unique_id=625223138]
+[node name="HTTPRequest" type="HTTPRequest" parent="GameWindow/WriteMessage" unique_id=625223138]
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Window2/WriteMessage" unique_id=807828102]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="GameWindow/WriteMessage" unique_id=807828102]
 
-[node name="Timer" type="Timer" parent="Window2/WriteMessage" unique_id=1550329490]
+[node name="Timer" type="Timer" parent="GameWindow/WriteMessage" unique_id=1550329490]
 one_shot = true
 
-[node name="Button" type="Button" parent="Window2" unique_id=1199593508]
+[node name="Button" type="Button" parent="GameWindow" unique_id=1199593508]
 offset_left = 1034.0
 offset_top = 623.0
 offset_right = 1201.0
@@ -166,19 +199,11 @@ theme_override_font_sizes/font_size = 36
 theme_override_styles/normal = SubResource("StyleBoxFlat_67y07")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_67y07")
 theme_override_styles/hover = SubResource("StyleBoxFlat_bqgb8")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_nd18o")
 disabled = true
 text = "SEND"
 
-[node name="EndConvoButton" type="Button" parent="Window2" unique_id=275846984]
-offset_left = 62.0
-offset_top = 253.0
-offset_right = 321.0
-offset_bottom = 366.0
-theme_override_font_sizes/font_size = 32
-disabled = true
-text = "End Conversation"
-
-[node name="StartConvo" type="Button" parent="Window2" unique_id=360941018]
+[node name="StartConvo" type="Button" parent="GameWindow" unique_id=360941018]
 offset_left = 62.0
 offset_top = 114.0
 offset_right = 342.0
@@ -186,30 +211,60 @@ offset_bottom = 233.0
 theme_override_font_sizes/font_size = 30
 text = "Start Conversation"
 
-[node name="gradient" type="Sprite2D" parent="Window2" unique_id=1942584580]
+[node name="gradient" type="Sprite2D" parent="GameWindow" unique_id=1942584580]
 position = Vector2(817.31946, 292.12216)
 rotation = -1.5707964
 scale = Vector2(2.2861109, 864.74744)
 texture = SubResource("GradientTexture1D_67y07")
 
-[node name="Line" type="ColorRect" parent="Window2" unique_id=416900403]
+[node name="Line" type="ColorRect" parent="GameWindow" unique_id=416900403]
 offset_top = 578.0
 offset_right = 1256.0
 offset_bottom = 585.0
 
-[node name="ScrollContainer" type="ScrollContainer" parent="Window2" unique_id=451774665]
+[node name="ScrollContainer" type="ScrollContainer" parent="GameWindow" unique_id=451774665]
 offset_left = 385.0
 offset_top = -2.0
 offset_right = 1250.0
 offset_bottom = 578.0
 horizontal_scroll_mode = 0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Window2/ScrollContainer" unique_id=384023497]
+[node name="VBoxContainer" type="VBoxContainer" parent="GameWindow/ScrollContainer" unique_id=384023497]
 custom_minimum_size = Vector2(800, 5000)
 layout_mode = 2
 
-[connection signal="text_changed" from="Window2/WriteMessage" to="Window2/WriteMessage" method="_on_text_changed"]
-[connection signal="timeout" from="Window2/WriteMessage/Timer" to="Window2/WriteMessage" method="_on_timer_timeout"]
-[connection signal="pressed" from="Window2/Button" to="Window2/WriteMessage" method="SendServerMessage"]
-[connection signal="pressed" from="Window2/EndConvoButton" to="Window2/WriteMessage" method="_on_end_convo_button_pressed"]
-[connection signal="pressed" from="Window2/StartConvo" to="Window2/WriteMessage" method="_on_start_convo_pressed"]
+[node name="NPCWindow" type="Window" parent="." unique_id=1735446946]
+oversampling_override = 1.0
+position = Vector2i(1362, 351)
+size = Vector2i(437, 495)
+
+[node name="BG" type="Sprite2D" parent="NPCWindow" unique_id=1926966364]
+modulate = Color(0.7195469, 0.76396143, 0.7295584, 0.827451)
+position = Vector2(334.50003, 244.5)
+scale = Vector2(1.155102, 1.1882353)
+texture = ExtResource("8_4v376")
+
+[node name="Character" type="Sprite2D" parent="NPCWindow" unique_id=264824167]
+position = Vector2(212.99997, 268)
+texture = ExtResource("9_nd18o")
+
+[node name="ColorRect" type="ColorRect" parent="NPCWindow" unique_id=640300789]
+offset_top = 368.0
+offset_right = 437.0
+offset_bottom = 496.0
+color = Color(0.3019608, 0.3019608, 0.3019608, 0.70980394)
+
+[node name="EndConvoButton" type="TextureButton" parent="NPCWindow" unique_id=428160814]
+offset_left = 178.0
+offset_top = 390.0
+offset_right = 266.0
+offset_bottom = 478.0
+texture_normal = ExtResource("10_lexak")
+ignore_texture_size = true
+stretch_mode = 0
+
+[connection signal="text_changed" from="GameWindow/WriteMessage" to="GameWindow/WriteMessage" method="_on_text_changed"]
+[connection signal="timeout" from="GameWindow/WriteMessage/Timer" to="GameWindow/WriteMessage" method="_on_timer_timeout"]
+[connection signal="pressed" from="GameWindow/Button" to="GameWindow/WriteMessage" method="SendServerMessage"]
+[connection signal="pressed" from="GameWindow/StartConvo" to="GameWindow/WriteMessage" method="_on_start_convo_pressed"]
+[connection signal="pressed" from="NPCWindow/EndConvoButton" to="GameWindow/WriteMessage" method="_on_end_convo_button_pressed"]
