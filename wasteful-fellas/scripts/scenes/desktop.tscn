@@ -157,7 +157,7 @@ texture = ExtResource("5_nf8vl")
 [node name="GameWindow" type="Window" parent="." unique_id=91366786]
 oversampling_override = 1.0
 title = "No to waste!"
-position = Vector2i(55, 103)
+position = Vector2i(0, 44)
 size = Vector2i(1250, 800)
 
 [node name="ColorRect" type="ColorRect" parent="GameWindow" unique_id=1724080318]
@@ -235,7 +235,7 @@ layout_mode = 2
 
 [node name="NPCWindow" type="Window" parent="." unique_id=1735446946]
 oversampling_override = 1.0
-position = Vector2i(1362, 351)
+position = Vector2i(713, 349)
 size = Vector2i(437, 495)
 
 [node name="BG" type="Sprite2D" parent="NPCWindow" unique_id=1926966364]
@@ -262,6 +262,18 @@ offset_bottom = 478.0
 texture_normal = ExtResource("10_lexak")
 ignore_texture_size = true
 stretch_mode = 0
+
+[node name="PointsWindow" type="Window" parent="." unique_id=1106094066]
+oversampling_override = 1.0
+position = Vector2i(1050, 45)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PointsWindow" unique_id=918937149]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "99"
 
 [connection signal="text_changed" from="GameWindow/WriteMessage" to="GameWindow/WriteMessage" method="_on_text_changed"]
 [connection signal="timeout" from="GameWindow/WriteMessage/Timer" to="GameWindow/WriteMessage" method="_on_timer_timeout"]

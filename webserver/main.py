@@ -8,11 +8,34 @@ import datetime
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(SCRIPT_DIR)
 
-from local_agent.app import agent
+from local_agent.app import agent, global_model, global_fridge, global_points
 
 app = Flask(__name__)
 
 log = [["Request", "Response"]]
+
+dict_package = {
+    "Response": str,
+    "Fridge": dict[str,int],
+    "Points": int
+}
+
+def update_package(package, model_response):
+    package["Response"] = model_response
+    package["Fridge"] = global_fridge
+    package["Points"] = global_points
+    return package
+
+def reset_points(package):
+    package["Points"] = int
+    return package
+
+def reset_package(package):
+    package["Response"] = str
+    package["Fridge"] = dict[str,int]
+    package["Points"] = int
+    return package
+
 
 @app.route("/")
 def show_home():
@@ -21,13 +44,15 @@ def show_home():
 @app.route("/request_reply", methods=['POST'])
 def request_reply():
     try :
+        dict_package = reset_points(dict_package)
         message = request.json["message"]
         response = agent.run(message)
 
         log.append(['"' + message + '"', '"' + response + '"'])
     except:
         return jsonify("Something didn't work")
-    return jsonify(response)
+    dict_package = update_package(dict_package, response)
+    return jsonify(dict_package)
 
 @app.route("/start_convo", methods=['GET'])
 def start_convo():
@@ -40,12 +65,15 @@ def start_convo():
         log.append(['"' + message + '"', '"' + response + '"'])
     except:
         return jsonify("Something didn't work")
-    return jsonify(response)
+    dict_package = update_package(dict_package, response)
+    return jsonify(dict_package)
 
 @app.route("/end_convo")
 def end_convo():
-    with open(f"{SCRIPT_DIR}/log/{datetime.datetime.now().strftime('%Y-%m-%d %H_%M')}.csv", "ab") as f:
+    with open(f"{SCRIPT_DIR}/log/{global_model}_{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M')}.csv", "ab") as f:
         np.savetxt(f, log, fmt="%s", delimiter=",")
+    log = [["Request", "Response"]]
+    dict_package = reset_package(dict_package)
     return jsonify()
 
 if __name__ == '__main__' :

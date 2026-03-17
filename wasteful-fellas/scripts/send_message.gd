@@ -39,12 +39,13 @@ func SendServerMessage() -> void:
 func _http_request_completed(result, response_code, headers, body):
 	var json = JSON.new()
 	json.parse(body.get_string_from_utf8())
-	var response = json.get_data()
-	if response == null:
+	var dict_package = json.get_data()
+	if dict_package["Response"] == null:
 		return
 	
+	
 	var green_bub = green_bubble.instantiate()
-	green_bub.prose = str(response)
+	green_bub.prose = str(dict_package["Response"])
 	vcontainer.add_child(green_bub)
 	clear()
 	
@@ -53,6 +54,8 @@ func _http_request_completed(result, response_code, headers, body):
 	SFX.stream = load("res://art/SFXs/ding_sfx.mp3") 
 	SFX.play()
 	clear() #clear message!
+	
+func _increment_points(points) -> void:
 	
 
 func _on_text_changed() -> void:

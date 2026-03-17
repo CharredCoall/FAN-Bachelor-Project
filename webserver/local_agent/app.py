@@ -8,6 +8,8 @@ sys.path.append(SCRIPT_DIR)
 
 from tools.final_answer import FinalAnswerTool
 
+global_model = "Qwen2.5-Coder-32B-Instruct"
+
 global_fridge = {
     "apple": 3,
     "banana": 8,
@@ -133,7 +135,7 @@ tool_list = [final_answer, count_fridge, take_from_fridge, fetch_fridge, calcula
 model = InferenceClientModel(
 max_tokens=2096,
 temperature=0.5,
-model_id='Qwen/Qwen2.5-Coder-32B-Instruct',
+model_id=f'Qwen/{global_model}',
 custom_role_conversions=None,
 api_key=os.environ["HF_API_TOKEN"]
 )
