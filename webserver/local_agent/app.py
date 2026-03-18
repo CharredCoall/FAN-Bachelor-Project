@@ -28,11 +28,14 @@ POSSIBLE_INGREDIENTS = [
     "onion", "steak", "potato", "salmon fillet", "egg", 
     "tomato", "bell pepper", "lemon", "mushroom", "pork chop", 
     "shrimp", "avocado", "zucchini", "sausage", "sweet potato", 
-    "corn on the cob", "garlic clove", "loaf of bread", "block of tofu", 
+    "corn", "garlic clove", "loaf of bread", "block of tofu", 
     "slice of bacon", "can of diced tomatoes", "can of black beans", "can of tuna", 
-    "tortilla", "pita bread", "hot dog", "burger patty", "lime", 
+    "tortilla", "pita bread", "hot dog", "lime", 
     "orange", "peach", "plum", "kiwi", "mango", "jalapeno", 
-    "leek", "eggplant"
+    "leek", "eggplant", "head of lettuce", "head of cabbage", "head of broccoli", "head of cauliflower", 
+    "stalk of celery", "radish", "turnip", "beet", "artichoke", "squash", 
+    "pumpkin", "shallot", "pickle", "stick of butter", "block of cheese", 
+    "pear", "grapefruit", "pineapple", "coconut", "fig", "papaya", "pomegranate",
 ]
 
 def generate_fridge(difficulty:int) -> dict[str,int]:
