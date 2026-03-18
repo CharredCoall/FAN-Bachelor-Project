@@ -2,31 +2,80 @@ from smolagents import CodeAgent, InferenceClientModel, load_tool, tool
 import yaml
 import os
 import sys
+import random
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(SCRIPT_DIR)
 
 from tools.final_answer import FinalAnswerTool
 
+characters = [
+    {
+        "name": "Jim",
+        "prompt_file": "character2.yaml",
+        "difficulty": 1
+    }
+]
+
 global_model = "Qwen2.5-Coder-32B-Instruct"
 
-global_fridge = {
-    "apple": 3,
-    "banana": 8,
-    "cucumber": 2,
-    "carrot": 4,
-    "bread": 3,
-    "chicken breast": 4,
-    "milk": 2,
-    "onion": 7,
-    "steak": 3,
-    "potato": 7,
-    "pasta": 1,
-    "brocolli": 1,
-    "salmon": 1
-}
+global_fridge = {}
 
 global_points = 0
+
+POSSIBLE_INGREDIENTS = [
+    "apple", "banana", "cucumber", "carrot", "chicken breast", 
+    "onion", "steak", "potato", "salmon fillet", "egg", 
+    "tomato", "bell pepper", "lemon", "mushroom", "pork chop", 
+    "shrimp", "avocado", "zucchini", "sausage", "sweet potato", 
+    "corn on the cob", "garlic clove", "loaf of bread", "block of tofu", 
+    "slice of bacon", "can of diced tomatoes", "can of black beans", "can of tuna", 
+    "tortilla", "pita bread", "hot dog", "burger patty", "lime", 
+    "orange", "peach", "plum", "kiwi", "mango", "jalapeno", 
+    "leek", "eggplant"
+]
+
+def generate_fridge(difficulty:int) -> dict[str,int]:
+    global global_fridge
+
+    # Difficulty setting for the fridge:
+    # 1 easy - 5 hard
+    if difficulty == 1:
+        unique_items_range = (4, 7)
+        item_amount_range = (1, 3)
+    elif difficulty == 2:
+        unique_items_range = (8, 12)
+        item_amount_range = (2, 5)
+    elif difficulty == 3:
+        unique_items_range = (13, 18)
+        item_amount_range = (3, 8)
+    elif difficulty == 4:
+        unique_items_range = (19, 24)
+        item_amount_range = (4, 10)
+    elif difficulty >= 5:
+        unique_items_range = (25, 30)
+        item_amount_range = (5, 12)
+    else:
+        unique_items_range = (4, 7)
+        item_amount_range = (1, 3)
+    
+    # unique items
+    num_unique_items = random.randint(*unique_items_range)
+
+    # Safety check:
+    num_unique_items = min(num_unique_items, len(POSSIBLE_INGREDIENTS))
+
+    selected_items = random.sample(POSSIBLE_INGREDIENTS, num_unique_items)
+
+    new_fridge = {}
+    for item in selected_items:
+        new_fridge[item] = random.randint(*item_amount_range)
+    
+    global_fridge.clear()
+    global_fridge.update(new_fridge)
+
+    return global_fridge
+
 
 @tool
 def fetch_fridge() -> dict[str,int]:
@@ -139,10 +188,6 @@ model_id=f'Qwen/{global_model}',
 custom_role_conversions=None,
 api_key=os.environ["HF_API_TOKEN"]
 )
-
-
-# Import tool from Hub
-image_generation_tool = load_tool("agents-course/text-to-image", trust_remote_code=True)
 
 with open(SCRIPT_DIR + "\\" + "character2.yaml", 'r') as stream:
     prompt_templates = yaml.safe_load(stream)

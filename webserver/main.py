@@ -8,7 +8,7 @@ import datetime
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(SCRIPT_DIR)
 
-from local_agent.app import agent, global_model, global_fridge, global_points
+from local_agent.app import agent, global_model, global_fridge, global_points, generate_fridge, characters
 
 app = Flask(__name__)
 
@@ -43,6 +43,7 @@ def show_home():
 
 @app.route("/request_reply", methods=['POST'])
 def request_reply():
+    global dict_package
     try :
         dict_package = reset_points(dict_package)
         message = request.json["message"]
@@ -56,7 +57,12 @@ def request_reply():
 
 @app.route("/start_convo", methods=['GET'])
 def start_convo():
+    global dict_package
     try :
+        character_difficulty = characters[0]["difficulty"]
+
+        generate_fridge(character_difficulty)
+        
         message = """This is a prompt telling you that you have connected to the player. 
         You can now write a message to them as you need their help reducing waste from your fridge. 
         So start by introducing yourself to them and telling them that you need help making a meal!"""
@@ -70,6 +76,7 @@ def start_convo():
 
 @app.route("/end_convo")
 def end_convo():
+    global dict_package
     with open(f"{SCRIPT_DIR}/log/{global_model}_{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M')}.csv", "ab") as f:
         np.savetxt(f, log, fmt="%s", delimiter=",")
     log = [["Request", "Response"]]
