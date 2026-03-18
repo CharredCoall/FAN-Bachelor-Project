@@ -47,12 +47,7 @@ def request_reply():
     try :
         dict_package = reset_points(dict_package)
         message = request.json["message"]
-        
-        injected_prompt = f"""[System Information: The fridge currently contains: {global_fridge}]
-        Player says: "{message}"
-        """
-
-        response = agent.run(injected_prompt)
+        response = agent.run(message)
 
         log.append(['"' + message + '"', '"' + response + '"'])
     except:
@@ -65,13 +60,12 @@ def start_convo():
     global dict_package
     try :
         character_difficulty = characters[0]["difficulty"]
-        generate_fridge(character_difficulty)
 
-        message = f"""[System Information: The fridge currently contains: {global_fridge}]
-        This is a prompt telling you that you have connected to the player. 
+        generate_fridge(character_difficulty)
+        
+        message = """This is a prompt telling you that you have connected to the player. 
         You can now write a message to them as you need their help reducing waste from your fridge. 
         So start by introducing yourself to them and telling them that you need help making a meal!"""
-        
         response = agent.run(message)
         
         log.append(['"' + message + '"', '"' + response + '"'])

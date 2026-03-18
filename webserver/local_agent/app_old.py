@@ -78,6 +78,19 @@ def generate_fridge(difficulty:int) -> dict[str,int]:
     global_fridge.update(new_fridge)
 
     return global_fridge
+
+
+@tool
+def fetch_fridge() -> dict[str,int]:
+    """A tool that retrieves a global variable global_fridge and returns it."""
+    # fetching fridge
+    global global_fridge
+    try:
+        return global_fridge
+    
+    except Exception as e:
+        # This catches the crash and lets the agent see the error message instead
+        return f"Error fetching fridge: {str(e)}"
     
 @tool
 def count_fridge(fridge: dict[str,int]) -> int:
@@ -166,7 +179,7 @@ def end_conversation() -> str:
     return "I am ending the conversation here!"
 
 final_answer = FinalAnswerTool()
-tool_list = [final_answer, count_fridge, take_from_fridge, calculate_points, print_fridge_points, end_conversation]
+tool_list = [final_answer, count_fridge, take_from_fridge, fetch_fridge, calculate_points, print_fridge_points, end_conversation]
 
 # If the agent does not answer, the model is overloaded, please use another model or the following Hugging Face Endpoint that also contains qwen2.5 coder:
 # model_id='https://pflgm2locj2t89co.us-east-1.aws.endpoints.huggingface.cloud' 
