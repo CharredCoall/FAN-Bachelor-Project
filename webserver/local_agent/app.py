@@ -32,7 +32,7 @@ POSSIBLE_INGREDIENTS = [
     "slice of bacon", "can of diced tomatoes", "can of black beans", "can of tuna", 
     "tortilla", "pita bread", "hot dog", "lime", 
     "orange", "peach", "plum", "kiwi", "mango", "jalapeno", 
-    "leek", "eggplant", "head of lettuce", "head of cabbage", "head of broccoli", "head of cauliflower", 
+    "leek", "eggplant", "lettuce", "cabbage", "broccoli", "cauliflower", 
     "stalk of celery", "radish", "turnip", "beet", "artichoke", "squash", 
     "pumpkin", "shallot", "pickle", "stick of butter", "block of cheese", 
     "pear", "grapefruit", "pineapple", "coconut", "fig", "papaya", "pomegranate",
