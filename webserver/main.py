@@ -8,7 +8,8 @@ import datetime
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(SCRIPT_DIR)
 
-from local_agent.app import agent, global_model, global_fridge, global_points, global_ended, generate_fridge, characters
+from local_agent.app import agent, generate_fridge, characters
+import local_agent.app as agent_app
 
 app = Flask(__name__)
 
@@ -21,21 +22,18 @@ dict_package = {
 }
 
 def update_package(package, model_response):
-    global global_fridge
-    global global_points
     package["Response"] = model_response
-    package["Fridge"] = global_fridge
-    package["Points"] = global_points
-    package["Ended"] = global_ended
+    package["Fridge"] = agent_app.global_fridge
+    package["Points"] = agent_app.global_points
+    package["Ended"] = agent_app.global_ended
     return package
 
 def reset_points(package):
     package["Points"] = int
+    agent_app.global_points = 0.0
     return package
 
 def reset_package(package):
-    global global_fridge
-    global global_points
     package["Response"] = str
     package["Fridge"] = dict[str,int]
     package["Points"] = int
@@ -49,8 +47,8 @@ def show_home():
 @app.route("/request_reply", methods=['POST'])
 def request_reply():
     global dict_package
-    global global_ended
-
+    global log
+    
     try :
         dict_package = reset_points(dict_package)
 
@@ -62,7 +60,7 @@ def request_reply():
 
         response = agent.run(injected_prompt)
 
-        if global_ended :
+        if agent_app.global_ended :
              _ = end_convo()
 
         log.append(['"' + message + '"', '"' + response + '"'])
@@ -75,15 +73,15 @@ def request_reply():
 @app.route("/start_convo", methods=['GET'])
 def start_convo():
     global dict_package
-    global global_ended 
+    global log
 
-    global_ended = False
+    agent_app.global_ended = False
     try :
-        global_ended = False
+        agent_app.global_ended = False
         character_difficulty = characters[0]["difficulty"]
         generate_fridge(character_difficulty)
 
-        message = f"""[System Information: The fridge currently contains: {global_fridge}]
+        message = f"""[System Information: The fridge currently contains: {agent_app.global_fridge}]
         This is a prompt telling you that you have connected to the player. 
         You can now write a message to them as you need their help reducing waste from your fridge. 
         So start by introducing yourself to them and telling them that you need help making a meal!"""
@@ -100,8 +98,9 @@ def start_convo():
 @app.route("/end_convo")
 def end_convo():
     global dict_package
+    global log
 
-    with open(f"{SCRIPT_DIR}/log/{global_model}_{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M')}.csv", "ab") as f:
+    with open(f"{SCRIPT_DIR}/log/{agent_app.global_model}_{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M')}.csv", "a") as f:
         np.savetxt(f, log, fmt="%s", delimiter=",")
     log = [["Request", "Response"]]
     dict_package = reset_package(dict_package)
