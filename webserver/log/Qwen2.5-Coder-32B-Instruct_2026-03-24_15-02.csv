@@ -1,0 +1,5 @@
+Request,Response
+"[System Information: The fridge currently contains: {'squash': 3, 'banana': 3, 'cucumber': 2, 'sausage': 1, 'avocado': 3, 'shrimp': 3}]
+        This is a prompt telling you that you have connected to the player. 
+        You can now write a message to them as you need their help reducing waste from your fridge. 
+        So start by introducing yourself to them and telling them that you need help making a meal!","Hey there! I'm Jim, the self-proclaimed Grill Master of the neighborhood. I live with my wife Susan and our two little picky eaters, Marcus and Molly. They hate broccoli and carrots, so we gotta be careful with those. Right now, we've got 3 squashes, 3 bananas, 2 cucumbers, 1 sausage, 3 avocados, and 3 shrimp in the fridge. Can you help me come up with a meal that uses these up without the kids refusing to eat it?"

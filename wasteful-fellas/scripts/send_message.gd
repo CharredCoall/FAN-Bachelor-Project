@@ -2,6 +2,8 @@ extends TextEdit
 #@onready var messageBox = get_node("TextEdit")
 #@onready var replyBox = get_node("Panel/RichTextLabel")
 
+@onready var GameManager = $"../.."
+
 @onready var green_bubble = preload("res://scripts/scenes/green_bubble.tscn")
 @onready var blue_bubble = preload("res://scripts/scenes/blue_bubble.tscn")
 @onready var vcontainer = get_parent().get_node("ScrollContainer/VBoxContainer")
@@ -16,10 +18,10 @@ func _ready():
 func SendServerMessage() -> void:
 	var message = text
 	
-	#make blue bubble
-	var blue_bub = blue_bubble.instantiate()
-	blue_bub.prose = text
-	vcontainer.add_child(blue_bub)
+	#make green bubble
+	var green_bub = green_bubble.instantiate()
+	green_bub.prose = text
+	vcontainer.add_child(green_bub)
 	
 	SFX.stop()
 	SFX.volume_db = 10.0
@@ -40,14 +42,19 @@ func _http_request_completed(result, response_code, headers, body):
 	var json = JSON.new()
 	json.parse(body.get_string_from_utf8())
 	var dict_package = json.get_data()
-	if dict_package["Response"] == null:
+	print(dict_package)
+	if dict_package == null:
 		return
 	
+	if  dict_package["Points"] != null:
+		GameManager._increment_points(dict_package["Points"])
 	
-	var green_bub = green_bubble.instantiate()
-	green_bub.prose = str(dict_package["Response"])
-	vcontainer.add_child(green_bub)
-	clear()
+	if dict_package["Fridge"] != null:
+		GameManager._update_fridge(dict_package["Fridge"])
+	
+	var blue_bub = blue_bubble.instantiate()
+	blue_bub.prose = str(dict_package["Response"])
+	vcontainer.add_child(blue_bub)
 	
 	SFX.stop()
 	SFX.volume_db = -10.0
@@ -55,8 +62,12 @@ func _http_request_completed(result, response_code, headers, body):
 	SFX.play()
 	clear() #clear message!
 	
-func _increment_points(points) -> void:
-	pass
+	if "Ended" in dict_package and dict_package["Ended"]:
+		_on_end_convo_button_pressed()
+	
+
+
+
 
 func _on_text_changed() -> void:
 	SFX.volume_db = 0.0

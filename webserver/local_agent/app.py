@@ -23,6 +23,8 @@ global_fridge = {}
 
 global_points = 0
 
+global_ended = True
+
 POSSIBLE_INGREDIENTS = [
     "apple", "banana", "cucumber", "carrot", "chicken breast", 
     "onion", "steak", "potato", "salmon fillet", "egg", 
@@ -143,30 +145,18 @@ def calculate_points(previous_fridge_amount:int, current_fridge_amount:int) -> i
         return f"Error removing from fridge: {str(e)}"
 
 @tool
-def print_fridge_points() -> tuple[dict[str,int], int]:
-    """A tool that prints out global variables as a varification that all other tools are working, and returns these values"""
-    global global_fridge
-    global global_points
-    try:
-        print(f"The fridge: {global_fridge}")
-        print(f"Points: {global_points}")
-        return global_fridge, global_points
-    except Exception as e:
-        # This catches the crash and lets the agent see the error message instead
-        return f"Error printing: {str(e)}"
-
-@tool
 def end_conversation() -> str:
     """This tool allows the model to end the conversation early, if the player makes the character too annoyed or mad. 
     Another usecase is if the character believes the conversation is over because they have received an appropriete dish. 
     The function returns a string to be used in the `final_answer` tool.
     """
-    # Dummy function to end the conversation
-    print("Conversation ended")
+    # Function to end the conversation
+    global global_ended
+    global_ended = True
     return "I am ending the conversation here!"
 
 final_answer = FinalAnswerTool()
-tool_list = [final_answer, count_fridge, take_from_fridge, calculate_points, print_fridge_points, end_conversation]
+tool_list = [final_answer, count_fridge, take_from_fridge, calculate_points, end_conversation]
 
 # If the agent does not answer, the model is overloaded, please use another model or the following Hugging Face Endpoint that also contains qwen2.5 coder:
 # model_id='https://pflgm2locj2t89co.us-east-1.aws.endpoints.huggingface.cloud' 

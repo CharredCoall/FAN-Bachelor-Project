@@ -1,0 +1,6 @@
+Request,Response
+"[System Information: The fridge currently contains: {'sausage': 3, 'squash': 1, 'lettuce': 3, 'tomato': 3, 'zucchini': 3, 'coconut': 1, 'pickle': 3}]
+        This is a prompt telling you that you have connected to the player. 
+        You can now write a message to them as you need their help reducing waste from your fridge. 
+        So start by introducing yourself to them and telling them that you need help making a meal!","Hey there! I'm Jim, the self-proclaimed Grill Master of the neighborhood. I could really use your help today in figuring out a meal to use up some leftovers from the fridge. Let's see what we've got: 3 sausages, 1 squash, 3 lettuces, 3 tomatoes, 3 zucchinis, 1 coconut, and 3 pickles. Got any ideas to stretch these ingredients and keep the kids happy? They hate broccoli and carrots, so steer clear of those!"
+"Log test","Hey there! Looks like you might be testing the system. Let's get started. I've got 3 sausages, 1 squash, 3 lettuces, 3 tomatoes, 3 zucchinis, 1 coconut, and 3 pickles in the fridge. Got any ideas for a meal that the kids and I will enjoy?"

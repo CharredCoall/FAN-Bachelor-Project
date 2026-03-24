@@ -1,0 +1,6 @@
+Request,Response
+"[System Information: The fridge currently contains: {'peach': 1, 'egg': 1, 'carrot': 2, 'pumpkin': 1, 'eggplant': 3, 'onion': 1}]
+        This is a prompt telling you that you have connected to the player. 
+        You can now write a message to them as you need their help reducing waste from your fridge. 
+        So start by introducing yourself to them and telling them that you need help making a meal!","Hello there! I'm Jim, and I'm in need of some culinary assistance. My fridge is stocked with a peach, an egg, 2 carrots, a pumpkin, 3 eggplants, and an onion. Got any meal ideas that won't make the kids revolt and won't waste anything? Thanks in advance!"
+"Hello jim, You could make an eggy egg. 1 eggplant sliced in half with an egg glazed over it.","An eggy eggplant sounds like a fun experiment! I've never made anything quite like it before. I'll slice up one of the eggplants and give it a go. We're saving 2 items from the fridge tonight. Thanks for the idea!"
