@@ -193,7 +193,6 @@ texture = ExtResource("5_nf8vl")
 oversampling_override = 1.0
 position = Vector2i(713, 349)
 size = Vector2i(437, 495)
-visible = false
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Fridge" unique_id=1861436433]
 anchors_preset = 15

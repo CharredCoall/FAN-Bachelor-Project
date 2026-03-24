@@ -1,5 +1,5 @@
 extends Node2D
-@onready var points_label = $PointsWindow/RichTextLabel
+@onready var points_label = $"Client Satisfaction/Panel/RichTextLabel"
 @onready var fridge_label = $Fridge/RichTextLabel
 
 var points = 0
