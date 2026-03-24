@@ -8,7 +8,7 @@ import datetime
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(SCRIPT_DIR)
 
-from local_agent.app import agent, global_model, global_fridge, global_points, generate_fridge, characters
+from local_agent.app import agent, global_model, global_fridge, global_points, global_ended, generate_fridge, characters
 
 app = Flask(__name__)
 
@@ -24,6 +24,7 @@ def update_package(package, model_response):
     package["Response"] = model_response
     package["Fridge"] = global_fridge
     package["Points"] = global_points
+    package["Ended"] = global_ended
     return package
 
 def reset_points(package):
@@ -44,8 +45,11 @@ def show_home():
 @app.route("/request_reply", methods=['POST'])
 def request_reply():
     global dict_package
+    global global_ended
+
     try :
         dict_package = reset_points(dict_package)
+
         message = request.json["message"]
         
         injected_prompt = f"""[System Information: The fridge currently contains: {global_fridge}]
@@ -54,16 +58,24 @@ def request_reply():
 
         response = agent.run(injected_prompt)
 
+        if global_ended :
+             _ = end_convo()
+
         log.append(['"' + message + '"', '"' + response + '"'])
+        dict_package = update_package(dict_package, response)
     except:
         return jsonify("Something didn't work")
-    dict_package = update_package(dict_package, response)
+    
     return jsonify(dict_package)
 
 @app.route("/start_convo", methods=['GET'])
 def start_convo():
     global dict_package
+    global global_ended 
+
+    global_ended = False
     try :
+        global_ended = False
         character_difficulty = characters[0]["difficulty"]
         generate_fridge(character_difficulty)
 
@@ -74,6 +86,7 @@ def start_convo():
         
         response = agent.run(message)
         
+        log = [["Request", "Response"]]
         log.append(['"' + message + '"', '"' + response + '"'])
     except:
         return jsonify("Something didn't work")
@@ -83,6 +96,7 @@ def start_convo():
 @app.route("/end_convo")
 def end_convo():
     global dict_package
+
     with open(f"{SCRIPT_DIR}/log/{global_model}_{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M')}.csv", "ab") as f:
         np.savetxt(f, log, fmt="%s", delimiter=",")
     log = [["Request", "Response"]]

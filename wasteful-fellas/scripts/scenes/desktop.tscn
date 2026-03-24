@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c6yrxw5htidt6"]
 
 [ext_resource type="Texture2D" uid="uid://crirfntjncgti" path="res://art/wallpaper_placeholder.png" id="1_fgoco"]
+[ext_resource type="Script" uid="uid://dt0nvgifvalji" path="res://scripts/scenes/GameManager.gd" id="1_nd18o"]
 [ext_resource type="Texture2D" uid="uid://bqkd53kw1ml2y" path="res://art/home_button.png" id="2_1ovop"]
 [ext_resource type="Texture2D" uid="uid://dxape1mb8kkh3" path="res://art/browser_button.png" id="3_ff6s3"]
 [ext_resource type="Texture2D" uid="uid://dxk1ybnasuwot" path="res://art/recycle_button.png" id="4_qrswn"]
@@ -96,6 +97,7 @@ colors = PackedColorArray(0.8781551, 0.9477405, 0.9606653, 1, 0.9669389, 0.96693
 gradient = SubResource("Gradient_nf8vl")
 
 [node name="Desktop" type="Node2D" unique_id=669669927]
+script = ExtResource("1_nd18o")
 
 [node name="WallpaperPlaceholder" type="Sprite2D" parent="." unique_id=1075045478]
 position = Vector2(960.00006, 540)
@@ -157,7 +159,7 @@ texture = ExtResource("5_nf8vl")
 [node name="GameWindow" type="Window" parent="." unique_id=91366786]
 oversampling_override = 1.0
 title = "No to waste!"
-position = Vector2i(0, 44)
+position = Vector2i(0, 36)
 size = Vector2i(1250, 800)
 
 [node name="ColorRect" type="ColorRect" parent="GameWindow" unique_id=1724080318]
@@ -211,6 +213,14 @@ offset_bottom = 233.0
 theme_override_font_sizes/font_size = 30
 text = "Start Conversation"
 
+[node name="EndConvo" type="Button" parent="GameWindow" unique_id=1902058966]
+offset_left = 62.0
+offset_top = 314.0
+offset_right = 342.0
+offset_bottom = 433.0001
+theme_override_font_sizes/font_size = 30
+text = "End Conversation"
+
 [node name="gradient" type="Sprite2D" parent="GameWindow" unique_id=1942584580]
 position = Vector2(817.31946, 292.12216)
 rotation = -1.5707964
@@ -233,28 +243,70 @@ horizontal_scroll_mode = 0
 custom_minimum_size = Vector2(800, 5000)
 layout_mode = 2
 
-[node name="NPCWindow" type="Window" parent="." unique_id=1735446946]
+[node name="Fridge" type="Window" parent="." unique_id=213408782]
 oversampling_override = 1.0
-position = Vector2i(713, 349)
-size = Vector2i(437, 495)
+position = Vector2i(437, 36)
+size = Vector2i(180, 200)
+min_size = Vector2i(180, 180)
 
-[node name="BG" type="Sprite2D" parent="NPCWindow" unique_id=1926966364]
+[node name="RichTextLabel" type="RichTextLabel" parent="Fridge" unique_id=1861436433]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Items in fridge:
+"
+
+[node name="PointsWindow" type="Window" parent="." unique_id=1106094066]
+oversampling_override = 1.0
+title = "Score!!:"
+position = Vector2i(497, 45)
+size = Vector2i(120, 120)
+unresizable = true
+min_size = Vector2i(120, 120)
+max_size = Vector2i(120, 120)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PointsWindow" unique_id=918937149]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.3698876, 0.49818695, 0.22875857, 1)
+theme_override_font_sizes/normal_font_size = 54
+bbcode_enabled = true
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NPCWindow" type="Window" parent="." unique_id=126784857]
+oversampling_override = 1.0
+title = "Camera"
+position = Vector2i(419, 240)
+size = Vector2i(440, 495)
+unresizable = true
+min_size = Vector2i(440, 495)
+max_size = Vector2i(440, 495)
+
+[node name="BG" type="Sprite2D" parent="NPCWindow" unique_id=1084552954]
 modulate = Color(0.7195469, 0.76396143, 0.7295584, 0.827451)
 position = Vector2(334.50003, 244.5)
 scale = Vector2(1.155102, 1.1882353)
 texture = ExtResource("8_4v376")
 
-[node name="Character" type="Sprite2D" parent="NPCWindow" unique_id=264824167]
+[node name="Character" type="Sprite2D" parent="NPCWindow" unique_id=273608728]
 position = Vector2(212.99997, 268)
 texture = ExtResource("9_nd18o")
 
-[node name="ColorRect" type="ColorRect" parent="NPCWindow" unique_id=640300789]
+[node name="ColorRect" type="ColorRect" parent="NPCWindow" unique_id=1661645042]
 offset_top = 368.0
 offset_right = 437.0
 offset_bottom = 496.0
 color = Color(0.3019608, 0.3019608, 0.3019608, 0.70980394)
 
-[node name="EndConvoButton" type="TextureButton" parent="NPCWindow" unique_id=428160814]
+[node name="EndConvoButton" type="TextureButton" parent="NPCWindow" unique_id=997289353]
 offset_left = 178.0
 offset_top = 390.0
 offset_right = 266.0
@@ -263,20 +315,8 @@ texture_normal = ExtResource("10_lexak")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="PointsWindow" type="Window" parent="." unique_id=1106094066]
-oversampling_override = 1.0
-position = Vector2i(1050, 45)
-
-[node name="RichTextLabel" type="RichTextLabel" parent="PointsWindow" unique_id=918937149]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "99"
-
 [connection signal="text_changed" from="GameWindow/WriteMessage" to="GameWindow/WriteMessage" method="_on_text_changed"]
 [connection signal="timeout" from="GameWindow/WriteMessage/Timer" to="GameWindow/WriteMessage" method="_on_timer_timeout"]
 [connection signal="pressed" from="GameWindow/Button" to="GameWindow/WriteMessage" method="SendServerMessage"]
 [connection signal="pressed" from="GameWindow/StartConvo" to="GameWindow/WriteMessage" method="_on_start_convo_pressed"]
-[connection signal="pressed" from="NPCWindow/EndConvoButton" to="GameWindow/WriteMessage" method="_on_end_convo_button_pressed"]
+[connection signal="pressed" from="GameWindow/EndConvo" to="GameWindow/WriteMessage" method="_on_end_convo_button_pressed"]

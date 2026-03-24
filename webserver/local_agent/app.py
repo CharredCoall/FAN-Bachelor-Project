@@ -23,6 +23,8 @@ global_fridge = {}
 
 global_points = 0
 
+global_ended = True
+
 POSSIBLE_INGREDIENTS = [
     "apple", "banana", "cucumber", "carrot", "chicken breast", 
     "onion", "steak", "potato", "salmon fillet", "egg", 
@@ -144,7 +146,7 @@ def calculate_points(previous_fridge_amount:int, current_fridge_amount:int) -> i
 
 @tool
 def print_fridge_points() -> tuple[dict[str,int], int]:
-    """A tool that prints out global variables as a varification that all other tools are working, and returns these values"""
+    """A tool that prints out global variables as a verification that all other tools are working, and returns these values"""
     global global_fridge
     global global_points
     try:
@@ -161,8 +163,9 @@ def end_conversation() -> str:
     Another usecase is if the character believes the conversation is over because they have received an appropriete dish. 
     The function returns a string to be used in the `final_answer` tool.
     """
-    # Dummy function to end the conversation
-    print("Conversation ended")
+    # Function to end the conversation
+    global global_ended
+    global_ended = True
     return "I am ending the conversation here!"
 
 final_answer = FinalAnswerTool()
