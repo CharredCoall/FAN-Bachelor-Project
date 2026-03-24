@@ -21,6 +21,8 @@ dict_package = {
 }
 
 def update_package(package, model_response):
+    global global_fridge
+    global global_points
     package["Response"] = model_response
     package["Fridge"] = global_fridge
     package["Points"] = global_points
@@ -31,6 +33,8 @@ def reset_points(package):
     return package
 
 def reset_package(package):
+    global global_fridge
+    global global_points
     package["Response"] = str
     package["Fridge"] = dict[str,int]
     package["Points"] = int
@@ -48,7 +52,7 @@ def request_reply():
         dict_package = reset_points(dict_package)
         message = request.json["message"]
         
-        injected_prompt = f"""[System Information: The fridge currently contains: {global_fridge}]
+        injected_prompt = f"""[System Information: The fridge currently contains: {dict_package["Fridge"]}]
         Player says: "{message}"
         """
 
