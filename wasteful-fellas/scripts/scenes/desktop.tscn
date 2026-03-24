@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dbwid30bnsge7" path="res://art/NPC backgrounds/green_kitchen.jpg" id="8_4v376"]
 [ext_resource type="Texture2D" uid="uid://dqneyg7riylqk" path="res://art/NPCs/old_man_placeholder.png" id="9_nd18o"]
 [ext_resource type="Texture2D" uid="uid://cj0ouujl4f575" path="res://art/hang_up_icon.png" id="10_lexak"]
+[ext_resource type="Script" uid="uid://dfiugjllsvrrr" path="res://scripts/window.gd" id="11_nd18o"]
 
 [sub_resource type="Gradient" id="Gradient_fgoco"]
 colors = PackedColorArray(0.05490196, 0.14117648, 0.3372549, 0.7921569, 1, 1, 1, 0)
@@ -95,6 +96,38 @@ colors = PackedColorArray(0.8781551, 0.9477405, 0.9606653, 1, 0.9669389, 0.96693
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_67y07"]
 gradient = SubResource("Gradient_nf8vl")
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nd18o"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lexak"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_efn2e"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gvy4x"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lexak"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.9411765, 0.9411765, 0.9411765, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_efn2e"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.9411765, 0.9411765, 0.9411765, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
 [node name="Desktop" type="Node2D" unique_id=669669927]
 
 [node name="WallpaperPlaceholder" type="Sprite2D" parent="." unique_id=1075045478]
@@ -159,6 +192,7 @@ oversampling_override = 1.0
 title = "No to waste!"
 position = Vector2i(0, 44)
 size = Vector2i(1250, 800)
+visible = false
 
 [node name="ColorRect" type="ColorRect" parent="GameWindow" unique_id=1724080318]
 offset_right = 385.0
@@ -237,6 +271,7 @@ layout_mode = 2
 oversampling_override = 1.0
 position = Vector2i(713, 349)
 size = Vector2i(437, 495)
+visible = false
 
 [node name="BG" type="Sprite2D" parent="NPCWindow" unique_id=1926966364]
 modulate = Color(0.7195469, 0.76396143, 0.7295584, 0.827451)
@@ -266,6 +301,7 @@ stretch_mode = 0
 [node name="PointsWindow" type="Window" parent="." unique_id=1106094066]
 oversampling_override = 1.0
 position = Vector2i(1050, 45)
+visible = false
 
 [node name="RichTextLabel" type="RichTextLabel" parent="PointsWindow" unique_id=918937149]
 anchors_preset = 15
@@ -275,8 +311,232 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "99"
 
+[node name="Client Satisfaction" type="ColorRect" parent="." unique_id=1138101869]
+offset_left = 1432.0
+offset_top = 641.0
+offset_right = 1662.0
+offset_bottom = 952.0
+color = Color(0.2627451, 0.5764706, 0.92156863, 1)
+script = ExtResource("11_nd18o")
+
+[node name="TopBar" type="Button" parent="Client Satisfaction" unique_id=176963910]
+layout_mode = 0
+offset_left = -1.0
+offset_right = 192.0
+offset_bottom = 39.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_nd18o")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_lexak")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_efn2e")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_gvy4x")
+text = "   Waste"
+alignment = 0
+
+[node name="Panel" type="Panel" parent="Client Satisfaction" unique_id=1678760510]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 40.0
+offset_right = 223.0
+offset_bottom = 305.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_lexak")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Client Satisfaction/Panel" unique_id=1421737055]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.18679053, 0.41511714, 0.62577724, 1)
+theme_override_font_sizes/normal_font_size = 38
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Waste Planner" type="ColorRect" parent="." unique_id=322381158]
+offset_left = 114.0
+offset_top = 55.0
+offset_right = 1383.0
+offset_bottom = 907.0
+color = Color(0.2581615, 0.57725954, 0.9219131, 1)
+script = ExtResource("11_nd18o")
+
+[node name="TopBar" type="Button" parent="Waste Planner" unique_id=329152009]
+layout_mode = 0
+offset_left = -1.0
+offset_right = 1224.0
+offset_bottom = 39.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_nd18o")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_lexak")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_efn2e")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_gvy4x")
+text = "   Waste"
+alignment = 0
+
+[node name="Panel" type="Panel" parent="Waste Planner" unique_id=739212009]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 40.0
+offset_right = 1262.0
+offset_bottom = 845.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_efn2e")
+
+[node name="ColorRect" type="ColorRect" parent="Waste Planner/Panel" unique_id=1128798682]
+layout_mode = 0
+offset_right = 385.0
+offset_bottom = 585.0
+color = Color(0.519767, 0.79812884, 0.5755315, 1)
+
+[node name="WriteMessage" type="TextEdit" parent="Waste Planner/Panel" unique_id=1670853495]
+layout_mode = 0
+offset_left = 67.0
+offset_top = 638.0
+offset_right = 1027.0
+offset_bottom = 750.0
+theme_override_colors/caret_color = Color(0, 0.5294118, 0.69803923, 1)
+theme_override_colors/font_color = Color(0, 0.5294118, 0.69803923, 1)
+theme_override_colors/font_readonly_color = Color(0.6019569, 0.6185075, 0.6224806, 1)
+theme_override_colors/font_placeholder_color = Color(0.09411765, 0.47058824, 0.654902, 0.6039216)
+theme_override_font_sizes/font_size = 29
+theme_override_styles/normal = SubResource("StyleBoxFlat_nf8vl")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_nf8vl")
+theme_override_styles/read_only = SubResource("StyleBoxFlat_4v376")
+placeholder_text = "Write something..."
+editable = false
+wrap_mode = 1
+script = ExtResource("7_bqgb8")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="Waste Planner/Panel/WriteMessage" unique_id=1153495048]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Waste Planner/Panel/WriteMessage" unique_id=727948318]
+
+[node name="Timer" type="Timer" parent="Waste Planner/Panel/WriteMessage" unique_id=575235675]
+one_shot = true
+
+[node name="Button" type="Button" parent="Waste Planner/Panel" unique_id=1138956334]
+layout_mode = 0
+offset_left = 1034.0
+offset_top = 623.0
+offset_right = 1201.0
+offset_bottom = 765.0
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_67y07")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_67y07")
+theme_override_styles/hover = SubResource("StyleBoxFlat_bqgb8")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_nd18o")
+disabled = true
+text = "SEND"
+
+[node name="StartConvo" type="Button" parent="Waste Planner/Panel" unique_id=1162297954]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 84.0
+offset_right = 344.0
+offset_bottom = 203.0
+theme_override_font_sizes/font_size = 30
+text = "Start Conversation"
+
+[node name="gradient" type="Sprite2D" parent="Waste Planner/Panel" unique_id=210982217]
+position = Vector2(817.31946, 292.12216)
+rotation = -1.5707964
+scale = Vector2(2.2861109, 864.74744)
+texture = SubResource("GradientTexture1D_67y07")
+
+[node name="Line" type="ColorRect" parent="Waste Planner/Panel" unique_id=2133983391]
+layout_mode = 0
+offset_top = 578.0
+offset_right = 1256.0
+offset_bottom = 585.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Waste Planner/Panel" unique_id=1846774065]
+layout_mode = 0
+offset_left = 385.0
+offset_top = -2.0
+offset_right = 1250.0
+offset_bottom = 578.0
+horizontal_scroll_mode = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Waste Planner/Panel/ScrollContainer" unique_id=780750589]
+custom_minimum_size = Vector2(800, 5000)
+layout_mode = 2
+
+[node name="Client" type="ColorRect" parent="." unique_id=1503985887]
+offset_left = 1414.0
+offset_top = 57.0
+offset_right = 1863.0
+offset_bottom = 601.0
+color = Color(0.2627451, 0.5764706, 0.92156863, 1)
+script = ExtResource("11_nd18o")
+
+[node name="TopBar" type="Button" parent="Client" unique_id=1256188458]
+layout_mode = 0
+offset_left = -1.0
+offset_right = 404.0
+offset_bottom = 39.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_nd18o")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_lexak")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_efn2e")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_gvy4x")
+text = "   Waste"
+alignment = 0
+
+[node name="Panel" type="Panel" parent="Client" unique_id=1611809260]
+clip_contents = true
+layout_mode = 0
+offset_left = 8.0
+offset_top = 39.0
+offset_right = 442.0
+offset_bottom = 536.0
+
+[node name="BG" type="Sprite2D" parent="Client/Panel" unique_id=493967370]
+modulate = Color(0.7195469, 0.76396143, 0.7295584, 0.827451)
+position = Vector2(334.50003, 244.5)
+scale = Vector2(1.155102, 1.1882353)
+texture = ExtResource("8_4v376")
+
+[node name="Character" type="Sprite2D" parent="Client/Panel" unique_id=1168780267]
+position = Vector2(212.99997, 268)
+texture = ExtResource("9_nd18o")
+
+[node name="ColorRect" type="ColorRect" parent="Client/Panel" unique_id=1607098207]
+layout_mode = 0
+offset_top = 368.0
+offset_right = 437.0
+offset_bottom = 496.0
+color = Color(0.3019608, 0.3019608, 0.3019608, 0.70980394)
+
+[node name="EndConvoButton" type="TextureButton" parent="Client/Panel" unique_id=1281522389]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 390.0
+offset_right = 266.0
+offset_bottom = 478.0
+texture_normal = ExtResource("10_lexak")
+ignore_texture_size = true
+stretch_mode = 0
+
 [connection signal="text_changed" from="GameWindow/WriteMessage" to="GameWindow/WriteMessage" method="_on_text_changed"]
 [connection signal="timeout" from="GameWindow/WriteMessage/Timer" to="GameWindow/WriteMessage" method="_on_timer_timeout"]
 [connection signal="pressed" from="GameWindow/Button" to="GameWindow/WriteMessage" method="SendServerMessage"]
 [connection signal="pressed" from="GameWindow/StartConvo" to="GameWindow/WriteMessage" method="_on_start_convo_pressed"]
 [connection signal="pressed" from="NPCWindow/EndConvoButton" to="GameWindow/WriteMessage" method="_on_end_convo_button_pressed"]
+[connection signal="button_down" from="Client Satisfaction/TopBar" to="Client Satisfaction" method="_on_top_bar_button_down"]
+[connection signal="button_up" from="Client Satisfaction/TopBar" to="Client Satisfaction" method="_on_top_bar_button_up"]
+[connection signal="button_down" from="Waste Planner/TopBar" to="Waste Planner" method="_on_top_bar_button_down"]
+[connection signal="button_up" from="Waste Planner/TopBar" to="Waste Planner" method="_on_top_bar_button_up"]
+[connection signal="text_changed" from="Waste Planner/Panel/WriteMessage" to="Waste Planner/Panel/WriteMessage" method="_on_text_changed"]
+[connection signal="timeout" from="Waste Planner/Panel/WriteMessage/Timer" to="Waste Planner/Panel/WriteMessage" method="_on_timer_timeout"]
+[connection signal="button_down" from="Client/TopBar" to="Client" method="_on_top_bar_button_down"]
+[connection signal="button_up" from="Client/TopBar" to="Client" method="_on_top_bar_button_up"]

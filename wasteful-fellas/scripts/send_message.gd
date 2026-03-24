@@ -56,7 +56,7 @@ func _http_request_completed(result, response_code, headers, body):
 	clear() #clear message!
 	
 func _increment_points(points) -> void:
-	
+	pass
 
 func _on_text_changed() -> void:
 	SFX.volume_db = 0.0
