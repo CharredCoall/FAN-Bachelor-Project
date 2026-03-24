@@ -189,34 +189,18 @@ position = Vector2(198.80191, 1038.25)
 scale = Vector2(0.11594965, 0.116210975)
 texture = ExtResource("5_nf8vl")
 
-[node name="Fridge" type="Window" parent="." unique_id=213408782]
-oversampling_override = 1.0
-position = Vector2i(713, 349)
-size = Vector2i(437, 495)
-visible = false
-
-[node name="RichTextLabel" type="RichTextLabel" parent="Fridge" unique_id=1861436433]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-text = "Items in fridge:
-"
-
-[node name="Client Satisfaction" type="ColorRect" parent="." unique_id=1138101869]
-offset_left = 1432.0
-offset_top = 641.0
-offset_right = 1662.0
-offset_bottom = 952.0
+[node name="Client\'s Fridge" type="ColorRect" parent="." unique_id=878269905]
+offset_left = 1363.0
+offset_top = 628.0
+offset_right = 1786.0
+offset_bottom = 932.0
 color = Color(0.2627451, 0.5764706, 0.92156863, 1)
 script = ExtResource("11_nd18o")
 
-[node name="TopBar" type="Button" parent="Client Satisfaction" unique_id=176963910]
+[node name="TopBar" type="Button" parent="Client\'s Fridge" unique_id=1158622394]
 layout_mode = 0
 offset_left = -1.0
-offset_right = 192.0
+offset_right = 376.0
 offset_bottom = 39.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
@@ -229,33 +213,31 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_gvy4x")
 text = "   Waste"
 alignment = 0
 
-[node name="Panel" type="Panel" parent="Client Satisfaction" unique_id=1678760510]
+[node name="Panel" type="Panel" parent="Client\'s Fridge" unique_id=686494051]
 layout_mode = 0
 offset_left = 6.0
 offset_top = 40.0
-offset_right = 223.0
-offset_bottom = 305.0
+offset_right = 415.0
+offset_bottom = 297.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_lexak")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Client Satisfaction/Panel" unique_id=1421737055]
+[node name="RichTextLabel" type="RichTextLabel" parent="Client\'s Fridge/Panel" unique_id=831897592]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_bottom = 1.0
+offset_right = 2.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/default_color = Color(0.18679053, 0.41511714, 0.62577724, 1)
-theme_override_font_sizes/normal_font_size = 38
-text = "99"
-horizontal_alignment = 1
-vertical_alignment = 1
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "  Items in fridge:
+"
 
 [node name="Waste Planner" type="ColorRect" parent="." unique_id=322381158]
-offset_left = 114.0
-offset_top = 55.0
-offset_right = 1383.0
-offset_bottom = 907.0
+offset_left = 47.0
+offset_top = 67.0
+offset_right = 1316.0
+offset_bottom = 919.0
 color = Color(0.2581615, 0.57725954, 0.9219131, 1)
 script = ExtResource("11_nd18o")
 
@@ -363,10 +345,10 @@ custom_minimum_size = Vector2(800, 5000)
 layout_mode = 2
 
 [node name="Client" type="ColorRect" parent="." unique_id=1503985887]
-offset_left = 1414.0
-offset_top = 57.0
-offset_right = 1863.0
-offset_bottom = 601.0
+offset_left = 1348.0
+offset_top = 73.0
+offset_right = 1759.0
+offset_bottom = 593.0
 color = Color(0.2627451, 0.5764706, 0.92156863, 1)
 script = ExtResource("11_nd18o")
 
@@ -391,8 +373,8 @@ clip_contents = true
 layout_mode = 0
 offset_left = 8.0
 offset_top = 39.0
-offset_right = 442.0
-offset_bottom = 536.0
+offset_right = 402.0
+offset_bottom = 511.0
 
 [node name="BG" type="Sprite2D" parent="Client/Panel" unique_id=493967370]
 modulate = Color(0.7195469, 0.76396143, 0.7295584, 0.827451)
@@ -401,7 +383,7 @@ scale = Vector2(1.155102, 1.1882353)
 texture = ExtResource("8_4v376")
 
 [node name="Character" type="Sprite2D" parent="Client/Panel" unique_id=1168780267]
-position = Vector2(212.99997, 268)
+position = Vector2(181.99997, 248)
 texture = ExtResource("9_nd18o")
 
 [node name="ColorRect" type="ColorRect" parent="Client/Panel" unique_id=1607098207]
@@ -413,21 +395,70 @@ color = Color(0.3019608, 0.3019608, 0.3019608, 0.70980394)
 
 [node name="EndConvoButton" type="TextureButton" parent="Client/Panel" unique_id=1281522389]
 layout_mode = 0
-offset_left = 178.0
-offset_top = 390.0
-offset_right = 266.0
-offset_bottom = 478.0
+offset_left = 161.0
+offset_top = 386.0
+offset_right = 234.0
+offset_bottom = 459.0
 texture_normal = ExtResource("10_lexak")
 ignore_texture_size = true
 stretch_mode = 0
 
-[connection signal="button_down" from="Client Satisfaction/TopBar" to="Client Satisfaction" method="_on_top_bar_button_down"]
-[connection signal="button_up" from="Client Satisfaction/TopBar" to="Client Satisfaction" method="_on_top_bar_button_up"]
+[node name="Client Satisfaction" type="ColorRect" parent="." unique_id=1138101869]
+offset_left = 1649.0
+offset_top = 516.0
+offset_right = 1879.0
+offset_bottom = 720.0
+color = Color(0.2627451, 0.5764706, 0.92156863, 1)
+script = ExtResource("11_nd18o")
+
+[node name="TopBar" type="Button" parent="Client Satisfaction" unique_id=176963910]
+layout_mode = 0
+offset_left = -1.0
+offset_right = 192.0
+offset_bottom = 39.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_nd18o")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_lexak")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_efn2e")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_gvy4x")
+text = "   Waste"
+alignment = 0
+
+[node name="Panel" type="Panel" parent="Client Satisfaction" unique_id=1678760510]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 40.0
+offset_right = 223.0
+offset_bottom = 198.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_lexak")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Client Satisfaction/Panel" unique_id=1421737055]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.18679053, 0.41511714, 0.62577724, 1)
+theme_override_font_sizes/normal_font_size = 80
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="button_down" from="Client\'s Fridge/TopBar" to="Client\'s Fridge" method="_on_top_bar_button_down"]
+[connection signal="button_up" from="Client\'s Fridge/TopBar" to="Client\'s Fridge" method="_on_top_bar_button_up"]
 [connection signal="button_down" from="Waste Planner/TopBar" to="Waste Planner" method="_on_top_bar_button_down"]
 [connection signal="button_up" from="Waste Planner/TopBar" to="Waste Planner" method="_on_top_bar_button_up"]
 [connection signal="text_changed" from="Waste Planner/Panel/WriteMessage" to="Waste Planner/Panel/WriteMessage" method="_on_text_changed"]
 [connection signal="timeout" from="Waste Planner/Panel/WriteMessage/Timer" to="Waste Planner/Panel/WriteMessage" method="_on_timer_timeout"]
+[connection signal="pressed" from="Waste Planner/Panel/Button" to="Waste Planner/Panel/WriteMessage" method="SendServerMessage"]
 [connection signal="pressed" from="Waste Planner/Panel/StartConvo" to="Waste Planner/Panel/WriteMessage" method="_on_start_convo_pressed"]
 [connection signal="button_down" from="Client/TopBar" to="Client" method="_on_top_bar_button_down"]
 [connection signal="button_up" from="Client/TopBar" to="Client" method="_on_top_bar_button_up"]
 [connection signal="pressed" from="Client/Panel/EndConvoButton" to="Waste Planner/Panel/WriteMessage" method="_on_end_convo_button_pressed"]
+[connection signal="button_down" from="Client Satisfaction/TopBar" to="Client Satisfaction" method="_on_top_bar_button_down"]
+[connection signal="button_up" from="Client Satisfaction/TopBar" to="Client Satisfaction" method="_on_top_bar_button_up"]
