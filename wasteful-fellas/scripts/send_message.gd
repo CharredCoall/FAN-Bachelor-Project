@@ -2,7 +2,7 @@ extends TextEdit
 #@onready var messageBox = get_node("TextEdit")
 #@onready var replyBox = get_node("Panel/RichTextLabel")
 
-@onready var GameManager = $"../.."
+@onready var GameManager = $"../../.."
 
 @onready var green_bubble = preload("res://scripts/scenes/green_bubble.tscn")
 @onready var blue_bubble = preload("res://scripts/scenes/blue_bubble.tscn")
