@@ -97,9 +97,9 @@ func _on_end_convo_button_pressed() -> void:
 	
 	$"../Button".disabled = true
 	
-	$"../../NPCWindow/EndConvoButton".disabled = true
+	$"../../../Client/Panel/EndConvoButton".disabled = true
 	
-	$"../StartConvo".disabled = false
+	$"../../Panel/StartConvo".disabled = false
 	
 	var end_label = Label.new()
 	end_label.text = "--- Conversation ended ---"
@@ -118,9 +118,9 @@ func _on_start_convo_pressed() -> void:
 	
 	$"../Button".disabled = false
 	
-	$"../../NPCWindow/EndConvoButton".disabled = false
+	$"../../../Client/Panel/EndConvoButton".disabled = false
 	
-	$"../StartConvo".disabled = true
+	$"../../Panel/StartConvo".disabled = true
 	
 	var start_label = Label.new()
 	start_label.text = "--- Conversation started ---"
