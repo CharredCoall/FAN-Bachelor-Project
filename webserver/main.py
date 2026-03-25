@@ -13,7 +13,7 @@ import local_agent.app as agent_app
 
 app = Flask(__name__)
 
-log = [["Request", "Response"]]
+log = []
 
 dict_package = {
     "Response": str,
@@ -88,7 +88,7 @@ def start_convo():
         
         response = agent.run(message)
         
-        log = [["Request", "Response"]]
+        log = []
         log.append(['"' + message + '"', '"' + response + '"'])
     except:
         return jsonify("Something didn't work")
@@ -101,8 +101,9 @@ def end_convo():
     global log
 
     with open(f"{SCRIPT_DIR}/log/{agent_app.global_model}_{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M')}.csv", "a") as f:
-        np.savetxt(f, log, fmt="%s", delimiter=",")
-    log = [["Request", "Response"]]
+        np.savetxt(f, [["Request", "Response"]] + log, fmt="%s", delimiter=",")
+    
+    log = []
     dict_package = reset_package(dict_package)
     return jsonify()
 
