@@ -169,7 +169,7 @@ custom_role_conversions=None,
 api_key=os.environ["HF_API_TOKEN"]
 )
 
-with open(SCRIPT_DIR + "\\" + "character2.yaml", 'r') as stream:
+with open(SCRIPT_DIR + "\\" + characters[0]["prompt_file"], 'r') as stream:
     prompt_templates = yaml.safe_load(stream)
     
 agent = CodeAgent(
