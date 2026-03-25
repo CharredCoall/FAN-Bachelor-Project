@@ -12,7 +12,7 @@ from tools.final_answer import FinalAnswerTool
 characters = [
     {
         "name": "Jim",
-        "prompt_file": "character2.yaml",
+        "prompt_file": "Jim.yaml",
         "difficulty": 1
     }
 ]
