@@ -14,6 +14,16 @@ characters = [
         "name": "Jim",
         "prompt_file": "Jim.yaml",
         "difficulty": 1
+    },
+    {
+        "name": "Brody",
+        "prompt_file": "Brody.yaml",
+        "difficulty": 3
+    },
+    {
+        "name": "Cecilia",
+        "prompt_file": "Cecilia.yaml",
+        "difficulty": 4
     }
 ]
 
@@ -169,7 +179,9 @@ custom_role_conversions=None,
 api_key=os.environ["HF_API_TOKEN"]
 )
 
-with open(SCRIPT_DIR + "\\" + characters[0]["prompt_file"], 'r') as stream:
+prompt_path = os.path.join(SCRIPT_DIR, "Character_prompts", characters[0]["prompt_file"])
+
+with open(prompt_path, 'r') as stream:
     prompt_templates = yaml.safe_load(stream)
     
 agent = CodeAgent(
