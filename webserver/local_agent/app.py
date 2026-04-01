@@ -37,7 +37,28 @@ characters = [
     }
 ]
 
-global_model = "Qwen2.5-Coder-32B-Instruct"
+global_models = [
+    {
+        "name": "Qwen/Qwen2.5-Coder-32B-Instruct",
+        "key": "srX5Dt3K0nfX3fQ4"
+    },
+    {
+        "name": "Qwen/Qwen2.5-72B-Instruct",
+        "key": "yfYXmOJTWZj9daLG"
+    },
+    {
+        "name": "meta-llama/Llama-3.3-70B-Instruct",
+        "key": "hdRm7wScJqOvmVze"
+    },
+    {
+        "name": "deepseek-ai/DeepSeek-Coder-V2-Instruct",
+        "key": "4vPloGeWwi6swcOq"
+    },
+    {
+        "name": "google/gemma-2-27b-it",
+        "key": "X6IQnIqkWWKi8Gyz"
+    }
+]
 
 global_fridge = {}
 
@@ -189,7 +210,7 @@ tool_list = [final_answer, count_fridge, take_from_fridge, calculate_points, end
 model = InferenceClientModel(
 max_tokens=2096,
 temperature=0.5,
-model_id=f'Qwen/{global_model}',
+model_id=global_models[0]["name"],
 custom_role_conversions=None,
 api_key=os.environ["HF_API_TOKEN"]
 )

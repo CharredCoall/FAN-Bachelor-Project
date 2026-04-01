@@ -8,7 +8,7 @@ import datetime
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(SCRIPT_DIR)
 
-from local_agent.app import agent, generate_fridge, characters
+from local_agent.app import generate_fridge, characters
 import local_agent.app as agent_app
 
 app = Flask(__name__)
@@ -58,7 +58,7 @@ def request_reply():
         Player says: "{message}"
         """
 
-        response = agent.run(injected_prompt)
+        response = agent_app.agent.run(injected_prompt)
 
         if agent_app.global_ended :
              _ = end_convo()
@@ -85,7 +85,7 @@ def start_convo():
         [System Event: The conversation has just started, and you are speaking first. 
         Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]"""
         
-        response = agent.run(message)
+        response = agent_app.agent.run(message)
         
         log = []
         log.append(['"' + message + '"', '"' + response + '"'])
@@ -99,7 +99,7 @@ def end_convo():
     global dict_package
     global log
 
-    with open(f"{SCRIPT_DIR}/log/{agent_app.global_model}_{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M')}.csv", "a") as f:
+    with open(f"{SCRIPT_DIR}/log/{agent_app.global_models[0]["key"]}_{characters[0]["name"]}_{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M')}.csv", "a") as f:
         np.savetxt(f, [["Request", "Response"]] + log, fmt="%s", delimiter=",")
     
     log = []
