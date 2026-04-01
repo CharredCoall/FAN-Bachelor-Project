@@ -82,9 +82,8 @@ def start_convo():
         generate_fridge(character_difficulty)
 
         message = f"""[System Information: The fridge currently contains: {agent_app.global_fridge}]
-        This is a prompt telling you that you have connected to the player. 
-        You can now write a message to them as you need their help reducing waste from your fridge. 
-        So start by introducing yourself to them and telling them that you need help making a meal!"""
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]"""
         
         response = agent.run(message)
         

@@ -16,6 +16,11 @@ characters = [
         "difficulty": 1
     },
     {
+        "name": "Jasmine",
+        "prompt_file": "Jasmine.yaml",
+        "difficulty": 2
+    },
+    {
         "name": "Brody",
         "prompt_file": "Brody.yaml",
         "difficulty": 3
@@ -24,6 +29,11 @@ characters = [
         "name": "Cecilia",
         "prompt_file": "Cecilia.yaml",
         "difficulty": 4
+    },
+    {
+        "name": "Voll",
+        "prompt_file": "Voll.yaml",
+        "difficulty": 5
     }
 ]
 
@@ -42,7 +52,7 @@ POSSIBLE_INGREDIENTS = [
     "shrimp", "avocado", "zucchini", "sausage", "sweet potato", 
     "corn", "garlic clove", "loaf of bread", "block of tofu", 
     "slice of bacon", "can of diced tomatoes", "can of black beans", "can of tuna", 
-    "tortilla", "pita bread", "hot dog", "lime", 
+    "tortilla", "pita bread", "hot dog", "lime", "kale",
     "orange", "peach", "plum", "kiwi", "mango", "jalapeno", 
     "leek", "eggplant", "lettuce", "cabbage", "broccoli", "cauliflower", 
     "stalk of celery", "radish", "turnip", "beet", "artichoke", "squash", 
@@ -81,6 +91,11 @@ def generate_fridge(difficulty:int) -> dict[str,int]:
     num_unique_items = min(num_unique_items, len(POSSIBLE_INGREDIENTS))
 
     selected_items = random.sample(POSSIBLE_INGREDIENTS, num_unique_items)
+
+    # VOLL's KALE OVERRIDE
+    if difficulty == 5:
+        if "kale" not in selected_items:
+            selected_items[-1] = "kale"
 
     new_fridge = {}
     for item in selected_items:
