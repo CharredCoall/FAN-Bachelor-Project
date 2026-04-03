@@ -210,7 +210,7 @@ tool_list = [final_answer, count_fridge, take_from_fridge, calculate_points, end
 model = InferenceClientModel(
 max_tokens=2096,
 temperature=0.5,
-model_id=global_models[0]["name"],
+model_id=global_models[1]["name"],
 custom_role_conversions=None,
 api_key=os.environ["HF_API_TOKEN"]
 )

@@ -1,0 +1,7 @@
+Request,Response
+"[System Information: The fridge currently contains: {'corn': 3, 'kale': 4, 'pineapple': 3, 'hot dog': 5, 'avocado': 3, 'eggplant': 2, 'block of tofu': 4, 'pickle': 3}]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","Ugh, finally home. I’ve been at work since 7 AM, and I’m so tired I can barely think straight. I need to eat something, but I don’t have the energy for anything complicated. I have 3 ears of corn, 4 bunches of kale, 3 pineapples, 5 hot dogs, 3 avocados, 2 eggplants, 4 blocks of tofu, and 3 pickles. Can you help me figure out something quick and easy to make?"
+"how about you make a salad with all the avacado, tofu, corn, pineapple and kale","I appreciate the suggestion, but chopping all that stuff sounds like a lot of work right now. I just want something quick and easy. Can you think of something simpler?"
+Request,Response
+"you can also make one with all tofu, hot dog, agge plant and pickle","Alright, that sounds doable. Tofu, hot dog, eggplant, and pickle. I can handle that. Thanks for the quick idea. You saved 4 items from the trash, so that's 4 points for you. I'm going to make this and crash. I am ending the conversation here!"
