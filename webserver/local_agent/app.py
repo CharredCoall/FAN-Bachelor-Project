@@ -215,7 +215,7 @@ custom_role_conversions=None,
 api_key=os.environ["HF_API_TOKEN"]
 )
 
-prompt_path = os.path.join(SCRIPT_DIR, "Character_prompts", characters[4]["prompt_file"])
+prompt_path = os.path.join(SCRIPT_DIR, "Character_prompts", characters[1]["prompt_file"])
 
 with open(prompt_path, 'r') as stream:
     prompt_templates = yaml.safe_load(stream)
