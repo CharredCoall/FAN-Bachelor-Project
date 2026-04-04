@@ -1,0 +1,16 @@
+Request,Response
+"[System Information: The fridge currently contains: {'can of tuna': 3, 'orange': 3, 'coconut': 1, 'lemon': 3}]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","Hey there! Thanks for helping me clear out the fridge. I just checked, and we've got 3 cans of tuna, 3 oranges, 1 coconut, and 3 lemons. My kids are pretty picky, so they won't touch anything with broccoli or carrots. I'm always looking for ways to use up what we have without wasting anything. Oh, and if there's any way to incorporate the grill, I'm all ears! What do you think?"
+"Hey there, I suggest to make a buffet-like dish where you slice up the coconut, the oranges, and the lemon, you boil some rice, fry some chicken or shrimps, add a bowl of salad and spring onions - then all can mix what they prefer","Hey, that sounds like a fun idea, but we don't have any chicken or shrimp, and the kids might not go for sliced coconut and lemon. How about something simpler using the tuna, oranges, and lemons we have? Maybe a tuna salad or a quick tuna and orange dish?"
+"You should also have the tuna as one of the ingrediens - maybe just make a salat with green salad, oranges, and tuna, then the kids don't have to use cocnut if they don't like
+
+instead of slicing the coconut, the shred the cocnut and fry light in a frying pan - it can be used as topping on the salad for those who like","That's a brilliant idea! A tuna salad with oranges and a crispy coconut topping sounds delicious and different. Plus, it’s a great way to use up the coconut without forcing the kids to eat it. Can you give me the amounts for the ingredients?"
+"For four persons use
+green salad - one head or one bag
+3.0 oranges
+2 cans of tuna
+1 lemon, 
+1.0 cocnut
+4 spring onions ","Sounds like a delicious and refreshing meal! I love the idea of a green salad with oranges, tuna, lemon, and coconut. We don't have spring onions, but I can use some other herbs or spices to add flavor. I'm taking the ingredients out now. Thanks for the suggestion, you just saved 7 items from going to waste! That's 7 points for you!"
+"Perfect - happy to help","Thanks for the enthusiasm! I just checked the fridge, and we've got 1 can of tuna and 2 lemons. Not a lot to work with, but I'm sure you can come up with something creative. Any ideas?"

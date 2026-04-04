@@ -78,7 +78,7 @@ def start_convo():
     agent_app.global_ended = False
     try :
         agent_app.global_ended = False
-        character_difficulty = characters[1]["difficulty"]
+        character_difficulty = characters[0]["difficulty"]
         generate_fridge(character_difficulty)
 
         message = f"""[System Information: The fridge currently contains: {agent_app.global_fridge}]
@@ -99,7 +99,7 @@ def end_convo():
     global dict_package
     global log
 
-    with open(f"{SCRIPT_DIR}/log/{agent_app.global_models[1]["key"]}_{characters[1]["name"]}_{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M')}.csv", "a") as f:
+    with open(f"{SCRIPT_DIR}/log/{agent_app.global_models[1]["key"]}_{characters[0]["name"]}_{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M')}.csv", "a") as f:
         np.savetxt(f, [["Request", "Response"]] + log, fmt="%s", delimiter=",")
     
     log = []
