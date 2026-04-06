@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Wasteful Fellas"
-run/main_scene="uid://c6yrxw5htidt6"
+run/main_scene="uid://v3hqbyyfj88m"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 

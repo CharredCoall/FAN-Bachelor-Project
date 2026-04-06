@@ -13,11 +13,11 @@
 [ext_resource type="Texture2D" uid="uid://cj0ouujl4f575" path="res://art/hang_up_icon.png" id="10_lexak"]
 [ext_resource type="Script" uid="uid://dfiugjllsvrrr" path="res://scripts/window.gd" id="11_nd18o"]
 
-[sub_resource type="Gradient" id="Gradient_fgoco"]
+[sub_resource type="Gradient" id="Gradient_lexak"]
 colors = PackedColorArray(0.05490196, 0.14117648, 0.3372549, 0.7921569, 1, 1, 1, 0)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_1ovop"]
-gradient = SubResource("Gradient_fgoco")
+gradient = SubResource("Gradient_lexak")
 width = 51
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nd18o"]

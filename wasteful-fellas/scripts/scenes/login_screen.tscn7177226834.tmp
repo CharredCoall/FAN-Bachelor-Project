@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://v3hqbyyfj88m"]
+
+[ext_resource type="Texture2D" uid="uid://pmtdnw12vp6k" path="res://art/profilepic.png" id="1_n8evb"]
+[ext_resource type="Script" uid="uid://dmajcehvrblpy" path="res://scripts/scenes/login_screen.gd" id="1_y3u6y"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_y3u6y"]
+load_path = "res://.godot/imported/lockscreen_placeholder.png-138f9e55cb733bfae8ec7cfcc2fd1fa9.ctex"
+
+[sub_resource type="Gradient" id="Gradient_fgoco"]
+offsets = PackedFloat32Array(0, 0.25906736, 1)
+colors = PackedColorArray(0.05490196, 0.14117648, 0.3372549, 0.6392157, 0.25055864, 0.7313684, 0.87035745, 0.5669613, 0.23137255, 1, 0.99215686, 0.4745098)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_57ir4"]
+gradient = SubResource("Gradient_fgoco")
+width = 51
+
+[node name="LoginScreen" type="Node2D" unique_id=1099419135]
+script = ExtResource("1_y3u6y")
+
+[node name="LockscreenPlaceholder" type="Sprite2D" parent="." unique_id=2121478788]
+position = Vector2(960.00006, 540)
+scale = Vector2(3.3333337, 3.3333335)
+texture = SubResource("CompressedTexture2D_y3u6y")
+
+[node name="TextureRect" type="TextureRect" parent="LockscreenPlaceholder" unique_id=1565924799]
+offset_left = -287.99997
+offset_top = 162.9
+offset_right = 37.864502
+offset_bottom = 738.8972
+rotation = -1.5707964
+texture = SubResource("GradientTexture1D_57ir4")
+
+[node name="ProfileIcon" type="Sprite2D" parent="." unique_id=30576048]
+position = Vector2(960, 350)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_n8evb")
+
+[node name="LoginButton" type="Button" parent="." unique_id=1710718542]
+offset_left = 890.0
+offset_top = 502.0
+offset_right = 1026.0
+offset_bottom = 542.0
+text = "Login"
+
+[node name="SettingsButton" type="Button" parent="." unique_id=131442615]
+offset_left = 890.0
+offset_top = 565.0
+offset_right = 1026.0
+offset_bottom = 605.0
+text = "Settings"
+
+[connection signal="pressed" from="LoginButton" to="." method="startGame"]
