@@ -16,8 +16,6 @@ func _ready():
 	$HTTPRequest.request_completed.connect(self._http_request_completed)
 
 func SendServerMessage() -> void:
-	var message = text
-	
 	#make green bubble
 	var green_bub = green_bubble.instantiate()
 	green_bub.prose = text
@@ -31,14 +29,14 @@ func SendServerMessage() -> void:
 	#green bubble for now!
 	#$Timer.start()
 	
-	var body = JSON.new().stringify({"message": text})
+	var body = JSON.stringify({"message": text})
 	var error = $HTTPRequest.request("http://127.0.0.1:5000/request_reply", ["Content-type: application/json"], HTTPClient.METHOD_POST, body)
 	if error != OK:
 		push_error("An error occurred in the HTTP request.")
 	
 	clear()
 	
-func _http_request_completed(result, response_code, headers, body):
+func _http_request_completed(_result, _response_code, _headers, body):
 	var json = JSON.new()
 	json.parse(body.get_string_from_utf8())
 	var dict_package = json.get_data()

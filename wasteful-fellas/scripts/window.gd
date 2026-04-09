@@ -9,7 +9,7 @@ var offset = Vector2.ZERO
 func _ready() -> void:
 	top_area.text = "   " + str(name)
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if pressing:
 		var new_pos = get_global_mouse_position() - offset
 		var max_y = tool_bar.position.y - size.y

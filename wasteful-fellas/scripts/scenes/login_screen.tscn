@@ -49,4 +49,4 @@ offset_right = 1026.0
 offset_bottom = 605.0
 text = "Settings"
 
-[connection signal="pressed" from="LoginButton" to="." method="startGame"]
+[connection signal="pressed" from="LoginButton" to="." method="_start_game"]

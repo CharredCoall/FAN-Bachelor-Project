@@ -2,7 +2,6 @@ from flask import Flask, render_template, request, jsonify
 import os
 import sys
 import numpy as np
-import time
 import datetime
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
