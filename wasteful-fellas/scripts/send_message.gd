@@ -11,9 +11,12 @@ extends TextEdit
 @onready var clicks_sfx = [preload("res://scripts/click_sfx1.mp3"), preload("res://scripts/click_sfx2.mp3"), preload("res://scripts/click_sfx3.mp3")]
 
 @onready var SFX = $AudioStreamPlayer
+var thread: Thread
+var pipes: Dictionary
 
 func _ready():
-	$HTTPRequest.request_completed.connect(self._http_request_completed)
+	thread = Thread.new()
+	thread.start(_run_server)
 
 func SendServerMessage() -> void:
 	#make green bubble
@@ -29,16 +32,18 @@ func SendServerMessage() -> void:
 	#green bubble for now!
 	#$Timer.start()
 	
-	var body = JSON.stringify({"message": text})
-	var error = $HTTPRequest.request("http://127.0.0.1:5000/request_reply", ["Content-type: application/json"], HTTPClient.METHOD_POST, body)
-	if error != OK:
-		push_error("An error occurred in the HTTP request.")
+	editable = false
+	
+	$"../Button".disabled = true
+	
+	var body = JSON.stringify({"path": "request_reply", "message": text})
+	pipes.stdio.store_line(body)
 	
 	clear()
 	
-func _http_request_completed(_result, _response_code, _headers, body):
+func _request_completed(body):
 	var json = JSON.new()
-	json.parse(body.get_string_from_utf8())
+	json.parse(body)
 	var dict_package = json.get_data()
 	print(dict_package)
 	if dict_package == null:
@@ -59,13 +64,14 @@ func _http_request_completed(_result, _response_code, _headers, body):
 	SFX.stream = load("res://art/SFXs/ding_sfx.mp3") 
 	SFX.play()
 	clear() #clear message!
+
+	editable = true
+	
+	$"../Button".disabled = false
 	
 	if "Ended" in dict_package and dict_package["Ended"]:
-		_on_end_convo_button_pressed()
+		_end_convo()
 	
-
-
-
 
 func _on_text_changed() -> void:
 	SFX.volume_db = 0.0
@@ -87,10 +93,11 @@ func _on_timer_timeout() -> void:
 
 
 func _on_end_convo_button_pressed() -> void:
-	var error = $HTTPRequest.request("http://127.0.0.1:5000/end_convo", [], HTTPClient.METHOD_GET)
-	if error != OK:
-		push_error("An error occurred in the HTTP request.")
-	
+	var body = JSON.stringify({"path": "end_convo"})
+	pipes.stdio.store_line(body)
+	_end_convo()
+
+func _end_convo():
 	editable = false
 	
 	$"../Button".disabled = true
@@ -108,14 +115,9 @@ func _on_end_convo_button_pressed() -> void:
 
 
 func _on_start_convo_pressed() -> void:
-	var error = $HTTPRequest.request("http://127.0.0.1:5000/start_convo", [], HTTPClient.METHOD_GET)
-	if error != OK:
-		push_error("An error occurred in the HTTP request.")
-	
-	editable = true
-	
-	$"../Button".disabled = false
-	
+	var body = JSON.stringify({"path": "start_convo"})
+	pipes.stdio.store_line(body)
+		
 	$"../../../Client/Panel/EndConvoButton".disabled = false
 	
 	$"../../Panel/StartConvo".disabled = true
@@ -128,3 +130,27 @@ func _on_start_convo_pressed() -> void:
 	
 	vcontainer.add_child(start_label)
 	
+
+func _run_server():
+	pipes = OS.execute_with_pipe("../python/python", ["../webserver/main.py"], false )
+	if pipes.is_empty():
+		print("Error?")
+	else:
+		while (OS.is_process_running(pipes.pid)):
+			if pipes.stdio.get_position() < pipes.stdio.get_length():
+				print("Python out:")
+				var body = pipes.stdio.get_as_text()
+				_request_completed(body)
+				print("-------------------------")
+			if pipes.stderr.get_position() < pipes.stderr.get_length():
+				print("Python Error:")
+				print(pipes.stderr.get_as_text())
+				print("-------------------------")
+				assert(OS.is_process_running(pipes.pid), "Error!: Server crashed due to an error.")
+			await get_tree().create_timer(1).timeout
+
+
+func _exit_tree() -> void:
+	if thread != null and !pipes.is_empty():
+		pipes.stdio.store_line(r"\x03")
+		thread.wait_to_finish()

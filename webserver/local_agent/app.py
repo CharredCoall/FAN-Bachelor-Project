@@ -1,4 +1,5 @@
-from smolagents import CodeAgent, InferenceClientModel, load_tool, tool
+from smolagents import CodeAgent, InferenceClientModel, AgentLogger, load_tool, tool
+from rich.console import Console
 import yaml
 import os
 import sys
@@ -220,6 +221,8 @@ prompt_path = os.path.join(SCRIPT_DIR, "Character_prompts", characters[0]["promp
 with open(prompt_path, 'r') as stream:
     prompt_templates = yaml.safe_load(stream)
     
+logger = AgentLogger(2, Console(quiet = True))
+
 agent = CodeAgent(
     model=model,
     tools=tool_list, 
@@ -228,7 +231,8 @@ agent = CodeAgent(
     planning_interval=None,
     name=None,
     description=None,
-    prompt_templates=prompt_templates
+    prompt_templates=prompt_templates,
+    logger = logger
 )
 
 

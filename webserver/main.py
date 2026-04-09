@@ -1,16 +1,14 @@
-from flask import Flask, render_template, request, jsonify
 import os
 import sys
 import numpy as np
 import datetime
+import json
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(SCRIPT_DIR)
 
 from local_agent.app import generate_fridge, characters
 import local_agent.app as agent_app
-
-app = Flask(__name__)
 
 log = []
 
@@ -38,20 +36,13 @@ def reset_package(package):
     package["Points"] = int
     return package
 
-
-@app.route("/")
-def show_home():
-    return render_template("index.html")
-
-@app.route("/request_reply", methods=['POST'])
-def request_reply():
+#@app.route("/request_reply", methods=['POST'])
+def request_reply(message):
     global dict_package
     global log
     
     try :
         dict_package = reset_points(dict_package)
-
-        message = request.json["message"]
         
         injected_prompt = f"""[System Information: The fridge currently contains: {dict_package["Fridge"]}]
         Player says: "{message}"
@@ -65,11 +56,11 @@ def request_reply():
         log.append(['"' + message + '"', '"' + response + '"'])
         dict_package = update_package(dict_package, response)
     except:
-        return jsonify("Something didn't work")
+        return json.dumps("Something didn't work")
     
-    return jsonify(dict_package)
+    return json.dumps(dict_package)
 
-@app.route("/start_convo", methods=['GET'])
+#@app.route("/start_convo", methods=['GET'])
 def start_convo():
     global dict_package
     global log
@@ -89,11 +80,11 @@ def start_convo():
         log = []
         log.append(['"' + message + '"', '"' + response + '"'])
     except:
-        return jsonify("Something didn't work")
+        return json.dumps("Something didn't work")
     dict_package = update_package(dict_package, response)
-    return jsonify(dict_package)
+    return json.dumps(dict_package)
 
-@app.route("/end_convo")
+#@app.route("/end_convo")
 def end_convo():
     global dict_package
     global log
@@ -103,7 +94,17 @@ def end_convo():
     
     log = []
     dict_package = reset_package(dict_package)
-    return jsonify()
 
 if __name__ == '__main__' :
-    app.run(debug=True)
+    running = True
+    while running:
+        request = json.loads(input())
+        match request["path"]:
+            case "request_reply":
+                print(request_reply(request["message"]))
+            case "start_convo":
+                print(start_convo())
+            case "end_convo":
+                end_convo()
+
+

@@ -1,0 +1,4 @@
+Request,Response
+"[System Information: The fridge currently contains: {'grapefruit': 1, 'radish': 1, 'zucchini': 3, 'cabbage': 2, 'tomato': 1, 'loaf of bread': 1, 'fig': 1}]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","Hey there! Thanks for helping me clear out the fridge. I just checked, and we've got a grapefruit, a radish, 3 zucchinis, 2 cabbages, a tomato, a loaf of bread, and a fig. My kids are super picky, so no broccoli or carrots, but I'm always up for a good meal that uses up what we have. Oh, and if there's a way to fire up the grill, I'm all for it! What do you think?"
