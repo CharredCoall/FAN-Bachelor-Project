@@ -111,7 +111,7 @@ if __name__ == '__main__' :
             case "request_reply":
                 print(request_reply(request["message"]))
             case "start_convo":
-                print(start_convo(request.get("char_idx")))) #None if nothing
+                print(start_convo(request.get("char_idx"))) #None if nothing
             case "end_convo":
                 end_convo()
 

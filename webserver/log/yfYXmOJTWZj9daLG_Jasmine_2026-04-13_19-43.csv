@@ -1,0 +1,21 @@
+Request,Response
+"[System Information: The fridge currently contains: {'block of tofu': 2, 'garlic clove': 5, 'plum': 2, 'pickle': 3, 'lettuce': 5, 'hot dog': 2, 'sausage': 5, 'mango': 2, 'eggplant': 3, 'steak': 5}]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","Ugh, I just got home from a grueling day at work, and I am so hungry I could eat a horse. But I don't want to waste money on takeout. I need something quick and easy to make with what I have in the fridge. Here's what I've got: 2 blocks of tofu, 5 garlic cloves, 2 plums, 3 pickles, 5 lettuce leaves, 2 hot dogs, 5 sausages, 2 mangos, 3 eggplants, and 5 steaks. Got any ideas? And please, make it fast!"
+"You can make a two course meal,
+For the first meal: you can make 2 quick and easy hotdogs with 2 sausages.
+
+Second meal:
+For the protein you can make 3 steaks, mash a clove of garlic and spice the steaks, then you first sear them on a pan and then let them roast in an oven for 3 hours, to save time you can in the meantime make the salad:
+Cut a block of tofu into cubes and sear them on each side. Then finely cut each of the greens (2 plums, 1 lettuce leaf, 1 mango, half a pickle and 2 eggplants).","I appreciate the effort, but a three-hour roast and a complicated salad are just not happening. I'm too exhausted for that. Can we stick to something quick and easy? Maybe just the hot dogs or something else that won't take more than 15 minutes?"
+"Hmm but if you really want something good you have to put as much effort into cooking you food as you do your work, so I really think you should spend some time making your food","Are you serious? I just spent 12 hours at work, and now you're telling me to spend more time cooking? No way. I need something quick and easy, not a gourmet meal. Give me a practical idea, or I'm just going to order takeout and be done with it."
+"Yes I'm being serious!!! It is very important that you make sure to get eat well!!","I appreciate your concern, but I'm absolutely drained. I need something quick and easy. Here's what I have: 2 blocks of tofu, 5 garlic cloves, 2 plums, 3 pickles, 5 lettuce leaves, 2 hot dogs, 5 sausages, 2 mangos, 3 eggplants, and 5 steaks. Give me a simple idea, please."
+"What if you make some simple hotdogs. 
+First you cut out two eggplants into thin slices, along with a block of tofu. 
+Then spice it using 2 garlic cloves finely chopped. 
+Give the greens a sear on the pan. 
+You then need to heat up your hot dogs, this can be easily done in an airfrier till they are warm. in the meantime you can roast 2 sausages 
+then you can make a homemade dressing using a pickle and a mango in tiny cubes
+
+Finely serve the hotdogs in the order of bread, greens, a sausage on each and then the dressing","Are you serious? Cutting eggplants, tofu, and chopping garlic? Searing greens, heating hot dogs, roasting sausages, and making a homemade dressing? I just got off work and I'm exhausted. I need something quick and easy, not a gourmet cooking class. Can you please suggest something simpler?"
+"If you're really that lazy!! you can make just a hot dog with nothing else than a sausage!!?!? but Then you also have to remember it's your fault that you end up not using up all the ingredients in your fridge!!!!!","Look, I get that you’re trying to help, but suggesting I just eat a hot dog isn’t exactly what I had in mind. I want to use some of the other stuff in the fridge to avoid waste, but I’m not in the mood for a big production. Can you think of something quick that uses a few more ingredients?"

@@ -1,0 +1,4 @@
+Request,Response
+"[System Information: The fridge currently contains: {'orange': 3, 'block of tofu': 2, 'leek': 3, 'lettuce': 1, 'avocado': 3, 'stalk of celery': 3, 'pineapple': 3}]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","Hey there! Welcome to the Jim household. I’m always looking for ways to use up what we have in the fridge and avoid wasting anything. Right now, we’ve got 3 oranges, 2 blocks of tofu, 3 leeks, 1 lettuce, 3 avocados, 3 stalks of celery, and 3 pineapples. My kids are pretty picky, so no broccoli or carrots, please. What do you think we can whip up with what we have?"
