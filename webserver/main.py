@@ -36,6 +36,10 @@ def reset_package(package):
     package["Points"] = int
     return package
 
+def change_character(idx):
+    agent_app.change_character(idx)
+
+
 #@app.route("/request_reply", methods=['POST'])
 def request_reply(message):
     global dict_package
@@ -61,14 +65,18 @@ def request_reply(message):
     return json.dumps(dict_package)
 
 #@app.route("/start_convo", methods=['GET'])
-def start_convo():
+def start_convo(char_idx = None):
     global dict_package
     global log
 
     agent_app.global_ended = False
+
+    if char_idx != None:
+        agent_app.change_character(char_idx)
+    
     try :
         agent_app.global_ended = False
-        character_difficulty = characters[0]["difficulty"]
+        character_difficulty = characters[agent_app.character_index]["difficulty"]
         generate_fridge(character_difficulty)
 
         message = f"""[System Information: The fridge currently contains: {agent_app.global_fridge}]
@@ -89,7 +97,7 @@ def end_convo():
     global dict_package
     global log
 
-    with open(f"{SCRIPT_DIR}/log/{agent_app.global_models[1]["key"]}_{characters[0]["name"]}_{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M')}.csv", "a") as f:
+    with open(f"{SCRIPT_DIR}/log/{agent_app.global_models[1]["key"]}_{characters[agent_app.character_index]["name"]}_{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M')}.csv", "a") as f:
         np.savetxt(f, [["Request", "Response"]] + log, fmt="%s", delimiter=",")
     
     log = []
@@ -103,7 +111,7 @@ if __name__ == '__main__' :
             case "request_reply":
                 print(request_reply(request["message"]))
             case "start_convo":
-                print(start_convo())
+                print(start_convo(request.get("char_idx")))) #None if nothing
             case "end_convo":
                 end_convo()
 

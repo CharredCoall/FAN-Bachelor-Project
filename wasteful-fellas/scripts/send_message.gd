@@ -14,6 +14,9 @@ extends TextEdit
 var thread: Thread
 var pipes: Dictionary
 
+signal convo_started
+signal convo_ended
+
 func _ready():
 	thread = Thread.new()
 	thread.start(_run_server)
@@ -95,6 +98,9 @@ func _on_timer_timeout() -> void:
 func _on_end_convo_button_pressed() -> void:
 	var body = JSON.stringify({"path": "end_convo"})
 	pipes.stdio.store_line(body)
+	
+	emit_signal("convo_ended")
+	
 	_end_convo()
 
 func _end_convo():
@@ -111,12 +117,18 @@ func _end_convo():
 	end_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	end_label.add_theme_color_override("font_color", Color.GRAY)
 	
+	if globals.current_char < 4:
+		globals.current_char += 1
+	
 	vcontainer.add_child(end_label)
+	
 
 
 func _on_start_convo_pressed() -> void:
-	var body = JSON.stringify({"path": "start_convo"})
+	var body = JSON.stringify({"path": "start_convo","char_idx": globals.current_char})
 	pipes.stdio.store_line(body)
+	
+	emit_signal("convo_started")
 		
 	$"../../../Client/Panel/EndConvoButton".disabled = false
 	

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dbwid30bnsge7"
-path="res://.godot/imported/green_kitchen.jpg-be4c5090ef4c8263889e9802358e98b0.ctex"
+uid="uid://cd4y7ceei8773"
+path="res://.godot/imported/Cecilia.png-7acbc96ad2d9e3eaba8b250288d43985.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/NPC backgrounds/green_kitchen.jpg"
-dest_files=["res://.godot/imported/green_kitchen.jpg-be4c5090ef4c8263889e9802358e98b0.ctex"]
+source_file="res://art/NPCs/Cecilia.png"
+dest_files=["res://.godot/imported/Cecilia.png-7acbc96ad2d9e3eaba8b250288d43985.ctex"]
 
 [params]
 

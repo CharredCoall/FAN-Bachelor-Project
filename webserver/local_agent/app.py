@@ -82,6 +82,10 @@ POSSIBLE_INGREDIENTS = [
     "pear", "grapefruit", "pineapple", "coconut", "fig", "papaya", "pomegranate",
 ]
 
+character_index = 0
+agent = None
+
+
 def generate_fridge(difficulty:int) -> dict[str,int]:
     global global_fridge
 
@@ -208,32 +212,46 @@ tool_list = [final_answer, count_fridge, take_from_fridge, calculate_points, end
 # If the agent does not answer, the model is overloaded, please use another model or the following Hugging Face Endpoint that also contains qwen2.5 coder:
 # model_id='https://pflgm2locj2t89co.us-east-1.aws.endpoints.huggingface.cloud' 
 
-model = InferenceClientModel(
-max_tokens=2096,
-temperature=0.5,
-model_id=global_models[1]["name"],
-custom_role_conversions=None,
-api_key=os.environ["HF_API_TOKEN"]
-)
-
-prompt_path = os.path.join(SCRIPT_DIR, "Character_prompts", characters[0]["prompt_file"])
-
-with open(prompt_path, 'r') as stream:
-    prompt_templates = yaml.safe_load(stream)
+def change_character(idx):
+    global character_index
     
-logger = AgentLogger(2, Console(quiet = True))
+    if idx > 0 and idx < len(characters):
+        character_index = idx
+        load_model()
 
-agent = CodeAgent(
-    model=model,
-    tools=tool_list, 
-    max_steps=4,
-    verbosity_level=1,
-    planning_interval=None,
-    name=None,
-    description=None,
-    prompt_templates=prompt_templates,
-    logger = logger
-)
+
+def load_model():
+    global agent
+    global character_index
+
+    model = InferenceClientModel(
+    max_tokens=2096,
+    temperature=0.5,
+    model_id=global_models[1]["name"],
+    custom_role_conversions=None,
+    api_key=os.environ["HF_API_TOKEN"]
+    )
+
+    prompt_path = os.path.join(SCRIPT_DIR, "Character_prompts", characters[character_index]["prompt_file"])
+
+    with open(prompt_path, 'r') as stream:
+        prompt_templates = yaml.safe_load(stream)
+    
+    logger = AgentLogger(2, Console(quiet = True))
+
+    agent = CodeAgent(
+        model=model,
+        tools=tool_list, 
+        max_steps=4,
+        verbosity_level=1,
+        planning_interval=None,
+        name=None,
+        description=None,
+        prompt_templates=prompt_templates,
+        logger = logger
+    )
+
+load_model()
 
 
 def chat_with_npc():

@@ -34,3 +34,14 @@ func _on_top_bar_button_up() -> void:
 
 func _on_close_pressed() -> void:
 	visible = false
+
+
+func _on_convo_started() -> void: #conected via write message signal
+	$"Panel/BG".texture = load("res://art/NPC backgrounds/" + globals.characters[globals.current_char] + "_BG.jpg")
+	$"Panel/Character".texture = load("res://art/NPCs/" + globals.characters[globals.current_char] + ".png")
+
+
+func _on_convo_ended() -> void:
+	$"Panel/BG".texture = null
+	$"Panel/Character".texture = null
+	

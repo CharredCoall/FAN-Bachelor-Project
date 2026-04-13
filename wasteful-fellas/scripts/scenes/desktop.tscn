@@ -10,9 +10,7 @@
 [ext_resource type="Script" uid="uid://bqsf8ax0k1ojp" path="res://scripts/send_message.gd" id="7_bqgb8"]
 [ext_resource type="Texture2D" uid="uid://bxrjqyndqlwm" path="res://art/camera_button.png" id="7_djp82"]
 [ext_resource type="Texture2D" uid="uid://ccjruna8i5wg0" path="res://art/fridge_button.png" id="8_2kcag"]
-[ext_resource type="Texture2D" uid="uid://dbwid30bnsge7" path="res://art/NPC backgrounds/green_kitchen.jpg" id="8_4v376"]
 [ext_resource type="Texture2D" uid="uid://lkj8vr34efhx" path="res://art/triangle.png" id="9_efn2e"]
-[ext_resource type="Texture2D" uid="uid://dqneyg7riylqk" path="res://art/NPCs/old_man_placeholder.png" id="9_nd18o"]
 [ext_resource type="Texture2D" uid="uid://q1u04r5nrljv" path="res://art/points_button.png" id="9_ppp2o"]
 [ext_resource type="Texture2D" uid="uid://cj0ouujl4f575" path="res://art/hang_up_icon.png" id="10_lexak"]
 [ext_resource type="Script" uid="uid://dfiugjllsvrrr" path="res://scripts/window.gd" id="11_nd18o"]
@@ -449,11 +447,10 @@ offset_bottom = 511.0
 modulate = Color(0.7195469, 0.76396143, 0.7295584, 0.827451)
 position = Vector2(334.50003, 244.5)
 scale = Vector2(1.155102, 1.1882353)
-texture = ExtResource("8_4v376")
 
 [node name="Character" type="Sprite2D" parent="Client/Panel" unique_id=1168780267]
-position = Vector2(181.99997, 248)
-texture = ExtResource("9_nd18o")
+position = Vector2(216.00002, 229)
+scale = Vector2(0.48356488, 0.48356488)
 
 [node name="ColorRect" type="ColorRect" parent="Client/Panel" unique_id=1607098207]
 layout_mode = 0
@@ -527,6 +524,8 @@ vertical_alignment = 1
 [connection signal="button_down" from="Waste Planner/TopBar" to="Waste Planner" method="_on_top_bar_button_down"]
 [connection signal="button_up" from="Waste Planner/TopBar" to="Waste Planner" method="_on_top_bar_button_up"]
 [connection signal="pressed" from="Waste Planner/Close" to="Waste Planner" method="_on_close_pressed"]
+[connection signal="convo_ended" from="Waste Planner/Panel/WriteMessage" to="Client" method="_on_convo_ended"]
+[connection signal="convo_started" from="Waste Planner/Panel/WriteMessage" to="Client" method="_on_convo_started"]
 [connection signal="text_changed" from="Waste Planner/Panel/WriteMessage" to="Waste Planner/Panel/WriteMessage" method="_on_text_changed"]
 [connection signal="timeout" from="Waste Planner/Panel/WriteMessage/Timer" to="Waste Planner/Panel/WriteMessage" method="_on_timer_timeout"]
 [connection signal="pressed" from="Waste Planner/Panel/Button" to="Waste Planner/Panel/WriteMessage" method="SendServerMessage"]
