@@ -30,3 +30,7 @@ func _on_top_bar_button_down() -> void:
 
 func _on_top_bar_button_up() -> void:
 	pressing = false
+
+
+func _on_close_pressed() -> void:
+	visible = false

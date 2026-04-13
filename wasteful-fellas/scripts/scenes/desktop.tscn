@@ -8,8 +8,12 @@
 [ext_resource type="Texture2D" uid="uid://b7wv2ntcdqryi" path="res://art/dot.png" id="5_67y07"]
 [ext_resource type="Texture2D" uid="uid://b1k8xs7mv8y7s" path="res://art/folder_button.webp" id="5_nf8vl"]
 [ext_resource type="Script" uid="uid://bqsf8ax0k1ojp" path="res://scripts/send_message.gd" id="7_bqgb8"]
+[ext_resource type="Texture2D" uid="uid://bxrjqyndqlwm" path="res://art/camera_button.png" id="7_djp82"]
+[ext_resource type="Texture2D" uid="uid://ccjruna8i5wg0" path="res://art/fridge_button.png" id="8_2kcag"]
 [ext_resource type="Texture2D" uid="uid://dbwid30bnsge7" path="res://art/NPC backgrounds/green_kitchen.jpg" id="8_4v376"]
+[ext_resource type="Texture2D" uid="uid://lkj8vr34efhx" path="res://art/triangle.png" id="9_efn2e"]
 [ext_resource type="Texture2D" uid="uid://dqneyg7riylqk" path="res://art/NPCs/old_man_placeholder.png" id="9_nd18o"]
+[ext_resource type="Texture2D" uid="uid://q1u04r5nrljv" path="res://art/points_button.png" id="9_ppp2o"]
 [ext_resource type="Texture2D" uid="uid://cj0ouujl4f575" path="res://art/hang_up_icon.png" id="10_lexak"]
 [ext_resource type="Script" uid="uid://dfiugjllsvrrr" path="res://scripts/window.gd" id="11_nd18o"]
 
@@ -173,14 +177,67 @@ position = Vector2(273.1344, 1038.25)
 scale = Vector2(0.04335931, 0.04345703)
 texture = ExtResource("3_ff6s3")
 
-[node name="RecycleButton" type="Sprite2D" parent="Toolbar" unique_id=1872791979]
-position = Vector2(342.54962, 1040.3438)
+[node name="RecycleButton" type="TextureButton" parent="Toolbar" unique_id=1601357989]
+layout_mode = 0
+offset_left = 320.27814
+offset_top = 1017.99994
+offset_right = 1520.2781
+offset_bottom = 2179.0
 scale = Vector2(0.038941007, 0.03902877)
-texture = ExtResource("4_qrswn")
+texture_normal = ExtResource("4_qrswn")
 
 [node name="Dot" type="Sprite2D" parent="Toolbar/RecycleButton" unique_id=1013967292]
 modulate = Color(0.33607247, 0.37250945, 0.5441873, 0.7294118)
-position = Vector2(17.38086, 708.6094)
+position = Vector2(589.3096, 1281.1055)
+scale = Vector2(0.6755877, 0.6755877)
+texture = ExtResource("5_67y07")
+
+[node name="CameraButton" type="TextureButton" parent="Toolbar" unique_id=1412801861]
+layout_mode = 0
+offset_left = 392.11633
+offset_top = 1016.00006
+offset_right = 1592.1163
+offset_bottom = 2177.0
+scale = Vector2(0.038941007, 0.03902877)
+texture_normal = ExtResource("7_djp82")
+stretch_mode = 0
+
+[node name="Dot" type="Sprite2D" parent="Toolbar/CameraButton" unique_id=1252527423]
+modulate = Color(0.33607247, 0.37250945, 0.5441873, 0.7294118)
+position = Vector2(589.3096, 1281.1055)
+scale = Vector2(0.6755877, 0.6755877)
+texture = ExtResource("5_67y07")
+
+[node name="FridgeButton" type="TextureButton" parent="Toolbar" unique_id=1927755704]
+layout_mode = 0
+offset_left = 461.95892
+offset_top = 1016.00006
+offset_right = 1661.959
+offset_bottom = 2177.0
+scale = Vector2(0.038941007, 0.03902877)
+texture_normal = ExtResource("8_2kcag")
+stretch_mode = 0
+
+[node name="Dot" type="Sprite2D" parent="Toolbar/FridgeButton" unique_id=623802499]
+modulate = Color(0.33607247, 0.37250945, 0.5441873, 0.7294118)
+position = Vector2(589.3096, 1281.1055)
+scale = Vector2(0.6755877, 0.6755877)
+texture = ExtResource("5_67y07")
+
+[node name="PointsButton" type="TextureButton" parent="Toolbar" unique_id=46508110]
+layout_mode = 0
+offset_left = 528.8082
+offset_top = 1014.99994
+offset_right = 1728.8082
+offset_bottom = 2176.0
+scale = Vector2(0.038941007, 0.03902877)
+texture_normal = ExtResource("9_ppp2o")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Dot" type="Sprite2D" parent="Toolbar/PointsButton" unique_id=659759883]
+modulate = Color(0.33607247, 0.37250945, 0.5441873, 0.7294118)
+position = Vector2(589.3096, 1281.1055)
 scale = Vector2(0.6755877, 0.6755877)
 texture = ExtResource("5_67y07")
 
@@ -256,6 +313,18 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_efn2e")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_gvy4x")
 text = "   Waste"
 alignment = 0
+
+[node name="Close" type="TextureButton" parent="Waste Planner" unique_id=1834067119]
+visible = false
+layout_mode = 0
+offset_left = 1256.4642
+offset_top = 29.0
+offset_right = 1275.9612
+offset_bottom = 44.50731
+rotation = 3.1415927
+texture_normal = ExtResource("9_efn2e")
+ignore_texture_size = true
+stretch_mode = 0
 
 [node name="Panel" type="Panel" parent="Waste Planner" unique_id=739212009]
 layout_mode = 0
@@ -449,10 +518,15 @@ text = "0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[connection signal="pressed" from="Toolbar/RecycleButton" to="." method="_on_app_pressed" binds= ["RecycleButton"]]
+[connection signal="pressed" from="Toolbar/CameraButton" to="." method="_on_app_pressed" binds= ["CameraButton"]]
+[connection signal="pressed" from="Toolbar/FridgeButton" to="." method="_on_app_pressed" binds= ["FridgeButton"]]
+[connection signal="pressed" from="Toolbar/PointsButton" to="." method="_on_app_pressed" binds= ["PointsButton"]]
 [connection signal="button_down" from="Client\'s Fridge/TopBar" to="Client\'s Fridge" method="_on_top_bar_button_down"]
 [connection signal="button_up" from="Client\'s Fridge/TopBar" to="Client\'s Fridge" method="_on_top_bar_button_up"]
 [connection signal="button_down" from="Waste Planner/TopBar" to="Waste Planner" method="_on_top_bar_button_down"]
 [connection signal="button_up" from="Waste Planner/TopBar" to="Waste Planner" method="_on_top_bar_button_up"]
+[connection signal="pressed" from="Waste Planner/Close" to="Waste Planner" method="_on_close_pressed"]
 [connection signal="text_changed" from="Waste Planner/Panel/WriteMessage" to="Waste Planner/Panel/WriteMessage" method="_on_text_changed"]
 [connection signal="timeout" from="Waste Planner/Panel/WriteMessage/Timer" to="Waste Planner/Panel/WriteMessage" method="_on_timer_timeout"]
 [connection signal="pressed" from="Waste Planner/Panel/Button" to="Waste Planner/Panel/WriteMessage" method="SendServerMessage"]
