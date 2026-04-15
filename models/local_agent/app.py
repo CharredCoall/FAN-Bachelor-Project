@@ -4,6 +4,7 @@ import yaml
 import os
 import sys
 import random
+import numpy as np
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(SCRIPT_DIR)
@@ -83,6 +84,7 @@ POSSIBLE_INGREDIENTS = [
 ]
 
 character_index = 0
+model_index = 0
 agent = None
 
 
@@ -223,11 +225,14 @@ def change_character(idx):
 def load_model():
     global agent
     global character_index
+    global model_index
+
+    model_index = np.random.random_integers(0, 4)
 
     model = InferenceClientModel(
     max_tokens=2096,
     temperature=0.5,
-    model_id=global_models[1]["name"],
+    model_id=global_models[model_index]["name"],
     custom_role_conversions=None,
     api_key=os.environ["HF_API_TOKEN"]
     )
