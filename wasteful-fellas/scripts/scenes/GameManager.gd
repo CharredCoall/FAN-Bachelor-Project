@@ -32,6 +32,8 @@ func _on_app_pressed(butt_name) -> void:
 			window = $"Client Satisfaction"
 		"FridgeButton":
 			window = $"Client's Fridge"
+		"HelpButton":
+			window = $"Work Guide"
 	
 	window.visible = !window.visible
 	globals.max_window_index += 1

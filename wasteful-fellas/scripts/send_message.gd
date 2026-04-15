@@ -98,13 +98,11 @@ func _on_timer_timeout() -> void:
 func _on_end_convo_button_pressed() -> void:
 	var body = JSON.stringify({"path": "end_convo"})
 	pipes.stdio.store_line(body)
-	
-	emit_signal("convo_ended")
-	
 	_end_convo()
 
 func _end_convo():
 	editable = false
+	emit_signal("convo_ended")
 	
 	$"../Button".disabled = true
 	

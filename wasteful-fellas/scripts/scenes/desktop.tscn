@@ -12,8 +12,10 @@
 [ext_resource type="Texture2D" uid="uid://ccjruna8i5wg0" path="res://art/fridge_button.png" id="8_2kcag"]
 [ext_resource type="Texture2D" uid="uid://lkj8vr34efhx" path="res://art/triangle.png" id="9_efn2e"]
 [ext_resource type="Texture2D" uid="uid://q1u04r5nrljv" path="res://art/points_button.png" id="9_ppp2o"]
+[ext_resource type="Texture2D" uid="uid://kimp75u03vly" path="res://art/help_button.png" id="10_1hnyq"]
 [ext_resource type="Texture2D" uid="uid://cj0ouujl4f575" path="res://art/hang_up_icon.png" id="10_lexak"]
 [ext_resource type="Script" uid="uid://dfiugjllsvrrr" path="res://scripts/window.gd" id="11_nd18o"]
+[ext_resource type="Texture2D" uid="uid://cvw33fegp4lu4" path="res://art/tutorial1.png" id="15_djp82"]
 
 [sub_resource type="Gradient" id="Gradient_lexak"]
 colors = PackedColorArray(0.05490196, 0.14117648, 0.3372549, 0.7921569, 1, 1, 1, 0)
@@ -185,6 +187,7 @@ scale = Vector2(0.038941007, 0.03902877)
 texture_normal = ExtResource("4_qrswn")
 
 [node name="Dot" type="Sprite2D" parent="Toolbar/RecycleButton" unique_id=1013967292]
+visible = false
 modulate = Color(0.33607247, 0.37250945, 0.5441873, 0.7294118)
 position = Vector2(589.3096, 1281.1055)
 scale = Vector2(0.6755877, 0.6755877)
@@ -201,6 +204,7 @@ texture_normal = ExtResource("7_djp82")
 stretch_mode = 0
 
 [node name="Dot" type="Sprite2D" parent="Toolbar/CameraButton" unique_id=1252527423]
+visible = false
 modulate = Color(0.33607247, 0.37250945, 0.5441873, 0.7294118)
 position = Vector2(589.3096, 1281.1055)
 scale = Vector2(0.6755877, 0.6755877)
@@ -217,6 +221,7 @@ texture_normal = ExtResource("8_2kcag")
 stretch_mode = 0
 
 [node name="Dot" type="Sprite2D" parent="Toolbar/FridgeButton" unique_id=623802499]
+visible = false
 modulate = Color(0.33607247, 0.37250945, 0.5441873, 0.7294118)
 position = Vector2(589.3096, 1281.1055)
 scale = Vector2(0.6755877, 0.6755877)
@@ -234,8 +239,26 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Dot" type="Sprite2D" parent="Toolbar/PointsButton" unique_id=659759883]
+visible = false
 modulate = Color(0.33607247, 0.37250945, 0.5441873, 0.7294118)
 position = Vector2(589.3096, 1281.1055)
+scale = Vector2(0.6755877, 0.6755877)
+texture = ExtResource("5_67y07")
+
+[node name="HelpButton" type="TextureButton" parent="Toolbar" unique_id=773831810]
+layout_mode = 0
+offset_left = 599.7491
+offset_top = 1015.00006
+offset_right = 1685.5432
+offset_bottom = 2065.5059
+scale = Vector2(0.038941007, 0.03902877)
+texture_normal = ExtResource("10_1hnyq")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Dot" type="Sprite2D" parent="Toolbar/HelpButton" unique_id=1501351980]
+modulate = Color(0.33607247, 0.37250945, 0.5441873, 0.7294118)
+position = Vector2(538.0654, 1281.1211)
 scale = Vector2(0.6755877, 0.6755877)
 texture = ExtResource("5_67y07")
 
@@ -245,6 +268,7 @@ scale = Vector2(0.11594965, 0.116210975)
 texture = ExtResource("5_nf8vl")
 
 [node name="Client\'s Fridge" type="ColorRect" parent="." unique_id=878269905]
+visible = false
 offset_left = 1363.0
 offset_top = 628.0
 offset_right = 1786.0
@@ -289,6 +313,7 @@ text = "  Items in fridge:
 "
 
 [node name="Waste Planner" type="ColorRect" parent="." unique_id=322381158]
+visible = false
 offset_left = 47.0
 offset_top = 67.0
 offset_right = 1316.0
@@ -411,7 +436,233 @@ horizontal_scroll_mode = 0
 custom_minimum_size = Vector2(800, 5000)
 layout_mode = 2
 
+[node name="Work Guide" type="ColorRect" parent="." unique_id=1123792481]
+offset_left = 414.0
+offset_top = 46.0
+offset_right = 1552.0
+offset_bottom = 950.0
+color = Color(0.2581615, 0.57725954, 0.9219131, 1)
+script = ExtResource("11_nd18o")
+
+[node name="TopBar" type="Button" parent="Work Guide" unique_id=1392853226]
+layout_mode = 0
+offset_left = -1.0
+offset_right = 1224.0
+offset_bottom = 39.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_nd18o")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_lexak")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_efn2e")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_gvy4x")
+text = "   Waste"
+alignment = 0
+
+[node name="Close" type="TextureButton" parent="Work Guide" unique_id=342951912]
+visible = false
+layout_mode = 0
+offset_left = 1256.4642
+offset_top = 29.0
+offset_right = 1275.9612
+offset_bottom = 44.50731
+rotation = 3.1415927
+texture_normal = ExtResource("9_efn2e")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Panel" type="Panel" parent="Work Guide" unique_id=1406194697]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 40.0
+offset_right = 1130.0
+offset_bottom = 845.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_efn2e")
+
+[node name="ColorRect" type="ColorRect" parent="Work Guide/Panel" unique_id=1061278776]
+visible = false
+layout_mode = 0
+offset_right = 385.0
+offset_bottom = 585.0
+color = Color(0.519767, 0.79812884, 0.5755315, 1)
+
+[node name="gradient" type="Sprite2D" parent="Work Guide/Panel" unique_id=454225379]
+position = Vector2(561.83954, 428.0071)
+rotation = -1.5707964
+scale = Vector2(3.347713, 1123.3052)
+texture = SubResource("GradientTexture1D_67y07")
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Work Guide/Panel" unique_id=990280903]
+visible = false
+layout_mode = 0
+offset_left = 197.0
+offset_top = 154.0
+offset_right = 936.0
+offset_bottom = 568.0
+theme_override_colors/default_color = Color(0.23119366, 0.3662076, 0.5810717, 1)
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "[center]We, here at ReFridge inc., are excited to help you get started working. Your task is simple: you need to help clients use as many ingredients from their fridge as possible. The more satisfied the clients are with your help, the higher your pay at the end of the day will be. So put on a smile, and represent our company well!
+
+For further details, read below:"
+scroll_active = false
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Work Guide/Panel" unique_id=938487688]
+visible = false
+layout_mode = 0
+offset_left = 1.0
+offset_top = 49.0
+offset_right = 1122.0
+offset_bottom = 142.0
+theme_override_colors/default_color = Color(0.23119366, 0.3662076, 0.5810717, 1)
+theme_override_font_sizes/normal_font_size = 46
+bbcode_enabled = true
+text = "[center]WELCOME TO YOUR BRAND NEW JOB!"
+scroll_active = false
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Work Guide/Panel" unique_id=1655169894]
+layout_mode = 0
+offset_left = 82.0
+offset_top = -2.0
+offset_right = 1124.0
+offset_bottom = 856.0
+horizontal_scroll_mode = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Work Guide/Panel/ScrollContainer" unique_id=876151677]
+custom_minimum_size = Vector2(943.61, 2300)
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Work Guide/Panel/ScrollContainer/VBoxContainer" unique_id=2071062520]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.23119366, 0.3662076, 0.5810717, 1)
+theme_override_font_sizes/normal_font_size = 46
+bbcode_enabled = true
+text = "[center]
+WELCOME TO YOUR BRAND NEW JOB!"
+fit_content = true
+scroll_active = false
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="Work Guide/Panel/ScrollContainer/VBoxContainer" unique_id=2073065268]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.23119366, 0.3662076, 0.5810717, 1)
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "[center]
+We, here at ReFridge inc., are excited to help 
+you get started working. Your task is simple: 
+you need to help clients use as many ingredients 
+from their fridge as possible. The more satisfied 
+the clients are with your help, the higher your pay 
+at the end of the day will be. So put on a smile, and 
+represent our company well!
+
+For further guidance, continue reading:"
+fit_content = true
+scroll_active = false
+
+[node name="Tutorial1" type="Sprite2D" parent="Work Guide/Panel/ScrollContainer/VBoxContainer" unique_id=1674183391]
+position = Vector2(474, 541)
+scale = Vector2(0.43287033, 0.43287033)
+texture = ExtResource("15_djp82")
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="Work Guide/Panel/ScrollContainer/VBoxContainer" unique_id=777506727]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.23119366, 0.3662076, 0.5810717, 1)
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "[center]
+
+
+
+At the bottom left you see your toolbar. Click any of 
+these icons to open the respective app. When the app 
+is open, you'll see a dot underneath. To close the app 
+simply click the icon when the window is open.
+
+The apps:"
+fit_content = true
+scroll_active = false
+
+[node name="RecycleButton" type="Sprite2D" parent="Work Guide/Panel/ScrollContainer/VBoxContainer" unique_id=1148236798]
+position = Vector2(220, 887.9995)
+scale = Vector2(0.101690315, 0.10169031)
+texture = ExtResource("4_qrswn")
+
+[node name="RichTextLabel5" type="RichTextLabel" parent="Work Guide/Panel/ScrollContainer/VBoxContainer" unique_id=1412381876]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.23119366, 0.3662076, 0.5810717, 1)
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "			Waste Planner:
+			This is what you will use to talk to clients
+			and thereby earn you pay!
+			Open this and you should quickly see that 
+			a client has started a conversation in the 
+			green area to the left.
+
+			The Fridge:
+			Here the ingredients that your client has
+			in their fridge, will be displayed. As they use
+			ingredients for your meal recommendation,
+			you'll see the ingredients disappear.
+
+			Client Satisfaction:
+			Here you will see how satisfied the client is
+			with your consultation. Max satisfaction is
+			dependent on the number of items in the 
+			fridge.
+
+			Webcam:
+			Here you will be able to see the client you're
+			talking to. Remember, they can see you too, 
+			so smile!"
+fit_content = true
+scroll_active = false
+tab_size = 18
+
+[node name="FridgeButton" type="Sprite2D" parent="Work Guide/Panel/ScrollContainer/VBoxContainer" unique_id=1031963188]
+position = Vector2(223.25, 1111.25)
+scale = Vector2(0.3486111, 0.3486111)
+texture = ExtResource("8_2kcag")
+
+[node name="PointsButton" type="Sprite2D" parent="Work Guide/Panel/ScrollContainer/VBoxContainer" unique_id=1930154764]
+position = Vector2(223, 1323)
+scale = Vector2(0.057903096, 0.057903077)
+texture = ExtResource("9_ppp2o")
+
+[node name="CameraButton" type="Sprite2D" parent="Work Guide/Panel/ScrollContainer/VBoxContainer" unique_id=1126884050]
+position = Vector2(224.375, 1517.3752)
+scale = Vector2(0.22509769, 0.22509769)
+texture = ExtResource("7_djp82")
+
+[node name="RichTextLabel6" type="RichTextLabel" parent="Work Guide/Panel/ScrollContainer/VBoxContainer" unique_id=1437849050]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.23119366, 0.3662076, 0.5810717, 1)
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "[center]
+INSERT STUFF ABOUT USING THE PLANNER! (like the client
+can hang up, but you can too)
+...
+
+INSERT FUNNY THING ABOUT SATISFACTION POINTS TO 
+MONEY CONVERSION!
+...
+
+That is all you need to know to get started with your work.
+Remember, ReFridge inc. is a company that strives to keep
+food out of the trash, by serving with a smile.
+We help, so that you waste less and trust more! 
+One fridge at a time.
+
+Make us proud.
+INSERT REFRIDGE LOGO"
+fit_content = true
+scroll_active = false
+
 [node name="Client" type="ColorRect" parent="." unique_id=1503985887]
+visible = false
 offset_left = 1348.0
 offset_top = 73.0
 offset_right = 1759.0
@@ -470,6 +721,7 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Client Satisfaction" type="ColorRect" parent="." unique_id=1138101869]
+visible = false
 offset_left = 1649.0
 offset_top = 516.0
 offset_right = 1879.0
@@ -519,6 +771,7 @@ vertical_alignment = 1
 [connection signal="pressed" from="Toolbar/CameraButton" to="." method="_on_app_pressed" binds= ["CameraButton"]]
 [connection signal="pressed" from="Toolbar/FridgeButton" to="." method="_on_app_pressed" binds= ["FridgeButton"]]
 [connection signal="pressed" from="Toolbar/PointsButton" to="." method="_on_app_pressed" binds= ["PointsButton"]]
+[connection signal="pressed" from="Toolbar/HelpButton" to="." method="_on_app_pressed" binds= ["HelpButton"]]
 [connection signal="button_down" from="Client\'s Fridge/TopBar" to="Client\'s Fridge" method="_on_top_bar_button_down"]
 [connection signal="button_up" from="Client\'s Fridge/TopBar" to="Client\'s Fridge" method="_on_top_bar_button_up"]
 [connection signal="button_down" from="Waste Planner/TopBar" to="Waste Planner" method="_on_top_bar_button_down"]
@@ -530,6 +783,9 @@ vertical_alignment = 1
 [connection signal="timeout" from="Waste Planner/Panel/WriteMessage/Timer" to="Waste Planner/Panel/WriteMessage" method="_on_timer_timeout"]
 [connection signal="pressed" from="Waste Planner/Panel/Button" to="Waste Planner/Panel/WriteMessage" method="SendServerMessage"]
 [connection signal="pressed" from="Waste Planner/Panel/StartConvo" to="Waste Planner/Panel/WriteMessage" method="_on_start_convo_pressed"]
+[connection signal="button_down" from="Work Guide/TopBar" to="Work Guide" method="_on_top_bar_button_down"]
+[connection signal="button_up" from="Work Guide/TopBar" to="Work Guide" method="_on_top_bar_button_up"]
+[connection signal="pressed" from="Work Guide/Close" to="Work Guide" method="_on_close_pressed"]
 [connection signal="button_down" from="Client/TopBar" to="Client" method="_on_top_bar_button_down"]
 [connection signal="button_up" from="Client/TopBar" to="Client" method="_on_top_bar_button_up"]
 [connection signal="pressed" from="Client/Panel/EndConvoButton" to="Waste Planner/Panel/WriteMessage" method="_on_end_convo_button_pressed"]
