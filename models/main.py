@@ -97,7 +97,7 @@ def end_convo():
     global dict_package
     global log
 
-    with open(f"{SCRIPT_DIR}/log/{agent_app.global_models[1]["key"]}_{characters[agent_app.character_index]["name"]}_{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M')}.csv", "a") as f:
+    with open(f"{SCRIPT_DIR}/log/{agent_app.global_models[agent_app.model_index]["key"]}_{characters[agent_app.character_index]["name"]}_{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M')}.csv", "a") as f:
         np.savetxt(f, [["Request", "Response"]] + log, fmt="%s", delimiter=",")
     
     log = []

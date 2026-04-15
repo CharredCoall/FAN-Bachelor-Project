@@ -4,6 +4,7 @@ import yaml
 import os
 import sys
 import random
+import numpy as np
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(SCRIPT_DIR)
@@ -83,6 +84,7 @@ POSSIBLE_INGREDIENTS = [
 ]
 
 character_index = 0
+model_index = 0
 agent = None
 
 
@@ -92,23 +94,23 @@ def generate_fridge(difficulty:int) -> dict[str,int]:
     # Difficulty setting for the fridge:
     # 1 easy - 5 hard
     if difficulty == 1:
-        unique_items_range = (4, 7)
-        item_amount_range = (1, 3)
+        unique_items_range = (6, 10)
+        item_amount_range = (1, 5)
     elif difficulty == 2:
         unique_items_range = (8, 12)
-        item_amount_range = (2, 5)
+        item_amount_range = (2, 6)
     elif difficulty == 3:
-        unique_items_range = (13, 18)
-        item_amount_range = (3, 8)
+        unique_items_range = (10, 14)
+        item_amount_range = (3, 7)
     elif difficulty == 4:
-        unique_items_range = (19, 24)
-        item_amount_range = (4, 10)
+        unique_items_range = (12, 16)
+        item_amount_range = (3, 8)
     elif difficulty >= 5:
-        unique_items_range = (25, 30)
-        item_amount_range = (5, 12)
+        unique_items_range = (14, 18)
+        item_amount_range = (3, 9)
     else:
-        unique_items_range = (4, 7)
-        item_amount_range = (1, 3)
+        unique_items_range = (5, 8)
+        item_amount_range = (1, 5)
     
     # unique items
     num_unique_items = random.randint(*unique_items_range)
@@ -223,11 +225,14 @@ def change_character(idx):
 def load_model():
     global agent
     global character_index
+    global model_index
+
+    model_index = np.random.random_integers(0, 4) # Random model selection
 
     model = InferenceClientModel(
     max_tokens=2096,
     temperature=0.5,
-    model_id=global_models[1]["name"],
+    model_id=global_models[model_index]["name"],
     custom_role_conversions=None,
     api_key=os.environ["HF_API_TOKEN"]
     )
