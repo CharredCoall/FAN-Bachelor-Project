@@ -227,7 +227,7 @@ def load_model():
     global character_index
     global model_index
 
-    model_index = np.random.random_integers(0, 4)
+    model_index = np.random.random_integers(0, 4) # Random model selection
 
     model = InferenceClientModel(
     max_tokens=2096,
