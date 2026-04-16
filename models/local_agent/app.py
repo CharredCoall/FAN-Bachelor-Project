@@ -41,10 +41,6 @@ characters = [
 
 global_models = [
     {
-        "name": "Qwen/Qwen2.5-Coder-32B-Instruct",
-        "key": "srX5Dt3K0nfX3fQ4"
-    },
-    {
         "name": "Qwen/Qwen2.5-72B-Instruct",
         "key": "yfYXmOJTWZj9daLG"
     },
@@ -53,11 +49,15 @@ global_models = [
         "key": "hdRm7wScJqOvmVze"
     },
     {
-        "name": "deepseek-ai/DeepSeek-Coder-V2-Instruct",
+        "name": "deepseek-ai/DeepSeek-R1-Distill-Llama-70B", # Creator: DeepSeek 
         "key": "4vPloGeWwi6swcOq"
     },
     {
-        "name": "google/gemma-2-27b-it",
+        "name": "nvidia/Llama-3.1-Nemotron-70B-Instruct-HF", # Creator: Nvidia 
+        "key": "srX5Dt3K0nfX3fQ4" 
+    },
+    {
+        "name": "NousResearch/Hermes-3-Llama-3.1-70B",   # Creator: Nous Research 
         "key": "X6IQnIqkWWKi8Gyz"
     }
 ]
