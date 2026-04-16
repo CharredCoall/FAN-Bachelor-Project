@@ -1,4 +1,4 @@
-from smolagents import CodeAgent, InferenceClientModel, AgentLogger, load_tool, tool
+from smolagents import CodeAgent, LiteLLMModel, AgentLogger, load_tool, tool
 from rich.console import Console
 import yaml
 import os
@@ -49,15 +49,15 @@ global_models = [
         "key": "hdRm7wScJqOvmVze"
     },
     {
-        "name": "deepseek-ai/DeepSeek-R1-Distill-Llama-70B", # Creator: DeepSeek 
+        "name": "deepseek-ai/DeepSeek-R1-Distill-Llama-70B", 
         "key": "4vPloGeWwi6swcOq"
     },
     {
-        "name": "nvidia/Llama-3.1-Nemotron-70B-Instruct-HF", # Creator: Nvidia 
+        "name": "nvidia/Llama-3.1-Nemotron-70B-Instruct-HF", 
         "key": "srX5Dt3K0nfX3fQ4" 
     },
     {
-        "name": "NousResearch/Hermes-3-Llama-3.1-70B",   # Creator: Nous Research 
+        "name": "NousResearch/Hermes-3-Llama-3.1-70B",
         "key": "X6IQnIqkWWKi8Gyz"
     }
 ]
@@ -229,13 +229,22 @@ def load_model():
 
     model_index = random.randint(0, 4) # Random model selection
 
-    model = InferenceClientModel(
-    max_tokens=2096,
-    temperature=0.5,
-    model_id=global_models[model_index]["name"],
-    custom_role_conversions=None,
-    api_key=os.environ["HF_API_TOKEN"]
+    model = LiteLLMModel(
+        #model_id=global_models[model_index]["name"],
+        model_id=global_models[0]["name"],
+        api_key="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",
+        temperature=0.5,
+        max_tokens=2096,
     )
+
+    #model = InferenceClientModel(
+    #max_tokens=2096,
+    #temperature=0.5,
+    #model_id=global_models[model_index]["name"],
+    #model_id=global_models[4]["name"],
+    #custom_role_conversions=None,
+    #api_key=os.environ["HF_API_TOKEN"]
+    #)
 
     prompt_path = os.path.join(SCRIPT_DIR, "Character_prompts", characters[character_index]["prompt_file"])
 

@@ -14,7 +14,7 @@ log = []
 
 dict_package = {
     "Response": "",
-    "Fridge": {"":0},
+    "Fridge": {},
     "Points": 0,
     "Ended": True
 }
@@ -33,7 +33,7 @@ def reset_points(package):
 
 def reset_package(package):
     package["Response"] = ""
-    package["Fridge"] = {"":0}
+    package["Fridge"] = {}
     agent_app.global_points = 0
     package["Points"] = agent_app.global_points
     return package
@@ -61,8 +61,8 @@ def request_reply(message):
 
         log.append(['"' + message + '"', '"' + response + '"'])
         dict_package = update_package(dict_package, response)
-    except:
-        return json.dumps("Something didn't work")
+    except Exception as e:
+        return json.dumps({"error": f"Python Exception: {str(e)}"})
     
     return json.dumps(dict_package)
 
@@ -89,8 +89,8 @@ def start_convo(char_idx = None):
         
         log = []
         log.append(['"' + message + '"', '"' + response + '"'])
-    except:
-        return json.dumps("Something didn't work")
+    except Exception as e:
+        return json.dumps({"error": f"Python Exception: {str(e)}"})
     dict_package = update_package(dict_package, response)
     return json.dumps(dict_package)
 
@@ -99,7 +99,8 @@ def end_convo():
     global dict_package
     global log
 
-    with open(f"{SCRIPT_DIR}/log/{agent_app.global_models[agent_app.model_index]["key"]}_{characters[agent_app.character_index]["name"]}_{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M')}.csv", "a") as f:
+    #with open(f"{SCRIPT_DIR}/log/{agent_app.global_models[agent_app.model_index]["key"]}_{characters[agent_app.character_index]["name"]}_{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M')}.csv", "a") as f:
+    with open(f"{SCRIPT_DIR}/log/{agent_app.global_models[0]["key"]}_{characters[agent_app.character_index]["name"]}_{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M')}.csv", "a") as f:
         np.savetxt(f, [["Request", "Response"]] + log, fmt="%s", delimiter=",")
     
     log = []
