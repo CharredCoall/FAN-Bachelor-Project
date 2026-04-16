@@ -142,7 +142,7 @@ func _on_start_convo_pressed() -> void:
 	
 
 func _run_server():
-	pipes = OS.execute_with_pipe("../python/python", ["../webserver/main.py"], false )
+	pipes = OS.execute_with_pipe("../python/python", ["../models/main.py"], false )
 	if pipes.is_empty():
 		print("Error?")
 	else:
