@@ -233,7 +233,6 @@ def load_model():
     max_tokens=2096,
     temperature=0.5,
     model_id=global_models[model_index]["name"],
-    #model_id=global_models[0]["name"],
     custom_role_conversions=None,
     api_key=os.environ["HF_API_TOKEN"]
     )

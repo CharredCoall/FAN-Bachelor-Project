@@ -27,14 +27,15 @@ def update_package(package, model_response):
     return package
 
 def reset_points(package):
-    package["Points"] = 0
     agent_app.global_points = 0
+    package["Points"] = agent_app.global_points
     return package
 
 def reset_package(package):
     package["Response"] = ""
     package["Fridge"] = {"":0}
-    package["Points"] = 0
+    agent_app.global_points = 0
+    package["Points"] = agent_app.global_points
     return package
 
 def change_character(idx):
@@ -99,7 +100,6 @@ def end_convo():
     global log
 
     with open(f"{SCRIPT_DIR}/log/{agent_app.global_models[agent_app.model_index]["key"]}_{characters[agent_app.character_index]["name"]}_{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M')}.csv", "a") as f:
-    #with open(f"{SCRIPT_DIR}/log/{agent_app.global_models[0]["key"]}_{characters[agent_app.character_index]["name"]}_{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M')}.csv", "a") as f:
         np.savetxt(f, [["Request", "Response"]] + log, fmt="%s", delimiter=",")
     
     log = []
