@@ -3,12 +3,15 @@ import sys
 import numpy as np
 import datetime
 import json
+from flask import Flask, request, jsonify
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(SCRIPT_DIR)
 
 from local_agent.app import generate_fridge, characters
 import local_agent.app as agent_app
+
+app = Flask(__name__)
 
 log = []
 
@@ -41,20 +44,21 @@ def reset_package(package):
 def change_character(idx):
     agent_app.change_character(idx)
 
-
-#@app.route("/request_reply", methods=['POST'])
-def request_reply(message):
+@app.route("/request_reply", methods=['POST'])
+def request_reply():
     global dict_package
     global log
     
     try :
         dict_package = reset_points(dict_package)
         
+        message = request.json["message"]
+
         injected_prompt = f"""[System Information: The fridge currently contains: {dict_package["Fridge"]}]
         Player says: "{message}"
         """
 
-        response = agent_app.agent.run(injected_prompt)
+        response = agent_app.agent.run(injected_prompt, reset=False)
 
         if agent_app.global_ended :
              _ = end_convo()
@@ -66,12 +70,14 @@ def request_reply(message):
     
     return json.dumps(dict_package)
 
-#@app.route("/start_convo", methods=['GET'])
-def start_convo(char_idx = None):
+@app.route("/start_convo", methods=['GET'])
+def start_convo():
     global dict_package
     global log
 
     agent_app.global_ended = False
+
+    char_idx = request.json["char_idx"]
 
     if char_idx != None:
         agent_app.change_character(char_idx)
@@ -85,7 +91,7 @@ def start_convo(char_idx = None):
         [System Event: The conversation has just started, and you are speaking first. 
         Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]"""
         
-        response = agent_app.agent.run(message)
+        response = agent_app.agent.run(message, reset=True)
         
         log = []
         log.append(['"' + message + '"', '"' + response + '"'])
@@ -94,27 +100,18 @@ def start_convo(char_idx = None):
     dict_package = update_package(dict_package, response)
     return json.dumps(dict_package)
 
-#@app.route("/end_convo")
+@app.route("/end_convo")
 def end_convo():
     global dict_package
     global log
 
-    with open(f"{SCRIPT_DIR}/log/{agent_app.global_models[agent_app.model_index]["key"]}_{characters[agent_app.character_index]["name"]}_{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M')}.csv", "a") as f:
+    with open(f"{SCRIPT_DIR}/log/{agent_app.global_models[agent_app.model_index]['key']}_{characters[agent_app.character_index]['name']}_{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M')}.csv", "a") as f:
         np.savetxt(f, [["Request", "Response"]] + log, fmt="%s", delimiter=",")
     
     log = []
     dict_package = reset_package(dict_package)
 
 if __name__ == '__main__' :
-    running = True
-    while running:
-        request = json.loads(input())
-        match request["path"]:
-            case "request_reply":
-                print(request_reply(request["message"]))
-            case "start_convo":
-                print(start_convo(request.get("char_idx"))) #None if nothing
-            case "end_convo":
-                end_convo()
+    app.run(debug=True)
 
 
