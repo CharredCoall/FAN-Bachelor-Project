@@ -2,7 +2,6 @@ import os
 import sys
 import numpy as np
 import datetime
-import json
 from flask import Flask, request, jsonify
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -66,9 +65,9 @@ def request_reply():
         log.append(['"' + message + '"', '"' + response + '"'])
         dict_package = update_package(dict_package, response)
     except:
-        return json.dumps("Something didn't work")
+        return jsonify("Something didn't work")
     
-    return json.dumps(dict_package)
+    return jsonify(dict_package)
 
 @app.route("/start_convo", methods=['GET'])
 def start_convo():
@@ -110,6 +109,7 @@ def end_convo():
     
     log = []
     dict_package = reset_package(dict_package)
+    return jsonify([])
 
 if __name__ == '__main__' :
     app.run(debug=True)
