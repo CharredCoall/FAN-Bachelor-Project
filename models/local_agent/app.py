@@ -227,7 +227,7 @@ def load_model():
     global character_index
     global model_index
 
-    model_index = random.randint(0, 4) # Random model selection
+    model_index = 1 #random.randint(0, 4) # Random model selection
 
     model = InferenceClientModel(
     max_tokens=2096,
