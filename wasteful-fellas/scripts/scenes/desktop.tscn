@@ -15,7 +15,13 @@
 [ext_resource type="Texture2D" uid="uid://kimp75u03vly" path="res://art/help_button.png" id="10_1hnyq"]
 [ext_resource type="Texture2D" uid="uid://cj0ouujl4f575" path="res://art/hang_up_icon.png" id="10_lexak"]
 [ext_resource type="Script" uid="uid://dfiugjllsvrrr" path="res://scripts/window.gd" id="11_nd18o"]
+[ext_resource type="Texture2D" uid="uid://d1s8xdr7po38y" path="res://art/warning_button.png" id="11_t0sou"]
+[ext_resource type="Texture2D" uid="uid://dwy5yk2tayeuu" path="res://art/NPC icons/jim_icon.png" id="15_2kcag"]
 [ext_resource type="Texture2D" uid="uid://cvw33fegp4lu4" path="res://art/tutorial1.png" id="15_djp82"]
+[ext_resource type="Texture2D" uid="uid://bmjhc2fd18uyv" path="res://art/NPC icons/jasmine_icon.png" id="16_wq15u"]
+[ext_resource type="Texture2D" uid="uid://devnrgk7j3ar0" path="res://art/NPC icons/brody_icon.png" id="17_drj1u"]
+[ext_resource type="Texture2D" uid="uid://c2al4gh8h36oe" path="res://art/NPC icons/cecilia_icon.png" id="18_t0sou"]
+[ext_resource type="Texture2D" uid="uid://c20sgf3f2kytr" path="res://art/NPC icons/voll_icon.png" id="19_drj1u"]
 
 [sub_resource type="Gradient" id="Gradient_lexak"]
 colors = PackedColorArray(0.05490196, 0.14117648, 0.3372549, 0.7921569, 1, 1, 1, 0)
@@ -125,6 +131,38 @@ corner_radius_top_left = 5
 corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t0sou"]
+bg_color = Color(0.52156866, 0.8, 0.5764706, 1)
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.37092805, 0.6232558, 0.4239134, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jcjvk"]
+bg_color = Color(0.47541428, 0.7514762, 0.5250801, 1)
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.37092805, 0.6232558, 0.4239134, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7xkin"]
+bg_color = Color(0.52156866, 0.8, 0.5764706, 1)
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.37092805, 0.6232558, 0.4239134, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_djp82"]
+bg_color = Color(0.52156866, 0.8, 0.5764706, 1)
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.37092805, 0.6232558, 0.4239134, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wq15u"]
+bg_color = Color(0.47541428, 0.7514762, 0.5250801, 1)
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.37092805, 0.6232558, 0.4239134, 1)
 
 [sub_resource type="Gradient" id="Gradient_nf8vl"]
 offsets = PackedFloat32Array(0.006024096, 0.28614458)
@@ -259,6 +297,24 @@ stretch_mode = 0
 [node name="Dot" type="Sprite2D" parent="Toolbar/HelpButton" unique_id=1501351980]
 modulate = Color(0.33607247, 0.37250945, 0.5441873, 0.7294118)
 position = Vector2(538.0654, 1281.1211)
+scale = Vector2(0.6755877, 0.6755877)
+texture = ExtResource("5_67y07")
+
+[node name="EndButton" type="TextureButton" parent="Toolbar" unique_id=252140567]
+visible = false
+layout_mode = 0
+offset_left = 658.4822
+offset_top = 1010.99994
+offset_right = 1956.1406
+offset_bottom = 2266.4844
+scale = Vector2(0.038941007, 0.03902877)
+texture_normal = ExtResource("11_t0sou")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Dot" type="Sprite2D" parent="Toolbar/EndButton" unique_id=225854901]
+modulate = Color(0.33607247, 0.37250945, 0.5441873, 0.7294118)
+position = Vector2(644.00195, 1383.6133)
 scale = Vector2(0.6755877, 0.6755877)
 texture = ExtResource("5_67y07")
 
@@ -404,13 +460,103 @@ disabled = true
 text = "SEND"
 
 [node name="StartConvo" type="Button" parent="Waste Planner/Panel" unique_id=1162297954]
+visible = false
 layout_mode = 0
-offset_left = 64.0
-offset_top = 84.0
-offset_right = 344.0
-offset_bottom = 203.0
-theme_override_font_sizes/font_size = 30
-text = "Start Conversation"
+offset_right = 385.0
+offset_bottom = 117.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_t0sou")
+theme_override_styles/hover = SubResource("StyleBoxFlat_jcjvk")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_7xkin")
+text = "Jim opened a chat"
+icon = ExtResource("15_2kcag")
+alignment = 0
+expand_icon = true
+
+[node name="StartConvo2" type="Button" parent="Waste Planner/Panel/StartConvo" unique_id=130068802]
+visible = false
+layout_mode = 0
+offset_top = 114.0
+offset_right = 385.0
+offset_bottom = 235.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_djp82")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wq15u")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_djp82")
+text = "Jasmine opened a chat"
+icon = ExtResource("16_wq15u")
+alignment = 0
+expand_icon = true
+
+[node name="StartConvo3" type="Button" parent="Waste Planner/Panel/StartConvo" unique_id=1900767385]
+visible = false
+layout_mode = 0
+offset_top = 232.0
+offset_right = 385.0
+offset_bottom = 352.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_djp82")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wq15u")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_djp82")
+text = "Brody opened a chat"
+icon = ExtResource("17_drj1u")
+alignment = 0
+expand_icon = true
+
+[node name="StartConvo4" type="Button" parent="Waste Planner/Panel/StartConvo" unique_id=1173001904]
+visible = false
+layout_mode = 0
+offset_top = 349.0
+offset_right = 385.0
+offset_bottom = 468.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_djp82")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wq15u")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_djp82")
+text = "Cecilia opened a chat"
+icon = ExtResource("18_t0sou")
+alignment = 0
+expand_icon = true
+
+[node name="StartConvo5" type="Button" parent="Waste Planner/Panel/StartConvo" unique_id=621359361]
+visible = false
+layout_mode = 0
+offset_top = 465.0
+offset_right = 385.0
+offset_bottom = 582.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_djp82")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wq15u")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_djp82")
+text = "Voll opened a chat"
+icon = ExtResource("19_drj1u")
+alignment = 0
+expand_icon = true
+
+[node name="Line2" type="ColorRect" parent="Waste Planner/Panel" unique_id=1062187399]
+visible = false
+layout_mode = 0
+offset_left = 385.0
+offset_top = -0.86600494
+offset_right = 965.4678
+offset_bottom = 2.133995
+rotation = 1.5707964
+color = Color(0.37254903, 0.62352943, 0.41960785, 1)
 
 [node name="gradient" type="Sprite2D" parent="Waste Planner/Panel" unique_id=210982217]
 position = Vector2(817.31946, 292.12216)
@@ -661,6 +807,130 @@ INSERT REFRIDGE LOGO"
 fit_content = true
 scroll_active = false
 
+[node name="End of the Day Report" type="ColorRect" parent="." unique_id=1530631481]
+visible = false
+offset_left = 414.0
+offset_top = 46.0
+offset_right = 1552.0
+offset_bottom = 950.0
+color = Color(0.2581615, 0.57725954, 0.9219131, 1)
+script = ExtResource("11_nd18o")
+
+[node name="TopBar" type="Button" parent="End of the Day Report" unique_id=938259023]
+layout_mode = 0
+offset_left = -1.0
+offset_right = 1224.0
+offset_bottom = 39.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_nd18o")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_lexak")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_efn2e")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_gvy4x")
+text = "   Waste"
+alignment = 0
+
+[node name="Close" type="TextureButton" parent="End of the Day Report" unique_id=70936071]
+visible = false
+layout_mode = 0
+offset_left = 1256.4642
+offset_top = 29.0
+offset_right = 1275.9612
+offset_bottom = 44.50731
+rotation = 3.1415927
+texture_normal = ExtResource("9_efn2e")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Panel" type="Panel" parent="End of the Day Report" unique_id=1110607799]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 40.0
+offset_right = 1130.0
+offset_bottom = 845.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_efn2e")
+
+[node name="ColorRect" type="ColorRect" parent="End of the Day Report/Panel" unique_id=759135358]
+visible = false
+layout_mode = 0
+offset_right = 385.0
+offset_bottom = 585.0
+color = Color(0.519767, 0.79812884, 0.5755315, 1)
+
+[node name="gradient" type="Sprite2D" parent="End of the Day Report/Panel" unique_id=1449007020]
+position = Vector2(561.83954, 428.0071)
+rotation = -1.5707964
+scale = Vector2(3.347713, 1123.3052)
+texture = SubResource("GradientTexture1D_67y07")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="End of the Day Report/Panel" unique_id=2030549052]
+layout_mode = 0
+offset_left = 82.0
+offset_top = -8.0
+offset_right = 1124.0
+offset_bottom = 850.0
+horizontal_scroll_mode = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="End of the Day Report/Panel/ScrollContainer" unique_id=1063719149]
+custom_minimum_size = Vector2(943.61, 850.84)
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="End of the Day Report/Panel/ScrollContainer/VBoxContainer" unique_id=567765554]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.23119366, 0.3662076, 0.5810717, 1)
+theme_override_font_sizes/normal_font_size = 46
+bbcode_enabled = true
+text = "[center]
+CONGRATULATIONS!"
+fit_content = true
+scroll_active = false
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="End of the Day Report/Panel/ScrollContainer/VBoxContainer" unique_id=729683509]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.23119366, 0.3662076, 0.5810717, 1)
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "[center]
+You just finished your first day at ReFridge inc.
+Clients can no longer contact you for help, so your
+work here is done.
+
+You're free to look through your conversations. 
+When you're done, close your computer by clicking
+the icon furthest to the left on the toolbar and log out.
+
+Client Satisfaction Points earned today:
+"
+fit_content = true
+scroll_active = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="End of the Day Report/Panel/ScrollContainer/VBoxContainer" unique_id=472614259]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.2655797, 0.46440703, 0.22522718, 1)
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
+text = "[center]99 out of 100"
+fit_content = true
+scroll_active = false
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="End of the Day Report/Panel/ScrollContainer/VBoxContainer" unique_id=2016731187]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.23119366, 0.3662076, 0.5810717, 1)
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "[center]
+This converts to you having earned X money today.
+Well done!
+
+Make sure to fill out the following questionare about
+your experience working with ReFridge inc.:
+LINK
+Thank you!"
+fit_content = true
+scroll_active = false
+
 [node name="Client" type="ColorRect" parent="." unique_id=1503985887]
 visible = false
 offset_left = 1348.0
@@ -772,6 +1042,7 @@ vertical_alignment = 1
 [connection signal="pressed" from="Toolbar/FridgeButton" to="." method="_on_app_pressed" binds= ["FridgeButton"]]
 [connection signal="pressed" from="Toolbar/PointsButton" to="." method="_on_app_pressed" binds= ["PointsButton"]]
 [connection signal="pressed" from="Toolbar/HelpButton" to="." method="_on_app_pressed" binds= ["HelpButton"]]
+[connection signal="pressed" from="Toolbar/EndButton" to="." method="_on_app_pressed" binds= ["EndButton"]]
 [connection signal="button_down" from="Client\'s Fridge/TopBar" to="Client\'s Fridge" method="_on_top_bar_button_down"]
 [connection signal="button_up" from="Client\'s Fridge/TopBar" to="Client\'s Fridge" method="_on_top_bar_button_up"]
 [connection signal="button_down" from="Waste Planner/TopBar" to="Waste Planner" method="_on_top_bar_button_down"]
@@ -783,9 +1054,16 @@ vertical_alignment = 1
 [connection signal="timeout" from="Waste Planner/Panel/WriteMessage/Timer" to="Waste Planner/Panel/WriteMessage" method="_on_timer_timeout"]
 [connection signal="pressed" from="Waste Planner/Panel/Button" to="Waste Planner/Panel/WriteMessage" method="SendServerMessage"]
 [connection signal="pressed" from="Waste Planner/Panel/StartConvo" to="Waste Planner/Panel/WriteMessage" method="_on_start_convo_pressed"]
+[connection signal="pressed" from="Waste Planner/Panel/StartConvo/StartConvo2" to="Waste Planner/Panel/WriteMessage" method="_on_start_convo_pressed"]
+[connection signal="pressed" from="Waste Planner/Panel/StartConvo/StartConvo3" to="Waste Planner/Panel/WriteMessage" method="_on_start_convo_pressed"]
+[connection signal="pressed" from="Waste Planner/Panel/StartConvo/StartConvo4" to="Waste Planner/Panel/WriteMessage" method="_on_start_convo_pressed"]
+[connection signal="pressed" from="Waste Planner/Panel/StartConvo/StartConvo5" to="Waste Planner/Panel/WriteMessage" method="_on_start_convo_pressed"]
 [connection signal="button_down" from="Work Guide/TopBar" to="Work Guide" method="_on_top_bar_button_down"]
 [connection signal="button_up" from="Work Guide/TopBar" to="Work Guide" method="_on_top_bar_button_up"]
 [connection signal="pressed" from="Work Guide/Close" to="Work Guide" method="_on_close_pressed"]
+[connection signal="button_down" from="End of the Day Report/TopBar" to="End of the Day Report" method="_on_top_bar_button_down"]
+[connection signal="button_up" from="End of the Day Report/TopBar" to="End of the Day Report" method="_on_top_bar_button_up"]
+[connection signal="pressed" from="End of the Day Report/Close" to="End of the Day Report" method="_on_close_pressed"]
 [connection signal="button_down" from="Client/TopBar" to="Client" method="_on_top_bar_button_down"]
 [connection signal="button_up" from="Client/TopBar" to="Client" method="_on_top_bar_button_up"]
 [connection signal="pressed" from="Client/Panel/EndConvoButton" to="Waste Planner/Panel/WriteMessage" method="_on_end_convo_button_pressed"]
