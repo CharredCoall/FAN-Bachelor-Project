@@ -1,8 +1,0 @@
-Request,Response
-"[System Information: The fridge currently contains: {'potato': 1, 'pork chop': 2, 'shrimp': 3, 'shallot': 1, 'lettuce': 1}]
-        This is a prompt telling you that you have connected to the player. 
-        You can now write a message to them as you need their help reducing waste from your fridge. 
-        So start by introducing yourself to them and telling them that you need help making a meal!","Hey there! I'm Jim, the Grill Master of the neighborhood. My fridge is looking a bit crowded, and I could use your help to come up with a meal that uses up what I have. Right now, we've got 1 potato, 2 pork chops, 3 shrimp, 1 shallot, and 1 lettuce leaf. What do you think we could whip up?"
-"Hello, let's do a barbeque, you don't have very many potatoes, but you can bake the one you have on the grill and share it, as well as using the 2 prok chops, the shallot can also be grilled and the shrimp, that would be a nice meal for the family don't you think?","Wow, you really know how to make a dad happy! Grilled pork chops, shrimp, and a baked potato sound like a perfect meal. I'll get the grill fired up and everyone will love it. I'm taking the ingredients out now. You just earned 7 points, and I get to barbecue. It's a win-win!"
-Request,Response
-"Great, That should do it for now, HAve a good day!","Alright, alright, I guess we're done for now. But that lettuce is still sitting there, waiting to be used! Thanks for the help today, though. I am ending the conversation here!"

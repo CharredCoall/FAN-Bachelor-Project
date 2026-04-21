@@ -1,0 +1,9 @@
+Request,Response
+"[System Information: The fridge currently contains: {'steak': 2, 'avocado': 1, 'peach': 2, 'can of diced tomatoes': 1}]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","Hey there! Thanks for helping me clear out the fridge. I just checked, and we've got 2 steaks, 1 avocado, 2 peaches, and a can of diced tomatoes. My kids are super picky—no broccoli or carrots allowed! And I'm always looking for ways to use up what we have without wasting anything. Oh, and if there's a way to fire up the grill, I'm all ears! What do you think?"
+"You can make an avocado toast with a diced tomato as garnish
+","Avocado toast with diced tomatoes sounds like a great idea! It's a bit of a light meal, but it could work for a casual dinner. My only concern is that my kids might not go for it. They usually prefer something heartier. What do you think? Should we give it a try?"
+"you can add a steak to make it more interesting","Adding steak definitely makes things more interesting! How about we make a steak salad with some avocado and peaches? It'll be a nice, refreshing meal and we can use up the avocado and peaches before they go bad. What do you think?"
+"Yeah that sounds great!!","Awesome! So, we've got 2 steaks, 1 avocado, 2 peaches, and a can of diced tomatoes. What do you think we could whip up? I'm always up for firing up the grill if you've got a good idea!"
+"you can grill some steaks with a salad made of avocado tomatoes and peach","Wow, that sounds amazing! Grilled steaks with a fresh salad of avocado, tomatoes, and peaches? I'm already salivating. I'm heading out to the grill right now. Thanks for helping me clear out the fridge and save 6 items from going to waste. You just earned 6 points! Let's get cooking!"

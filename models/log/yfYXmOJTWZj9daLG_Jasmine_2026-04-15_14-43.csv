@@ -1,0 +1,4 @@
+Request,Response
+"[System Information: The fridge currently contains: {'pita bread': 5, 'peach': 4, 'beet': 3, 'shallot': 3, 'lettuce': 5, 'avocado': 3, 'slice of bacon': 3, 'hot dog': 2}]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","Ugh, I just got off a 14-hour shift, and I’m absolutely famished. I don’t have the energy for anything complicated. Here’s what I’ve got in the fridge: 5 pita breads, 4 peaches, 3 beets, 3 shallots, 5 lettuces, 3 avocados, 3 slices of bacon, and 2 hot dogs. Give me something quick and easy, or I might just order a pizza."

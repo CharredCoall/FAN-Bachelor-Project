@@ -15,17 +15,12 @@ extends TextEdit
 @onready var init_chat_button = get_parent().get_node("StartConvo")
 var cur_chat
 
-var thread: Thread
-var pipes: Dictionary
-
 signal convo_started
 signal convo_ended
 
 func _ready():
-	thread = Thread.new()
-	thread.start(_run_server)
-	
 	cur_chat = init_chat_button
+	$HTTPRequest.request_completed.connect(self._request_completed)
 
 func SendServerMessage() -> void:
 	#make green bubble
@@ -45,14 +40,16 @@ func SendServerMessage() -> void:
 	
 	$"../Button".disabled = true
 	
-	var body = JSON.stringify({"path": "request_reply", "message": text})
-	pipes.stdio.store_line(body)
-	
+	var body = JSON.stringify({"message": text})
+	var error = $HTTPRequest.request("http://127.0.0.1:5000/request_reply", ["Content-type: application/json"], HTTPClient.METHOD_POST, body)
+	if error != OK:
+		push_error("An error occurred in the HTTP request.")
+		
 	clear()
 	
-func _request_completed(body):
+func _request_completed(_result, _response_code, _headers, body):
 	var json = JSON.new()
-	json.parse(body)
+	json.parse(body.get_string_from_utf8())
 	var dict_package = json.get_data()
 	print(dict_package)
 	if dict_package == null:
@@ -99,8 +96,10 @@ func _on_timer_timeout() -> void:
 
 
 func _on_end_convo_button_pressed() -> void:
-	var body = JSON.stringify({"path": "end_convo"})
-	pipes.stdio.store_line(body)
+	var error = $HTTPRequest.request("http://127.0.0.1:5000/end_convo", [], HTTPClient.METHOD_GET)
+	if error != OK:
+		push_error("An error occurred in the HTTP request.")
+	
 	_end_convo()
 
 func _end_convo():
@@ -145,8 +144,10 @@ func _end_convo():
 
 
 func _on_start_convo_pressed() -> void:
-	var body = JSON.stringify({"path": "start_convo","char_idx": globals.current_char})
-	pipes.stdio.store_line(body)
+	var body = JSON.stringify({"char_idx": globals.current_char})
+	var error = $HTTPRequest.request("http://127.0.0.1:5000/start_convo", ["Content-type: application/json"], HTTPClient.METHOD_GET, body)
+	if error != OK:
+		push_error("An error occurred in the HTTP request.")
 	
 	emit_signal("convo_started")
 		
@@ -162,27 +163,3 @@ func _on_start_convo_pressed() -> void:
 	
 	vcontainer.add_child(start_label)
 	
-
-func _run_server():
-	pipes = OS.execute_with_pipe("../python/python", ["../webserver/main.py"], false )
-	if pipes.is_empty():
-		print("Error?")
-	else:
-		while (OS.is_process_running(pipes.pid)):
-			if pipes.stdio.get_position() < pipes.stdio.get_length():
-				print("Python out:")
-				var body = pipes.stdio.get_as_text()
-				_request_completed(body)
-				print("-------------------------")
-			if pipes.stderr.get_position() < pipes.stderr.get_length():
-				print("Python Error:")
-				print(pipes.stderr.get_as_text())
-				print("-------------------------")
-				assert(OS.is_process_running(pipes.pid), "Error!: Server crashed due to an error.")
-			await get_tree().create_timer(1).timeout
-
-
-func _exit_tree() -> void:
-	if thread != null and !pipes.is_empty():
-		pipes.stdio.store_line(r"\x03")
-		thread.wait_to_finish()

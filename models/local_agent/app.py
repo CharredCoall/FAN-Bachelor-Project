@@ -41,10 +41,6 @@ characters = [
 
 global_models = [
     {
-        "name": "Qwen/Qwen2.5-Coder-32B-Instruct",
-        "key": "srX5Dt3K0nfX3fQ4"
-    },
-    {
         "name": "Qwen/Qwen2.5-72B-Instruct",
         "key": "yfYXmOJTWZj9daLG"
     },
@@ -53,12 +49,8 @@ global_models = [
         "key": "hdRm7wScJqOvmVze"
     },
     {
-        "name": "deepseek-ai/DeepSeek-Coder-V2-Instruct",
+        "name": "deepseek-ai/DeepSeek-R1-Distill-Llama-70B",
         "key": "4vPloGeWwi6swcOq"
-    },
-    {
-        "name": "google/gemma-2-27b-it",
-        "key": "X6IQnIqkWWKi8Gyz"
     }
 ]
 
@@ -227,7 +219,7 @@ def load_model():
     global character_index
     global model_index
 
-    model_index = np.random.random_integers(0, 4) # Random model selection
+    model_index = random.randint(0, 2)
 
     model = InferenceClientModel(
     max_tokens=2096,
