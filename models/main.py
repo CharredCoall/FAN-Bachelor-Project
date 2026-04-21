@@ -95,9 +95,9 @@ def start_convo():
         log = []
         log.append(['"' + message + '"', '"' + response + '"'])
     except:
-        return json.dumps("Something didn't work")
+        return jsonify("Something didn't work")
     dict_package = update_package(dict_package, response)
-    return json.dumps(dict_package)
+    return jsonify(dict_package)
 
 @app.route("/end_convo")
 def end_convo():
@@ -110,6 +110,14 @@ def end_convo():
     log = []
     dict_package = reset_package(dict_package)
     return jsonify([])
+
+@app.route("/ping")
+def ping():
+    return jsonify(["pong"])
+
+@app.route("/")
+def home():
+    return jsonify(["Hello from Azure"])
 
 if __name__ == '__main__' :
     app.run(debug=True)
