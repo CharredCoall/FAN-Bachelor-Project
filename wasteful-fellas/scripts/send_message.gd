@@ -12,6 +12,11 @@ extends TextEdit
 
 @onready var SFX = $AudioStreamPlayer
 
+var model_idx = 0
+var steps = {}
+var log = []
+var last_sent_message = ""
+
 signal convo_started
 signal convo_ended
 
@@ -36,7 +41,9 @@ func SendServerMessage() -> void:
 	
 	$"../Button".disabled = true
 	
-	var body = JSON.stringify({"message": text})
+	last_sent_message = text
+	
+	var body = JSON.stringify({"message": text, "model_idx": int(model_idx), "char_idx": int(globals.current_char), "steps": steps, "log": log, "fridge": GameManager.fridge})
 	var error = $HTTPRequest.request("http://127.0.0.1:5000/request_reply", ["Content-type: application/json"], HTTPClient.METHOD_POST, body)
 	if error != OK:
 		push_error("An error occurred in the HTTP request.")
@@ -50,15 +57,28 @@ func _request_completed(_result, _response_code, _headers, body):
 	print(dict_package)
 	if dict_package == null:
 		return
+		
+	if "error" in dict_package:
+		push_error(dict_package["error"])
+		return
 	
-	if  dict_package["Points"] != null:
-		GameManager._increment_points(dict_package["Points"])
+	if "points" in dict_package:
+		GameManager._increment_points(dict_package["points"])
 	
-	if dict_package["Fridge"] != null:
-		GameManager._update_fridge(dict_package["Fridge"])
+	if "fridge" in dict_package:
+		GameManager._update_fridge(dict_package["fridge"])
+	
+	if "model_idx" in dict_package:
+		model_idx = dict_package["model_idx"]
+	
+	if "char_idx" in dict_package:
+		globals.current_char = dict_package["char_idx"]
+	
+	if "steps" in dict_package:
+		steps = dict_package["steps"]
 	
 	var blue_bub = blue_bubble.instantiate()
-	blue_bub.prose = str(dict_package["Response"])
+	blue_bub.prose = str(dict_package["response"])
 	vcontainer.add_child(blue_bub)
 	
 	SFX.stop()
@@ -71,7 +91,9 @@ func _request_completed(_result, _response_code, _headers, body):
 	
 	$"../Button".disabled = false
 	
-	if "Ended" in dict_package and dict_package["Ended"]:
+	log.append([last_sent_message, dict_package["response"]])
+	
+	if "ended" in dict_package and dict_package["ended"]:
 		_end_convo()
 	
 
@@ -95,7 +117,8 @@ func _on_timer_timeout() -> void:
 
 
 func _on_end_convo_button_pressed() -> void:
-	var error = $HTTPRequest.request("http://127.0.0.1:5000/end_convo", [], HTTPClient.METHOD_GET)
+	var body = JSON.stringify({"model_idx": int(model_idx), "char_idx": int(globals.current_char), "log": log})
+	var error = $HTTPRequest.request("http://127.0.0.1:5000/end_convo", ["Content-type: application/json"], HTTPClient.METHOD_GET, body)
 	if error != OK:
 		push_error("An error occurred in the HTTP request.")
 	
@@ -124,7 +147,7 @@ func _end_convo():
 
 
 func _on_start_convo_pressed() -> void:
-	var body = JSON.stringify({"char_idx": globals.current_char})
+	var body = JSON.stringify({"char_idx": int(globals.current_char)})
 	var error = $HTTPRequest.request("http://127.0.0.1:5000/start_convo", ["Content-type: application/json"], HTTPClient.METHOD_GET, body)
 	if error != OK:
 		push_error("An error occurred in the HTTP request.")
