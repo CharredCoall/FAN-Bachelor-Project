@@ -49,16 +49,8 @@ global_models = [
         "key": "hdRm7wScJqOvmVze"
     },
     {
-        "name": "deepseek-ai/DeepSeek-R1-Distill-Llama-70B", # Creator: DeepSeek 
+        "name": "deepseek-ai/DeepSeek-R1-Distill-Llama-70B",
         "key": "4vPloGeWwi6swcOq"
-    },
-    {
-        "name": "nvidia/Llama-3.1-Nemotron-70B-Instruct-HF", # Creator: Nvidia 
-        "key": "srX5Dt3K0nfX3fQ4" 
-    },
-    {
-        "name": "NousResearch/Hermes-3-Llama-3.1-70B",   # Creator: Nous Research 
-        "key": "X6IQnIqkWWKi8Gyz"
     }
 ]
 
@@ -227,7 +219,7 @@ def load_model():
     global character_index
     global model_index
 
-    model_index = 1 #random.randint(0, 4) # Random model selection
+    model_index = random.randint(0, 2)
 
     model = InferenceClientModel(
     max_tokens=2096,

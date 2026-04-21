@@ -64,8 +64,8 @@ def request_reply():
 
         log.append(['"' + message + '"', '"' + response + '"'])
         dict_package = update_package(dict_package, response)
-    except:
-        return jsonify("Something didn't work")
+    except Exception as e:
+        return jsonify({"error": f"Python Exception: {str(e)}"})
     
     return jsonify(dict_package)
 
@@ -94,8 +94,8 @@ def start_convo():
         
         log = []
         log.append(['"' + message + '"', '"' + response + '"'])
-    except:
-        return jsonify("Something didn't work")
+    except Exception as e:
+        return jsonify({"error": f"Python Exception: {str(e)}"})
     dict_package = update_package(dict_package, response)
     return jsonify(dict_package)
 
