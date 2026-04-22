@@ -8,6 +8,11 @@ on:
   push:
     branches:
       - main
+    paths:
+      - 'models/local_agent/**'
+      - 'models/main.py'
+      - 'models/requirements.txt'
+      - '.github/**'
   workflow_dispatch:
 
 jobs:
