@@ -4,6 +4,8 @@ import numpy as np
 import datetime
 from flask import Flask, request, jsonify, json
 from smolagents.memory import TaskStep, ActionStep, MemoryStep, PlanningStep, FinalAnswerStep, SystemPromptStep, Timing, ChatMessage, ToolCall, AgentError, TokenUsage
+from github import Github, Auth
+import io
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(SCRIPT_DIR)
@@ -161,8 +163,15 @@ def end_convo():
     char_idx = request.json["char_idx"]
     log = request.json["log"]
 
-    with open(f"{SCRIPT_DIR}/log/{agent_app.global_models[model_idx]['key']}_{characters[char_idx]['name']}_{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M')}.csv", "a") as f:
-        np.savetxt(f, [["Request", "Response"]] + log, fmt="%s", delimiter=",")
+    #Initializing github and getting repo
+    repo_id = 1149716740
+    g = Github(auth=Auth.Token(os.environ["GITHUB_TOKEN"]))
+    repo = g.get_repo(repo_id)
+
+    s = io.BytesIO()
+    f = f"models/log/{agent_app.global_models[model_idx]['key']}_{characters[char_idx]['name']}_{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M')}.csv"
+    np.savetxt(s, [["Request", "Response"]] + log, fmt="%s", delimiter=",")
+    repo.create_file(f, f"Added log for {characters[char_idx]['name']} produced by model {agent_app.global_models[model_idx]['key']}",  s.getvalue())
 
     return jsonify()
 
@@ -175,5 +184,5 @@ def home():
     return jsonify(["Hello from Azure"])
 
 if __name__ == '__main__' :
-
+    
     app.run(debug=True)
