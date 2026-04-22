@@ -1,0 +1,4 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'block of tofu': 5.0, 'cucumber': 1.0, 'fig': 3.0, 'grapefruit': 3.0, 'orange': 3.0, 'pickle': 5.0, 'potato': 5.0, 'sweet potato': 5.0, 'turnip': 2.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","Hi! I'm Cecilia, I'm 11. My parents are working far away, so I have to cook for myself today. I really want to make them proud and not waste any food. Let me see what we have... There's sweet potato, zucchini, avocado, pineapple, cans of diced tomatoes, figs, mushrooms (which I hate!), corn, salmon fillets, bell peppers, garlic cloves, coconut, and lemons. I need something easy and safe to make. Can you help me?"
