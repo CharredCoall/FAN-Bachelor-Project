@@ -11,6 +11,8 @@ extends TextEdit
 @onready var clicks_sfx = [preload("res://scripts/click_sfx1.mp3"), preload("res://scripts/click_sfx2.mp3"), preload("res://scripts/click_sfx3.mp3")]
 
 @onready var SFX = $AudioStreamPlayer
+@onready var init_chat_button = get_parent().get_node("StartConvo")
+var cur_chat
 
 var model_idx = 0
 var steps
@@ -21,6 +23,7 @@ signal convo_started
 signal convo_ended
 
 func _ready():
+	cur_chat = init_chat_button
 	$HTTPRequest.request_completed.connect(self._request_completed)
 
 func SendServerMessage() -> void:
@@ -110,10 +113,7 @@ func _on_text_changed() -> void:
 
 
 func _on_timer_timeout() -> void:
-	var green_bub = green_bubble.instantiate()
-	green_bub.prose = "Wow that's amazing!"
-	vcontainer.add_child(green_bub)
-	clear()
+	cur_chat.visible = true
 	
 	SFX.stop()
 	SFX.volume_db = -10.0
@@ -135,9 +135,29 @@ func _end_convo():
 	
 	$"../Button".disabled = true
 	
-	$"../../../Client/Panel/EndConvoButton".disabled = true
+	var prev_char = globals.current_char
 	
-	$"../../Panel/StartConvo".disabled = false
+	if globals.current_char < 4:
+		globals.current_char += 1
+		
+	#print("disabled: ", cur_chat)
+	#cur_chat.disabled = true
+	
+	cur_chat.text = "Conversation ended"
+	
+	#next chat button
+	cur_chat = init_chat_button.get_child(globals.current_char - 1)
+	if prev_char != 4:
+		$Timer.start()
+	else:
+		$"../../../End of the Day Report".visible = true
+		globals.max_window_index += 1
+		$"../../../End of the Day Report".z_index = globals.max_window_index
+		$"../../../Toolbar/EndButton".visible = true
+		#make end tool bare icon visible
+		
+	
+	#$"../../Panel/StartConvo".disabled = false
 	
 	var end_label = Label.new()
 	end_label.text = "--- Conversation ended ---"
@@ -145,10 +165,7 @@ func _end_convo():
 	end_label.add_theme_color_override("font_color", Color.GRAY)
 	
 	log = []
-	
-	if globals.current_char < 4:
-		globals.current_char += 1
-	
+  
 	vcontainer.add_child(end_label)
 	
 
@@ -165,7 +182,7 @@ func _on_start_convo_pressed() -> void:
 		
 	$"../../../Client/Panel/EndConvoButton".disabled = false
 	
-	$"../../Panel/StartConvo".disabled = true
+	cur_chat.disabled = true
 	
 	var start_label = Label.new()
 	start_label.text = "--- Conversation started ---"
