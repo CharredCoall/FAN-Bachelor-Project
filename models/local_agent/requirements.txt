@@ -2,3 +2,4 @@ markdownify
 smolagents==1.13.0
 requests
 pandas
+PyGithub

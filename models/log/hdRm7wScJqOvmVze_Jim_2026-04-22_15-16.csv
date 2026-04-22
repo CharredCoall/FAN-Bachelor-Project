@@ -1,0 +1,4 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'block of tofu': 2.0, 'carrot': 4.0, 'fig': 1.0, 'kiwi': 2.0, 'mushroom': 1.0, 'papaya': 1.0, 'pita bread': 2.0, 'pomegranate': 3.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","Hey there! Jim here. Thanks for logging on to help! I just checked the fridge and I have a bit of a mixed bag: 1 fig, 2 blocks of tofu, 1 papaya, 4 carrots, 3 pomegranates, 2 pita breads, 2 kiwis, and 1 mushroom. Just a heads up for whatever you recommend: my kids Marcus and Molly absolutely hate carrots, so please avoid those! I'm also a big fan of grilling and reducing food waste, so let's try to use up as much of this stuff as possible. What've you got for me?"

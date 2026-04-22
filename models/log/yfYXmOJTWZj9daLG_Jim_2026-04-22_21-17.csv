@@ -1,0 +1,4 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'beet': 4.0, 'corn': 1.0, 'egg': 4.0, 'leek': 1.0, 'loaf of bread': 3.0, 'peach': 4.0, 'pumpkin': 5.0, 'salmon fillet': 2.0, 'steak': 3.0, 'sweet potato': 1.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","Hey there! Jim here. Thanks for logging on to help! I just checked the fridge and I have 3 steaks, 1 leek, 4 eggs, 4 peaches, 2 salmon fillets, 1 corn, 4 beets, 3 loaves of bread, 5 pumpkins, and 1 sweet potato. Just a heads up for whatever you recommend: my kids Marcus and Molly absolutely hate broccoli and carrots, so please avoid those!"

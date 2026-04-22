@@ -203,23 +203,23 @@ def end_conversation() -> str:
 final_answer = FinalAnswerTool()
 tool_list = [final_answer, count_fridge, take_from_fridge, calculate_points, end_conversation]
 
-# If the agent does not answer, the model is overloaded, please use another model or the following Hugging Face Endpoint that also contains qwen2.5 coder:
-# model_id='https://pflgm2locj2t89co.us-east-1.aws.endpoints.huggingface.cloud' 
-
-def change_character(idx):
+def change_character(char_idx, model_idx = None):
     global character_index
     
-    if idx > 0 and idx < len(characters):
-        character_index = idx
-        load_model()
+    if char_idx > 0 and char_idx < len(characters):
+        character_index = char_idx
+        load_model(model_idx)
 
 
-def load_model():
+def load_model(model_idx):
     global agent
     global character_index
     global model_index
 
-    model_index = random.randint(0, 2)
+    if model_idx == None:
+        model_index = random.randint(0, 2)
+    else:
+        model_index = model_idx
 
     model = InferenceClientModel(
     max_tokens=2096,
@@ -248,7 +248,7 @@ def load_model():
         logger = logger
     )
 
-load_model()
+load_model(None)
 
 
 def chat_with_npc():
