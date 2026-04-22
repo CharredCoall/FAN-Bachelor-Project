@@ -13,7 +13,7 @@ extends TextEdit
 @onready var SFX = $AudioStreamPlayer
 
 var model_idx = 0
-var steps = {}
+var steps
 var log = []
 var last_sent_message = ""
 
@@ -91,7 +91,12 @@ func _request_completed(_result, _response_code, _headers, body):
 	
 	$"../Button".disabled = false
 	
-	log.append([last_sent_message, dict_package["response"]])
+	if len(log) == 0 or log == []:
+		last_sent_message = "[System Information: The fridge currently contains: " + str(GameManager.fridge) + "]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]"
+	
+	log.append(['"' + last_sent_message.replace('"', "'") + '"', '"' + dict_package["response"].replace('"', "'") + '"'])
 	
 	if "ended" in dict_package and dict_package["ended"]:
 		_end_convo()
@@ -139,6 +144,8 @@ func _end_convo():
 	end_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	end_label.add_theme_color_override("font_color", Color.GRAY)
 	
+	log = []
+	
 	if globals.current_char < 4:
 		globals.current_char += 1
 	
@@ -147,6 +154,8 @@ func _end_convo():
 
 
 func _on_start_convo_pressed() -> void:
+	log = []
+	
 	var body = JSON.stringify({"char_idx": int(globals.current_char)})
 	var error = $HTTPRequest.request("http://127.0.0.1:5000/start_convo", ["Content-type: application/json"], HTTPClient.METHOD_GET, body)
 	if error != OK:
