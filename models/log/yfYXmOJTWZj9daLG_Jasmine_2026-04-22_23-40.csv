@@ -1,0 +1,4 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'artichoke': 5.0, 'banana': 5.0, 'can of black beans': 5.0, 'cauliflower': 2.0, 'corn': 6.0, 'grapefruit': 3.0, 'pork chop': 5.0, 'salmon fillet': 4.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","Ugh, finally connected. I just got off a 12-hour shift, and I'm so tired and hungry. I need to eat something quick and easy. I have 5 pork chops, 5 cans of black beans, 6 ears of corn, 5 artichokes, 5 bananas, 3 grapefruits, 4 salmon fillets, and 2 cauliflowers. Give me something fast, or I might just order takeout and go to bed."
