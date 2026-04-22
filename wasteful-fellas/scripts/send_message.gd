@@ -12,6 +12,9 @@ extends TextEdit
 
 @onready var SFX = $AudioStreamPlayer
 @onready var init_chat_button = get_parent().get_node("StartConvo")
+
+var base_url = "https://wastefulfellas-dkdsd4bkhrepf8ec.swedencentral-01.azurewebsites.net"
+
 var cur_chat
 
 var model_idx = 0
@@ -47,7 +50,7 @@ func SendServerMessage() -> void:
 	last_sent_message = text
 	
 	var body = JSON.stringify({"message": text, "model_idx": int(model_idx), "char_idx": int(globals.current_char), "steps": steps, "log": log, "fridge": GameManager.fridge})
-	var error = $HTTPRequest.request("http://127.0.0.1:5000/request_reply", ["Content-type: application/json"], HTTPClient.METHOD_POST, body)
+	var error = $HTTPRequest.request(base_url + "/request_reply", ["Content-type: application/json"], HTTPClient.METHOD_POST, body)
 	if error != OK:
 		push_error("An error occurred in the HTTP request.")
 		
@@ -123,7 +126,7 @@ func _on_timer_timeout() -> void:
 
 func _on_end_convo_button_pressed() -> void:
 	var body = JSON.stringify({"model_idx": int(model_idx), "char_idx": int(globals.current_char), "log": log})
-	var error = $HTTPRequest.request("http://127.0.0.1:5000/end_convo", ["Content-type: application/json"], HTTPClient.METHOD_GET, body)
+	var error = $HTTPRequest.request(base_url + "/end_convo", ["Content-type: application/json"], HTTPClient.METHOD_GET, body)
 	if error != OK:
 		push_error("An error occurred in the HTTP request.")
 	
@@ -174,7 +177,7 @@ func _on_start_convo_pressed() -> void:
 	log = []
 	
 	var body = JSON.stringify({"char_idx": int(globals.current_char)})
-	var error = $HTTPRequest.request("http://127.0.0.1:5000/start_convo", ["Content-type: application/json"], HTTPClient.METHOD_GET, body)
+	var error = $HTTPRequest.request(base_url + "/start_convo", ["Content-type: application/json"], HTTPClient.METHOD_GET, body)
 	if error != OK:
 		push_error("An error occurred in the HTTP request.")
 	
