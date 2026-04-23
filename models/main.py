@@ -121,6 +121,7 @@ def request_reply():
     try :
         #Load all necessary variables
         agent_app.global_ended = False
+        agent_app.global_points = 0
         message = request.json["message"]
         steps = request.json["steps"]
         char_idx = request.json["char_idx"]
@@ -181,6 +182,7 @@ def start_convo():
     try :
         #Load all necessary variables
         agent_app.global_ended = False
+        agent_app.global_points = 0
         char_idx = request.json["char_idx"]
 
         #If the character id is set, load the selected character with a random model
