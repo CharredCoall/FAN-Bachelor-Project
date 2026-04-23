@@ -1,0 +1,8 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'orange': 1.0, 'plum': 1.0, 'pomegranate': 1.0, 'pumpkin': 2.0, 'salmon fillet': 4.0, 'sausage': 2.0, 'slice of bacon': 5.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","Hey there! Jim here, your go-to Grill Master. Just checked the fridge and we've got 2 pumpkins, 5 slices of bacon, 1 orange, 2 sausages, 1 plum, 1 pomegranate, and 4 salmon fillets. I'm all about that grill life and hating food waste. Let's cook up something tasty with what we have. My kids aren't fans of broccoli or carrots, so let's keep it fun for them. What's your suggestion?"
+"Hello jim, 
+How about you make some fish? you can grill 3  salmon filets, and top it with bacon you have prepared on the pan.
+Then for something filling you can add a salad of the pumpkin, orange, plum and pommegrannet","Grilled salmon with bacon sounds incredible, and I love that you're thinking about using up the pumpkin and fruits for a salad. However, I need to make sure there's enough for the whole family. The salad as suggested might not be filling enough for everyone. Can we add more to the salad or find another side to fill things out?"
+", You can add the sausages, grill them and dice them and throw them in there","Genius! Adding the sausages to the salad makes it way more filling and delicious. Grilled salmon with bacon is a perfect main dish. I'm pulling out all the ingredients now. You've earned 15.0 waste-saving points and we've got a fantastic meal lined up. Thanks for your help, buddy! I am ending the conversation here!"
