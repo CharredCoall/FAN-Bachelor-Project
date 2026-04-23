@@ -206,7 +206,7 @@ tool_list = [final_answer, count_fridge, take_from_fridge, calculate_points, end
 def change_character(char_idx, model_idx = None):
     global character_index
     
-    if char_idx > 0 and char_idx < len(characters):
+    if char_idx >= 0 and char_idx < len(characters):
         character_index = char_idx
         load_model(model_idx)
 

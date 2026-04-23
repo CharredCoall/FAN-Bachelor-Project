@@ -60,7 +60,6 @@ func _request_completed(_result, _response_code, _headers, body):
 	var json = JSON.new()
 	json.parse(body.get_string_from_utf8())
 	var dict_package = json.get_data()
-	print(dict_package)
 	if dict_package == null:
 		return
 		
@@ -70,21 +69,25 @@ func _request_completed(_result, _response_code, _headers, body):
 	
 	if "points" in dict_package:
 		GameManager._increment_points(dict_package["points"])
+		print("Points:", dict_package["points"])
 	
 	if "fridge" in dict_package:
 		GameManager._update_fridge(dict_package["fridge"])
+		print("Fridge:", dict_package["fridge"])
 	
 	if "model_idx" in dict_package:
 		model_idx = dict_package["model_idx"]
+		print("Model:", model_idx)
 	
 	if "char_idx" in dict_package:
-		globals.current_char = dict_package["char_idx"]
+		print("Character:", dict_package["char_idx"])
 	
 	if "steps" in dict_package:
 		steps = dict_package["steps"]
 	
 	var blue_bub = blue_bubble.instantiate()
 	blue_bub.prose = str(dict_package["response"])
+	print("Response:", dict_package["response"], "\n")
 	vcontainer.add_child(blue_bub)
 	
 	SFX.stop()
@@ -125,10 +128,11 @@ func _on_timer_timeout() -> void:
 
 
 func _on_end_convo_button_pressed() -> void:
-	var body = JSON.stringify({"model_idx": int(model_idx), "char_idx": int(globals.current_char), "log": log})
-	var error = $HTTPRequest.request(base_url + "/end_convo", ["Content-type: application/json"], HTTPClient.METHOD_GET, body)
-	if error != OK:
-		push_error("An error occurred in the HTTP request.")
+	if len(log) > 0 and log != []:
+		var body = JSON.stringify({"model_idx": int(model_idx), "char_idx": int(globals.current_char), "log": log})
+		var error = $HTTPRequest.request(base_url + "/end_convo", ["Content-type: application/json"], HTTPClient.METHOD_GET, body)
+		if error != OK:
+			push_error("An error occurred in the HTTP request.")
 	
 	_end_convo()
 
@@ -176,6 +180,7 @@ func _end_convo():
 func _on_start_convo_pressed() -> void:
 	log = []
 	
+	print("Attempting to request message from character:", globals.current_char)
 	var body = JSON.stringify({"char_idx": int(globals.current_char)})
 	var error = $HTTPRequest.request(base_url + "/start_convo", ["Content-type: application/json"], HTTPClient.METHOD_GET, body)
 	if error != OK:
