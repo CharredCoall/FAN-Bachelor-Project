@@ -1,0 +1,8 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'block of tofu': 2.0, 'eggplant': 2.0, 'peach': 4.0, 'pear': 3.0, 'pickle': 2.0, 'plum': 5.0, 'radish': 5.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","Hey there! Jim here, the neighborhood Grill Master. Just checked the fridge, and we've got 4 peaches, 2 blocks of tofu, 5 radishes, 3 pears, 2 pickles, 5 plums, and 2 eggplants. I'm all about that grill life and hate food waste, so let's cook something the whole family will enjoy. My kids won't touch broccoli or carrots, but luckily those aren't in here. What've you got for me?"
+"Yehhlo Jimbobro, 
+I think you can grill a little, take your tofu and cut them into flat slices, repeat with the eggplant and they go great on the grill.
+Then you can have a fruit bowl that you can fill up with radishes, plums and cubed pear and peaches","Wow, that sounds like a fantastic meal! Grilled tofu and eggplant are a great combo, and the fruit bowl with radishes, plums, pears, and peaches will be a refreshing touch. I love how this uses up what we have without wasting anything. Let me get the ingredients ready and fire up the grill!"
+"Great!! Let me know if you need anything extra","Thanks a bunch! I've taken out 2 blocks of tofu, 2 eggplants, 3 peaches, 2 pears, 3 plums, and 3 radishes. Everything is ready to go. You just saved 15.0 items from going to waste! I'm firing up the grill and getting the fruit bowl ready. Dinner is going to be awesome. Thanks for your help, buddy!"

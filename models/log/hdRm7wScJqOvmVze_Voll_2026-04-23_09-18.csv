@@ -1,0 +1,9 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'banana': 3.0, 'cabbage': 8.0, 'can of tuna': 3.0, 'carrot': 3.0, 'kale': 4.0, 'kiwi': 5.0, 'lemon': 5.0, 'lime': 7.0, 'mango': 3.0, 'mushroom': 7.0, 'papaya': 7.0, 'plum': 5.0, 'potato': 7.0, 'sausage': 9.0, 'shallot': 9.0, 'steak': 7.0, 'tomato': 5.0, 'tortilla': 5.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","I'm 82 years old, I don't need a babysitter. But the doctor said I need 'variety' or whatever nonsense. I have a lot of... stuff in my fridge. Now how do I turn this th"
+"I suggest making some potatoes, with steak
+Just cook the potatoes as you normally would,
+Create a sause using tomato, a lime, 1 cabbage and two heads of kale. 
+then you sear the steak in a pan and brown some shallots with them","Hmph. Fine. You've actually suggested something decent for once. The kale is a nice touch. I suppose I can cook the potatoes and steak as you've described. But don't think this means I'm going to start taking orders from you or anything."
+"Great!, then let's get cookin!!","Alright, let's get cooking. We're using 1 potato, 1 steak, 1 tomato, 1 lime, 1 cabbage, 2 kale, and 1 shallot. You've saved me 8.0 items from going to waste. Now leave me alone so I can cook."
