@@ -103,7 +103,7 @@ def steps_from_dict(raw):
     return steps
 
 @app.route("/request_reply", methods=['POST'])
-def request_reply():
+def request_reply(retries=0):
     """
     This function handles the HTTP requests for requesting a reply from a model.
     It requires a message, details about the current model, the fridge and the history of the conversation.
@@ -141,28 +141,33 @@ def request_reply():
         #Get response and update steps
         agent_app.agent.memory.steps = steps_from_dict(steps) #Load steps from request
         response = agent_app.agent.run(injected_prompt, reset=False) #Get response
-        steps = steps_to_dict(agent_app.agent.memory.steps) #Store updated steps
+        updated_steps = steps_to_dict(agent_app.agent.memory.steps) #Store updated steps
 
         #If model has ended conversation, End conversation and write log
         if agent_app.global_ended :
              request.json["log"].append(['"' + message.replace('"', "'") + '"', '"' + response.replace('"', "'") + '"'])
              _ = end_convo()
 
-        #Set returning variables
-        package["response"] = response
-        package["fridge"] = agent_app.global_fridge
-        package["points"] = agent_app.global_points
-        package["ended"] = agent_app.global_ended
-        package["steps"] = steps
 
     except Exception as e:
+        #Retries request up to 5 times in case of server error.
+        if retries < 5:
+            return request_reply(retries=retries + 1)
+
         #Send error to client
         return jsonify({"error": f"Python Exception: {str(e)}"})
-    
+
+    #Set returning variables
+    package["response"] = response
+    package["fridge"] = agent_app.global_fridge
+    package["points"] = agent_app.global_points
+    package["ended"] = agent_app.global_ended
+    package["steps"] = updated_steps
+
     return jsonify(package)
 
 @app.route("/start_convo", methods=['GET'])
-def start_convo():
+def start_convo(retries=0):
     """
     This function handles the HTTP request for starting a conversation.
     It requires a character index to tell the server what model to load.
@@ -203,6 +208,10 @@ def start_convo():
         steps = steps_to_dict(agent_app.agent.memory.steps) #Store updated steps
         
     except Exception as e:
+        #Retries request up to 4 times in case of server error.
+        if retries < 5:
+            return start_convo(retries=retries + 1)
+
         #Send error to client
         return jsonify({"error": f"Python Exception: {str(e)}"})
     
