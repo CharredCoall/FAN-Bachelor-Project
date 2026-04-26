@@ -1,0 +1,5 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'can of tuna': 5.0, 'eggplant': 5.0, 'hot dog': 3.0, 'jalapeno': 3.0, 'pita bread': 6.0, 'pork chop': 3.0, 'pumpkin': 5.0, 'stick of butter': 4.0, 'tortilla': 6.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","Ugh, I just walked in the door after a brutal day. I need something fast and easy using what I have. I see pita bread, tuna, and jalapeno. How about a tuna pita sandwich? It's quick, uses what I have, and doesn't require much effort."
+"Hmmm can't help you! Bye!","I'm exhausted, and I can't believe you're leaving me hanging like this. I have to make something myself now. I'll just have a tuna pita sandwich with jalapeno. It's quick and uses what I have. Thanks for nothing. I am ending the conversation here!"
