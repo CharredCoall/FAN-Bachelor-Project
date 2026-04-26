@@ -152,6 +152,8 @@ def request_reply(retries=0):
     except Exception as e:
         #Retries request up to 5 times in case of server error.
         if retries < 5:
+            agent_app.change_character(char_idx, model_idx)
+
             return request_reply(retries=retries + 1)
 
         #Send error to client
