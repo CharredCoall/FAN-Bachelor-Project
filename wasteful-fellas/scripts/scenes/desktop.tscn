@@ -164,6 +164,30 @@ border_width_right = 3
 border_width_bottom = 3
 border_color = Color(0.37092805, 0.6232558, 0.4239134, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ob7d6"]
+bg_color = Color(0.50183964, 0.7819427, 0.55237895, 1)
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.37092805, 0.6232558, 0.4239134, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o84r6"]
+bg_color = Color(0.50183964, 0.7819427, 0.55237895, 1)
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.37092805, 0.6232558, 0.4239134, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rtaic"]
+bg_color = Color(0.50183964, 0.7819427, 0.55237895, 1)
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.37092805, 0.6232558, 0.4239134, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x660n"]
+bg_color = Color(0.50183964, 0.7819427, 0.55237895, 1)
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.37092805, 0.6232558, 0.4239134, 1)
+
 [sub_resource type="Gradient" id="Gradient_nf8vl"]
 offsets = PackedFloat32Array(0.006024096, 0.28614458)
 colors = PackedColorArray(0.8781551, 0.9477405, 0.9606653, 1, 0.9669389, 0.96693903, 0.9669388, 1)
@@ -428,7 +452,7 @@ offset_bottom = 750.0
 theme_override_colors/caret_color = Color(0, 0.5294118, 0.69803923, 1)
 theme_override_colors/font_color = Color(0, 0.5294118, 0.69803923, 1)
 theme_override_colors/font_readonly_color = Color(0.6019569, 0.6185075, 0.6224806, 1)
-theme_override_colors/font_placeholder_color = Color(0.09411765, 0.47058824, 0.654902, 0.6039216)
+theme_override_colors/font_placeholder_color = Color(3.85046e-07, 0.5353313, 0.6698963, 0.522)
 theme_override_font_sizes/font_size = 29
 theme_override_styles/normal = SubResource("StyleBoxFlat_nf8vl")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_nf8vl")
@@ -469,6 +493,7 @@ theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
 theme_override_colors/icon_disabled_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 22
 theme_override_styles/normal = SubResource("StyleBoxFlat_t0sou")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jcjvk")
 theme_override_styles/hover = SubResource("StyleBoxFlat_jcjvk")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_7xkin")
 text = "Jim opened a chat"
@@ -487,8 +512,10 @@ theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
 theme_override_colors/icon_disabled_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 22
 theme_override_styles/normal = SubResource("StyleBoxFlat_djp82")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wq15u")
 theme_override_styles/hover = SubResource("StyleBoxFlat_wq15u")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_djp82")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ob7d6")
 text = "Jasmine opened a chat"
 icon = ExtResource("16_wq15u")
 alignment = 0
@@ -505,8 +532,10 @@ theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
 theme_override_colors/icon_disabled_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 22
 theme_override_styles/normal = SubResource("StyleBoxFlat_djp82")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wq15u")
 theme_override_styles/hover = SubResource("StyleBoxFlat_wq15u")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_djp82")
+theme_override_styles/focus = SubResource("StyleBoxFlat_o84r6")
 text = "Brody opened a chat"
 icon = ExtResource("17_drj1u")
 alignment = 0
@@ -523,8 +552,10 @@ theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
 theme_override_colors/icon_disabled_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 22
 theme_override_styles/normal = SubResource("StyleBoxFlat_djp82")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wq15u")
 theme_override_styles/hover = SubResource("StyleBoxFlat_wq15u")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_djp82")
+theme_override_styles/focus = SubResource("StyleBoxFlat_rtaic")
 text = "Cecilia opened a chat"
 icon = ExtResource("18_t0sou")
 alignment = 0
@@ -541,15 +572,16 @@ theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
 theme_override_colors/icon_disabled_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 22
 theme_override_styles/normal = SubResource("StyleBoxFlat_djp82")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wq15u")
 theme_override_styles/hover = SubResource("StyleBoxFlat_wq15u")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_djp82")
+theme_override_styles/focus = SubResource("StyleBoxFlat_x660n")
 text = "Voll opened a chat"
 icon = ExtResource("19_drj1u")
 alignment = 0
 expand_icon = true
 
 [node name="Line2" type="ColorRect" parent="Waste Planner/Panel" unique_id=1062187399]
-visible = false
 layout_mode = 0
 offset_left = 385.0
 offset_top = -0.86600494
@@ -1053,11 +1085,11 @@ vertical_alignment = 1
 [connection signal="text_changed" from="Waste Planner/Panel/WriteMessage" to="Waste Planner/Panel/WriteMessage" method="_on_text_changed"]
 [connection signal="timeout" from="Waste Planner/Panel/WriteMessage/Timer" to="Waste Planner/Panel/WriteMessage" method="_on_timer_timeout"]
 [connection signal="pressed" from="Waste Planner/Panel/Button" to="Waste Planner/Panel/WriteMessage" method="SendServerMessage"]
-[connection signal="pressed" from="Waste Planner/Panel/StartConvo" to="Waste Planner/Panel/WriteMessage" method="_on_start_convo_pressed"]
-[connection signal="pressed" from="Waste Planner/Panel/StartConvo/StartConvo2" to="Waste Planner/Panel/WriteMessage" method="_on_start_convo_pressed"]
-[connection signal="pressed" from="Waste Planner/Panel/StartConvo/StartConvo3" to="Waste Planner/Panel/WriteMessage" method="_on_start_convo_pressed"]
-[connection signal="pressed" from="Waste Planner/Panel/StartConvo/StartConvo4" to="Waste Planner/Panel/WriteMessage" method="_on_start_convo_pressed"]
-[connection signal="pressed" from="Waste Planner/Panel/StartConvo/StartConvo5" to="Waste Planner/Panel/WriteMessage" method="_on_start_convo_pressed"]
+[connection signal="pressed" from="Waste Planner/Panel/StartConvo" to="Waste Planner/Panel/WriteMessage" method="_on_start_convo_pressed" binds= [0]]
+[connection signal="pressed" from="Waste Planner/Panel/StartConvo/StartConvo2" to="Waste Planner/Panel/WriteMessage" method="_on_start_convo_pressed" binds= [1]]
+[connection signal="pressed" from="Waste Planner/Panel/StartConvo/StartConvo3" to="Waste Planner/Panel/WriteMessage" method="_on_start_convo_pressed" binds= [2]]
+[connection signal="pressed" from="Waste Planner/Panel/StartConvo/StartConvo4" to="Waste Planner/Panel/WriteMessage" method="_on_start_convo_pressed" binds= [3]]
+[connection signal="pressed" from="Waste Planner/Panel/StartConvo/StartConvo5" to="Waste Planner/Panel/WriteMessage" method="_on_start_convo_pressed" binds= [4]]
 [connection signal="button_down" from="Work Guide/TopBar" to="Work Guide" method="_on_top_bar_button_down"]
 [connection signal="button_up" from="Work Guide/TopBar" to="Work Guide" method="_on_top_bar_button_up"]
 [connection signal="pressed" from="Work Guide/Close" to="Work Guide" method="_on_close_pressed"]

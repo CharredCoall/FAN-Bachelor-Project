@@ -1,0 +1,175 @@
+[gd_scene format=3 uid="uid://ilpkg4qof5o4"]
+
+[ext_resource type="Texture2D" uid="uid://lkj8vr34efhx" path="res://art/triangle.png" id="1_hebmm"]
+[ext_resource type="Texture2D" uid="uid://dhxp40pegrhpl" path="res://art/grey_dot.webp" id="1_o2rsc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pxrep"]
+bg_color = Color(0.7730721, 0.7936489, 0.80838346, 1)
+border_color = Color(2.4065375e-06, 0.5276297, 0.69911206, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+expand_margin_left = 35.0
+expand_margin_top = 30.0
+expand_margin_right = 35.0
+expand_margin_bottom = 30.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mcbtl"]
+bg_color = Color(0.8302027, 0.84611744, 0.8575279, 1)
+border_color = Color(2.4065375e-06, 0.5276297, 0.69911206, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+expand_margin_left = 35.0
+expand_margin_top = 30.0
+expand_margin_right = 35.0
+expand_margin_bottom = 30.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p83lf"]
+bg_color = Color(0.8302027, 0.84611744, 0.8575279, 1)
+border_color = Color(2.4065375e-06, 0.5276297, 0.69911206, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+expand_margin_left = 35.0
+expand_margin_top = 30.0
+expand_margin_right = 35.0
+expand_margin_bottom = 30.0
+
+[sub_resource type="Animation" id="Animation_qpb2n"]
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(122, 128)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(194.00002, 128)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(266, 128)]
+}
+
+[sub_resource type="Animation" id="Animation_p0iak"]
+resource_name = "ball_bounce"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(140, 128), Vector2(140, 91.19), Vector2(140, 128), Vector2(140, 128)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.5, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(194.00002, 128), Vector2(194, 91.19), Vector2(194.00002, 128)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(250, 128), Vector2(250, 128), Vector2(250, 91.19), Vector2(250, 128)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hebmm"]
+_data = {
+&"RESET": SubResource("Animation_qpb2n"),
+&"ball_bounce": SubResource("Animation_p0iak")
+}
+
+[node name="Control" type="Control" unique_id=1239342970]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Triangle" type="Sprite2D" parent="." unique_id=1437958954]
+modulate = Color(0.83137256, 0.84705883, 0.85882354, 1)
+position = Vector2(62, 111)
+rotation = -1.5707964
+scale = Vector2(0.01, 0.01)
+texture = ExtResource("1_hebmm")
+
+[node name="TextEdit2" type="TextEdit" parent="." unique_id=1280631988]
+custom_minimum_size = Vector2(289, 0)
+layout_mode = 0
+offset_left = 109.99999
+offset_top = 87.0
+offset_right = 399.0
+offset_bottom = 127.0
+scale = Vector2(0.58, 1)
+theme_override_font_sizes/font_size = 26
+theme_override_styles/normal = SubResource("StyleBoxFlat_pxrep")
+theme_override_styles/focus = SubResource("StyleBoxFlat_mcbtl")
+theme_override_styles/read_only = SubResource("StyleBoxFlat_p83lf")
+editable = false
+scroll_fit_content_height = true
+
+[node name="1" type="Sprite2D" parent="." unique_id=627297489]
+position = Vector2(122, 128)
+scale = Vector2(0.061, 0.061)
+texture = ExtResource("1_o2rsc")
+
+[node name="2" type="Sprite2D" parent="." unique_id=1835252662]
+position = Vector2(194.00002, 128)
+scale = Vector2(0.061, 0.061)
+texture = ExtResource("1_o2rsc")
+
+[node name="3" type="Sprite2D" parent="." unique_id=240233451]
+position = Vector2(266, 128)
+scale = Vector2(0.061, 0.061)
+texture = ExtResource("1_o2rsc")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1279176597]
+libraries/ = SubResource("AnimationLibrary_hebmm")
+speed_scale = 1.8
