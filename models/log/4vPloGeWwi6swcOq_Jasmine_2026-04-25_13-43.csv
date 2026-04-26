@@ -1,0 +1,5 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'broccoli': 3.0, 'fig': 3.0, 'mushroom': 3.0, 'pita bread': 6.0, 'radish': 3.0, 'salmon fillet': 6.0, 'squash': 6.0, 'stalk of celery': 6.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","Alright, let's make a quick salmon and veggie stir-fry with pita bread. Here's what we'll use: 1 salmon fillet, 1 cup broccoli florets, 1/2 cup sliced mushrooms, and 1 stalk of celery. Cook the salmon in a pan for 4 minutes per side. Then stir-fry the veggies in the same pan for 3-4 minutes. Warm the pita bread in the microwave for 10-15 seconds. Plate everything and serve. This should take about 15 minutes total."
+"ok super how was it?","Actually, it was great! Quick, easy, and exactly what I needed. Thanks for not messing around. You saved 3.5 items from going bad, so you get 3.5 points. I'm about to eat and then crash. I am ending the conversation here!"

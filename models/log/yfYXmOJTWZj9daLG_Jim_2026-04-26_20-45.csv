@@ -1,0 +1,4 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'artichoke': 3.0, 'beet': 3.0, 'block of cheese': 1.0, 'cucumber': 1.0, 'egg': 1.0, 'mango': 5.0, 'radish': 5.0, 'slice of bacon': 4.0, 'stalk of celery': 1.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","Hey there! Jim here. Thanks for logging on to help! I just checked the fridge and I have 1 stalk of celery, 5 mangos, 1 block of cheese, 3 artichokes, 1 cucumber, 5 radishes, 1 egg, 3 beets, and 4 slices of bacon. Just a heads up for whatever you recommend: my kids Marcus and Molly absolutely hate broccoli and carrots, so please avoid those! Also, I'm all about reducing food waste, so let's make the most of what we have. Ready to get cooking?"
