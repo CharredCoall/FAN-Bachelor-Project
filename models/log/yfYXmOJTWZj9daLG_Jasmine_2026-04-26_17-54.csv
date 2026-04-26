@@ -1,0 +1,5 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'apple': 3.0, 'egg': 6.0, 'hot dog': 3.0, 'jalapeno': 4.0, 'pork chop': 5.0, 'shallot': 4.0, 'squash': 3.0, 'tomato': 2.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","Finally, I got through. I just finished a grueling 14-hour day, and I'm absolutely drained. I need something quick and easy to eat. I have 4 shallots, 3 squashes, 3 apples, 6 eggs, 3 hot dogs, 2 tomatoes, 4 jalapeños, and 5 pork chops. Give me something fast, or I might just order a pizza and go to bed."
+"Pizza is tasty. Why do you care about food waste?","Because I'm a responsible adult, and I don't want to waste money on food I could use. Plus, I'm trying to be more sustainable. But right now, I just need something quick and easy. I don't have the energy for a big production. Got any ideas?"
