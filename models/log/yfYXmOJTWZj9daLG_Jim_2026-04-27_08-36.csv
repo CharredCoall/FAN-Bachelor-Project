@@ -1,0 +1,4 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'cabbage': 3.0, 'cauliflower': 1.0, 'kale': 2.0, 'peach': 5.0, 'pickle': 5.0, 'pomegranate': 1.0, 'pork chop': 3.0, 'turnip': 1.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","Hey there! Jim here. Thanks for logging on to help! I just checked the fridge and I have 3 pork chops, 5 pickles, 1 turnip, 5 peaches, 1 cauliflower, 1 pomegranate, 3 cabbages, and 2 kale leaves. Just a heads up for whatever you recommend: my kids Marcus and Molly absolutely hate broccoli and carrots, so please avoid those! Oh, and if you can suggest something I can grill, that would be awesome!"
