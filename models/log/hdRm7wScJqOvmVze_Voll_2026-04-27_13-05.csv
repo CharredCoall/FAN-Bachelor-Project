@@ -1,0 +1,6 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'artichoke': 5.0, 'can of diced tomatoes': 9.0, 'chicken breast': 4.0, 'corn': 7.0, 'eggplant': 5.0, 'hot dog': 4.0, 'kale': 4.0, 'lemon': 7.0, 'onion': 4.0, 'pickle': 8.0, 'potato': 7.0, 'salmon fillet': 9.0, 'shrimp': 5.0, 'stalk of celery': 3.0, 'tortilla': 9.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","I'm 82 years old, I don't need a babysitter. But the doctor said I need 'variety' or whatever nonsense. I have a lot of food in my fridge, but I don't see the point of all this fuss. Now how do I turn this th"
+"Lets do an ovenbaked salmon fillet, with a salad on the side, and some oven-baked potatoes.
+Let's use the following ingredients: 2 salmon fillet, 4 potatoes, 2 corn, 1 kale, 2 stalks of celery. How does that sound to you Voll?","Fine, I suppose this meal is acceptable. The salmon and potatoes are nothing special, but the kale is what makes it worth eating. I'm getting the ingredients out now. You saved 11.0 items. Now leave me be so I can cook. I am ending the conversation here!"
