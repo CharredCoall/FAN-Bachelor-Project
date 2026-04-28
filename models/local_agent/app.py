@@ -18,18 +18,18 @@ characters = [
         "difficulty": 1
     },
     {
-        "name": "Jasmine",
-        "prompt_file": "Jasmine.yaml",
-        "difficulty": 2
-    },
-    {
         "name": "Brody",
         "prompt_file": "Brody.yaml",
-        "difficulty": 3
+        "difficulty": 2
     },
     {
         "name": "Cecilia",
         "prompt_file": "Cecilia.yaml",
+        "difficulty": 3
+    },
+        {
+        "name": "Jasmine",
+        "prompt_file": "Jasmine.yaml",
         "difficulty": 4
     },
     {
@@ -65,14 +65,20 @@ POSSIBLE_INGREDIENTS = [
     "onion", "steak", "potato", "salmon fillet", "egg", 
     "tomato", "bell pepper", "lemon", "mushroom", "pork chop", 
     "shrimp", "avocado", "zucchini", "sausage", "sweet potato", 
-    "corn", "garlic clove", "loaf of bread", "block of tofu", 
+    "corn", "garlic clove", "slice of bread", "block of tofu", 
     "slice of bacon", "can of diced tomatoes", "can of black beans", "can of tuna", 
     "tortilla", "pita bread", "hot dog", "lime", "kale",
     "orange", "peach", "plum", "kiwi", "mango", "jalapeno", 
-    "leek", "eggplant", "lettuce", "cabbage", "broccoli", "cauliflower", 
-    "stalk of celery", "radish", "turnip", "beet", "artichoke", "squash", 
-    "pumpkin", "shallot", "pickle", "stick of butter", "block of cheese", 
-    "pear", "grapefruit", "pineapple", "coconut", "fig", "papaya", "pomegranate",
+    "leek", "eggplant", "lettuce", "cabbage", "broccoli", 
+    "stalk of celery", "radish", "turnip", "beet", "squash",
+    "shallot", "pickle", "stick of butter", "block of cheese", 
+    "pear", "pineapple", "coconut", "fig", "papaya", "pomegranate"
+]
+
+PROTEIN_ITEMS = [
+    "chicken breast", "steak", "salmon fillet", "egg", "pork chop", 
+    "shrimp", "block of tofu", "slice of bacon", "can of black beans", 
+    "can of tuna", "hot dog", "sausage", "sweet potato"
 ]
 
 character_index = 0
@@ -89,17 +95,17 @@ def generate_fridge(difficulty:int) -> dict[str,int]:
         unique_items_range = (6, 10)
         item_amount_range = (1, 5)
     elif difficulty == 2:
-        unique_items_range = (8, 12)
-        item_amount_range = (2, 6)
+        unique_items_range = (7, 11)
+        item_amount_range = (1, 6)
     elif difficulty == 3:
-        unique_items_range = (10, 14)
-        item_amount_range = (3, 7)
+        unique_items_range = (8, 12)
+        item_amount_range = (1, 6)
     elif difficulty == 4:
-        unique_items_range = (12, 16)
-        item_amount_range = (3, 8)
+        unique_items_range = (9, 13)
+        item_amount_range = (1, 6)
     elif difficulty >= 5:
-        unique_items_range = (14, 18)
-        item_amount_range = (3, 9)
+        unique_items_range = (10, 14)
+        item_amount_range = (1, 7)
     else:
         unique_items_range = (5, 8)
         item_amount_range = (1, 5)
@@ -111,6 +117,12 @@ def generate_fridge(difficulty:int) -> dict[str,int]:
     num_unique_items = min(num_unique_items, len(POSSIBLE_INGREDIENTS))
 
     selected_items = random.sample(POSSIBLE_INGREDIENTS, num_unique_items)
+
+    if difficulty == 2:
+        has_protein = any(item in PROTEIN_ITEMS for item in selected_items)
+        if not has_protein:
+            protein_to_add = random.choice(PROTEIN_ITEMS)
+            selected_items[-1] = protein_to_add
 
     # VOLL's KALE OVERRIDE
     if difficulty == 5:
