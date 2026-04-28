@@ -1,0 +1,4 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'artichoke': 5.0, 'fig': 5.0, 'kale': 2.0, 'mango': 2.0, 'pear': 3.0, 'plum': 2.0, 'sweet potato': 2.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","Hey there! Jim here. Thanks for logging on to help! I just checked the fridge and I have 3 pears, 2 kale, 2 plums, 2 sweet potatoes, 5 figs, 2 mangos, and 5 artichokes. No broccoli or carrots this time, so we're good to go with whatever you suggest!"
