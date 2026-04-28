@@ -133,7 +133,7 @@ func _request_completed(_result, _response_code, _headers, body):
         [System Event: The conversation has just started, and you are speaking first. 
         Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]"
 	
-	log.append(['"' + last_sent_message.replace('"', "'") + '"', '"' + dict_package["response"].replace('"', "'") + '"'])
+	log.append(['"' + last_sent_message.replace('"', "'").replace("—","-") + '"', '"' + dict_package["response"].replace('"', "'").replace("—","-") + '"'])
 	
 	history[str(globals.current_char)].append(dict_package["response"])
 	print(history)
