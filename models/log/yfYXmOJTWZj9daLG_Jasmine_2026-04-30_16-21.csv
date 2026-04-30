@@ -1,0 +1,4 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'beet': 1.0, 'carrot': 5.0, 'chicken breast': 5.0, 'corn': 6.0, 'cucumber': 6.0, 'egg': 4.0, 'fig': 2.0, 'lime': 2.0, 'peach': 1.0, 'pear': 2.0, 'pork chop': 4.0, 'shallot': 2.0, 'turnip': 1.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","Ugh, finally connected. I just got off a 12-hour shift, and I'm absolutely drained. I need to eat something, but I don't have the energy for anything complicated. Here's what I have in the fridge: 6 cucumbers, 1 peach, 2 figs, 2 shallots, 5 chicken breasts, 4 pork chops, 1 beet, 4 eggs, 1 turnip, 2 limes, 2 pears, 6 ears of corn, and 5 carrots. Give me something quick and easy, or I might just order takeout."
