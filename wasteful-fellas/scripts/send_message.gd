@@ -2,7 +2,7 @@ extends TextEdit
 #@onready var messageBox = get_node("TextEdit")
 #@onready var replyBox = get_node("Panel/RichTextLabel")
 
-@onready var GameManager = $"../../.."
+@onready var GameManager = $"../../../.."
 
 @onready var green_bubble = preload("res://scripts/scenes/green_bubble.tscn")
 @onready var blue_bubble = preload("res://scripts/scenes/blue_bubble.tscn")
@@ -23,6 +23,7 @@ var model_idx = 0
 var steps
 var log = []
 var last_sent_message = ""
+var first = true #first completed request
 
 var history = {}
 var selected_chat #chat for history
@@ -38,7 +39,6 @@ func _ready():
 	for i in range(5):
 		history[str(i)] = []
 	
-	print(history)
 
 func SendServerMessage() -> void:
 	placeholder_text = "Client is typing..."
@@ -80,7 +80,7 @@ func SendServerMessage() -> void:
 func _request_completed(_result, _response_code, _headers, body):
 	placeholder_text = "Write something..."
 	set("theme_override_colors/font_placeholder_color", Color(0.0, 0.425, 0.593, 0.522))
-	if vcontainer.get_node("BALLS") != null:
+	if vcontainer.get_node_or_null("BALLS") != null:
 		vcontainer.get_node("BALLS").queue_free()
 	
 	var json = JSON.new()
@@ -100,6 +100,11 @@ func _request_completed(_result, _response_code, _headers, body):
 	if "fridge" in dict_package:
 		GameManager._update_fridge(dict_package["fridge"])
 		print("Fridge:", dict_package["fridge"])
+		
+		if first or ("model_idx" in dict_package and model_idx != dict_package["model_idx"]):
+			first = false
+			for key in dict_package["fridge"]:
+				globals.max_points += dict_package["fridge"][key]
 	
 	if "model_idx" in dict_package:
 		model_idx = dict_package["model_idx"]
@@ -190,9 +195,11 @@ func _end_convo():
 	if prev_char != 4:
 		$Timer.start()
 	else:
-		$"../../../End of the Day Report".visible = true
+		var end_report = $"../../../End of the Day Report"
+		end_report.visible = true
+		end_report.get_node("Panel/ScrollContainer/VBoxContainer/Points").text = "[center]" + str(GameManager.points) + " out of " + str(int(globals.max_points))
 		globals.max_window_index += 1
-		$"../../../End of the Day Report".z_index = globals.max_window_index
+		end_report.z_index = globals.max_window_index
 		$"../../../Toolbar/EndButton".visible = true
 		#make end tool bare icon visible
 		

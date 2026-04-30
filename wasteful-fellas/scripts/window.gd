@@ -1,13 +1,14 @@
 extends ColorRect
 
 @onready var top_area = $TopBar
-@onready var tool_bar = get_parent().get_node("Toolbar/ColorRect")
+@onready var tool_bar = $"../../Toolbar/ColorRect"
 
 var pressing = false
 var offset = Vector2.ZERO
 
 func _ready() -> void:
 	top_area.text = "   " + str(name)
+	mouse_filter = Control.MOUSE_FILTER_STOP
 
 func _process(_delta: float) -> void:
 	if pressing:
@@ -23,8 +24,9 @@ func _process(_delta: float) -> void:
 
 func _on_top_bar_button_down() -> void:
 	pressing = true
-	z_index = globals.max_window_index + 1
-	globals.max_window_index = z_index
+	#z_index = globals.max_window_index + 1
+	#globals.max_window_index = z_index
+	move_to_front()
 	offset = get_global_mouse_position() - global_position
 
 

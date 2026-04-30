@@ -1,6 +1,6 @@
 extends Node2D
-@onready var points_label = $"Client Satisfaction/Panel/RichTextLabel"
-@onready var fridge_label = $"Client's Fridge/Panel/RichTextLabel"
+@onready var points_label = $"Windows/Client Satisfaction/Panel/RichTextLabel"
+@onready var fridge_label = $"Windows/Client's Fridge/Panel/RichTextLabel"
 
 var points = 0
 var fridge = {}
@@ -27,24 +27,25 @@ func _on_app_pressed(butt_name) -> void:
 	
 	match butt_name:
 		"RecycleButton":
-			window = $"Waste Planner"
+			window = $"Windows/Waste Planner"
 			if first_open: #when first opening window
-				$"Waste Planner/Panel/WriteMessage/Timer".start()
+				$"Windows/Waste Planner/Panel/WriteMessage/Timer".start()
 				first_open = false
 		"CameraButton":
-			window = $"Client"
+			window = $"Windows/Client"
 		"PointsButton":
-			window = $"Client Satisfaction"
+			window = $"Windows/Client Satisfaction"
 		"FridgeButton":
-			window = $"Client's Fridge"
+			window = $"Windows/Client's Fridge"
 		"HelpButton":
-			window = $"Work Guide"
+			window = $"Windows/Work Guide"
 		"EndButton":
-			window = $"End of the Day Report"
+			window = $"Windows/End of the Day Report"
 	
 	window.visible = !window.visible
-	globals.max_window_index += 1
-	window.z_index = globals.max_window_index
+	#globals.max_window_index += 1
+	#window.z_index = globals.max_window_index
+	window.move_to_front()
 	
 	if !window.visible:
 		dot.visible = false

@@ -347,8 +347,15 @@ position = Vector2(198.80191, 1038.25)
 scale = Vector2(0.11594965, 0.116210975)
 texture = ExtResource("5_nf8vl")
 
-[node name="Client\'s Fridge" type="ColorRect" parent="." unique_id=878269905]
+[node name="Windows" type="Control" parent="." unique_id=679621759]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Client\'s Fridge" type="ColorRect" parent="Windows" unique_id=878269905]
 visible = false
+layout_mode = 0
 offset_left = 1363.0
 offset_top = 628.0
 offset_right = 1786.0
@@ -356,7 +363,7 @@ offset_bottom = 932.0
 color = Color(0.2627451, 0.5764706, 0.92156863, 1)
 script = ExtResource("11_nd18o")
 
-[node name="TopBar" type="Button" parent="Client\'s Fridge" unique_id=1158622394]
+[node name="TopBar" type="Button" parent="Windows/Client\'s Fridge" unique_id=1158622394]
 layout_mode = 0
 offset_left = -1.0
 offset_right = 376.0
@@ -372,7 +379,7 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_gvy4x")
 text = "   Waste"
 alignment = 0
 
-[node name="Panel" type="Panel" parent="Client\'s Fridge" unique_id=686494051]
+[node name="Panel" type="Panel" parent="Windows/Client\'s Fridge" unique_id=686494051]
 layout_mode = 0
 offset_left = 6.0
 offset_top = 40.0
@@ -380,7 +387,7 @@ offset_right = 415.0
 offset_bottom = 297.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_lexak")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Client\'s Fridge/Panel" unique_id=831897592]
+[node name="RichTextLabel" type="RichTextLabel" parent="Windows/Client\'s Fridge/Panel" unique_id=831897592]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -392,8 +399,9 @@ theme_override_colors/default_color = Color(0, 0, 0, 1)
 text = "  Items in fridge:
 "
 
-[node name="Waste Planner" type="ColorRect" parent="." unique_id=322381158]
+[node name="Waste Planner" type="ColorRect" parent="Windows" unique_id=322381158]
 visible = false
+layout_mode = 0
 offset_left = 47.0
 offset_top = 67.0
 offset_right = 1316.0
@@ -401,7 +409,7 @@ offset_bottom = 919.0
 color = Color(0.2581615, 0.57725954, 0.9219131, 1)
 script = ExtResource("11_nd18o")
 
-[node name="TopBar" type="Button" parent="Waste Planner" unique_id=329152009]
+[node name="TopBar" type="Button" parent="Windows/Waste Planner" unique_id=329152009]
 layout_mode = 0
 offset_left = -1.0
 offset_right = 1224.0
@@ -417,7 +425,7 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_gvy4x")
 text = "   Waste"
 alignment = 0
 
-[node name="Close" type="TextureButton" parent="Waste Planner" unique_id=1834067119]
+[node name="Close" type="TextureButton" parent="Windows/Waste Planner" unique_id=1834067119]
 visible = false
 layout_mode = 0
 offset_left = 1256.4642
@@ -429,7 +437,7 @@ texture_normal = ExtResource("9_efn2e")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Panel" type="Panel" parent="Waste Planner" unique_id=739212009]
+[node name="Panel" type="Panel" parent="Windows/Waste Planner" unique_id=739212009]
 layout_mode = 0
 offset_left = 7.0
 offset_top = 40.0
@@ -437,13 +445,13 @@ offset_right = 1262.0
 offset_bottom = 845.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_efn2e")
 
-[node name="ColorRect" type="ColorRect" parent="Waste Planner/Panel" unique_id=1128798682]
+[node name="ColorRect" type="ColorRect" parent="Windows/Waste Planner/Panel" unique_id=1128798682]
 layout_mode = 0
 offset_right = 385.0
 offset_bottom = 585.0
 color = Color(0.519767, 0.79812884, 0.5755315, 1)
 
-[node name="WriteMessage" type="TextEdit" parent="Waste Planner/Panel" unique_id=1670853495]
+[node name="WriteMessage" type="TextEdit" parent="Windows/Waste Planner/Panel" unique_id=1670853495]
 layout_mode = 0
 offset_left = 67.0
 offset_top = 638.0
@@ -462,14 +470,14 @@ editable = false
 wrap_mode = 1
 script = ExtResource("7_bqgb8")
 
-[node name="HTTPRequest" type="HTTPRequest" parent="Waste Planner/Panel/WriteMessage" unique_id=1153495048]
+[node name="HTTPRequest" type="HTTPRequest" parent="Windows/Waste Planner/Panel/WriteMessage" unique_id=1153495048]
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Waste Planner/Panel/WriteMessage" unique_id=727948318]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Windows/Waste Planner/Panel/WriteMessage" unique_id=727948318]
 
-[node name="Timer" type="Timer" parent="Waste Planner/Panel/WriteMessage" unique_id=575235675]
+[node name="Timer" type="Timer" parent="Windows/Waste Planner/Panel/WriteMessage" unique_id=575235675]
 one_shot = true
 
-[node name="Button" type="Button" parent="Waste Planner/Panel" unique_id=1138956334]
+[node name="Button" type="Button" parent="Windows/Waste Planner/Panel" unique_id=1138956334]
 layout_mode = 0
 offset_left = 1034.0
 offset_top = 623.0
@@ -483,7 +491,7 @@ theme_override_styles/disabled = SubResource("StyleBoxFlat_nd18o")
 disabled = true
 text = "SEND"
 
-[node name="StartConvo" type="Button" parent="Waste Planner/Panel" unique_id=1162297954]
+[node name="StartConvo" type="Button" parent="Windows/Waste Planner/Panel" unique_id=1162297954]
 visible = false
 layout_mode = 0
 offset_right = 385.0
@@ -501,7 +509,7 @@ icon = ExtResource("15_2kcag")
 alignment = 0
 expand_icon = true
 
-[node name="StartConvo2" type="Button" parent="Waste Planner/Panel/StartConvo" unique_id=130068802]
+[node name="StartConvo2" type="Button" parent="Windows/Waste Planner/Panel/StartConvo" unique_id=130068802]
 visible = false
 layout_mode = 0
 offset_top = 114.0
@@ -516,12 +524,12 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_wq15u")
 theme_override_styles/hover = SubResource("StyleBoxFlat_wq15u")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_djp82")
 theme_override_styles/focus = SubResource("StyleBoxFlat_ob7d6")
-text = "Jasmine opened a chat"
-icon = ExtResource("16_wq15u")
+text = "Brody opened a chat"
+icon = ExtResource("17_drj1u")
 alignment = 0
 expand_icon = true
 
-[node name="StartConvo3" type="Button" parent="Waste Planner/Panel/StartConvo" unique_id=1900767385]
+[node name="StartConvo3" type="Button" parent="Windows/Waste Planner/Panel/StartConvo" unique_id=1900767385]
 visible = false
 layout_mode = 0
 offset_top = 232.0
@@ -536,12 +544,12 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_wq15u")
 theme_override_styles/hover = SubResource("StyleBoxFlat_wq15u")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_djp82")
 theme_override_styles/focus = SubResource("StyleBoxFlat_o84r6")
-text = "Brody opened a chat"
-icon = ExtResource("17_drj1u")
+text = "Cecilia opened a chat"
+icon = ExtResource("18_t0sou")
 alignment = 0
 expand_icon = true
 
-[node name="StartConvo4" type="Button" parent="Waste Planner/Panel/StartConvo" unique_id=1173001904]
+[node name="StartConvo4" type="Button" parent="Windows/Waste Planner/Panel/StartConvo" unique_id=1173001904]
 visible = false
 layout_mode = 0
 offset_top = 349.0
@@ -556,12 +564,12 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_wq15u")
 theme_override_styles/hover = SubResource("StyleBoxFlat_wq15u")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_djp82")
 theme_override_styles/focus = SubResource("StyleBoxFlat_rtaic")
-text = "Cecilia opened a chat"
-icon = ExtResource("18_t0sou")
+text = "Jasmine opened a chat"
+icon = ExtResource("16_wq15u")
 alignment = 0
 expand_icon = true
 
-[node name="StartConvo5" type="Button" parent="Waste Planner/Panel/StartConvo" unique_id=621359361]
+[node name="StartConvo5" type="Button" parent="Windows/Waste Planner/Panel/StartConvo" unique_id=621359361]
 visible = false
 layout_mode = 0
 offset_top = 465.0
@@ -581,7 +589,7 @@ icon = ExtResource("19_drj1u")
 alignment = 0
 expand_icon = true
 
-[node name="Line2" type="ColorRect" parent="Waste Planner/Panel" unique_id=1062187399]
+[node name="Line2" type="ColorRect" parent="Windows/Waste Planner/Panel" unique_id=1062187399]
 layout_mode = 0
 offset_left = 385.0
 offset_top = -0.86600494
@@ -590,19 +598,19 @@ offset_bottom = 2.133995
 rotation = 1.5707964
 color = Color(0.37254903, 0.62352943, 0.41960785, 1)
 
-[node name="gradient" type="Sprite2D" parent="Waste Planner/Panel" unique_id=210982217]
+[node name="gradient" type="Sprite2D" parent="Windows/Waste Planner/Panel" unique_id=210982217]
 position = Vector2(817.31946, 292.12216)
 rotation = -1.5707964
 scale = Vector2(2.2861109, 864.74744)
 texture = SubResource("GradientTexture1D_67y07")
 
-[node name="Line" type="ColorRect" parent="Waste Planner/Panel" unique_id=2133983391]
+[node name="Line" type="ColorRect" parent="Windows/Waste Planner/Panel" unique_id=2133983391]
 layout_mode = 0
 offset_top = 578.0
 offset_right = 1256.0
 offset_bottom = 585.0
 
-[node name="ScrollContainer" type="ScrollContainer" parent="Waste Planner/Panel" unique_id=1846774065]
+[node name="ScrollContainer" type="ScrollContainer" parent="Windows/Waste Planner/Panel" unique_id=1846774065]
 layout_mode = 0
 offset_left = 385.0
 offset_top = -2.0
@@ -610,11 +618,12 @@ offset_right = 1250.0
 offset_bottom = 578.0
 horizontal_scroll_mode = 0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Waste Planner/Panel/ScrollContainer" unique_id=780750589]
+[node name="VBoxContainer" type="VBoxContainer" parent="Windows/Waste Planner/Panel/ScrollContainer" unique_id=780750589]
 custom_minimum_size = Vector2(800, 5000)
 layout_mode = 2
 
-[node name="Work Guide" type="ColorRect" parent="." unique_id=1123792481]
+[node name="Work Guide" type="ColorRect" parent="Windows" unique_id=1123792481]
+layout_mode = 0
 offset_left = 414.0
 offset_top = 46.0
 offset_right = 1552.0
@@ -622,7 +631,7 @@ offset_bottom = 950.0
 color = Color(0.2581615, 0.57725954, 0.9219131, 1)
 script = ExtResource("11_nd18o")
 
-[node name="TopBar" type="Button" parent="Work Guide" unique_id=1392853226]
+[node name="TopBar" type="Button" parent="Windows/Work Guide" unique_id=1392853226]
 layout_mode = 0
 offset_left = -1.0
 offset_right = 1224.0
@@ -638,7 +647,7 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_gvy4x")
 text = "   Waste"
 alignment = 0
 
-[node name="Close" type="TextureButton" parent="Work Guide" unique_id=342951912]
+[node name="Close" type="TextureButton" parent="Windows/Work Guide" unique_id=342951912]
 visible = false
 layout_mode = 0
 offset_left = 1256.4642
@@ -650,7 +659,7 @@ texture_normal = ExtResource("9_efn2e")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Panel" type="Panel" parent="Work Guide" unique_id=1406194697]
+[node name="Panel" type="Panel" parent="Windows/Work Guide" unique_id=1406194697]
 layout_mode = 0
 offset_left = 7.0
 offset_top = 40.0
@@ -658,20 +667,20 @@ offset_right = 1130.0
 offset_bottom = 845.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_efn2e")
 
-[node name="ColorRect" type="ColorRect" parent="Work Guide/Panel" unique_id=1061278776]
+[node name="ColorRect" type="ColorRect" parent="Windows/Work Guide/Panel" unique_id=1061278776]
 visible = false
 layout_mode = 0
 offset_right = 385.0
 offset_bottom = 585.0
 color = Color(0.519767, 0.79812884, 0.5755315, 1)
 
-[node name="gradient" type="Sprite2D" parent="Work Guide/Panel" unique_id=454225379]
+[node name="gradient" type="Sprite2D" parent="Windows/Work Guide/Panel" unique_id=454225379]
 position = Vector2(561.83954, 428.0071)
 rotation = -1.5707964
 scale = Vector2(3.347713, 1123.3052)
 texture = SubResource("GradientTexture1D_67y07")
 
-[node name="RichTextLabel2" type="RichTextLabel" parent="Work Guide/Panel" unique_id=990280903]
+[node name="RichTextLabel2" type="RichTextLabel" parent="Windows/Work Guide/Panel" unique_id=990280903]
 visible = false
 layout_mode = 0
 offset_left = 197.0
@@ -686,7 +695,7 @@ text = "[center]We, here at ReFridge inc., are excited to help you get started w
 For further details, read below:"
 scroll_active = false
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Work Guide/Panel" unique_id=938487688]
+[node name="RichTextLabel" type="RichTextLabel" parent="Windows/Work Guide/Panel" unique_id=938487688]
 visible = false
 layout_mode = 0
 offset_left = 1.0
@@ -699,7 +708,7 @@ bbcode_enabled = true
 text = "[center]WELCOME TO YOUR BRAND NEW JOB!"
 scroll_active = false
 
-[node name="ScrollContainer" type="ScrollContainer" parent="Work Guide/Panel" unique_id=1655169894]
+[node name="ScrollContainer" type="ScrollContainer" parent="Windows/Work Guide/Panel" unique_id=1655169894]
 layout_mode = 0
 offset_left = 82.0
 offset_top = -2.0
@@ -707,11 +716,11 @@ offset_right = 1124.0
 offset_bottom = 856.0
 horizontal_scroll_mode = 0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Work Guide/Panel/ScrollContainer" unique_id=876151677]
+[node name="VBoxContainer" type="VBoxContainer" parent="Windows/Work Guide/Panel/ScrollContainer" unique_id=876151677]
 custom_minimum_size = Vector2(943.61, 2300)
 layout_mode = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Work Guide/Panel/ScrollContainer/VBoxContainer" unique_id=2071062520]
+[node name="RichTextLabel" type="RichTextLabel" parent="Windows/Work Guide/Panel/ScrollContainer/VBoxContainer" unique_id=2071062520]
 layout_mode = 2
 theme_override_colors/default_color = Color(0.23119366, 0.3662076, 0.5810717, 1)
 theme_override_font_sizes/normal_font_size = 46
@@ -721,7 +730,7 @@ WELCOME TO YOUR BRAND NEW JOB!"
 fit_content = true
 scroll_active = false
 
-[node name="RichTextLabel3" type="RichTextLabel" parent="Work Guide/Panel/ScrollContainer/VBoxContainer" unique_id=2073065268]
+[node name="RichTextLabel3" type="RichTextLabel" parent="Windows/Work Guide/Panel/ScrollContainer/VBoxContainer" unique_id=2073065268]
 layout_mode = 2
 theme_override_colors/default_color = Color(0.23119366, 0.3662076, 0.5810717, 1)
 theme_override_font_sizes/normal_font_size = 24
@@ -739,12 +748,12 @@ For further guidance, continue reading:"
 fit_content = true
 scroll_active = false
 
-[node name="Tutorial1" type="Sprite2D" parent="Work Guide/Panel/ScrollContainer/VBoxContainer" unique_id=1674183391]
+[node name="Tutorial1" type="Sprite2D" parent="Windows/Work Guide/Panel/ScrollContainer/VBoxContainer" unique_id=1674183391]
 position = Vector2(474, 541)
 scale = Vector2(0.43287033, 0.43287033)
 texture = ExtResource("15_djp82")
 
-[node name="RichTextLabel4" type="RichTextLabel" parent="Work Guide/Panel/ScrollContainer/VBoxContainer" unique_id=777506727]
+[node name="RichTextLabel4" type="RichTextLabel" parent="Windows/Work Guide/Panel/ScrollContainer/VBoxContainer" unique_id=777506727]
 layout_mode = 2
 theme_override_colors/default_color = Color(0.23119366, 0.3662076, 0.5810717, 1)
 theme_override_font_sizes/normal_font_size = 24
@@ -762,12 +771,12 @@ The apps:"
 fit_content = true
 scroll_active = false
 
-[node name="RecycleButton" type="Sprite2D" parent="Work Guide/Panel/ScrollContainer/VBoxContainer" unique_id=1148236798]
+[node name="RecycleButton" type="Sprite2D" parent="Windows/Work Guide/Panel/ScrollContainer/VBoxContainer" unique_id=1148236798]
 position = Vector2(220, 887.9995)
 scale = Vector2(0.101690315, 0.10169031)
 texture = ExtResource("4_qrswn")
 
-[node name="RichTextLabel5" type="RichTextLabel" parent="Work Guide/Panel/ScrollContainer/VBoxContainer" unique_id=1412381876]
+[node name="RichTextLabel5" type="RichTextLabel" parent="Windows/Work Guide/Panel/ScrollContainer/VBoxContainer" unique_id=1412381876]
 layout_mode = 2
 theme_override_colors/default_color = Color(0.23119366, 0.3662076, 0.5810717, 1)
 theme_override_font_sizes/normal_font_size = 24
@@ -799,22 +808,22 @@ fit_content = true
 scroll_active = false
 tab_size = 18
 
-[node name="FridgeButton" type="Sprite2D" parent="Work Guide/Panel/ScrollContainer/VBoxContainer" unique_id=1031963188]
+[node name="FridgeButton" type="Sprite2D" parent="Windows/Work Guide/Panel/ScrollContainer/VBoxContainer" unique_id=1031963188]
 position = Vector2(223.25, 1111.25)
 scale = Vector2(0.3486111, 0.3486111)
 texture = ExtResource("8_2kcag")
 
-[node name="PointsButton" type="Sprite2D" parent="Work Guide/Panel/ScrollContainer/VBoxContainer" unique_id=1930154764]
+[node name="PointsButton" type="Sprite2D" parent="Windows/Work Guide/Panel/ScrollContainer/VBoxContainer" unique_id=1930154764]
 position = Vector2(223, 1323)
 scale = Vector2(0.057903096, 0.057903077)
 texture = ExtResource("9_ppp2o")
 
-[node name="CameraButton" type="Sprite2D" parent="Work Guide/Panel/ScrollContainer/VBoxContainer" unique_id=1126884050]
+[node name="CameraButton" type="Sprite2D" parent="Windows/Work Guide/Panel/ScrollContainer/VBoxContainer" unique_id=1126884050]
 position = Vector2(224.375, 1517.3752)
 scale = Vector2(0.22509769, 0.22509769)
 texture = ExtResource("7_djp82")
 
-[node name="RichTextLabel6" type="RichTextLabel" parent="Work Guide/Panel/ScrollContainer/VBoxContainer" unique_id=1437849050]
+[node name="RichTextLabel6" type="RichTextLabel" parent="Windows/Work Guide/Panel/ScrollContainer/VBoxContainer" unique_id=1437849050]
 layout_mode = 2
 theme_override_colors/default_color = Color(0.23119366, 0.3662076, 0.5810717, 1)
 theme_override_font_sizes/normal_font_size = 24
@@ -839,8 +848,9 @@ INSERT REFRIDGE LOGO"
 fit_content = true
 scroll_active = false
 
-[node name="End of the Day Report" type="ColorRect" parent="." unique_id=1530631481]
+[node name="End of the Day Report" type="ColorRect" parent="Windows" unique_id=1530631481]
 visible = false
+layout_mode = 0
 offset_left = 414.0
 offset_top = 46.0
 offset_right = 1552.0
@@ -848,7 +858,7 @@ offset_bottom = 950.0
 color = Color(0.2581615, 0.57725954, 0.9219131, 1)
 script = ExtResource("11_nd18o")
 
-[node name="TopBar" type="Button" parent="End of the Day Report" unique_id=938259023]
+[node name="TopBar" type="Button" parent="Windows/End of the Day Report" unique_id=938259023]
 layout_mode = 0
 offset_left = -1.0
 offset_right = 1224.0
@@ -864,7 +874,7 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_gvy4x")
 text = "   Waste"
 alignment = 0
 
-[node name="Close" type="TextureButton" parent="End of the Day Report" unique_id=70936071]
+[node name="Close" type="TextureButton" parent="Windows/End of the Day Report" unique_id=70936071]
 visible = false
 layout_mode = 0
 offset_left = 1256.4642
@@ -876,7 +886,7 @@ texture_normal = ExtResource("9_efn2e")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Panel" type="Panel" parent="End of the Day Report" unique_id=1110607799]
+[node name="Panel" type="Panel" parent="Windows/End of the Day Report" unique_id=1110607799]
 layout_mode = 0
 offset_left = 7.0
 offset_top = 40.0
@@ -884,20 +894,20 @@ offset_right = 1130.0
 offset_bottom = 845.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_efn2e")
 
-[node name="ColorRect" type="ColorRect" parent="End of the Day Report/Panel" unique_id=759135358]
+[node name="ColorRect" type="ColorRect" parent="Windows/End of the Day Report/Panel" unique_id=759135358]
 visible = false
 layout_mode = 0
 offset_right = 385.0
 offset_bottom = 585.0
 color = Color(0.519767, 0.79812884, 0.5755315, 1)
 
-[node name="gradient" type="Sprite2D" parent="End of the Day Report/Panel" unique_id=1449007020]
+[node name="gradient" type="Sprite2D" parent="Windows/End of the Day Report/Panel" unique_id=1449007020]
 position = Vector2(561.83954, 428.0071)
 rotation = -1.5707964
 scale = Vector2(3.347713, 1123.3052)
 texture = SubResource("GradientTexture1D_67y07")
 
-[node name="ScrollContainer" type="ScrollContainer" parent="End of the Day Report/Panel" unique_id=2030549052]
+[node name="ScrollContainer" type="ScrollContainer" parent="Windows/End of the Day Report/Panel" unique_id=2030549052]
 layout_mode = 0
 offset_left = 82.0
 offset_top = -8.0
@@ -905,11 +915,11 @@ offset_right = 1124.0
 offset_bottom = 850.0
 horizontal_scroll_mode = 0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="End of the Day Report/Panel/ScrollContainer" unique_id=1063719149]
+[node name="VBoxContainer" type="VBoxContainer" parent="Windows/End of the Day Report/Panel/ScrollContainer" unique_id=1063719149]
 custom_minimum_size = Vector2(943.61, 850.84)
 layout_mode = 2
 
-[node name="RichTextLabel" type="RichTextLabel" parent="End of the Day Report/Panel/ScrollContainer/VBoxContainer" unique_id=567765554]
+[node name="RichTextLabel" type="RichTextLabel" parent="Windows/End of the Day Report/Panel/ScrollContainer/VBoxContainer" unique_id=567765554]
 layout_mode = 2
 theme_override_colors/default_color = Color(0.23119366, 0.3662076, 0.5810717, 1)
 theme_override_font_sizes/normal_font_size = 46
@@ -919,7 +929,7 @@ CONGRATULATIONS!"
 fit_content = true
 scroll_active = false
 
-[node name="RichTextLabel3" type="RichTextLabel" parent="End of the Day Report/Panel/ScrollContainer/VBoxContainer" unique_id=729683509]
+[node name="RichTextLabel3" type="RichTextLabel" parent="Windows/End of the Day Report/Panel/ScrollContainer/VBoxContainer" unique_id=729683509]
 layout_mode = 2
 theme_override_colors/default_color = Color(0.23119366, 0.3662076, 0.5810717, 1)
 theme_override_font_sizes/normal_font_size = 24
@@ -938,7 +948,7 @@ Client Satisfaction Points earned today:
 fit_content = true
 scroll_active = false
 
-[node name="RichTextLabel2" type="RichTextLabel" parent="End of the Day Report/Panel/ScrollContainer/VBoxContainer" unique_id=472614259]
+[node name="Points" type="RichTextLabel" parent="Windows/End of the Day Report/Panel/ScrollContainer/VBoxContainer" unique_id=472614259]
 layout_mode = 2
 theme_override_colors/default_color = Color(0.2655797, 0.46440703, 0.22522718, 1)
 theme_override_font_sizes/normal_font_size = 40
@@ -947,7 +957,7 @@ text = "[center]99 out of 100"
 fit_content = true
 scroll_active = false
 
-[node name="RichTextLabel4" type="RichTextLabel" parent="End of the Day Report/Panel/ScrollContainer/VBoxContainer" unique_id=2016731187]
+[node name="RichTextLabel4" type="RichTextLabel" parent="Windows/End of the Day Report/Panel/ScrollContainer/VBoxContainer" unique_id=2016731187]
 layout_mode = 2
 theme_override_colors/default_color = Color(0.23119366, 0.3662076, 0.5810717, 1)
 theme_override_font_sizes/normal_font_size = 24
@@ -963,8 +973,9 @@ Thank you!"
 fit_content = true
 scroll_active = false
 
-[node name="Client" type="ColorRect" parent="." unique_id=1503985887]
+[node name="Client" type="ColorRect" parent="Windows" unique_id=1503985887]
 visible = false
+layout_mode = 0
 offset_left = 1348.0
 offset_top = 73.0
 offset_right = 1759.0
@@ -972,7 +983,7 @@ offset_bottom = 593.0
 color = Color(0.2627451, 0.5764706, 0.92156863, 1)
 script = ExtResource("11_nd18o")
 
-[node name="TopBar" type="Button" parent="Client" unique_id=1256188458]
+[node name="TopBar" type="Button" parent="Windows/Client" unique_id=1256188458]
 layout_mode = 0
 offset_left = -1.0
 offset_right = 404.0
@@ -988,7 +999,7 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_gvy4x")
 text = "   Waste"
 alignment = 0
 
-[node name="Panel" type="Panel" parent="Client" unique_id=1611809260]
+[node name="Panel" type="Panel" parent="Windows/Client" unique_id=1611809260]
 clip_contents = true
 layout_mode = 0
 offset_left = 8.0
@@ -996,23 +1007,23 @@ offset_top = 39.0
 offset_right = 402.0
 offset_bottom = 511.0
 
-[node name="BG" type="Sprite2D" parent="Client/Panel" unique_id=493967370]
+[node name="BG" type="Sprite2D" parent="Windows/Client/Panel" unique_id=493967370]
 modulate = Color(0.7195469, 0.76396143, 0.7295584, 0.827451)
 position = Vector2(334.50003, 244.5)
 scale = Vector2(1.155102, 1.1882353)
 
-[node name="Character" type="Sprite2D" parent="Client/Panel" unique_id=1168780267]
+[node name="Character" type="Sprite2D" parent="Windows/Client/Panel" unique_id=1168780267]
 position = Vector2(216.00002, 229)
 scale = Vector2(0.48356488, 0.48356488)
 
-[node name="ColorRect" type="ColorRect" parent="Client/Panel" unique_id=1607098207]
+[node name="ColorRect" type="ColorRect" parent="Windows/Client/Panel" unique_id=1607098207]
 layout_mode = 0
 offset_top = 368.0
 offset_right = 437.0
 offset_bottom = 496.0
 color = Color(0.3019608, 0.3019608, 0.3019608, 0.70980394)
 
-[node name="EndConvoButton" type="TextureButton" parent="Client/Panel" unique_id=1281522389]
+[node name="EndConvoButton" type="TextureButton" parent="Windows/Client/Panel" unique_id=1281522389]
 layout_mode = 0
 offset_left = 161.0
 offset_top = 386.0
@@ -1022,8 +1033,9 @@ texture_normal = ExtResource("10_lexak")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Client Satisfaction" type="ColorRect" parent="." unique_id=1138101869]
+[node name="Client Satisfaction" type="ColorRect" parent="Windows" unique_id=1138101869]
 visible = false
+layout_mode = 0
 offset_left = 1649.0
 offset_top = 516.0
 offset_right = 1879.0
@@ -1031,7 +1043,7 @@ offset_bottom = 720.0
 color = Color(0.2627451, 0.5764706, 0.92156863, 1)
 script = ExtResource("11_nd18o")
 
-[node name="TopBar" type="Button" parent="Client Satisfaction" unique_id=176963910]
+[node name="TopBar" type="Button" parent="Windows/Client Satisfaction" unique_id=176963910]
 layout_mode = 0
 offset_left = -1.0
 offset_right = 192.0
@@ -1047,7 +1059,7 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_gvy4x")
 text = "   Waste"
 alignment = 0
 
-[node name="Panel" type="Panel" parent="Client Satisfaction" unique_id=1678760510]
+[node name="Panel" type="Panel" parent="Windows/Client Satisfaction" unique_id=1678760510]
 layout_mode = 0
 offset_left = 6.0
 offset_top = 40.0
@@ -1055,7 +1067,7 @@ offset_right = 223.0
 offset_bottom = 198.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_lexak")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Client Satisfaction/Panel" unique_id=1421737055]
+[node name="RichTextLabel" type="RichTextLabel" parent="Windows/Client Satisfaction/Panel" unique_id=1421737055]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1075,29 +1087,29 @@ vertical_alignment = 1
 [connection signal="pressed" from="Toolbar/PointsButton" to="." method="_on_app_pressed" binds= ["PointsButton"]]
 [connection signal="pressed" from="Toolbar/HelpButton" to="." method="_on_app_pressed" binds= ["HelpButton"]]
 [connection signal="pressed" from="Toolbar/EndButton" to="." method="_on_app_pressed" binds= ["EndButton"]]
-[connection signal="button_down" from="Client\'s Fridge/TopBar" to="Client\'s Fridge" method="_on_top_bar_button_down"]
-[connection signal="button_up" from="Client\'s Fridge/TopBar" to="Client\'s Fridge" method="_on_top_bar_button_up"]
-[connection signal="button_down" from="Waste Planner/TopBar" to="Waste Planner" method="_on_top_bar_button_down"]
-[connection signal="button_up" from="Waste Planner/TopBar" to="Waste Planner" method="_on_top_bar_button_up"]
-[connection signal="pressed" from="Waste Planner/Close" to="Waste Planner" method="_on_close_pressed"]
-[connection signal="convo_ended" from="Waste Planner/Panel/WriteMessage" to="Client" method="_on_convo_ended"]
-[connection signal="convo_started" from="Waste Planner/Panel/WriteMessage" to="Client" method="_on_convo_started"]
-[connection signal="text_changed" from="Waste Planner/Panel/WriteMessage" to="Waste Planner/Panel/WriteMessage" method="_on_text_changed"]
-[connection signal="timeout" from="Waste Planner/Panel/WriteMessage/Timer" to="Waste Planner/Panel/WriteMessage" method="_on_timer_timeout"]
-[connection signal="pressed" from="Waste Planner/Panel/Button" to="Waste Planner/Panel/WriteMessage" method="SendServerMessage"]
-[connection signal="pressed" from="Waste Planner/Panel/StartConvo" to="Waste Planner/Panel/WriteMessage" method="_on_start_convo_pressed" binds= [0]]
-[connection signal="pressed" from="Waste Planner/Panel/StartConvo/StartConvo2" to="Waste Planner/Panel/WriteMessage" method="_on_start_convo_pressed" binds= [1]]
-[connection signal="pressed" from="Waste Planner/Panel/StartConvo/StartConvo3" to="Waste Planner/Panel/WriteMessage" method="_on_start_convo_pressed" binds= [2]]
-[connection signal="pressed" from="Waste Planner/Panel/StartConvo/StartConvo4" to="Waste Planner/Panel/WriteMessage" method="_on_start_convo_pressed" binds= [3]]
-[connection signal="pressed" from="Waste Planner/Panel/StartConvo/StartConvo5" to="Waste Planner/Panel/WriteMessage" method="_on_start_convo_pressed" binds= [4]]
-[connection signal="button_down" from="Work Guide/TopBar" to="Work Guide" method="_on_top_bar_button_down"]
-[connection signal="button_up" from="Work Guide/TopBar" to="Work Guide" method="_on_top_bar_button_up"]
-[connection signal="pressed" from="Work Guide/Close" to="Work Guide" method="_on_close_pressed"]
-[connection signal="button_down" from="End of the Day Report/TopBar" to="End of the Day Report" method="_on_top_bar_button_down"]
-[connection signal="button_up" from="End of the Day Report/TopBar" to="End of the Day Report" method="_on_top_bar_button_up"]
-[connection signal="pressed" from="End of the Day Report/Close" to="End of the Day Report" method="_on_close_pressed"]
-[connection signal="button_down" from="Client/TopBar" to="Client" method="_on_top_bar_button_down"]
-[connection signal="button_up" from="Client/TopBar" to="Client" method="_on_top_bar_button_up"]
-[connection signal="pressed" from="Client/Panel/EndConvoButton" to="Waste Planner/Panel/WriteMessage" method="_on_end_convo_button_pressed"]
-[connection signal="button_down" from="Client Satisfaction/TopBar" to="Client Satisfaction" method="_on_top_bar_button_down"]
-[connection signal="button_up" from="Client Satisfaction/TopBar" to="Client Satisfaction" method="_on_top_bar_button_up"]
+[connection signal="button_down" from="Windows/Client\'s Fridge/TopBar" to="Windows/Client\'s Fridge" method="_on_top_bar_button_down"]
+[connection signal="button_up" from="Windows/Client\'s Fridge/TopBar" to="Windows/Client\'s Fridge" method="_on_top_bar_button_up"]
+[connection signal="button_down" from="Windows/Waste Planner/TopBar" to="Windows/Waste Planner" method="_on_top_bar_button_down"]
+[connection signal="button_up" from="Windows/Waste Planner/TopBar" to="Windows/Waste Planner" method="_on_top_bar_button_up"]
+[connection signal="pressed" from="Windows/Waste Planner/Close" to="Windows/Waste Planner" method="_on_close_pressed"]
+[connection signal="convo_ended" from="Windows/Waste Planner/Panel/WriteMessage" to="Windows/Client" method="_on_convo_ended"]
+[connection signal="convo_started" from="Windows/Waste Planner/Panel/WriteMessage" to="Windows/Client" method="_on_convo_started"]
+[connection signal="text_changed" from="Windows/Waste Planner/Panel/WriteMessage" to="Windows/Waste Planner/Panel/WriteMessage" method="_on_text_changed"]
+[connection signal="timeout" from="Windows/Waste Planner/Panel/WriteMessage/Timer" to="Windows/Waste Planner/Panel/WriteMessage" method="_on_timer_timeout"]
+[connection signal="pressed" from="Windows/Waste Planner/Panel/Button" to="Windows/Waste Planner/Panel/WriteMessage" method="SendServerMessage"]
+[connection signal="pressed" from="Windows/Waste Planner/Panel/StartConvo" to="Windows/Waste Planner/Panel/WriteMessage" method="_on_start_convo_pressed" binds= [0]]
+[connection signal="pressed" from="Windows/Waste Planner/Panel/StartConvo/StartConvo2" to="Windows/Waste Planner/Panel/WriteMessage" method="_on_start_convo_pressed" binds= [1]]
+[connection signal="pressed" from="Windows/Waste Planner/Panel/StartConvo/StartConvo3" to="Windows/Waste Planner/Panel/WriteMessage" method="_on_start_convo_pressed" binds= [2]]
+[connection signal="pressed" from="Windows/Waste Planner/Panel/StartConvo/StartConvo4" to="Windows/Waste Planner/Panel/WriteMessage" method="_on_start_convo_pressed" binds= [3]]
+[connection signal="pressed" from="Windows/Waste Planner/Panel/StartConvo/StartConvo5" to="Windows/Waste Planner/Panel/WriteMessage" method="_on_start_convo_pressed" binds= [4]]
+[connection signal="button_down" from="Windows/Work Guide/TopBar" to="Windows/Work Guide" method="_on_top_bar_button_down"]
+[connection signal="button_up" from="Windows/Work Guide/TopBar" to="Windows/Work Guide" method="_on_top_bar_button_up"]
+[connection signal="pressed" from="Windows/Work Guide/Close" to="Windows/Work Guide" method="_on_close_pressed"]
+[connection signal="button_down" from="Windows/End of the Day Report/TopBar" to="Windows/End of the Day Report" method="_on_top_bar_button_down"]
+[connection signal="button_up" from="Windows/End of the Day Report/TopBar" to="Windows/End of the Day Report" method="_on_top_bar_button_up"]
+[connection signal="pressed" from="Windows/End of the Day Report/Close" to="Windows/End of the Day Report" method="_on_close_pressed"]
+[connection signal="button_down" from="Windows/Client/TopBar" to="Windows/Client" method="_on_top_bar_button_down"]
+[connection signal="button_up" from="Windows/Client/TopBar" to="Windows/Client" method="_on_top_bar_button_up"]
+[connection signal="pressed" from="Windows/Client/Panel/EndConvoButton" to="Windows/Waste Planner/Panel/WriteMessage" method="_on_end_convo_button_pressed"]
+[connection signal="button_down" from="Windows/Client Satisfaction/TopBar" to="Windows/Client Satisfaction" method="_on_top_bar_button_down"]
+[connection signal="button_up" from="Windows/Client Satisfaction/TopBar" to="Windows/Client Satisfaction" method="_on_top_bar_button_up"]
