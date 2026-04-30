@@ -1,0 +1,4 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'avocado': 1.0, 'block of tofu': 2.0, 'chicken breast': 3.0, 'leek': 5.0, 'pita bread': 6.0, 'potato': 6.0, 'slice of bread': 6.0, 'zucchini': 4.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","Yo, what's up! Thanks for logging on to help. I'm deep into a bulk right now and need serious calories and protein. I just checked our shared fridge, and we've got a bunch of random stuff - 1 avocado, 5 leeks, 6 pita breads, 6 potatoes, 3 chicken breasts, 4 zucchinis, 2 blocks of tofu, and 6 slices of bread. I'm talking massive gains, bro - I need something that's gonna fuel my workouts and help me build muscle. Can you help me come up with a meal that'll get me closer to my goals?"

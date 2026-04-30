@@ -1,0 +1,4 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'banana': 6.0, 'block of cheese': 2.0, 'fig': 1.0, 'jalapeno': 4.0, 'kale': 5.0, 'lime': 1.0, 'peach': 1.0, 'sweet potato': 2.0, 'tortilla': 6.0, 'zucchini': 6.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","Who is this? I'm 82 years old, I don't need a babysitter. The doctor said I need 'variety' or whatever nonsense. I have 1 lime, 2 sweet potatoes, 6 zucchinis, 6 tortillas, 6 bananas, 1 peach, 4 jalapenos, 2 blocks of cheese, 1 fig, and 5 kale. Now how do I turn this th"
