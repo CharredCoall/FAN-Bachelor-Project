@@ -1,0 +1,5 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'avocado': 2.0, 'block of tofu': 1.0, 'chicken breast': 3.0, 'cucumber': 2.0, 'eggplant': 4.0, 'fig': 6.0, 'kale': 1.0, 'lime': 5.0, 'pear': 2.0, 'pita bread': 4.0, 'plum': 1.0, 'stalk of celery': 6.0, 'stick of butter': 7.0, 'tomato': 5.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","I'm 82 years old, I don't need a babysitter. But the doctor said I need 'variety' or whatever nonsense. I have a bunch of stuff in my fridge, but I don't see the point of any of it. Now how do I turn this th"
+"Eat kale and chicken and pita bread with avocado. ","Fine, I'll eat this... thing. At least it has kale. You get 4.0 points. Now leave me be. I am ending the conversation here!"
