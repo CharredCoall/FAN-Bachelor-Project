@@ -1,0 +1,6 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'banana': 6.0, 'hot dog': 3.0, 'lime': 2.0, 'papaya': 6.0, 'peach': 4.0, 'pork chop': 4.0, 'potato': 5.0, 'radish': 2.0, 'shrimp': 2.0, 'steak': 2.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","Hi! I'm Cecilia, I'm 11. My parents are working far away, so I have to cook for myself today. I really want to make them proud and not waste the food they bought. I looked in the fridge and I have 4 peaches, 3 hot dogs, 2 limes, 5 potatoes, 2 steaks, 2 shrimps, 6 bananas, 6 papayas, 2 radishes, and 4 pork chops. What should I make?"
+"Do you have any ideas?","Actually, yeah! I was thinking about making something simple. I have hot dogs and potatoes, so maybe I could boil some hot dogs and potatoes? But I need to make sure I don't use too much food. What do you think?"
+"Good idea, do that!","Okay, I'm taking one hot dog and one potato out of the fridge. I'll boil them. I saved 2.0 items from going bad, so you get 2.0 points! Thanks for helping me, I am ending the conversation here!"
