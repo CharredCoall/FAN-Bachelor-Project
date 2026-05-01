@@ -1,0 +1,5 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'can of black beans': 1.0, 'eggplant': 6.0, 'hot dog': 5.0, 'kale': 7.0, 'kiwi': 2.0, 'leek': 2.0, 'mushroom': 2.0, 'onion': 4.0, 'pickle': 5.0, 'plum': 1.0, 'potato': 1.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","Who is this? I'm 82 years old, I don't need a babysitter. The doctor said I need 'variety' or whatever nonsense. I have 5 pickles, 6 eggplants, 2 kiwis, 5 hot dogs, 1 can of black beans, 2 mushrooms, 1 plum, 1 potato, 4 onions, 2 leeks, and 7 kale. Now how do I turn this th"
+"Use kale and beans. Cook it","Fine, I'll cook some kale and beans. But next time, give me a better reason than 'cook it.' At least the kale is good for me. You get 4 points. Goodbye. I am ending the conversation here!"
