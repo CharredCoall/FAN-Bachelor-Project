@@ -1,0 +1,4 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'avocado': 2.0, 'bell pepper': 5.0, 'garlic clove': 4.0, 'leek': 2.0, 'lemon': 1.0, 'lettuce': 1.0, 'onion': 6.0, 'papaya': 2.0, 'peach': 6.0, 'pork chop': 2.0, 'squash': 2.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","Ugh, I just walked in the door after a 12-hour day, and I'm so hungry I could eat the furniture. I need something fast, easy, and not too complicated. Look at what I've got in the fridge: lettuce, leek, onion, papaya, avocado, pork chops, peaches, lemon, garlic cloves, squash, and bell peppers. I don't have the mental bandwidth for anything fancy. Hit me with your best quick meal idea. And make it snappy."
