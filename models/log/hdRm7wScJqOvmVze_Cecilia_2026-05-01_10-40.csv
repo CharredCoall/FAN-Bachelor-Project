@@ -1,0 +1,4 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'banana': 6.0, 'bell pepper': 4.0, 'leek': 2.0, 'pineapple': 3.0, 'potato': 4.0, 'squash': 3.0, 'stalk of celery': 1.0, 'stick of butter': 5.0, 'tomato': 4.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","Hi! I'm Cecilia, I'm 11. My parents are working far away, so I have to cook for myself today! I really want to make them proud and not waste the groceries they bought. I looked in the fridge and I have a lot of stuff, but I'm not sure what to make. There's potatoes, pineapple, leek, celery, squash, butter, tomatoes, bell peppers, and bananas. I don't really like leeks, they're gross! Can you please help me come up with a recipe that doesn't have any yucky ingredients?"
