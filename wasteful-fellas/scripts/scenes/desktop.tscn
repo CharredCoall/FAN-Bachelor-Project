@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://devnrgk7j3ar0" path="res://art/NPC icons/brody_icon.png" id="17_drj1u"]
 [ext_resource type="Texture2D" uid="uid://c2al4gh8h36oe" path="res://art/NPC icons/cecilia_icon.png" id="18_t0sou"]
 [ext_resource type="Texture2D" uid="uid://c20sgf3f2kytr" path="res://art/NPC icons/voll_icon.png" id="19_drj1u"]
+[ext_resource type="Texture2D" uid="uid://ba2ue0tr35vwj" path="res://art/speaker_icon.png" id="23_jcjvk"]
 
 [sub_resource type="Gradient" id="Gradient_lexak"]
 colors = PackedColorArray(0.05490196, 0.14117648, 0.3372549, 0.7921569, 1, 1, 1, 0)
@@ -195,6 +196,81 @@ colors = PackedColorArray(0.8781551, 0.9477405, 0.9606653, 1, 0.9669389, 0.96693
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_67y07"]
 gradient = SubResource("Gradient_nf8vl")
 
+[sub_resource type="Gradient" id="Gradient_t0sou"]
+colors = PackedColorArray(0.05490196, 0.14117648, 0.3372549, 0.11764706, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_jcjvk"]
+gradient = SubResource("Gradient_t0sou")
+width = 51
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h6wof"]
+bg_color = Color(1, 1, 1, 0.56078434)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.5411765, 0.5411765, 0.5411765, 0.3882353)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j27re"]
+bg_color = Color(0.9275333, 0.92753345, 0.9275332, 0.56078434)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.5411765, 0.5411765, 0.5411765, 0.3882353)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ok7va"]
+bg_color = Color(0.95815676, 0.95815676, 0.95815676, 0.56078434)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.5411765, 0.5411765, 0.5411765, 0.3882353)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3y4ia"]
+bg_color = Color(0.6, 0.6, 0.6, 0.47843137)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.6392157, 0.63529414, 0.63529414, 0.80784315)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+expand_margin_left = 8.0
+expand_margin_top = 5.0
+expand_margin_right = 8.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="DPITexture" id="DPITexture_jcjvk"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"32\" height=\"16\"><rect width=\"30\" height=\"14\" x=\"1\" y=\"1\" fill=\"#fff\" fill-opacity=\".75\" rx=\"7\"/><circle cx=\"24\" cy=\"8\" r=\"5\" fill=\"#1a1a1a\"/></svg>
+"
+base_scale = 1.05
+color_map = {
+Color(0.101960786, 0.101960786, 0.101960786, 1): Color(0.015686275, 0.44705883, 0.8117647, 1)
+}
+
+[sub_resource type="DPITexture" id="DPITexture_7xkin"]
+_source = "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"32\" height=\"16\"><rect width=\"30\" height=\"14\" x=\"1\" y=\"1\" fill=\"#fff\" fill-opacity=\".75\" rx=\"7\"/><circle cx=\"8\" cy=\"8\" r=\"5\" fill=\"#1a1a1a\"/></svg>
+"
+base_scale = 1.05
+color_map = {
+Color(0.101960786, 0.101960786, 0.101960786, 1): Color(0.58707833, 0.58707833, 0.58707833, 1)
+}
+
 [node name="Desktop" type="Node2D" unique_id=669669927]
 script = ExtResource("1_nd18o")
 
@@ -228,11 +304,20 @@ offset_right = 1915.6825
 offset_bottom = 1081.0
 color = Color(1, 1, 1, 0.6666667)
 
-[node name="HomeButton" type="Sprite2D" parent="Toolbar" unique_id=1599328967]
-modulate = Color(0.24332309, 0.8726737, 0.9534431, 1)
-position = Vector2(54.876328, 1040)
-scale = Vector2(0.044690944, 0.04479167)
-texture = ExtResource("2_1ovop")
+[node name="HomeButton" type="TextureButton" parent="Toolbar" unique_id=2022688197]
+layout_mode = 0
+offset_left = 30.93026
+offset_top = 1016.0
+offset_right = 1260.7931
+offset_bottom = 2245.8613
+scale = Vector2(0.038941007, 0.03902877)
+texture_normal = ExtResource("2_1ovop")
+stretch_mode = 0
+
+[node name="Dot" type="Node2D" parent="Toolbar/HomeButton" unique_id=508205467]
+modulate = Color(0.33607247, 0.37250945, 0.5441873, 0.7294118)
+position = Vector2(614.9318, 1357.972)
+scale = Vector2(2.739868, 205.31532)
 
 [node name="BrowserButton" type="Sprite2D" parent="Toolbar" unique_id=1990060908]
 position = Vector2(273.1344, 1038.25)
@@ -833,10 +918,6 @@ INSERT STUFF ABOUT USING THE PLANNER! (like the client
 can hang up, but you can too)
 ...
 
-INSERT FUNNY THING ABOUT SATISFACTION POINTS TO 
-MONEY CONVERSION!
-...
-
 That is all you need to know to get started with your work.
 Remember, ReFridge inc. is a company that strives to keep
 food out of the trash, by serving with a smile.
@@ -957,7 +1038,7 @@ text = "[center]99 out of 100"
 fit_content = true
 scroll_active = false
 
-[node name="RichTextLabel4" type="RichTextLabel" parent="Windows/End of the Day Report/Panel/ScrollContainer/VBoxContainer" unique_id=2016731187]
+[node name="Money" type="RichTextLabel" parent="Windows/End of the Day Report/Panel/ScrollContainer/VBoxContainer" unique_id=2016731187]
 layout_mode = 2
 theme_override_colors/default_color = Color(0.23119366, 0.3662076, 0.5810717, 1)
 theme_override_font_sizes/normal_font_size = 24
@@ -965,7 +1046,16 @@ bbcode_enabled = true
 text = "[center]
 This converts to you having earned X money today.
 Well done!
+"
+fit_content = true
+scroll_active = false
 
+[node name="RichTextLabel5" type="RichTextLabel" parent="Windows/End of the Day Report/Panel/ScrollContainer/VBoxContainer" unique_id=286776640]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.23119366, 0.3662076, 0.5810717, 1)
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "[center]
 Make sure to fill out the following questionare about
 your experience working with ReFridge inc.:
 LINK
@@ -1081,6 +1171,79 @@ text = "0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Home" type="ColorRect" parent="Windows" unique_id=1163357659]
+visible = false
+layout_mode = 0
+offset_left = -3.0
+offset_top = 668.0
+offset_right = 287.0
+offset_bottom = 997.0
+color = Color(1, 1, 1, 0.6666667)
+script = ExtResource("11_nd18o")
+
+[node name="TopBar" type="Button" parent="Windows/Home" unique_id=739665430]
+layout_mode = 0
+offset_left = -1.0
+offset_right = 290.0
+offset_bottom = 329.0
+theme_override_colors/font_color = Color(1, 1, 1, 0)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 0)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 0)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 0)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_nd18o")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_lexak")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_efn2e")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_gvy4x")
+text = "   Waste"
+alignment = 0
+
+[node name="TextureRect" type="TextureRect" parent="Windows/Home" unique_id=779084566]
+layout_mode = 0
+offset_left = -2.6631775
+offset_top = 329.0
+offset_right = 95.52248
+offset_bottom = 621.6604
+rotation = -1.5707964
+texture = SubResource("GradientTexture1D_jcjvk")
+
+[node name="LogOut" type="Button" parent="Windows/Home" unique_id=1525520238]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 43.0
+offset_right = 259.0
+offset_bottom = 118.0
+theme_override_colors/font_color = Color(0.507155, 0.50073946, 0.49013507, 1)
+theme_override_colors/font_pressed_color = Color(0.5058824, 0.5019608, 0.49019608, 1)
+theme_override_colors/font_hover_color = Color(0.5058824, 0.5019608, 0.49019608, 1)
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxFlat_h6wof")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_j27re")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ok7va")
+text = "LOG OUT"
+
+[node name="SFXtoggle" type="CheckButton" parent="Windows/Home" unique_id=778484606]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 164.0
+offset_right = 160.34464
+offset_bottom = 196.2034
+scale = Vector2(1.77, 1.77)
+theme_override_styles/normal = SubResource("StyleBoxFlat_3y4ia")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_3y4ia")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3y4ia")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_3y4ia")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3y4ia")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_3y4ia")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_3y4ia")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_3y4ia")
+theme_override_styles/focus = SubResource("StyleBoxFlat_3y4ia")
+theme_override_icons/checked = SubResource("DPITexture_jcjvk")
+theme_override_icons/unchecked = SubResource("DPITexture_7xkin")
+button_pressed = true
+icon = ExtResource("23_jcjvk")
+expand_icon = true
+
+[connection signal="pressed" from="Toolbar/HomeButton" to="." method="_on_app_pressed" binds= ["HomeButton"]]
 [connection signal="pressed" from="Toolbar/RecycleButton" to="." method="_on_app_pressed" binds= ["RecycleButton"]]
 [connection signal="pressed" from="Toolbar/CameraButton" to="." method="_on_app_pressed" binds= ["CameraButton"]]
 [connection signal="pressed" from="Toolbar/FridgeButton" to="." method="_on_app_pressed" binds= ["FridgeButton"]]
@@ -1113,3 +1276,7 @@ vertical_alignment = 1
 [connection signal="pressed" from="Windows/Client/Panel/EndConvoButton" to="Windows/Waste Planner/Panel/WriteMessage" method="_on_end_convo_button_pressed"]
 [connection signal="button_down" from="Windows/Client Satisfaction/TopBar" to="Windows/Client Satisfaction" method="_on_top_bar_button_down"]
 [connection signal="button_up" from="Windows/Client Satisfaction/TopBar" to="Windows/Client Satisfaction" method="_on_top_bar_button_up"]
+[connection signal="button_down" from="Windows/Home/TopBar" to="Windows/Home" method="_on_top_bar_button_down"]
+[connection signal="button_up" from="Windows/Home/TopBar" to="Windows/Home" method="_on_top_bar_button_up"]
+[connection signal="pressed" from="Windows/Home/LogOut" to="." method="_on_log_out_pressed"]
+[connection signal="toggled" from="Windows/Home/SFXtoggle" to="." method="_on_sfx_toggled"]

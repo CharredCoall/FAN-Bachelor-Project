@@ -11,7 +11,7 @@ func _ready() -> void:
 	mouse_filter = Control.MOUSE_FILTER_STOP
 
 func _process(_delta: float) -> void:
-	if pressing:
+	if pressing and name != "Home":
 		var new_pos = get_global_mouse_position() - offset
 		var max_y = tool_bar.position.y - size.y
 		var max_x = get_viewport_rect().size.x - size.x

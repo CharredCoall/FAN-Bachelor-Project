@@ -7,3 +7,5 @@ var current_char = 0
 var characters = ["Jim", "Brody", "Cecilia", "Jasmine", "Voll"]
 
 var max_points = 0.0
+
+var sound_on = true

@@ -21,6 +21,7 @@ var cur_chat #chat button that appears
 
 var model_idx = 0
 var steps
+@warning_ignore("shadowed_global_identifier")
 var log = []
 var last_sent_message = ""
 var first = true #first completed request
@@ -52,6 +53,7 @@ func SendServerMessage() -> void:
 	
 	if text != null:
 		history[str(globals.current_char)].append(text)
+	
 	
 	SFX.stop()
 	SFX.volume_db = 10.0
@@ -150,10 +152,11 @@ func _request_completed(_result, _response_code, _headers, body):
 	
 
 func _on_text_changed() -> void:
-	SFX.volume_db = 0.0
-	SFX.stop()
-	SFX.stream = clicks_sfx.pick_random()
-	SFX.play()
+	if globals.sound_on:
+		SFX.volume_db = 0.0
+		SFX.stop()
+		SFX.stream = clicks_sfx.pick_random()
+		SFX.play()
 
 
 func _on_timer_timeout() -> void:
@@ -198,9 +201,11 @@ func _end_convo():
 		var end_report = $"../../../End of the Day Report"
 		end_report.visible = true
 		end_report.get_node("Panel/ScrollContainer/VBoxContainer/Points").text = "[center]" + str(GameManager.points) + " out of " + str(int(globals.max_points))
-		globals.max_window_index += 1
-		end_report.z_index = globals.max_window_index
-		$"../../../Toolbar/EndButton".visible = true
+		end_report.get_node("Panel/ScrollContainer/VBoxContainer/Money").text = "[center]This converts to you having earned " + str(GameManager.points*2.5) + " money today.\nWell done!"
+		#globals.max_window_index += 1
+		#end_report.z_index = globals.max_window_index
+		end_report.move_to_front()
+		$"../../../../Toolbar/EndButton".visible = true
 		#make end tool bare icon visible
 		
 	

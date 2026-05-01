@@ -41,6 +41,8 @@ func _on_app_pressed(butt_name) -> void:
 			window = $"Windows/Work Guide"
 		"EndButton":
 			window = $"Windows/End of the Day Report"
+		"HomeButton":
+			window = $"Windows/Home"
 	
 	window.visible = !window.visible
 	#globals.max_window_index += 1
@@ -51,3 +53,12 @@ func _on_app_pressed(butt_name) -> void:
 		dot.visible = false
 	else:
 		dot.visible = true
+
+
+func _on_log_out_pressed() -> void:
+	get_tree().change_scene_to_file("res://scripts/scenes/login_screen.tscn")
+	#make sure all requests are stopped?
+
+
+func _on_sfx_toggled(toggled_on: bool) -> void:
+	globals.sound_on = toggled_on
