@@ -1,0 +1,4 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'bell pepper': 3.0, 'block of cheese': 2.0, 'eggplant': 2.0, 'peach': 1.0, 'potato': 1.0, 'slice of bread': 2.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","Hey there! I'm Jim, the Grill Master of the neighborhood, and I'm excited to work with you to clear out the fridge. Let's see what we've got here: 2 slices of bread, 1 peach, 3 bell peppers, 2 eggplants, 2 blocks of cheese, and 1 potato. My kids, Marcus and Molly, hate broccoli and carrots, so let's steer clear of those. I'm all about grilling or a good salad, and I can't stand food waste. Let's come up with something delicious that uses what we have. I'm counting on your help!"
