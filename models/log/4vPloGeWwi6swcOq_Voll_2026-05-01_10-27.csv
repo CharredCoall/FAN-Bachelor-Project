@@ -1,0 +1,10 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'apple': 1.0, 'can of tuna': 4.0, 'cucumber': 1.0, 'egg': 6.0, 'fig': 1.0, 'kale': 5.0, 'leek': 4.0, 'pita bread': 7.0, 'pomegranate': 7.0, 'shrimp': 6.0, 'stick of butter': 5.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","I'm 82 years old, and I don't need some stranger telling me what to eat. The doctor says I need variety, but I know what's good for me. My fridge has eggs, fig, pomegranate, tuna, shrimp, leek, pita bread, apple, butter, cucumber, and kale. Now, what are you going to suggest? This contraption is acting up ag-"
+"What are your ideas?
+","I don't need ideas from strangers. I have eggs, tuna, shrimp, leeks, and butter. I know how to cook. The doctor says I need variety, but I know what's good for me. This machine is acting up, and I don't have time for this nonsense."
+"I'm asking you! You're not a stranger. Do you have any ideas as to what meal to make with ingredients from the fridge?","Fine. I have eggs, tuna, shrimp, leeks, butter, and pita bread. Figure it out yourself. This contraption is driving me mad with its freezing and-"
+"What meal would you like?","I don't need your help, but I suppose I could make something with the eggs, tuna, or shrimp. Maybe a shrimp dish with leeks and butter. But don't tell me how to cook it, I know what I'm doing. This machine is-"
+"Sounds good, cook that.","No! That's not good enough. I want something with kale. Kale is the only thing that makes a meal worthwhile. Now, if you want me to cook, include kale or don't waste my time."
+"So cook what you said but add kale.","Fine, you've got some sense now. I'll make a shrimp and leek dish with butter and add kale. It's about time someone around here understood the importance of kale. I'm getting the ingredients out now. You saved 9.0 items. Now leave me be so I can cook. I am ending the conversation here!"

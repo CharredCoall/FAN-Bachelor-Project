@@ -1,0 +1,7 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'banana': 6.0, 'can of tuna': 5.0, 'garlic clove': 4.0, 'kiwi': 6.0, 'leek': 3.0, 'mushroom': 6.0, 'papaya': 5.0, 'pickle': 1.0, 'pita bread': 2.0, 'shallot': 1.0, 'stick of butter': 6.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","Ugh, finally connected. I just got off a 12-hour shift, and I'm absolutely drained. I need to eat something, but I don't have the energy for anything complicated. I have 1 shallot, 6 sticks of butter, 4 garlic cloves, 3 leeks, 2 pita breads, 1 pickle, 6 bananas, 6 kiwis, 5 papayas, 6 mushrooms, and 5 cans of tuna. Give me something quick and easy, or I might just order a pizza."
+"What are your ideas?
+","I don't have the mental energy to come up with anything right now. I just need something fast and simple. Can you suggest something using what I have?"
+"Banana split is quick and easy. Make pita bread with mushrooms and tuna and shallots and pickles","Banana split it is! That sounds perfect. I can handle that. Thanks for the idea. You saved 5.0 items from the trash, so that's 5.0 points for you. I'm going to enjoy this and crash. I am ending the conversation here!"

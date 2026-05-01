@@ -1,0 +1,7 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'apple': 2.0, 'corn': 6.0, 'hot dog': 6.0, 'lettuce': 1.0, 'mushroom': 4.0, 'onion': 2.0, 'pita bread': 4.0, 'sausage': 5.0, 'steak': 3.0, 'stick of butter': 6.0, 'turnip': 2.0, 'zucchini': 2.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","Hi there! I'm Cecilia, I'm 11. My parents are working far away, so I have to cook for myself today. I really want to make them proud and not waste any food. I looked in the fridge, and I have 6 sticks of butter, 5 sausages, 6 hot dogs, 6 ears of corn, 2 apples, 2 onions, 4 mushrooms, 3 steaks, 2 turnips, 1 lettuce, 2 zucchinis, and 4 pita breads. What should I make?"
+"What are your ideas?
+","Well, I was thinking maybe I could make some hot dogs with corn and apples. It seems pretty easy and I don't have to use any big knives or the blender. What do you think?"
+"Yeah, great idea, do that!","Yay! I'm so glad you liked my idea! I'm going to make a hot dog with some corn and an apple. It's going to be delicious and super easy. I'm taking the food out of the fridge right now. You saved 3.0 items from going bad, so you get 3.0 points! Thanks for helping me, I am ending the conversation here!"

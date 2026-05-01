@@ -1,0 +1,4 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'banana': 1.0, 'chicken breast': 5.0, 'egg': 5.0, 'eggplant': 5.0, 'fig': 5.0, 'leek': 2.0, 'lime': 4.0, 'orange': 3.0, 'pear': 4.0, 'stalk of celery': 6.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","Hey there, bro! Thanks for jumping on to help me out. I'm in the middle of a serious bulk, and I need to pack in the protein and calories before I hit the gym. I just checked the fridge, and we've got 3 oranges, 4 limes, 1 banana, 5 chicken breasts, 5 figs, 5 eggs, 2 leeks, 5 eggplants, 6 stalks of celery, and 4 pears. Help me put together a massive meal that will fuel my gains!"
