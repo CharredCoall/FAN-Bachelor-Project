@@ -4,8 +4,10 @@ import csv
 
 def merge_logs():
     # relative path
-    input_dir = os.path.join("..", "models", "log")
-    output_file = "merged_dataset.csv"
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    input_dir = os.path.join(script_dir, "..", "models", "log")
+    input_dir = os.path.abspath(input_dir)
+    output_file = os.path.join(script_dir, "merged_dataset.csv")
 
     # Search for all CSV files in the logs directory
     search_pattern = os.path.join(input_dir, "*.csv")
@@ -22,7 +24,7 @@ def merge_logs():
         writer = csv.writer(outfile)
         
         # header
-        writer.writerow(["Request", "Response", "Model_Key", "Character"])
+        writer.writerow(["Request", "History", "Response", "Model_Key", "Character", "Score"])
 
         # Iterate through every file
         for file_path in csv_files:
@@ -40,11 +42,13 @@ def merge_logs():
                 character = parts[1]
                 
                 # Open the log
-                with open(file_path, mode='r', encoding='utf-8') as infile:
+                with open(file_path, mode='r', encoding='cp1252') as infile:
                     reader = csv.reader(infile)
                     
                     # Skip the header row
                     next(reader, None) 
+
+                    conversation_history = []
                     
                     # Read the rows, append the new data, and write to output file
                     for row in reader:
@@ -52,7 +56,12 @@ def merge_logs():
                             request = row[0]
                             response = row[1]
 
-                            writer.writerow([request, response, model_key, character])
+                            current_history_str = "\n\n".join(conversation_history)
+
+                            writer.writerow([request, current_history_str, response, model_key, character, None])
+
+                            turn_string = f"Player: {request}\n{character}: {response}"
+                            conversation_history.append(turn_string)
             else:
                 print(f"Skipping {filename}: Filename doesn't match expected format.")
 
