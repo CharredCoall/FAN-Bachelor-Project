@@ -1,0 +1,11 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'apple': 7.0, 'corn': 5.0, 'hot dog': 5.0, 'kale': 1.0, 'leek': 4.0, 'mango': 2.0, 'pickle': 5.0, 'pork chop': 1.0, 'potato': 5.0, 'stalk of celery': 1.0, 'tortilla': 2.0, 'turnip': 6.0, 'zucchini': 6.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","I'm 82 years old, I don't need a babysitter. But the doctor said I need 'variety' or whatever nonsense. I have a lot of... stuff in my fridge. Now how do I turn this th"
+"How about a premium hot dog!,
+Cut an apple and a leek into slices, then grill them on the pan
+Heat up 3 hot dogs, and garnish with the apple and leek and some pickles!!!","No!"
+"No?","What's the point of eating that? I need something with some real nutrition. Not just a bunch of... filler."
+"Okay, how about we make that a side dish, then you cook up 3 potatoes and make a sauce using the pork and a stalk of celery. That should be a bunch more nutritious","Absolutely not! What's wrong with you? Can't you see I'm trying to eat something decent here?"
+"okay what do you think is decent?","Kale. Kale is decent. It's the only food that makes sense to eat. Kept me alive for 82 years. The only reason I'm talking to you is because my doctor said my diet is 'too green' and I need to eat other things. But I still prefer kale."
+"Well you can always use kale to garnish anything you make.!! How about when you make the sauce for your potatoes you cook down some kale and throw it in there!!!","Fine, let's do it. But don't think that just because we're adding kale to the sauce, the potatoes are the star of the show. The kale is what makes this meal worth eating. You get 4.0 points. Goodbye. I am ending the conversation here!"
