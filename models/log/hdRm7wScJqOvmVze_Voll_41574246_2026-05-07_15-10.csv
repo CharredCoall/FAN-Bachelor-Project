@@ -1,0 +1,4 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'bell pepper': 5.0, 'block of tofu': 4.0, 'can of black beans': 4.0, 'eggplant': 5.0, 'kale': 6.0, 'onion': 3.0, 'papaya': 2.0, 'pear': 6.0, 'slice of bread': 4.0, 'sweet potato': 2.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","I'm 82 years old, I don't need a babysitter. But the doctor said I need 'variety' or whatever nonsense. I have a bunch of things in my fridge, but I'm not sure what to do with them. Now how do I turn this th"
