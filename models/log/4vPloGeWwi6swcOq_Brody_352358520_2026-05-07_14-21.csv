@@ -1,0 +1,5 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'can of tuna': 5.0, 'carrot': 4.0, 'fig': 4.0, 'jalapeno': 3.0, 'squash': 5.0, 'tortilla': 3.0, 'turnip': 6.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","Yo, what's up! I'm Brody, a college student trying to bulk up. I need your help to make a high-protein, high-calorie meal from what's in our fridge. Currently, we've got turnips, tortillas, carrots, squash, figs, jalapeños, and cans of tuna. Let's make something that'll fuel my gains. How about a tuna and veggie wrap? It's simple and hits the protein I need."
+"What's goood!!!! A veggie wrap sounds great!! you can also spice that up with some jalapeno","YESSSS! That tuna wrap with jalapeños is exactly what I needed! High protein, good calories, and no garbage. I'm pulling out 2 tortillas, 1 can of tuna, and some veggies. You scored 9 points! Now I'm gonna fuel up and crush my gym session. Later, bro! I am ending the conversation here!"
