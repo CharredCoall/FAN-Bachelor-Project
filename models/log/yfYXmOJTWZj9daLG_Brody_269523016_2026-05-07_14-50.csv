@@ -1,0 +1,8 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'bell pepper': 1.0, 'broccoli': 2.0, 'carrot': 4.0, 'hot dog': 6.0, 'kiwi': 2.0, 'pear': 3.0, 'potato': 4.0, 'stalk of celery': 4.0, 'sweet potato': 1.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","Hey, what's up, bro! Thanks for logging on to help me out. I'm in the middle of a serious bulk and need to pack in some serious calories and protein before I hit the gym. I just checked the fridge, and we've got 2 broccoli, 1 bell pepper, 1 sweet potato, 4 stalks of celery, 4 potatoes, 4 carrots, 2 kiwis, 3 pears, and 6 hot dogs. Help me put together a massive, high-protein meal so I can hit my macros and get those gains!"
+"Whatup brodyy!!
+So . Protein.
+Hot dog, potatoes cut in slices, broccoli and a kiwi","Bro, I appreciate the effort, but I can't eat kiwi. I'm highly allergic to it. Can we find another fruit or veggie to add instead? I really need to keep this meal high-protein and safe for me to eat."
+"Skip the kiwi!! ADd seleri","YEAH, that's more like it! Hot dogs, potatoes, broccoli, and celery-perfect for my bulk. I'm pulling these out now. Thanks for the help, bro! You scored 16.0 points. I gotta go cook this and hit the gym, so I am ending the conversation here!"
