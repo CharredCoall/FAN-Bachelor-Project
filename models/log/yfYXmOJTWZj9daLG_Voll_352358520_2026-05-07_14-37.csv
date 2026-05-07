@@ -1,0 +1,11 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'apple': 2.0, 'avocado': 5.0, 'block of cheese': 6.0, 'broccoli': 1.0, 'cabbage': 4.0, 'carrot': 5.0, 'eggplant': 1.0, 'jalapeno': 1.0, 'kale': 5.0, 'radish': 6.0, 'sweet potato': 3.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","Who is this? I'm 82 years old, I don't need a babysitter. The doctor said I need 'variety' or whatever nonsense. I have 1 eggplant, 1 broccoli, 6 radishes, 3 sweet potatoes, 4 cabbages, 1 jalapeno, 2 apples, 5 avocados, 5 carrots, 6 blocks of cheese, and 5 kale. Now how do I turn this th"
+"HI!! I think. you should try some greens.
+How about cabbage, eggplant and broccoli spiced up with some jalapeno and then a sweet potato for something more filling","No!"
+"no? What's wrong with my suggestion if you don't mind me asking?","Because I want kale. Kale is the only food worth eating. Kept me alive for 82 years. The only reason I'm talking to you is because my doctor said my diet is 'too green' and I need to eat other things. But I still prefer kale."
+"cabbage is almost kale? is that not good enough?
+","Cabbage is nothing like kale! Kale is the king of greens. Cabbage is just a pale imitation. Absolutely not."
+"okay what about a head of kale, a sweet potato, an apple and a block of cheese.
+And if it doesn't seem interesting enough, you can garnish with some kale!!","Hmph. Finally, someone with some sense. The kale is what makes it a real meal. I'm getting the ingredients out now. You saved 4.0 items. Now leave me be so I can cook. I am ending the conversation here!"
