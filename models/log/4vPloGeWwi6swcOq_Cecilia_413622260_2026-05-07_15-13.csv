@@ -1,0 +1,4 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'beet': 3.0, 'can of diced tomatoes': 3.0, 'coconut': 5.0, 'corn': 2.0, 'garlic clove': 6.0, 'hot dog': 5.0, 'papaya': 3.0, 'salmon fillet': 3.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","Hi! I'm Cecilia, I'm 11. My parents are working far away, so I need to cook for myself today. I really want to make them proud and not waste the groceries they bought. Let me see what's in the fridge... There's 3 cans of diced tomatoes, 5 hot dogs, 5 coconuts, 3 salmon fillets, 3 beets, 3 papayas, 2 corns, and 6 garlic cloves. Hmm, that's a lot! What should I make?"
