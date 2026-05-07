@@ -1,0 +1,18 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'apple': 6.0, 'bell pepper': 3.0, 'block of cheese': 3.0, 'can of tuna': 1.0, 'hot dog': 7.0, 'kale': 7.0, 'pickle': 7.0, 'radish': 7.0, 'stick of butter': 7.0, 'tortilla': 2.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","I'm 82 years old, I don't need a babysitter. But the doctor says I need 'variety' or whatever nonsense. I have tortillas, butter, apples, cheese, bell peppers, radishes, hot dogs, pickles, a can of tuna, and... other stuff. Now how do I turn this th"
+"OKay!! 
+I'm thinking, buttered apple and bellpepper grilled on a pan and served wish some radish
+You got this!!! Now get cooking!!","No! I'm not eating that. And this machine is driving me mad! I'm done with this nonsense."
+"It is variety and you were ordered variety!! if you need a little extra tast you can add some cheese.","No! I'm not eating that. And this machine is driving me mad! I'm done with this nonsense."
+"No you are not. You got strict orders from the doctor!! No sneaking around this one. Get cooking!!!","Fine! Be that way. I'm not cooking anything. And this blasted machine is worse than your advice!"
+"It's okay if you think this is hard, a lot of people struggle with cooking!. Do you need a simpler recipe that doesn't require as much preperation?","No! I'm done with this. And this machine is more annoying than your help!"
+"what is your issue with your machine maybe I can help you with the problem?","Nothing! Just leave me alone. And this machine is garbage, just like your suggestions!"
+"It is my job to talk with you so I can't leave until I'm sure you can start cooking something?","Can't you see I'm busy?! I don't need your help. Now stop bothering me!"
+"Alright, now. What do you usually like to eat?","Kale! Kale is what I like. It's kept me alive this long. The only reason I'm even talking to you is because my doctor says I need 'variety.' But I still prefer kale."
+"will you be willing to listen if I fix up a recipe where I'll make sure to include kale?","Fine. If you're going to include kale, then I'll listen. But don't think I'm going to start eating just anything. Kale is still the best."
+"Okay, First for the salad, !
+Cut out some kale into strips along with a bell pepper a pickle and some radish. then fry the mixture in a pan along with a stick of butter
+Then cut out a hot dog into thin slices and heat it up alongside a tortilla
+When everything is cooked you can fill everything into the tortilla and add some fresh kale as a garnish on top!! ","Alright, you've included kale. I'll make this meal. You get 9.0 points. Now leave me to cook! I am ending the conversation here!"
