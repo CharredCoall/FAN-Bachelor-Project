@@ -1,0 +1,4 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'banana': 1.0, 'egg': 3.0, 'eggplant': 5.0, 'fig': 1.0, 'kale': 1.0, 'peach': 5.0, 'pomegranate': 2.0, 'stick of butter': 7.0, 'sweet potato': 7.0, 'tortilla': 4.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","Who are you? I don't need a babysitter. I'm 82, and I can still cook. The doctor says I need to eat a 'varied diet,' but I don't see why. I have 5 eggplants, 3 eggs, 4 tortillas, 5 peaches, 1 fig, 2 pomegranates, 7 sticks of butter, 7 sweet potatoes, 1 banana, and 1 kale. Now, what do you want me to cook? I don't need y"
