@@ -26,6 +26,8 @@ var log = []
 var last_sent_message = ""
 var error_count = 0 #errors since last successful request
 var first = true #first completed request
+var awaiting_response = false
+var game_won = false
 
 var history = {}
 var selected_chat #chat for history
@@ -71,7 +73,8 @@ func SendServerMessage() -> void:
 	var error = $HTTPRequest.request(base_url + "/request_reply", ["Content-type: application/json"], HTTPClient.METHOD_POST, body)
 	if error != OK:
 		push_error("An error occurred in the HTTP request.")
-		
+	
+	awaiting_response = true
 	clear()
 	
 	var balls = ball_scene.instantiate()
@@ -161,6 +164,8 @@ func _request_completed(_result, _response_code, _headers, body):
 	history[str(globals.current_char)].append(dict_package["response"])
 	print(history)
 	
+	awaiting_response = false
+	
 	if "ended" in dict_package and dict_package["ended"]:
 		_end_convo()
 	
@@ -185,6 +190,9 @@ func _on_timer_timeout() -> void:
 
 
 func _on_end_convo_button_pressed() -> void:
+	if awaiting_response or history[str(globals.current_char)] == []:
+		return
+	
 	if len(log) > 0 and log != []:
 		var body = JSON.stringify({"model_idx": int(model_idx), "char_idx": int(globals.current_char), "log": log, "session_id": globals.session_id})
 		var error = $HTTPRequest.request(base_url + "/end_convo", ["Content-type: application/json"], HTTPClient.METHOD_GET, body)
@@ -214,6 +222,9 @@ func _end_convo():
 	if prev_char != 4:
 		$Timer.start()
 	else:
+		game_won = true
+		editable = false
+		$"../Button".disabled = true
 		var end_report = $"../../../End of the Day Report"
 		end_report.visible = true
 		end_report.get_node("Panel/ScrollContainer/VBoxContainer/Points").text = "[center]" + str(GameManager.points) + " out of " + str(int(globals.max_points))
@@ -240,13 +251,15 @@ func _end_convo():
 
 func _on_start_convo_pressed(chat_idx) -> void:
 	selected_chat = chat_idx
-	if history[str(chat_idx)] != []:
+	if selected_chat != globals.current_char or history[str(chat_idx)] != [] or awaiting_response:
 		load_history(chat_idx)
 		
-		if selected_chat != globals.current_char: #only be able to respond if in correct chat
+		if selected_chat != globals.current_char or awaiting_response or game_won: #only be able to respond if in correct chat
 			editable = false
+			$"../Button".disabled = true
 		else:
 			editable = true
+			$"../Button".disabled = false
 		
 	else:
 		load_history(chat_idx)
@@ -259,6 +272,8 @@ func _on_start_convo_pressed(chat_idx) -> void:
 		var error = $HTTPRequest.request(base_url + "/start_convo", ["Content-type: application/json"], HTTPClient.METHOD_GET, body)
 		if error != OK:
 			push_error("An error occurred in the HTTP request.")
+		
+		awaiting_response = true
 	
 		emit_signal("convo_started")
 		
@@ -295,3 +310,9 @@ func load_history(idx):
 				bubble = green_bubble.instantiate()
 			bubble.prose = convo[i]
 			vcontainer.add_child(bubble)
+			
+	if awaiting_response and idx == globals.current_char:
+		var balls = ball_scene.instantiate()
+		balls.get_child(-1).play("ball_bounce")
+		balls.name = "BALLS"
+		vcontainer.add_child(balls)
