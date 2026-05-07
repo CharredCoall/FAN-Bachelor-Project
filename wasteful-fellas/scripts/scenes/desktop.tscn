@@ -23,6 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://c2al4gh8h36oe" path="res://art/NPC icons/cecilia_icon.png" id="18_t0sou"]
 [ext_resource type="Texture2D" uid="uid://c20sgf3f2kytr" path="res://art/NPC icons/voll_icon.png" id="19_drj1u"]
 [ext_resource type="Texture2D" uid="uid://ba2ue0tr35vwj" path="res://art/speaker_icon.png" id="23_jcjvk"]
+[ext_resource type="Script" uid="uid://chri1bgs61lba" path="res://scripts/scenes/DisplaySessionId.gd" id="24_7xkin"]
 
 [sub_resource type="Gradient" id="Gradient_lexak"]
 colors = PackedColorArray(0.05490196, 0.14117648, 0.3372549, 0.7921569, 1, 1, 1, 0)
@@ -930,7 +931,6 @@ fit_content = true
 scroll_active = false
 
 [node name="End of the Day Report" type="ColorRect" parent="Windows" unique_id=1530631481]
-visible = false
 layout_mode = 0
 offset_left = 414.0
 offset_top = 46.0
@@ -1056,10 +1056,28 @@ theme_override_colors/default_color = Color(0.23119366, 0.3662076, 0.5810717, 1)
 theme_override_font_sizes/normal_font_size = 24
 bbcode_enabled = true
 text = "[center]
-Make sure to fill out the following questionare about
-your experience working with ReFridge inc.:
-LINK
-Thank you!"
+Make sure to fill out the following questionaire about
+your experience working with ReFridge inc.:"
+fit_content = true
+scroll_active = false
+
+[node name="Questionaire" type="LinkButton" parent="Windows/End of the Day Report/Panel/ScrollContainer/VBoxContainer" unique_id=867244180]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.3254902, 0.44313726, 0.6313726, 1)
+theme_override_colors/font_focus_color = Color(0.5000494, 0.6310185, 0.8395268, 1)
+theme_override_colors/font_pressed_color = Color(0.5019608, 0.6313726, 0.8392157, 1)
+theme_override_colors/font_hover_color = Color(0.10021516, 0.4826752, 0.84147847, 1)
+theme_override_font_sizes/font_size = 20
+text = "Experience Questionaire"
+uri = "https://forms.gle/QFekmMhYE9ypRUxVA"
+
+[node name="RichTextLabel6" type="RichTextLabel" parent="Windows/End of the Day Report/Panel/ScrollContainer/VBoxContainer" unique_id=474929627]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.23119366, 0.3662076, 0.5810717, 1)
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "[center]Thank you!"
 fit_content = true
 scroll_active = false
 
@@ -1243,6 +1261,167 @@ button_pressed = true
 icon = ExtResource("23_jcjvk")
 expand_icon = true
 
+[node name="Error" type="ColorRect" parent="Windows" unique_id=798990301]
+layout_mode = 0
+offset_left = 414.0
+offset_top = 46.0
+offset_right = 1552.0
+offset_bottom = 950.0
+color = Color(0.2581615, 0.57725954, 0.9219131, 1)
+script = ExtResource("11_nd18o")
+
+[node name="TopBar" type="Button" parent="Windows/Error" unique_id=803833318]
+layout_mode = 0
+offset_left = -1.0
+offset_right = 1224.0
+offset_bottom = 39.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_nd18o")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_lexak")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_efn2e")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_gvy4x")
+text = "   Waste"
+alignment = 0
+
+[node name="Close" type="TextureButton" parent="Windows/Error" unique_id=53971339]
+visible = false
+layout_mode = 0
+offset_left = 1256.4642
+offset_top = 29.0
+offset_right = 1275.9612
+offset_bottom = 44.50731
+rotation = 3.1415927
+texture_normal = ExtResource("9_efn2e")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Panel" type="Panel" parent="Windows/Error" unique_id=1558905038]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 40.0
+offset_right = 1130.0
+offset_bottom = 845.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_efn2e")
+
+[node name="ColorRect" type="ColorRect" parent="Windows/Error/Panel" unique_id=1904399037]
+visible = false
+layout_mode = 0
+offset_right = 385.0
+offset_bottom = 585.0
+color = Color(0.519767, 0.79812884, 0.5755315, 1)
+
+[node name="gradient" type="Sprite2D" parent="Windows/Error/Panel" unique_id=301603391]
+position = Vector2(561.83954, 428.0071)
+rotation = -1.5707964
+scale = Vector2(3.347713, 1123.3052)
+texture = SubResource("GradientTexture1D_67y07")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Windows/Error/Panel" unique_id=484304441]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 49.0
+offset_right = 1122.0
+offset_bottom = 142.0
+theme_override_colors/default_color = Color(0.6759129, 0.08884973, 0.14009783, 1)
+theme_override_font_sizes/normal_font_size = 46
+bbcode_enabled = true
+text = "[center]An error Occured"
+scroll_active = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Windows/Error/Panel" unique_id=2014416327]
+layout_mode = 0
+offset_left = 197.0
+offset_top = 154.0
+offset_right = 936.0
+offset_bottom = 299.0
+theme_override_colors/default_color = Color(0.23119366, 0.3662076, 0.5810717, 1)
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "[center]Unfortunately, your pc encountered a communication error while reaching out to your customer.
+Please restart your game
+You are welcome to submit the following error at this link:
+"
+scroll_active = false
+
+[node name="LinkButton" type="LinkButton" parent="Windows/Error/Panel" unique_id=560375594]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 486.0
+offset_top = 303.0
+offset_right = -507.0
+offset_bottom = 346.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.26666668, 0.39607844, 0.6, 1)
+theme_override_colors/font_focus_color = Color(0.26666668, 0.39607844, 0.6, 1)
+theme_override_colors/font_pressed_color = Color(0.5745313, 0.6897234, 0.8695926, 1)
+theme_override_colors/font_hover_color = Color(0.33995005, 0.59448355, 0.8543879, 1)
+theme_override_font_sizes/font_size = 20
+text = "Submit Error"
+uri = "https://forms.gle/WTC2X2DKyfL2M1yL8"
+
+[node name="ErrorText" type="RichTextLabel" parent="Windows/Error/Panel" unique_id=647836112]
+layout_mode = 0
+offset_left = 197.0
+offset_top = 354.0
+offset_right = 936.0
+offset_bottom = 693.0
+theme_override_colors/default_color = Color(0.6784314, 0.09411765, 0.14509805, 1)
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "Error: You have not recieved any error?"
+scroll_active = false
+
+[node name="Session Id" type="ColorRect" parent="Windows" unique_id=100205755]
+layout_mode = 0
+offset_left = 1607.0
+offset_right = 1918.307
+offset_bottom = 114.0
+color = Color(0.2627451, 0.5764706, 0.92156863, 1)
+script = ExtResource("11_nd18o")
+
+[node name="TopBar" type="Button" parent="Windows/Session Id" unique_id=1121844850]
+layout_mode = 0
+offset_left = -1.0
+offset_right = 192.0
+offset_bottom = 39.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_nd18o")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_lexak")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_efn2e")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_gvy4x")
+text = "  Session ID"
+alignment = 0
+
+[node name="Panel" type="Panel" parent="Windows/Session Id" unique_id=643848124]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 40.0
+offset_right = 307.0
+offset_bottom = 102.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_lexak")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Windows/Session Id/Panel" unique_id=945124574]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.18679053, 0.41511714, 0.62577724, 1)
+theme_override_font_sizes/normal_font_size = 40
+text = "000000000"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("24_7xkin")
+
 [connection signal="pressed" from="Toolbar/HomeButton" to="." method="_on_app_pressed" binds= ["HomeButton"]]
 [connection signal="pressed" from="Toolbar/RecycleButton" to="." method="_on_app_pressed" binds= ["RecycleButton"]]
 [connection signal="pressed" from="Toolbar/CameraButton" to="." method="_on_app_pressed" binds= ["CameraButton"]]
@@ -1280,3 +1459,8 @@ expand_icon = true
 [connection signal="button_up" from="Windows/Home/TopBar" to="Windows/Home" method="_on_top_bar_button_up"]
 [connection signal="pressed" from="Windows/Home/LogOut" to="." method="_on_log_out_pressed"]
 [connection signal="toggled" from="Windows/Home/SFXtoggle" to="." method="_on_sfx_toggled"]
+[connection signal="button_down" from="Windows/Error/TopBar" to="Windows/Error" method="_on_top_bar_button_down"]
+[connection signal="button_up" from="Windows/Error/TopBar" to="Windows/Error" method="_on_top_bar_button_up"]
+[connection signal="pressed" from="Windows/Error/Close" to="Windows/Error" method="_on_close_pressed"]
+[connection signal="button_down" from="Windows/Session Id/TopBar" to="Windows/Session Id" method="_on_top_bar_button_down"]
+[connection signal="button_up" from="Windows/Session Id/TopBar" to="Windows/Session Id" method="_on_top_bar_button_up"]

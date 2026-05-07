@@ -24,6 +24,7 @@ var steps
 @warning_ignore("shadowed_global_identifier")
 var log = []
 var last_sent_message = ""
+var error_count = 0 #errors since last successful request
 var first = true #first completed request
 
 var history = {}
@@ -66,7 +67,7 @@ func SendServerMessage() -> void:
 	
 	last_sent_message = text
 	
-	var body = JSON.stringify({"message": text, "model_idx": int(model_idx), "char_idx": int(globals.current_char), "steps": steps, "log": log, "fridge": GameManager.fridge})
+	var body = JSON.stringify({"message": text, "model_idx": int(model_idx), "char_idx": int(globals.current_char), "steps": steps, "log": log, "fridge": GameManager.fridge, "session_id": globals.session_id})
 	var error = $HTTPRequest.request(base_url + "/request_reply", ["Content-type: application/json"], HTTPClient.METHOD_POST, body)
 	if error != OK:
 		push_error("An error occurred in the HTTP request.")
@@ -93,7 +94,22 @@ func _request_completed(_result, _response_code, _headers, body):
 		
 	if "error" in dict_package:
 		push_error(dict_package["error"])
+		error_count += 1
+		if error_count < 5:
+			var new_body = JSON.stringify({"message": last_sent_message, "model_idx": int(model_idx), "char_idx": int(globals.current_char), "steps": steps, "log": log, "fridge": GameManager.fridge, "session_id": globals.session_id})
+			var error = $HTTPRequest.request(base_url + "/request_reply", ["Content-type: application/json"], HTTPClient.METHOD_POST, new_body)
+			if error != OK:
+				push_error("An error occurred in the HTTP request.")
+		else:
+			var error_window = $Windows/Error
+			var error_text = $Windows/Error/Panel/ErrorText
+			error_window.visible = true
+			error_window.move_to_front()
+			error_text.text = "Error: " + dict_package["error"]
+			
+			
 		return
+	error_count = 0 
 	
 	if "points" in dict_package:
 		GameManager._increment_points(dict_package["points"])
@@ -170,7 +186,7 @@ func _on_timer_timeout() -> void:
 
 func _on_end_convo_button_pressed() -> void:
 	if len(log) > 0 and log != []:
-		var body = JSON.stringify({"model_idx": int(model_idx), "char_idx": int(globals.current_char), "log": log})
+		var body = JSON.stringify({"model_idx": int(model_idx), "char_idx": int(globals.current_char), "log": log, "session_id": globals.session_id})
 		var error = $HTTPRequest.request(base_url + "/end_convo", ["Content-type: application/json"], HTTPClient.METHOD_GET, body)
 		if error != OK:
 			push_error("An error occurred in the HTTP request.")

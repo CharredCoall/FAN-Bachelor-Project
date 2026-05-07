@@ -1,5 +1,7 @@
 extends Node
 
+@onready var session_id = RandomNumberGenerator.new().randi_range(0, 999999999)
+
 #var max_window_index = 0
 
 var current_char = 0

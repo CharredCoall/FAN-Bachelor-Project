@@ -244,6 +244,7 @@ def end_convo():
         model_idx = request.json["model_idx"]
         char_idx = request.json["char_idx"]
         log = request.json["log"]
+        session_id = request.json["session_id"]
 
         #Initializing github and getting repo
         repo_id = 1149716740
@@ -252,7 +253,7 @@ def end_convo():
 
         #Creates and uploads log file
         s = io.BytesIO() #Create empty stream
-        f = f"models/log/{agent_app.global_models[model_idx]['key']}_{characters[char_idx]['name']}_{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M')}.csv" #Set file path
+        f = f"models/log/{agent_app.global_models[model_idx]['key']}_{characters[char_idx]['name']}_{session_id}_{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M')}.csv" #Set file path
         np.savetxt(s, [["Request", "Response"]] + log, fmt="%s", delimiter=",", encoding='utf-8') #Write file to stream using numpy
         repo.create_file(f, f"Added log for {characters[char_idx]['name']} produced by model {agent_app.global_models[model_idx]['key']}",  s.getvalue(), ) #Upload file to github
 
