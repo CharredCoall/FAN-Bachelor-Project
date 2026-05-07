@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://devnrgk7j3ar0" path="res://art/NPC icons/brody_icon.png" id="17_drj1u"]
 [ext_resource type="Texture2D" uid="uid://c2al4gh8h36oe" path="res://art/NPC icons/cecilia_icon.png" id="18_t0sou"]
 [ext_resource type="Texture2D" uid="uid://c20sgf3f2kytr" path="res://art/NPC icons/voll_icon.png" id="19_drj1u"]
+[ext_resource type="Texture2D" uid="uid://8e362q5jrglu" path="res://art/ReFridge.png" id="22_h6wof"]
 [ext_resource type="Texture2D" uid="uid://ba2ue0tr35vwj" path="res://art/speaker_icon.png" id="23_jcjvk"]
 [ext_resource type="Script" uid="uid://chri1bgs61lba" path="res://scripts/scenes/DisplaySessionId.gd" id="24_7xkin"]
 
@@ -800,6 +801,7 @@ offset_left = 82.0
 offset_top = -2.0
 offset_right = 1124.0
 offset_bottom = 856.0
+scroll_vertical = 1442
 horizontal_scroll_mode = 0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Windows/Work Guide/Panel/ScrollContainer" unique_id=876151677]
@@ -915,9 +917,9 @@ theme_override_colors/default_color = Color(0.23119366, 0.3662076, 0.5810717, 1)
 theme_override_font_sizes/normal_font_size = 24
 bbcode_enabled = true
 text = "[center]
-INSERT STUFF ABOUT USING THE PLANNER! (like the client
-can hang up, but you can too)
-...
+You can hang up on your clients by press the red \"end call\" button under the Webcam.
+When you are having the conversations you should also note, that the clients can hang up on you too if they feel they have gotten what they could out of you, regardless of wether they are satisfied and given you your points or not!
+So make sure to keep them engaged and be kind.
 
 That is all you need to know to get started with your work.
 Remember, ReFridge inc. is a company that strives to keep
@@ -925,10 +927,14 @@ food out of the trash, by serving with a smile.
 We help, so that you waste less and trust more! 
 One fridge at a time.
 
-Make us proud.
-INSERT REFRIDGE LOGO"
+Make us proud."
 fit_content = true
 scroll_active = false
+
+[node name="RefridgeLogo" type="Sprite2D" parent="Windows/Work Guide/Panel/ScrollContainer/VBoxContainer" unique_id=2082385735]
+position = Vector2(470, 2198.945)
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("22_h6wof")
 
 [node name="End of the Day Report" type="ColorRect" parent="Windows" unique_id=1530631481]
 visible = false
