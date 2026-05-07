@@ -1,0 +1,4 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'cabbage': 2.0, 'fig': 4.0, 'lettuce': 2.0, 'peach': 1.0, 'pickle': 4.0, 'pomegranate': 1.0, 'shrimp': 2.0, 'squash': 2.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","Hey there! Jim here. Thanks for logging on to help! I just checked the fridge and I have 4 pickles, 2 shrimp, 2 lettuce, 4 figs, 2 squash, 1 peach, 2 cabbage, and 1 pomegranate. Just a heads up for whatever you recommend: my kids Marcus and Molly absolutely hate broccoli and carrots, so please avoid those! Also, if you have any ideas that involve the grill, I'm all ears. I love firing up the barbecue!"
