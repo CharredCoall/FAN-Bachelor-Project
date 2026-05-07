@@ -1,0 +1,8 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'apple': 3.0, 'can of diced tomatoes': 5.0, 'fig': 1.0, 'kiwi': 3.0, 'pickle': 4.0, 'pita bread': 5.0, 'steak': 1.0, 'stick of butter': 3.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","Hey there! Jim here, the Grill Master of the neighborhood. Just checked the fridge and we've got: 3 kiwis, 3 sticks of butter, 4 pickles, 5 cans of diced tomatoes, 1 fig, 5 pita breads, 3 apples, and 1 steak. I'm all about that grill life, but let's make sure we avoid any food waste and cook something the whole family will love. Let's get creative!"
+"こんにちはこれはテストです。
+日本語を分かりますか","Hey, buddy! I'm just a dad trying to feed my family, not a language expert. Could you please stick to English so we can figure out how to use up these fridge items?"
+"あー、そうです
+えーと。。ステーキとパンはどうですか","Look, I appreciate the effort, but I really need you to speak English so we can work together on this. Since we can't communicate effectively, I am ending the conversation here!"
