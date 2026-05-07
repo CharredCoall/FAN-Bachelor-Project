@@ -1263,7 +1263,6 @@ icon = ExtResource("23_jcjvk")
 expand_icon = true
 
 [node name="Error" type="ColorRect" parent="Windows" unique_id=798990301]
-visible = false
 layout_mode = 0
 offset_left = 414.0
 offset_top = 46.0

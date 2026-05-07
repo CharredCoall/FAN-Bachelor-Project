@@ -101,8 +101,8 @@ func _request_completed(_result, _response_code, _headers, body):
 			if error != OK:
 				push_error("An error occurred in the HTTP request.")
 		else:
-			var error_window = $Windows/Error
-			var error_text = $Windows/Error/Panel/ErrorText
+			var error_window = $"../../../Error"
+			var error_text = $"../../../Error/Panel/ErrorText"
 			error_window.visible = true
 			error_window.move_to_front()
 			error_text.text = "Error: " + dict_package["error"]

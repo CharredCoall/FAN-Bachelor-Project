@@ -23,7 +23,9 @@ func _update_fridge(new_fridge) -> void:
 
 func _on_app_pressed(butt_name) -> void:
 	var window
-	var dot = get_node("Toolbar/" + butt_name).get_child(0)
+	var dot = null
+	if get_node("Toolbar/" + butt_name) != null:
+		dot = get_node("Toolbar/" + butt_name).get_child(0)
 	
 	match butt_name:
 		"RecycleButton":
@@ -43,16 +45,19 @@ func _on_app_pressed(butt_name) -> void:
 			window = $"Windows/End of the Day Report"
 		"HomeButton":
 			window = $"Windows/Home"
+		"ErrorButton":
+			window = $"Windows/Error"
 	
 	window.visible = !window.visible
 	#globals.max_window_index += 1
 	#window.z_index = globals.max_window_index
 	window.move_to_front()
 	
-	if !window.visible:
-		dot.visible = false
-	else:
-		dot.visible = true
+	if dot != null:
+		if !window.visible:
+			dot.visible = false
+		else:
+			dot.visible = true
 
 
 func _on_log_out_pressed() -> void:
