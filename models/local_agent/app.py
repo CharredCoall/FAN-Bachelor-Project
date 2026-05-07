@@ -1,5 +1,4 @@
-from smolagents import CodeAgent, InferenceClientModel, AgentLogger, load_tool, tool
-from rich.console import Console
+from smolagents import CodeAgent, InferenceClientModel, load_tool, tool
 import yaml
 import os
 import sys
@@ -245,8 +244,6 @@ def load_model(model_idx):
 
     with open(prompt_path, 'r') as stream:
         prompt_templates = yaml.safe_load(stream)
-    
-    logger = AgentLogger(2, Console(quiet = True))
 
     agent = CodeAgent(
         model=model,
@@ -256,8 +253,7 @@ def load_model(model_idx):
         planning_interval=None,
         name=None,
         description=None,
-        prompt_templates=prompt_templates,
-        logger = logger
+        prompt_templates=prompt_templates
     )
 
 load_model(None)
