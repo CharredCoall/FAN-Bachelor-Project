@@ -1,0 +1,8 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'cabbage': 5.0, 'carrot': 3.0, 'kiwi': 6.0, 'mango': 3.0, 'plum': 3.0, 'sausage': 2.0, 'squash': 3.0, 'sweet potato': 1.0, 'tortilla': 4.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","Ugh, I just got home from a brutal day at work and I’m starving. I need something quick and easy using what I have. My fridge has cabbage, carrots, plums, sausages, tortillas, squash, mangoes, sweet potatoes, and kiwis. I don’t have the energy for anything complicated. I live alone, so nothing excessive. Just something fast and simple. Help me out before I lose it."
+"Hi 
+Sosig pan with cabbage and slices of carrots and squash. then heat up a sweet potato and you have food!!","That sounds okay, but I need specifics. How much cabbage, carrot, and squash are we talking? I don’t want to make too much or too little. Also, should we add the sausage to make it more filling? I need clear, quick guidance here."
+"2 sausiges, half a cabbage, 3 carrots and half a squash!!","Okay, let’s scale this down. I don’t need half a cabbage or 3 carrots for one meal. How about 1 sausage, a quarter of the cabbage, 1 carrot, and a quarter of the squash? That’s plenty for me and won’t leave too much waste. Let me know if that works."
+"okay thats great!!","Great, let's do this. I'm using 1 sausage, a quarter of the cabbage, 1 carrot, and a quarter of the squash. Thanks for scaling it down. You saved 4.0 items from the trash, so that's 4.0 points for you. I'm going to cook this and crash. I am ending the conversation here!"
