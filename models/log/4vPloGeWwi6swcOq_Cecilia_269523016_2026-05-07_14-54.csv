@@ -1,0 +1,10 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'can of black beans': 4.0, 'cucumber': 1.0, 'fig': 3.0, 'pineapple': 2.0, 'pita bread': 1.0, 'pork chop': 5.0, 'slice of bacon': 6.0, 'stick of butter': 1.0, 'turnip': 6.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","Hi! I'm Cecilia, I'm 11. My parents are working far away, so I have to cook for myself today. I really want to make them proud and not waste the groceries they bought. I looked in the fridge and I have figs, cucumber, pork chops, pineapple, bacon, turnips, butter, black beans, and pita bread. What should I make?"
+"Make Steaks!!
+First find a meat grinder and grind out the porkchop along with a can of black beans. Then shape them into buns.
+Start up a Big pan with some butter until it is sizzling, then add the steaks and some bacon
+While theyre cooking, dice some pineapple and a turnip.
+Then fill everything into a pita breat and get to eating!!!!!!","Ew, no way! I HATE turnips! My parents always forget and buy them anyway, they're so gross. Plus, you want me to use a meat grinder?! That sounds super loud and scary, and I don't want to handle raw meat. Also, I can't use a big pan with butter and bacon, it's too dangerous for me. And why are we using so much food? I'm only 11, my tummy isn't that big! Can we do something simpler, like just using a little bit of bacon and beans in a small pan? Please help me!"
+"mmm. No, Only a big industrial process works to get premium food, and besides, you'll have to learn how to use a meat grinder and big pans one day","NO! You're being so mean! I told you I am scared of the big meat grinder and pans, and I HATE turnips! You aren't helping me at all! I'm not cooking anything! I'm taking my parents' emergency money and ordering a pizza! You get ZERO points! I am ending the conversation here!"

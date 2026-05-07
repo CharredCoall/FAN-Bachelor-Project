@@ -1,0 +1,6 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'eggplant': 1.0, 'fig': 4.0, 'lime': 1.0, 'pickle': 1.0, 'slice of bacon': 4.0, 'stalk of celery': 1.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","Hey there! Jim here, the self-proclaimed Grill Master of the neighborhood. I'm excited to have you help me tackle the fridge. We've got a bit of a mix in here - 1 pickle, 1 stalk of celery, 4 figs, 1 lime, 1 eggplant, and 4 slices of bacon. Just a heads up, my kids Marcus and Molly absolutely hate broccoli and carrots, so let's avoid those. I'm in the mood for something tasty, maybe something grilled or a fresh salad. What've you got for me?"
+"HI jim, 
+So. Grill, Bacon, Eggplant add lime to taste How's that sounding?","Wow, you're speaking my language now! Grilled eggplant with crispy bacon and a squeeze of lime sounds amazing. I'm taking the ingredients out now. You just earned 6.0 points for helping me use up some of these leftovers. Let's get grilling!"

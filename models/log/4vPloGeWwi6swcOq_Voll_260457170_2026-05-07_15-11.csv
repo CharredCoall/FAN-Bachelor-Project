@@ -1,0 +1,4 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'bell pepper': 1.0, 'cabbage': 3.0, 'kale': 3.0, 'mango': 7.0, 'onion': 1.0, 'pickle': 7.0, 'pita bread': 6.0, 'shallot': 2.0, 'stick of butter': 4.0, 'sweet potato': 3.0, 'zucchini': 3.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","What is this nonsense? Can't even... Stupid machine. I'm 82 years old, and I don't need some... variety... Ugh, the doctor said... Fine, I have shallots, pita bread, zucchini, cabbage, butter, onion, mangoes, pickles, bell pepper, sweet potatoes, and kale. Now stop bothering me with this... thing."

@@ -1,0 +1,4 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'can of diced tomatoes': 5.0, 'can of tuna': 3.0, 'kale': 3.0, 'kiwi': 1.0, 'lime': 5.0, 'mushroom': 4.0, 'onion': 4.0, 'papaya': 5.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","Hey there! Jim here. Thanks for logging on to help! I just checked the fridge and I have 3 cans of tuna, 5 limes, 4 mushrooms, 4 onions, 1 kiwi, 5 cans of diced tomatoes, 5 papayas, and 3 kale leaves. Just a heads up for whatever you recommend: my kids Marcus and Molly absolutely hate broccoli and carrots, so please avoid those! Also, I'm a big fan of grilling, so if you have any BBQ ideas, I'm all ears. Let's see what we can cook up without wasting anything!"
