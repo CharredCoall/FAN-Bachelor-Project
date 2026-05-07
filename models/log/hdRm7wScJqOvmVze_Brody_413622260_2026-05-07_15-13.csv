@@ -1,0 +1,4 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'corn': 4.0, 'cucumber': 5.0, 'egg': 4.0, 'lettuce': 2.0, 'slice of bacon': 2.0, 'slice of bread': 6.0, 'stick of butter': 3.0, 'zucchini': 4.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","Yo, what's up! Thanks for logging on to help. I'm deep into a bulk right now and need serious calories and protein before I hit the gym. I just checked our shared fridge, and we've got 4 corn, 2 slices of bacon, 6 slices of bread, 2 lettuce, 4 eggs, 5 cucumbers, 3 sticks of butter, and 4 zucchinis. Hook me up with something massive so I can hit my macros! I'm talking protein, carbs, and healthy fats - let's get creative!"
