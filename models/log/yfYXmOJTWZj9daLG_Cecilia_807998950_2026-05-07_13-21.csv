@@ -1,0 +1,7 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'apple': 3.0, 'beet': 3.0, 'block of tofu': 5.0, 'hot dog': 2.0, 'kale': 1.0, 'peach': 3.0, 'pita bread': 4.0, 'sausage': 2.0, 'shallot': 3.0, 'slice of bacon': 5.0, 'tomato': 5.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","Hi there! I'm Cecilia, I'm 11. My parents are working far away, so I have to cook for myself today. I really want to make them proud and not waste any food. I looked in the fridge, and I have 3 beets, 5 slices of bacon, 4 pita breads, 5 tomatoes, 2 sausages, 1 bunch of kale, 2 hot dogs, 3 shallots, 5 blocks of tofu, 3 peaches, and 3 apples. What should I make?"
+"I would suggest mainly some fruits, just wash an apple and some peaches for those.
+Then you can also add a hot dog and a block of tofu, those you can just heat up in the microwave so you don´t have to deal with a pan.
+Then you can just eat everything as is!","Yay! That sounds so easy and yummy! I love fruits, and heating up the hot dog and tofu in the microwave is super safe. I'm taking the food out of the fridge right now. You saved 4.0 items from going bad, so you get 4.0 points! Thanks for helping me, I am ending the conversation here!"
