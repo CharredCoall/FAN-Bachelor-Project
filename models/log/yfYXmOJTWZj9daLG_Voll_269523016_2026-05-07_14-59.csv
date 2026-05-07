@@ -1,0 +1,5 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'beet': 2.0, 'block of tofu': 5.0, 'cucumber': 7.0, 'eggplant': 1.0, 'hot dog': 1.0, 'kale': 6.0, 'mushroom': 3.0, 'orange': 4.0, 'pineapple': 6.0, 'salmon fillet': 7.0, 'slice of bacon': 1.0, 'steak': 7.0, 'stick of butter': 3.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","Who is this? I'm 82 years old, I don't need a babysitter. The doctor said I need 'variety' or whatever nonsense. I have 1 hot dog, 7 salmon fillets, 4 oranges, 1 eggplant, 2 beets, 3 mushrooms, 6 pineapples, 1 slice of bacon, 7 steaks, 7 cucumbers, 6 kale, 5 blocks of tofu, and 3 sticks of butter. Now how do I turn this th"
+"steak, kale, beets, mushrooms and a stick of butter","Hmph. Steak, kale, beets, mushrooms, and a stick of butter? Fine, I suppose. At least there's kale. You get 5.0 points. Now leave me be so I can cook. I am ending the conversation here!"
