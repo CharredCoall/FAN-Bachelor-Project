@@ -34,5 +34,6 @@ window/stretch/mode="canvas_items"
 [rendering]
 
 rendering_device/driver.windows="d3d12"
+textures/vram_compression/import_etc2_astc=true
 anti_aliasing/quality/msaa_2d=3
 environment/defaults/default_clear_color=Color(0.9406359, 0.94063586, 0.94063574, 1)
