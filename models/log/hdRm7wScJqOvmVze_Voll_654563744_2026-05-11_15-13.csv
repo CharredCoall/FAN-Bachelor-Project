@@ -1,0 +1,5 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'cucumber': 4.0, 'eggplant': 4.0, 'kale': 3.0, 'lettuce': 7.0, 'onion': 1.0, 'papaya': 1.0, 'pickle': 6.0, 'shallot': 3.0, 'tomato': 5.0, 'turnip': 4.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","I'm 82 years old, I don't need a babysitter. The doctor said I need 'variety' or whatever nonsense. I have a bunch of stuff in the fridge, but I'm not sure I want to eat any of it. Now how do I turn this th"
+"you okay?","Of course I'm okay, just dealing with this confounded machine. It's always freezing up or doing something stupid. Now, are you here to help me with my meal or just waste my time?"
