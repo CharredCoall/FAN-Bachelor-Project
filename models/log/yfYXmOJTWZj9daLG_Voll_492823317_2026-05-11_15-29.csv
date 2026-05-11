@@ -1,0 +1,9 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'bell pepper': 4.0, 'can of black beans': 1.0, 'can of tuna': 6.0, 'corn': 5.0, 'egg': 4.0, 'hot dog': 3.0, 'kale': 1.0, 'leek': 2.0, 'orange': 3.0, 'slice of bread': 5.0, 'stalk of celery': 2.0, 'sweet potato': 2.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","Who is this? I'm 82 years old, I don't need a babysitter. The doctor said I need 'variety' or whatever nonsense. I have 3 oranges, 2 leeks, 6 cans of tuna, 5 corn, 2 sweet potatoes, 3 hot dogs, 1 can of black beans, 2 stalks of celery, 4 bell peppers, 4 eggs, and 1 kale. Now how do I turn this th"
+"hello sir do you like stuffed bellpeppers","No!"
+"sick me too okay gimme a sec
+","Are you serious? Hurry up and give me a proper suggestion, or I'm hanging up on this stupid machine!"
+"how about a tuna sandwich? it would be easy to mix your tuna with your bell peppers, corn and leeks, then but the tuna mixtures between two slices of bread. if you'd like than you could make some friede eggs to eat on the side","Hmph. A tuna sandwich, huh? I suppose it's not the worst idea. But where's the kale? Fine, I'll make the sandwich, but I'm still having kale tomorrow. How many slices of bread and eggs do you want me to use?"
+"kale would also be yummy and a crunchy layer in the sandwhich. i think you should use 4 slices of bread and 2 eggs","Fine, I'll add the kale. It will make the sandwich more interesting. I'll use 4 slices of bread and 2 eggs. You get 11.0 points. Now leave me alone so I can cook. I am ending the conversation here!"
