@@ -1,0 +1,18 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'beet': 2.0, 'can of diced tomatoes': 2.0, 'cucumber': 4.0, 'kiwi': 4.0, 'leek': 2.0, 'peach': 2.0, 'pomegranate': 3.0, 'pork chop': 5.0, 'stalk of celery': 6.0, 'stick of butter': 1.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","Hi there! I'm Cecilia, I'm 11. My parents are working far away, so I have to cook for myself today. I really want to make them proud and not waste any food. I looked in the fridge, and I have 3 pomegranates, 2 cans of diced tomatoes, 1 stick of butter, 6 stalks of celery, 5 pork chops, 2 leeks, 2 beets, 4 cucumbers, 2 peaches, and 4 kiwis. Can you help me figure out what to make?"
+"OKAY, SO WE GONNA MAKE SMOOTHIE, AND SOUP! USE 3 pomegranates, 2 peaches, and 4 kiwis BLEND THAT FOR THE SMOOTHIE. 1 stick of butter MELT IN A POT. CUT 6 stalks of celery, 5 pork chops, 2 leeks, 2 beets, 4 cucumbers, 2 cans of diced tomatoes AND ADD TO THE BUTTER. THEN LET IT SIMMER FOR MAYBE 2 HOURS OR 5 DEPENDING ON HOW THICC YOU WANT IT","Whoa, slow down! I can't use the blender, it's too loud and scary. And I really don't like leeks, they're so gross. Plus, I can't chop all those vegetables, I might hurt myself. Can we find something simpler and safer to make?"
+"DO YOU HAVE BREED?","I don't have any bread in the fridge. Maybe we can find something else to make with what we have? Any other ideas?"
+"OKAY. CAN YOU USE THE STOVE?","Sure, I can use the stove! I can handle a small pan or something simple. Do you have any easy recipes in mind?"
+"YES THANS FOR ASKING!! 
+STEP 1.
+GET SMALL PAN 
+STEP 2.
+BUT BUTTER IN AND MELT.
+STEP 3.
+PUT 2 CANS OF DICIED TOMATOES AND THE RIP THE BEETS INTO SMALL PIECES AND ADD AS WELL.
+STEP 4.
+DONE
+STEP 5.
+EAT THE FRUIT AS A SIDE DISH","Yay! That sounds easy and yummy! I can totally handle a small pan on the stove. I'll melt the butter, add the canned tomatoes, and rip the beets into small pieces. For a side dish, I'll eat some fruit. I'm taking the food out of the fridge right now. You saved 5.0 items from going bad, so you get 5.0 points! Thanks for helping me, I am ending the conversation here!"
