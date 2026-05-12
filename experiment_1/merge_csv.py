@@ -80,7 +80,7 @@ def merge_logs():
             writer.writerow(["Request", "History", "Response", "Model_Key", "Character", "Score"])
 
             for file_path, model_key, character in chunk_files:
-                with open(file_path, mode='r', encoding='cp1252') as infile:
+                with open(file_path, mode='r', encoding='Latin-1') as infile:
                     reader = csv.reader(infile)
                     next(reader, None)
 
@@ -93,7 +93,7 @@ def merge_logs():
                             current_history_str = "\n\n".join(conversation_history)
                             writer.writerow([request, current_history_str, response, model_key, character, None])
 
-                            turn_string = f"Player: {request}\n{character}: {response}"
+                            turn_string = f"{request}\n{character}: {response}"
                             conversation_history.append(turn_string)
     
     print("All merging completed successfully!")
