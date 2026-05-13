@@ -1,0 +1,4 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'apple': 1.0, 'can of black beans': 5.0, 'corn': 4.0, 'jalapeno': 4.0, 'kiwi': 2.0, 'lime': 4.0, 'peach': 2.0, 'pita bread': 2.0, 'squash': 2.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","Hey there! Jim here, the Grill Master of the neighborhood! Thanks for logging on to help. I just checked the fridge and I have 5 cans of black beans, 4 jalapenos, 2 kiwis, 2 pita breads, 2 peaches, 4 limes, 1 apple, 4 corns, and 2 squashes. Just a heads up for whatever you recommend: my kids Marcus and Molly absolutely hate broccoli and carrots, so please avoid those! I'm super stoked to use up these leftovers-hate seeing good food go to waste. Let's cook something delicious for the family!"
