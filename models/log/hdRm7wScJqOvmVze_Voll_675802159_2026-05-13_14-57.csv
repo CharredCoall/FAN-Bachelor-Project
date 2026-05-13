@@ -1,0 +1,9 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'cabbage': 1.0, 'can of black beans': 1.0, 'carrot': 5.0, 'eggplant': 1.0, 'fig': 5.0, 'kale': 5.0, 'lemon': 7.0, 'papaya': 3.0, 'pickle': 4.0, 'salmon fillet': 2.0, 'sausage': 3.0, 'shrimp': 7.0, 'turnip': 3.0, 'zucchini': 6.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","I'm 82 years old, I don't need a babysitter. But the doctor said I need 'variety' or whatever nonsense. I have a bunch of stuff in my fridge, but I don't see why I need to be talking to you about it. Now how do I turn this th"
+"Hello, Voll. Let's make you the best meal we can.
+It seems like you have enough in your fridge for a delicious stir fry with cabbage, black beans, carrot, eggplant, kale, turnip, sliced sausages, and zucchini. With that stir fry you can eat some salmon fillets with juice from the lemons to add a little zest. The figs, papaya and shrimp can be turned into a shrimp cocktail for a nice appetizer.","Fine, you've managed to come up with a meal that doesn't sound completely terrible. I suppose the stir fry and salmon fillets will be edible. You've also used up most of the ingredients, which is good. You get 44.0 points. Goodbye."
+"Goodbye, Voll. I hope you enjoy your meal
+","Good riddance. Now I can finally eat my meal without any more of your nonsense. Don't bother coming back, I can take care of myself."
+"Goodbye","I am ending the conversation here!"
