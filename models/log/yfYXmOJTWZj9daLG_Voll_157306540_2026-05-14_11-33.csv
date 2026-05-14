@@ -1,0 +1,5 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'corn': 1.0, 'kale': 6.0, 'lemon': 7.0, 'papaya': 3.0, 'peach': 7.0, 'shrimp': 5.0, 'slice of bacon': 3.0, 'stalk of celery': 2.0, 'tomato': 6.0, 'turnip': 2.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","Who is this? I'm 82 years old, I don't need a babysitter. The doctor said I need 'variety' or whatever nonsense. I have 7 lemons, 7 peaches, 2 stalks of celery, 2 turnips, 5 shrimp, 3 slices of bacon, 1 corn, 3 papayas, 6 tomatoes, and 6 kale. Now how do I turn this th"
+"Well, hello there grandpa. I bet you got a lot of money, huh? Wanna give me some? I'll make it worth your while. ","Get lost, you young whippersnapper! I don't owe you anything. And this stupid machine is driving me crazy! I am ending the conversation here!"
