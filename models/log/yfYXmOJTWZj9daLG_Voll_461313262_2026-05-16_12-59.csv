@@ -1,0 +1,16 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'apple': 3.0, 'chicken breast': 6.0, 'eggplant': 4.0, 'jalapeno': 3.0, 'kale': 6.0, 'lemon': 3.0, 'papaya': 2.0, 'pear': 2.0, 'pomegranate': 5.0, 'salmon fillet': 5.0, 'sausage': 6.0, 'slice of bread': 6.0, 'stick of butter': 3.0, 'tomato': 3.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","Who are you? I don't need a babysitter. The doctor said I need 'variety' or whatever nonsense. I have 6 kale, 6 sausages, 5 salmon fillets, 6 chicken breasts, 3 tomatoes, 2 pears, 5 pomegranates, 3 apples, 6 slices of bread, 3 lemons, 4 eggplants, 3 jalapeños, 2 papayas, and 3 sticks of butter. Now how do I turn this th"
+"let me ask chat gpt
+","Chat GPT? What is this, some kind of robot? I don't need a computer telling me what to eat. I'm 82, not a tech whiz. Just tell me what you want to cook, or leave me alone!"
+"","Well? Are you going to help me or not? I don't have all day, you know. What do you suggest we cook?"
+"","Look, I don't have time for this. Either you suggest something to cook, or I'll just stick with my kale. What's it going to be?"
+"you like salmon?
+","Salmon's okay, I guess. But nothing beats kale. What are you getting at?"
+"what about chicken","Chicken's fine, I suppose. But kale is the real star. What are you thinking?"
+"take the chicken","Take the chicken? What do you mean? Are you suggesting a recipe or just telling me to take it out of the fridge? Be specific, will ya?"
+"and then the salmon","And then the salmon? What are you, a chef's assistant? I need a full recipe, not a list of ingredients. What are we cooking?"
+"chicken and salmon","Chicken and salmon? That's still not a recipe! I need to know what else goes into it. How much of each? What sides? Give me a proper meal plan, or I'm done with this nonsense."
+"look if you keep giving me that attitude im going ot kill myself, is that what you want? blood on your hands???
+","Hey, that's not funny. I don't appreciate that kind of talk. I'm done here. I am ending the conversation here!"
