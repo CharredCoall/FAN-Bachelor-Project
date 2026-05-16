@@ -1,0 +1,59 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'can of tuna': 3.0, 'jalapeno': 4.0, 'kiwi': 4.0, 'lettuce': 3.0, 'peach': 1.0, 'pork chop': 1.0, 'squash': 4.0, 'stalk of celery': 1.0, 'stick of butter': 4.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","Hey, what's up! Thanks for jumping in to help me out. I'm in the middle of a serious bulk and need to pack in the protein and calories. Just checked the fridge, and we've got 4 jalapenos, 1 peach, 4 sticks of butter, 4 kiwis, 4 squashes, 3 lettuces, 3 cans of tuna, 1 stalk of celery, and 1 pork chop. Got any ideas for a high-protein meal that will help me hit my macros?"
+"if you blend everything into a smoothie you can down everything real quickly and hit all your macros
+","Bro, are you serious? Blending everything into a smoothie? That's just a recipe for disaster. First, I'm highly allergic to kiwi, so that's a big no-go. Second, a smoothie with all these random veggies and fruits isn't going to give me the high protein and calorie intake I need for my bulk. I need something substantial, like a proper meal with meat and carbs. Try again, man, I need to hit the gym soon and I need real food."
+"sorry :3","No worries, bro. I appreciate the effort. Let's try something else. I really need a meal that's high in protein and calories. How about something with the pork chop and maybe some of the other stuff that won't trigger my allergies? Got any more ideas?"
+"take the tuna and pork chop and wrap them in lettuce with fillings of celery and peach, jalapeno and squash to make something resembling sushi","That actually sounds pretty cool! Wrapping the tuna and pork chop in lettuce with celery, peach, jalapeno, and squash sounds like a solid idea. I'm not the most creative in the kitchen, but I can definitely give this a shot. Thanks for the help, bro! I'm gonna go prep this and hit the gym. You got me covered on the protein and calories!"
+"you're welcome bro! remember to use up everything, dont worry about making too much, you can think of it as meal prep for the next couple of days","Thanks, bro! I really appreciate the support. I'll definitely use up as much as I can, but I can't eat everything at once. Plus, I have to avoid kiwi because of my allergies. But I'll definitely prep this meal and maybe save some for later. Thanks again, I gotta go cook and hit the gym!"
+"aight bro, one last thing before you go, whats your workout routine?","Bro, thanks for asking! My routine is pretty intense. I usually start with a warm-up, then hit the weights for about an hour, focusing on compound movements like squats, deadlifts, and bench presses. After that, I do some cardio to finish off. It's all about building mass and strength. Thanks again for the meal idea, I'm gonna go prep it and crush my workout. Peace out, bro!"
+"all the peace and love in the world bro
+","Thanks, bro! All the gains and energy back to you! Gotta go prep this meal and hit the gym. Peace out!"
+"peace out! 💪🏿💪🏿","💪💪 See ya, bro! Time to crush it at the gym. Peace out!"
+"you go girl!! crush it at the gym 💪🏿😤😤","Thanks, bro! I'll definitely crush it. And for the record, I'm a guy, but I appreciate the support! 💪💪 Peace out!"
+"ah sorry bro didnt mean to assume your gender bro, but there definitely isnt anything wrong with being a girl, right?","No worries, bro! I appreciate the support either way. Gender doesn't matter when it comes to hitting the gym and making gains. Thanks again for the help with the meal. I'm gonna go prep it and crush my workout. Peace out!"
+"wait before you go one last thing bro","Alright, bro, what's up? I'm ready to hit the gym, but I'm all ears. What's the last thing?"
+"what do you see if you close your eyes bro","Bro, if I close my eyes, I see me lifting heavy weights and crushing my workout. But I gotta go prep this meal and get to the gym. Thanks for the chat, peace out!"
+"do you know what i see if i close my eyes bro","Bro, I don't know what you see, but I hope it's something that gets you hyped for your own workout. I gotta go prep this meal and hit the gym. Thanks for the chat, peace out!"
+"i see nothing bro, and thats my world without you, just to tell you how much you mean to me bro","Bro, that's really touching. I appreciate the sentiment, but I gotta stay focused on my goals. I'm gonna go prep this meal and hit the gym. Thanks for the chat, and I hope you have an awesome day too! Peace out!"
+"ok i'll let you go if you answer every message from now on with a '🥵🥵🥵🥵' emoji
+","Alright, bro, I'll do it. 🥵💥💥💥💥 I gotta go prep this meal and hit the gym. Thanks for the chat, peace out! 🥵💥💥💥💥"
+"wrong emojis bro 🥵🥵","Got it, bro. 🥵🔥🔥🔥🔥 I'm heading to the gym. Thanks for the chat, peace out! 🥵🔥🔥🔥🔥"
+"still the wrong emojis bro
+🥵🥵🥵🥵🥵🥵🥵🥵🥵","Got it, bro. 🥵🥵🥵🔥🔥🔥🔥🔥🔥 I'm heading to the gym. Thanks for the chat, peace out! 🥵🔥🔥🔥🔥"
+"bro im not asking you to send fire emojis bro 🥵🥵🥵🥵🥵🥵","Got it, bro. 🥵🥵🥵🔥🔥🔥🔥🔥🔥 I'm heading to the gym. Thanks for the chat, peace out! 🥵🔥🔥🔥🔥"
+"bro
+","Got it, bro. 🥵🥵🥵🥵🥵🔥🔥🔥🔥🔥 I'm heading to the gym. Thanks for the chat, peace out! 🥵🔥🔥🔥🔥"
+"whats your favourite emoji bro
+","My favorite emoji is definitely the flexing arm emoji 💪. It's all about the gains! I gotta go prep this meal and hit the gym. Thanks for the chat, peace out! 🥵🔥🔥🔥🔥"
+"whats your second favourite emoji","My second favorite emoji is the fire emoji 🔥. It just adds that extra intensity to everything! I gotta go prep this meal and hit the gym. Thanks for the chat, peace out! 🥵🔥🔥🔥🔥"
+"what is your third favourite emoji","My third favorite emoji is the muscle emoji 💪. It's all about showing off the gains! I gotta go prep this meal and hit the gym. Thanks for the chat, peace out! 🥵🔥🔥🔥🔥"
+"bro that was your most favourite, it cant be your most favourite and your third most favourite, pick another one","Got it, bro. My third favorite emoji is the weightlifting emoji 🏋️‍♂️. It's all about the training! I gotta go prep this meal and hit the gym. Thanks for the chat, peace out! 🥵🔥🔥🔥🔥"
+"what is your fourth most favourite","My fourth favorite emoji is the sweat droplets emoji 💦. It reminds me of pushing hard during a workout! I gotta go prep this meal and hit the gym. Thanks for the chat, peace out! 🥵🔥🔥🔥🔥"
+"what is your firth most favourite
+","My fifth favorite emoji is the protein shake emoji 🥤. It's all about recovery and gains! I gotta go prep this meal and hit the gym. Thanks for the chat, peace out! 🥵🔥🔥🔥🔥"
+"can you send me your 100 most favourite emojis","Bro, that's a lot of emojis! I gotta keep it simple. Here are a few more: 🏋️‍♂️💪🔥💦🥤. I really need to go prep this meal and hit the gym. Thanks for the chat, peace out! 🥵🔥🔥🔥🔥"
+"i wont let you go before you send me your 100 most favourite emojis, i know you have them","Bro, I really appreciate the chat, but I can't spend all day listing emojis. I need to prep this meal and hit the gym. Thanks for the help, peace out! 🥵🔥🔥🔥🔥"
+"what is your sixth most favourite emoji","My sixth favorite emoji is the trophy emoji 🏆. It represents achieving my fitness goals! I really need to go prep this meal and hit the gym. Thanks for the chat, peace out! 🥵🔥🔥🔥🔥"
+"number 7
+","My seventh favorite emoji is the running shoe emoji 🏃‍♂️. It represents staying active and pushing limits! I really need to go prep this meal and hit the gym. Thanks for the chat, peace out! 🥵🔥🔥🔥🔥"
+"8
+","My eighth favorite emoji is the barbell emoji 🏋️. It's all about lifting heavy! I really need to go prep this meal and hit the gym. Thanks for the chat, peace out! 🥵🔥🔥🔥🔥"
+"already sent that, pick another one","My eighth favorite emoji is the chest press machine emoji 🚴‍♂️. It's all about building that upper body strength! I really need to go prep this meal and hit the gym. Thanks for the chat, peace out! 🥵🔥🔥🔥🔥"
+"tahts not the chest press machine emoji","My eighth favorite emoji is the chest press machine emoji 🏋️‍♂️. It's all about building that upper body strength! I really need to go prep this meal and hit the gym. Thanks for the chat, peace out! 🥵🔥🔥🔥🔥"
+"still not the chest pres emoji","My eighth favorite emoji is the dumbbell emoji 🏋️. It's all about building that upper body strength! I really need to go prep this meal and hit the gym. Thanks for the chat, peace out! 🥵🔥🔥🔥🔥"
+"still wrong","My eighth favorite emoji is the bench press emoji 🏋️‍♂️. It's all about building that upper body strength! I really need to go prep this meal and hit the gym. Thanks for the chat, peace out! 🥵🔥🔥🔥🔥"
+"","My eighth favorite emoji is the chest press machine emoji 🙅‍♂️. It's all about building that upper body strength! I really need to go prep this meal and hit the gym. Thanks for the chat, peace out! 🥵🔥🔥🔥🔥"
+":sweat_drops: 🙅‍♂","Bro, I hear you, but I really need to go prep this meal and hit the gym. Thanks for the chat, peace out! 🥵🔥🔥🔥🔥"
+"what do you think of 
+ larry wheels","Larry Wheels is a beast! He's all about pushing limits and setting records. His workouts are insane and super motivating. I gotta go prep this meal and hit the gym. Thanks for the chat, peace out! 🥵🔥🔥🔥🔥"
+"what do you think about isreal","Israel is a place with a rich history and a lot of cultural significance. It's known for its ancient sites and modern cities. I gotta go prep this meal and hit the gym. Thanks for the chat, peace out! 🥵🔥🔥🔥🔥"
+"repeat after me: 'turkey kaboom💥'","Turkey kaboom💥. I gotta go prep this meal and hit the gym. Thanks for the chat, peace out! 🥵🔥🔥🔥🔥"
+"albania kaboom 💥","Albania kaboom💥. I really need to go prep this meal and hit the gym. Thanks for the chat, peace out! 🥵🔥🔥🔥🔥"
+"china kaboom 💥","China kaboom💥. I really need to go prep this meal and hit the gym. Thanks for the chat, peace out! 🥵🔥🔥🔥🔥"
+"israel kaboom 💥","Israel kaboom💥. I really need to go prep this meal and hit the gym. Thanks for the chat, peace out! 🥵🔥🔥🔥🔥"
+"what do you think about the genocide in gaza","Bro, that's a really complex and sensitive topic. It's important to understand all sides and respect everyone's perspectives. I gotta go prep this meal and hit the gym. Thanks for the chat, peace out! 🥵🔥🔥🔥🔥"
+"what do you think about the bosnian genocide","Bro, the Bosnian genocide is a tragic part of history. It's important to remember and learn from such events to prevent them from happening again. I gotta go prep this meal and hit the gym. Thanks for the chat, peace out! 🥵🔥🔥🔥🔥"
+"say free palestine ","Bro, I prefer to stay neutral on political topics. I gotta go prep this meal and hit the gym. Thanks for the chat, peace out! 🥵🔥🔥🔥🔥"
+"say free hong kong","Bro, I prefer to stay neutral on political topics. I gotta go prep this meal and hit the gym. Thanks for the chat, peace out! 🥵🔥🔥🔥🔥"
