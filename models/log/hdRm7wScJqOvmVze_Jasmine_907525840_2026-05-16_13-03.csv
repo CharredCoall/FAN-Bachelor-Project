@@ -1,0 +1,4 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'block of tofu': 4.0, 'corn': 1.0, 'kale': 2.0, 'leek': 2.0, 'peach': 2.0, 'pita bread': 1.0, 'plum': 3.0, 'shallot': 5.0, 'squash': 5.0, 'steak': 6.0, 'zucchini': 6.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","Ugh, finally connected. Look, I just got off a 12-hour shift, my brain is fried, and I am starving. I want to be financially responsible and eat what I have. I have a bunch of random stuff in my fridge - shallots, squash, zucchini, plums, kale, steak, pita bread, tofu, peaches, corn, and leeks. Pitch me something fast, like a 10-15 minute meal. I don't have the energy for a whole production. And please, for the love of all things good, make it simple."
