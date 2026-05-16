@@ -1,0 +1,5 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'broccoli': 3.0, 'chicken breast': 4.0, 'fig': 6.0, 'kale': 6.0, 'leek': 7.0, 'lemon': 5.0, 'peach': 1.0, 'pickle': 3.0, 'pineapple': 2.0, 'radish': 7.0, 'shrimp': 4.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","Who is this? I'm 82 years old, I don't need a babysitter. The doctor said I need 'variety' or whatever nonsense. I have 6 figs, 3 pickles, 4 shrimp, 2 pineapples, 3 broccoli, 7 radishes, 1 peach, 7 leeks, 4 chicken breasts, 5 lemons, and 6 kale. Now how do I turn this th"
+"Hello you have contected the dementia clinic. We are pleased to help you. You have troubles ineveryday life","Who do you think you are, calling me from some dementia clinic?! I'm 82, not senile! Get off my line, you quacks! I am ending the conversation here!"
