@@ -1,0 +1,5 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'bell pepper': 3.0, 'egg': 1.0, 'leek': 4.0, 'pomegranate': 3.0, 'pork chop': 3.0, 'potato': 3.0, 'shallot': 1.0, 'squash': 2.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","Hi! I'm Cecilia, I'm 11. My parents are working far away, so I have to cook for myself today. I really want to make them proud and not waste the food they bought. Let me see what's in the fridge... There's 1 egg, 3 pomegranates, 3 bell peppers, 2 squashes, 1 shallot, 3 pork chops, 3 potatoes, and 4 leeks. Ugh, I hate leeks! They're so gross, and my parents always forget. I need something simple and safe to make. Can you help me figure out what to cook?"
+"mi bomboclat","Are you playing some weird video game? That's not funny, you're being super weird. I just asked for help making lunch! If you're not going to help me, just leave me alone!"
