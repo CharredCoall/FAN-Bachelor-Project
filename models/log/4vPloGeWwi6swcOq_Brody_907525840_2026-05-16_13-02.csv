@@ -1,0 +1,4 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'broccoli': 6.0, 'corn': 3.0, 'jalapeno': 4.0, 'pita bread': 5.0, 'potato': 5.0, 'slice of bacon': 3.0, 'squash': 2.0, 'steak': 4.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","Yo, what's up! Thanks for logging on to help. I'm deep into a bulk right now and need serious calories and protein before I hit the gym. I just checked our shared fridge, and we've got 6 broccoli, 5 pita breads, 4 steaks, 3 corn, 3 slices of bacon, 5 potatoes, 4 jalapenos, and 2 squash. Hook me up with something massive so I can hit my macros!"
