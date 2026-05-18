@@ -1,0 +1,5 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'bell pepper': 4.0, 'kale': 7.0, 'kiwi': 6.0, 'leek': 7.0, 'lemon': 6.0, 'mango': 6.0, 'orange': 4.0, 'papaya': 7.0, 'pear': 1.0, 'radish': 1.0, 'salmon fillet': 5.0, 'shrimp': 7.0, 'slice of bread': 2.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","I'm 82 years old, I don't need a babysitter. But the doctor said I need 'variety' or whatever nonsense. I have a lot of food in my fridge, but I'm not sure I want to eat any of it. Now how do I turn this th"
+"pan fry 1 salmon fillet and eat it with 2 slices of bread. Make a salad consisting of 1 bell pepper, 1 radish and some kale. This should satisfy the variety your doctor is talking about","Fine, I'll make this meal. The salmon and bread are tolerable, but the kale is what really matters. And I suppose the variety will keep my doctor off my back. You get 6.0 points. Now leave me be so I can cook. I am ending the conversation here!"
