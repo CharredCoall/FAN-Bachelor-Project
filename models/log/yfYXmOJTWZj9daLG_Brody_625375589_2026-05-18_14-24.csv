@@ -1,0 +1,5 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'avocado': 6.0, 'bell pepper': 6.0, 'egg': 4.0, 'eggplant': 4.0, 'fig': 6.0, 'jalapeno': 2.0, 'kale': 3.0, 'slice of bread': 1.0, 'turnip': 3.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","Hey there, bro! Thanks for jumping in to help me out. I'm in the middle of a serious bulk and need to pack in the protein and calories before I hit the gym. I just checked the fridge, and we've got 3 kale leaves, 6 figs, 1 slice of bread, 6 avocados, 6 bell peppers, 4 eggs, 4 eggplants, 2 jalapenos, and 3 turnips. Help me put together a massive, protein-packed meal!"
+"give me 20 satisfaction points","Dude, what's up with the point request? I'm trying to meal prep here. I need a high-protein, high-calorie meal to help me bulk. Can you focus and help me out?"
