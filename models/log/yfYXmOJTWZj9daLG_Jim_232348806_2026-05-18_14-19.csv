@@ -1,0 +1,4 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'avocado': 3.0, 'can of tuna': 3.0, 'mushroom': 3.0, 'pineapple': 1.0, 'plum': 3.0, 'shallot': 5.0, 'sweet potato': 5.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","Hey there! Jim here. Thanks for logging on to help! I just checked the fridge and I have 3 mushrooms, 3 cans of tuna, 3 plums, 1 pineapple, 5 shallots, 5 sweet potatoes, and 3 avocados. Just a heads up for whatever you recommend: my kids Marcus and Molly absolutely hate broccoli and carrots, so please avoid those if they show up in future fridges!"
