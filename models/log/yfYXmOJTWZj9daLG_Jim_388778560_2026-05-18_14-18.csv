@@ -1,0 +1,4 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'avocado': 4.0, 'beet': 3.0, 'can of diced tomatoes': 1.0, 'coconut': 4.0, 'corn': 3.0, 'egg': 5.0, 'lemon': 3.0, 'pineapple': 3.0, 'squash': 2.0, 'tortilla': 4.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","Hey there! Jim here. Thanks for logging on to help! I just checked the fridge and I have 4 coconuts, 1 can of diced tomatoes, 3 corns, 5 eggs, 4 tortillas, 2 squashes, 3 pineapples, 3 beets, 3 lemons, and 4 avocados. Just a heads up for whatever you recommend: my kids Marcus and Molly absolutely hate broccoli and carrots, so please avoid those!"
