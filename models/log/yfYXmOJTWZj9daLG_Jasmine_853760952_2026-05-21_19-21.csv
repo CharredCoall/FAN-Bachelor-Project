@@ -1,0 +1,9 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'banana': 6.0, 'corn': 6.0, 'egg': 3.0, 'leek': 1.0, 'peach': 4.0, 'pickle': 5.0, 'sweet potato': 1.0, 'tomato': 3.0, 'tortilla': 2.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","Ugh, finally connected. I just got off a 12-hour shift, and I'm absolutely drained. I need something quick and easy to eat. I have 6 bananas, 2 tortillas, 3 eggs, 1 leek, 1 sweet potato, 4 peaches, 5 pickles, 6 ears of corn, and 3 tomatoes. Give me a fast idea, please."
+"Peel and dice the sweet potato. Microwave for 3 minutes, stir, microwave for an additional 2 minutes. Perfectly cooked sweet potatoes. When they come out of the microwave hot add butter if you have any and savory spices.
+Chop the kernels of one corn, and give them a few seconds with a little bit of water in the microwave, until tender.
+Scramble the eggs in a pan and add salt and pepper to taste.
+Chop up some pickles and tomato.
+heat up your tortillas and make some wraps. Shouldn't take more than 15-20 minutes.","Thanks, this sounds doable. I'll microwave the sweet potato and corn, scramble the eggs, and make some wraps. I appreciate the quick and easy suggestion. You saved 8.0 items from the trash, so that's 8.0 points for you. I'm going to eat this and crash. I am ending the conversation here!"
