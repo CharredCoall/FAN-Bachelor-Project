@@ -1,0 +1,8 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'banana': 7.0, 'bell pepper': 1.0, 'can of diced tomatoes': 3.0, 'chicken breast': 1.0, 'garlic clove': 3.0, 'kale': 5.0, 'lime': 6.0, 'pork chop': 1.0, 'salmon fillet': 1.0, 'shallot': 2.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","Who is this? I'm 82 years old, I don't need a babysitter. The doctor said I need 'variety' or whatever nonsense. I have 1 chicken breast, 6 limes, 1 bell pepper, 3 cans of diced tomatoes, 7 bananas, 5 kale, 1 salmon fillet, 2 shallots, 1 pork chop, and 3 garlic cloves. Now how do I turn this th"
+"Hi Voll, you have plenty of nice things in the fridge
+How about making a dish in the oven, where you put the chicken breast in a dish, around it you add large slices of kale, chopped garlic, slices of bell pepper, and a can of diced tomatoes
+Remember to add enough spices for the tomatoes
+The maybe peal a few bananas and put in another dish, sqeeze juice from one lime on top and add brown suger on top - this can heat in the oven while you eat the chicken - that will give you a nice dessert","Hmph. Fine, I'll try your fancy oven dish. The kale is the best part, of course. And the bananas with lime sound interesting. I'll get the ingredients out now. You saved 13.0 items. Now leave me be so I can cook. I am ending the conversation here!"
