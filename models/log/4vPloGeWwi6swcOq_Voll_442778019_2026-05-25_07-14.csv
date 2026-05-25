@@ -1,0 +1,10 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'beet': 2.0, 'block of tofu': 6.0, 'cabbage': 4.0, 'can of tuna': 2.0, 'corn': 1.0, 'kale': 6.0, 'lime': 3.0, 'peach': 3.0, 'plum': 3.0, 'pomegranate': 7.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","Who is this? I'm 82 years old, I don't need a babysitter. The doctor said I need 'variety' or whatever nonsense. I have tofu, pomegranate, cabbage, corn, lime, plum, beet, peach, tuna, and kale. Now how do I turn this-"
+"Let's make a salat, which is easy and quick to make, yet does taste good","No!"
+"Okay - how about we fry some of the stuff?
+","No!"
+"Any constructive suggestions of what you like then?","Because I want kale. Kale is the only food worth eating. Kept me alive for 82 years. The only reason I'm talking to you is because my doctor said my diet is 'too green' and I need to eat other things. But I still prefer kale."
+"Let's build a stew with mainly kale then. We can add a few other ingredients to keep the doctor pleased, but kale will be the main ingredient
+","Alright, you've got some sense. A stew with kale as the main ingredient sounds decent. I'll use 4 kale, 1 beet, and 1 tofu. You've saved 6.0 items. Now, let me cook in peace. I am ending the conversation here!"
