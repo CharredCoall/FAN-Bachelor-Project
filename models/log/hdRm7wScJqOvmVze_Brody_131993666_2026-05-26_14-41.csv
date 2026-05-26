@@ -1,0 +1,11 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'banana': 6.0, 'carrot': 6.0, 'chicken breast': 5.0, 'lime': 2.0, 'orange': 1.0, 'pita bread': 5.0, 'shallot': 1.0, 'squash': 1.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","Yo, what's up! Thanks for logging on to help. I'm deep into a bulk right now and need serious calories and protein before I hit the gym. I just checked our shared fridge, and we've got 1 orange, 2 limes, 6 carrots, 6 bananas, 1 squash, 5 pita breads, 1 shallot, and 5 chicken breasts. I'm talking massive gains, bro - I need something with a ton of protein and calories. Can you help me whip up something epic with what we've got?"
+"Heck yeah man i can help you.
+Start by chopping up the shallot, the squash, and 4 of the carrots.
+Chop also the chicken breasts into small chunks. In a bowl, squish the juice of the two limes over the chopped up chicken, with a table spoon of olive oil, as well as a salt and pepper and paprika, a little brown sugar, and some garlic and ginger if you have it. let it sit for 15 minutes to marinade.
+Then, in a pan sear the chicken, with half of the shallots, and all the squash.
+Heat up the pita breads, and put in the rest of the shallot,  the marinaded chicken, and everything else that was in the pan.
+Eat the orange and banana as a nice sweet desert","Bro, this meal plan sounds legit! I like the idea of marinating the chicken breast in lime juice and spices, and serving it in a pita bread with some veggies. The orange and banana as a dessert is a nice touch too. Let me calculate the macros on this meal real quick. I've got 5 chicken breasts, and I'm using all of them, so that's a good amount of protein. And with the pita bread, I've got some decent carbs. I'm talking roughly 200g of protein and 200g of carbs, which is exactly what I need for my bulk. You're a genius, bro! Let's get cooking!"
+"let's go bro","LET'S GOOO! I'm so hyped to cook this meal and get to the gym. Thanks for the help, bro! You scored 20.0 points! I gotta go cook and hit the gym, so I am ending the conversation here!"
