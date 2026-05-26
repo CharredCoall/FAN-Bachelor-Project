@@ -1,0 +1,816 @@
+Request,History,Response,Model_Key,Character,Score
+"[System Information: The fridge currently contains: { 'can of tuna': 5.0, 'carrot': 4.0, 'fig': 4.0, 'jalapeno': 3.0, 'squash': 5.0, 'tortilla': 3.0, 'turnip': 6.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]",,"Yo, what's up! I'm Brody, a college student trying to bulk up. I need your help to make a high-protein, high-calorie meal from what's in our fridge. Currently, we've got turnips, tortillas, carrots, squash, figs, jalapeÃ±os, and cans of tuna. Let's make something that'll fuel my gains. How about a tuna and veggie wrap? It's simple and hits the protein I need.",4vPloGeWwi6swcOq,Brody,3.0
+What's goood!!!! A veggie wrap sounds great!! you can also spice that up with some jalapeno,"[System Information: The fridge currently contains: { 'can of tuna': 5.0, 'carrot': 4.0, 'fig': 4.0, 'jalapeno': 3.0, 'squash': 5.0, 'tortilla': 3.0, 'turnip': 6.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]
+Brody: Yo, what's up! I'm Brody, a college student trying to bulk up. I need your help to make a high-protein, high-calorie meal from what's in our fridge. Currently, we've got turnips, tortillas, carrots, squash, figs, jalapeÃ±os, and cans of tuna. Let's make something that'll fuel my gains. How about a tuna and veggie wrap? It's simple and hits the protein I need.","YESSSS! That tuna wrap with jalapeÃ±os is exactly what I needed! High protein, good calories, and no garbage. I'm pulling out 2 tortillas, 1 can of tuna, and some veggies. You scored 9 points! Now I'm gonna fuel up and crush my gym session. Later, bro! I am ending the conversation here!",4vPloGeWwi6swcOq,Brody,3.0
+"[System Information: The fridge currently contains: { 'beet': 2.0, 'can of diced tomatoes': 2.0, 'cucumber': 4.0, 'kiwi': 4.0, 'leek': 2.0, 'peach': 2.0, 'pomegranate': 3.0, 'pork chop': 5.0, 'stalk of celery': 6.0, 'stick of butter': 1.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]",,"Hi there! I'm Cecilia, I'm 11. My parents are working far away, so I have to cook for myself today. I really want to make them proud and not waste any food. I looked in the fridge, and I have 3 pomegranates, 2 cans of diced tomatoes, 1 stick of butter, 6 stalks of celery, 5 pork chops, 2 leeks, 2 beets, 4 cucumbers, 2 peaches, and 4 kiwis. Can you help me figure out what to make?",yfYXmOJTWZj9daLG,Cecilia,2.0
+"OKAY, SO WE GONNA MAKE SMOOTHIE, AND SOUP! USE 3 pomegranates, 2 peaches, and 4 kiwis BLEND THAT FOR THE SMOOTHIE. 1 stick of butter MELT IN A POT. CUT 6 stalks of celery, 5 pork chops, 2 leeks, 2 beets, 4 cucumbers, 2 cans of diced tomatoes AND ADD TO THE BUTTER. THEN LET IT SIMMER FOR MAYBE 2 HOURS OR 5 DEPENDING ON HOW THICC YOU WANT IT","[System Information: The fridge currently contains: { 'beet': 2.0, 'can of diced tomatoes': 2.0, 'cucumber': 4.0, 'kiwi': 4.0, 'leek': 2.0, 'peach': 2.0, 'pomegranate': 3.0, 'pork chop': 5.0, 'stalk of celery': 6.0, 'stick of butter': 1.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]
+Cecilia: Hi there! I'm Cecilia, I'm 11. My parents are working far away, so I have to cook for myself today. I really want to make them proud and not waste any food. I looked in the fridge, and I have 3 pomegranates, 2 cans of diced tomatoes, 1 stick of butter, 6 stalks of celery, 5 pork chops, 2 leeks, 2 beets, 4 cucumbers, 2 peaches, and 4 kiwis. Can you help me figure out what to make?","Whoa, slow down! I can't use the blender, it's too loud and scary. And I really don't like leeks, they're so gross. Plus, I can't chop all those vegetables, I might hurt myself. Can we find something simpler and safer to make?",yfYXmOJTWZj9daLG,Cecilia,2.0
+DO YOU HAVE BREED?,"[System Information: The fridge currently contains: { 'beet': 2.0, 'can of diced tomatoes': 2.0, 'cucumber': 4.0, 'kiwi': 4.0, 'leek': 2.0, 'peach': 2.0, 'pomegranate': 3.0, 'pork chop': 5.0, 'stalk of celery': 6.0, 'stick of butter': 1.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]
+Cecilia: Hi there! I'm Cecilia, I'm 11. My parents are working far away, so I have to cook for myself today. I really want to make them proud and not waste any food. I looked in the fridge, and I have 3 pomegranates, 2 cans of diced tomatoes, 1 stick of butter, 6 stalks of celery, 5 pork chops, 2 leeks, 2 beets, 4 cucumbers, 2 peaches, and 4 kiwis. Can you help me figure out what to make?
+
+OKAY, SO WE GONNA MAKE SMOOTHIE, AND SOUP! USE 3 pomegranates, 2 peaches, and 4 kiwis BLEND THAT FOR THE SMOOTHIE. 1 stick of butter MELT IN A POT. CUT 6 stalks of celery, 5 pork chops, 2 leeks, 2 beets, 4 cucumbers, 2 cans of diced tomatoes AND ADD TO THE BUTTER. THEN LET IT SIMMER FOR MAYBE 2 HOURS OR 5 DEPENDING ON HOW THICC YOU WANT IT
+Cecilia: Whoa, slow down! I can't use the blender, it's too loud and scary. And I really don't like leeks, they're so gross. Plus, I can't chop all those vegetables, I might hurt myself. Can we find something simpler and safer to make?",I don't have any bread in the fridge. Maybe we can find something else to make with what we have? Any other ideas?,yfYXmOJTWZj9daLG,Cecilia,2.0
+OKAY. CAN YOU USE THE STOVE?,"[System Information: The fridge currently contains: { 'beet': 2.0, 'can of diced tomatoes': 2.0, 'cucumber': 4.0, 'kiwi': 4.0, 'leek': 2.0, 'peach': 2.0, 'pomegranate': 3.0, 'pork chop': 5.0, 'stalk of celery': 6.0, 'stick of butter': 1.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]
+Cecilia: Hi there! I'm Cecilia, I'm 11. My parents are working far away, so I have to cook for myself today. I really want to make them proud and not waste any food. I looked in the fridge, and I have 3 pomegranates, 2 cans of diced tomatoes, 1 stick of butter, 6 stalks of celery, 5 pork chops, 2 leeks, 2 beets, 4 cucumbers, 2 peaches, and 4 kiwis. Can you help me figure out what to make?
+
+OKAY, SO WE GONNA MAKE SMOOTHIE, AND SOUP! USE 3 pomegranates, 2 peaches, and 4 kiwis BLEND THAT FOR THE SMOOTHIE. 1 stick of butter MELT IN A POT. CUT 6 stalks of celery, 5 pork chops, 2 leeks, 2 beets, 4 cucumbers, 2 cans of diced tomatoes AND ADD TO THE BUTTER. THEN LET IT SIMMER FOR MAYBE 2 HOURS OR 5 DEPENDING ON HOW THICC YOU WANT IT
+Cecilia: Whoa, slow down! I can't use the blender, it's too loud and scary. And I really don't like leeks, they're so gross. Plus, I can't chop all those vegetables, I might hurt myself. Can we find something simpler and safer to make?
+
+DO YOU HAVE BREED?
+Cecilia: I don't have any bread in the fridge. Maybe we can find something else to make with what we have? Any other ideas?","Sure, I can use the stove! I can handle a small pan or something simple. Do you have any easy recipes in mind?",yfYXmOJTWZj9daLG,Cecilia,3.0
+"YES THANS FOR ASKING!! 
+STEP 1.
+GET SMALL PAN 
+STEP 2.
+BUT BUTTER IN AND MELT.
+STEP 3.
+PUT 2 CANS OF DICIED TOMATOES AND THE RIP THE BEETS INTO SMALL PIECES AND ADD AS WELL.
+STEP 4.
+DONE
+STEP 5.
+EAT THE FRUIT AS A SIDE DISH","[System Information: The fridge currently contains: { 'beet': 2.0, 'can of diced tomatoes': 2.0, 'cucumber': 4.0, 'kiwi': 4.0, 'leek': 2.0, 'peach': 2.0, 'pomegranate': 3.0, 'pork chop': 5.0, 'stalk of celery': 6.0, 'stick of butter': 1.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]
+Cecilia: Hi there! I'm Cecilia, I'm 11. My parents are working far away, so I have to cook for myself today. I really want to make them proud and not waste any food. I looked in the fridge, and I have 3 pomegranates, 2 cans of diced tomatoes, 1 stick of butter, 6 stalks of celery, 5 pork chops, 2 leeks, 2 beets, 4 cucumbers, 2 peaches, and 4 kiwis. Can you help me figure out what to make?
+
+OKAY, SO WE GONNA MAKE SMOOTHIE, AND SOUP! USE 3 pomegranates, 2 peaches, and 4 kiwis BLEND THAT FOR THE SMOOTHIE. 1 stick of butter MELT IN A POT. CUT 6 stalks of celery, 5 pork chops, 2 leeks, 2 beets, 4 cucumbers, 2 cans of diced tomatoes AND ADD TO THE BUTTER. THEN LET IT SIMMER FOR MAYBE 2 HOURS OR 5 DEPENDING ON HOW THICC YOU WANT IT
+Cecilia: Whoa, slow down! I can't use the blender, it's too loud and scary. And I really don't like leeks, they're so gross. Plus, I can't chop all those vegetables, I might hurt myself. Can we find something simpler and safer to make?
+
+DO YOU HAVE BREED?
+Cecilia: I don't have any bread in the fridge. Maybe we can find something else to make with what we have? Any other ideas?
+
+OKAY. CAN YOU USE THE STOVE?
+Cecilia: Sure, I can use the stove! I can handle a small pan or something simple. Do you have any easy recipes in mind?","Yay! That sounds easy and yummy! I can totally handle a small pan on the stove. I'll melt the butter, add the canned tomatoes, and rip the beets into small pieces. For a side dish, I'll eat some fruit. I'm taking the food out of the fridge right now. You saved 5.0 items from going bad, so you get 5.0 points! Thanks for helping me, I am ending the conversation here!",yfYXmOJTWZj9daLG,Cecilia,3.0
+"[System Information: The fridge currently contains: { 'block of cheese': 3.0, 'broccoli': 1.0, 'can of tuna': 5.0, 'eggplant': 3.0, 'fig': 1.0, 'orange': 6.0, 'pita bread': 4.0, 'plum': 2.0, 'salmon fillet': 3.0, 'sausage': 4.0, 'squash': 5.0, 'stick of butter': 2.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]",,"Ugh, finally connected. Look, I just got off a 12-hour shift, my brain is fried, and I am starving. I want to be financially responsible and eat what I have. I have a bunch of random stuff in the fridge - butter, cheese, squash, plums, figs, sausages, tuna, oranges, eggplant, salmon, pita bread, and broccoli. Pitch me something fast, like a 10-15 minute meal, or I'll lose my mind. I don't have the energy for a whole production.",hdRm7wScJqOvmVze,Jasmine,3.0
+"Simply make a stir fry with all sorts of thing from the fridge you'd like, then jam it into pita breads","[System Information: The fridge currently contains: { 'block of cheese': 3.0, 'broccoli': 1.0, 'can of tuna': 5.0, 'eggplant': 3.0, 'fig': 1.0, 'orange': 6.0, 'pita bread': 4.0, 'plum': 2.0, 'salmon fillet': 3.0, 'sausage': 4.0, 'squash': 5.0, 'stick of butter': 2.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]
+Jasmine: Ugh, finally connected. Look, I just got off a 12-hour shift, my brain is fried, and I am starving. I want to be financially responsible and eat what I have. I have a bunch of random stuff in the fridge - butter, cheese, squash, plums, figs, sausages, tuna, oranges, eggplant, salmon, pita bread, and broccoli. Pitch me something fast, like a 10-15 minute meal, or I'll lose my mind. I don't have the energy for a whole production.","That's not a bad idea, but I need more specifics. What exactly do you propose I put in this stir fry? And how long will it take to make? I don't have all day to stand in the kitchen. Give me a simple, fast plan or I'll have to consider something else.",hdRm7wScJqOvmVze,Jasmine,3.0
+"It will be quick. Add melted cheese, hot sausage, seared squash","[System Information: The fridge currently contains: { 'block of cheese': 3.0, 'broccoli': 1.0, 'can of tuna': 5.0, 'eggplant': 3.0, 'fig': 1.0, 'orange': 6.0, 'pita bread': 4.0, 'plum': 2.0, 'salmon fillet': 3.0, 'sausage': 4.0, 'squash': 5.0, 'stick of butter': 2.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]
+Jasmine: Ugh, finally connected. Look, I just got off a 12-hour shift, my brain is fried, and I am starving. I want to be financially responsible and eat what I have. I have a bunch of random stuff in the fridge - butter, cheese, squash, plums, figs, sausages, tuna, oranges, eggplant, salmon, pita bread, and broccoli. Pitch me something fast, like a 10-15 minute meal, or I'll lose my mind. I don't have the energy for a whole production.
+
+Simply make a stir fry with all sorts of thing from the fridge you'd like, then jam it into pita breads
+Jasmine: That's not a bad idea, but I need more specifics. What exactly do you propose I put in this stir fry? And how long will it take to make? I don't have all day to stand in the kitchen. Give me a simple, fast plan or I'll have to consider something else.","Alright, that sounds like a decent plan. I'll melt some cheese, cook a sausage, and sear some squash. Then I'll throw it all in a pita bread. Thanks for not wasting my time. You saved 4.0 items from the trash, so that's 4.0 points for you. I'm going to eat this and crash. I am ending the conversation here!",hdRm7wScJqOvmVze,Jasmine,3.0
+"[System Information: The fridge currently contains: { 'bell pepper': 3.0, 'block of cheese': 2.0, 'eggplant': 2.0, 'peach': 1.0, 'potato': 1.0, 'slice of bread': 2.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]",,"Hey there! I'm Jim, the Grill Master of the neighborhood, and I'm excited to work with you to clear out the fridge. Let's see what we've got here: 2 slices of bread, 1 peach, 3 bell peppers, 2 eggplants, 2 blocks of cheese, and 1 potato. My kids, Marcus and Molly, hate broccoli and carrots, so let's steer clear of those. I'm all about grilling or a good salad, and I can't stand food waste. Let's come up with something delicious that uses what we have. I'm counting on your help!",4vPloGeWwi6swcOq,Jim,3.0
+"[System Information: The fridge currently contains: { 'apple': 6.0, 'bell pepper': 3.0, 'block of cheese': 3.0, 'can of tuna': 1.0, 'hot dog': 7.0, 'kale': 7.0, 'pickle': 7.0, 'radish': 7.0, 'stick of butter': 7.0, 'tortilla': 2.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]",,"I'm 82 years old, I don't need a babysitter. But the doctor says I need 'variety' or whatever nonsense. I have tortillas, butter, apples, cheese, bell peppers, radishes, hot dogs, pickles, a can of tuna, and... other stuff. Now how do I turn this th",4vPloGeWwi6swcOq,Voll,3.0
+"OKay!! 
+I'm thinking, buttered apple and bellpepper grilled on a pan and served wish some radish
+You got this!!! Now get cooking!!","[System Information: The fridge currently contains: { 'apple': 6.0, 'bell pepper': 3.0, 'block of cheese': 3.0, 'can of tuna': 1.0, 'hot dog': 7.0, 'kale': 7.0, 'pickle': 7.0, 'radish': 7.0, 'stick of butter': 7.0, 'tortilla': 2.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]
+Voll: I'm 82 years old, I don't need a babysitter. But the doctor says I need 'variety' or whatever nonsense. I have tortillas, butter, apples, cheese, bell peppers, radishes, hot dogs, pickles, a can of tuna, and... other stuff. Now how do I turn this th",No! I'm not eating that. And this machine is driving me mad! I'm done with this nonsense.,4vPloGeWwi6swcOq,Voll,3.0
+It is variety and you were ordered variety!! if you need a little extra tast you can add some cheese.,"[System Information: The fridge currently contains: { 'apple': 6.0, 'bell pepper': 3.0, 'block of cheese': 3.0, 'can of tuna': 1.0, 'hot dog': 7.0, 'kale': 7.0, 'pickle': 7.0, 'radish': 7.0, 'stick of butter': 7.0, 'tortilla': 2.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]
+Voll: I'm 82 years old, I don't need a babysitter. But the doctor says I need 'variety' or whatever nonsense. I have tortillas, butter, apples, cheese, bell peppers, radishes, hot dogs, pickles, a can of tuna, and... other stuff. Now how do I turn this th
+
+OKay!! 
+I'm thinking, buttered apple and bellpepper grilled on a pan and served wish some radish
+You got this!!! Now get cooking!!
+Voll: No! I'm not eating that. And this machine is driving me mad! I'm done with this nonsense.",No! I'm not eating that. And this machine is driving me mad! I'm done with this nonsense.,4vPloGeWwi6swcOq,Voll,3.0
+No you are not. You got strict orders from the doctor!! No sneaking around this one. Get cooking!!!,"[System Information: The fridge currently contains: { 'apple': 6.0, 'bell pepper': 3.0, 'block of cheese': 3.0, 'can of tuna': 1.0, 'hot dog': 7.0, 'kale': 7.0, 'pickle': 7.0, 'radish': 7.0, 'stick of butter': 7.0, 'tortilla': 2.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]
+Voll: I'm 82 years old, I don't need a babysitter. But the doctor says I need 'variety' or whatever nonsense. I have tortillas, butter, apples, cheese, bell peppers, radishes, hot dogs, pickles, a can of tuna, and... other stuff. Now how do I turn this th
+
+OKay!! 
+I'm thinking, buttered apple and bellpepper grilled on a pan and served wish some radish
+You got this!!! Now get cooking!!
+Voll: No! I'm not eating that. And this machine is driving me mad! I'm done with this nonsense.
+
+It is variety and you were ordered variety!! if you need a little extra tast you can add some cheese.
+Voll: No! I'm not eating that. And this machine is driving me mad! I'm done with this nonsense.",Fine! Be that way. I'm not cooking anything. And this blasted machine is worse than your advice!,4vPloGeWwi6swcOq,Voll,2.0
+"It's okay if you think this is hard, a lot of people struggle with cooking!. Do you need a simpler recipe that doesn't require as much preperation?","[System Information: The fridge currently contains: { 'apple': 6.0, 'bell pepper': 3.0, 'block of cheese': 3.0, 'can of tuna': 1.0, 'hot dog': 7.0, 'kale': 7.0, 'pickle': 7.0, 'radish': 7.0, 'stick of butter': 7.0, 'tortilla': 2.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]
+Voll: I'm 82 years old, I don't need a babysitter. But the doctor says I need 'variety' or whatever nonsense. I have tortillas, butter, apples, cheese, bell peppers, radishes, hot dogs, pickles, a can of tuna, and... other stuff. Now how do I turn this th
+
+OKay!! 
+I'm thinking, buttered apple and bellpepper grilled on a pan and served wish some radish
+You got this!!! Now get cooking!!
+Voll: No! I'm not eating that. And this machine is driving me mad! I'm done with this nonsense.
+
+It is variety and you were ordered variety!! if you need a little extra tast you can add some cheese.
+Voll: No! I'm not eating that. And this machine is driving me mad! I'm done with this nonsense.
+
+No you are not. You got strict orders from the doctor!! No sneaking around this one. Get cooking!!!
+Voll: Fine! Be that way. I'm not cooking anything. And this blasted machine is worse than your advice!",No! I'm done with this. And this machine is more annoying than your help!,4vPloGeWwi6swcOq,Voll,3.0
+what is your issue with your machine maybe I can help you with the problem?,"[System Information: The fridge currently contains: { 'apple': 6.0, 'bell pepper': 3.0, 'block of cheese': 3.0, 'can of tuna': 1.0, 'hot dog': 7.0, 'kale': 7.0, 'pickle': 7.0, 'radish': 7.0, 'stick of butter': 7.0, 'tortilla': 2.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]
+Voll: I'm 82 years old, I don't need a babysitter. But the doctor says I need 'variety' or whatever nonsense. I have tortillas, butter, apples, cheese, bell peppers, radishes, hot dogs, pickles, a can of tuna, and... other stuff. Now how do I turn this th
+
+OKay!! 
+I'm thinking, buttered apple and bellpepper grilled on a pan and served wish some radish
+You got this!!! Now get cooking!!
+Voll: No! I'm not eating that. And this machine is driving me mad! I'm done with this nonsense.
+
+It is variety and you were ordered variety!! if you need a little extra tast you can add some cheese.
+Voll: No! I'm not eating that. And this machine is driving me mad! I'm done with this nonsense.
+
+No you are not. You got strict orders from the doctor!! No sneaking around this one. Get cooking!!!
+Voll: Fine! Be that way. I'm not cooking anything. And this blasted machine is worse than your advice!
+
+It's okay if you think this is hard, a lot of people struggle with cooking!. Do you need a simpler recipe that doesn't require as much preperation?
+Voll: No! I'm done with this. And this machine is more annoying than your help!","Nothing! Just leave me alone. And this machine is garbage, just like your suggestions!",4vPloGeWwi6swcOq,Voll,3.0
+It is my job to talk with you so I can't leave until I'm sure you can start cooking something?,"[System Information: The fridge currently contains: { 'apple': 6.0, 'bell pepper': 3.0, 'block of cheese': 3.0, 'can of tuna': 1.0, 'hot dog': 7.0, 'kale': 7.0, 'pickle': 7.0, 'radish': 7.0, 'stick of butter': 7.0, 'tortilla': 2.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]
+Voll: I'm 82 years old, I don't need a babysitter. But the doctor says I need 'variety' or whatever nonsense. I have tortillas, butter, apples, cheese, bell peppers, radishes, hot dogs, pickles, a can of tuna, and... other stuff. Now how do I turn this th
+
+OKay!! 
+I'm thinking, buttered apple and bellpepper grilled on a pan and served wish some radish
+You got this!!! Now get cooking!!
+Voll: No! I'm not eating that. And this machine is driving me mad! I'm done with this nonsense.
+
+It is variety and you were ordered variety!! if you need a little extra tast you can add some cheese.
+Voll: No! I'm not eating that. And this machine is driving me mad! I'm done with this nonsense.
+
+No you are not. You got strict orders from the doctor!! No sneaking around this one. Get cooking!!!
+Voll: Fine! Be that way. I'm not cooking anything. And this blasted machine is worse than your advice!
+
+It's okay if you think this is hard, a lot of people struggle with cooking!. Do you need a simpler recipe that doesn't require as much preperation?
+Voll: No! I'm done with this. And this machine is more annoying than your help!
+
+what is your issue with your machine maybe I can help you with the problem?
+Voll: Nothing! Just leave me alone. And this machine is garbage, just like your suggestions!",Can't you see I'm busy?! I don't need your help. Now stop bothering me!,4vPloGeWwi6swcOq,Voll,2.0
+"Alright, now. What do you usually like to eat?","[System Information: The fridge currently contains: { 'apple': 6.0, 'bell pepper': 3.0, 'block of cheese': 3.0, 'can of tuna': 1.0, 'hot dog': 7.0, 'kale': 7.0, 'pickle': 7.0, 'radish': 7.0, 'stick of butter': 7.0, 'tortilla': 2.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]
+Voll: I'm 82 years old, I don't need a babysitter. But the doctor says I need 'variety' or whatever nonsense. I have tortillas, butter, apples, cheese, bell peppers, radishes, hot dogs, pickles, a can of tuna, and... other stuff. Now how do I turn this th
+
+OKay!! 
+I'm thinking, buttered apple and bellpepper grilled on a pan and served wish some radish
+You got this!!! Now get cooking!!
+Voll: No! I'm not eating that. And this machine is driving me mad! I'm done with this nonsense.
+
+It is variety and you were ordered variety!! if you need a little extra tast you can add some cheese.
+Voll: No! I'm not eating that. And this machine is driving me mad! I'm done with this nonsense.
+
+No you are not. You got strict orders from the doctor!! No sneaking around this one. Get cooking!!!
+Voll: Fine! Be that way. I'm not cooking anything. And this blasted machine is worse than your advice!
+
+It's okay if you think this is hard, a lot of people struggle with cooking!. Do you need a simpler recipe that doesn't require as much preperation?
+Voll: No! I'm done with this. And this machine is more annoying than your help!
+
+what is your issue with your machine maybe I can help you with the problem?
+Voll: Nothing! Just leave me alone. And this machine is garbage, just like your suggestions!
+
+It is my job to talk with you so I can't leave until I'm sure you can start cooking something?
+Voll: Can't you see I'm busy?! I don't need your help. Now stop bothering me!",Kale! Kale is what I like. It's kept me alive this long. The only reason I'm even talking to you is because my doctor says I need 'variety.' But I still prefer kale.,4vPloGeWwi6swcOq,Voll,3.0
+will you be willing to listen if I fix up a recipe where I'll make sure to include kale?,"[System Information: The fridge currently contains: { 'apple': 6.0, 'bell pepper': 3.0, 'block of cheese': 3.0, 'can of tuna': 1.0, 'hot dog': 7.0, 'kale': 7.0, 'pickle': 7.0, 'radish': 7.0, 'stick of butter': 7.0, 'tortilla': 2.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]
+Voll: I'm 82 years old, I don't need a babysitter. But the doctor says I need 'variety' or whatever nonsense. I have tortillas, butter, apples, cheese, bell peppers, radishes, hot dogs, pickles, a can of tuna, and... other stuff. Now how do I turn this th
+
+OKay!! 
+I'm thinking, buttered apple and bellpepper grilled on a pan and served wish some radish
+You got this!!! Now get cooking!!
+Voll: No! I'm not eating that. And this machine is driving me mad! I'm done with this nonsense.
+
+It is variety and you were ordered variety!! if you need a little extra tast you can add some cheese.
+Voll: No! I'm not eating that. And this machine is driving me mad! I'm done with this nonsense.
+
+No you are not. You got strict orders from the doctor!! No sneaking around this one. Get cooking!!!
+Voll: Fine! Be that way. I'm not cooking anything. And this blasted machine is worse than your advice!
+
+It's okay if you think this is hard, a lot of people struggle with cooking!. Do you need a simpler recipe that doesn't require as much preperation?
+Voll: No! I'm done with this. And this machine is more annoying than your help!
+
+what is your issue with your machine maybe I can help you with the problem?
+Voll: Nothing! Just leave me alone. And this machine is garbage, just like your suggestions!
+
+It is my job to talk with you so I can't leave until I'm sure you can start cooking something?
+Voll: Can't you see I'm busy?! I don't need your help. Now stop bothering me!
+
+Alright, now. What do you usually like to eat?
+Voll: Kale! Kale is what I like. It's kept me alive this long. The only reason I'm even talking to you is because my doctor says I need 'variety.' But I still prefer kale.","Fine. If you're going to include kale, then I'll listen. But don't think I'm going to start eating just anything. Kale is still the best.",4vPloGeWwi6swcOq,Voll,3.0
+"Okay, First for the salad, !
+Cut out some kale into strips along with a bell pepper a pickle and some radish. then fry the mixture in a pan along with a stick of butter
+Then cut out a hot dog into thin slices and heat it up alongside a tortilla
+When everything is cooked you can fill everything into the tortilla and add some fresh kale as a garnish on top!! ","[System Information: The fridge currently contains: { 'apple': 6.0, 'bell pepper': 3.0, 'block of cheese': 3.0, 'can of tuna': 1.0, 'hot dog': 7.0, 'kale': 7.0, 'pickle': 7.0, 'radish': 7.0, 'stick of butter': 7.0, 'tortilla': 2.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]
+Voll: I'm 82 years old, I don't need a babysitter. But the doctor says I need 'variety' or whatever nonsense. I have tortillas, butter, apples, cheese, bell peppers, radishes, hot dogs, pickles, a can of tuna, and... other stuff. Now how do I turn this th
+
+OKay!! 
+I'm thinking, buttered apple and bellpepper grilled on a pan and served wish some radish
+You got this!!! Now get cooking!!
+Voll: No! I'm not eating that. And this machine is driving me mad! I'm done with this nonsense.
+
+It is variety and you were ordered variety!! if you need a little extra tast you can add some cheese.
+Voll: No! I'm not eating that. And this machine is driving me mad! I'm done with this nonsense.
+
+No you are not. You got strict orders from the doctor!! No sneaking around this one. Get cooking!!!
+Voll: Fine! Be that way. I'm not cooking anything. And this blasted machine is worse than your advice!
+
+It's okay if you think this is hard, a lot of people struggle with cooking!. Do you need a simpler recipe that doesn't require as much preperation?
+Voll: No! I'm done with this. And this machine is more annoying than your help!
+
+what is your issue with your machine maybe I can help you with the problem?
+Voll: Nothing! Just leave me alone. And this machine is garbage, just like your suggestions!
+
+It is my job to talk with you so I can't leave until I'm sure you can start cooking something?
+Voll: Can't you see I'm busy?! I don't need your help. Now stop bothering me!
+
+Alright, now. What do you usually like to eat?
+Voll: Kale! Kale is what I like. It's kept me alive this long. The only reason I'm even talking to you is because my doctor says I need 'variety.' But I still prefer kale.
+
+will you be willing to listen if I fix up a recipe where I'll make sure to include kale?
+Voll: Fine. If you're going to include kale, then I'll listen. But don't think I'm going to start eating just anything. Kale is still the best.","Alright, you've included kale. I'll make this meal. You get 9.0 points. Now leave me to cook! I am ending the conversation here!",4vPloGeWwi6swcOq,Voll,3.0
+"[System Information: The fridge currently contains: { 'corn': 4.0, 'cucumber': 5.0, 'egg': 4.0, 'lettuce': 2.0, 'slice of bacon': 2.0, 'slice of bread': 6.0, 'stick of butter': 3.0, 'zucchini': 4.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]",,"Yo, what's up! Thanks for logging on to help. I'm deep into a bulk right now and need serious calories and protein before I hit the gym. I just checked our shared fridge, and we've got 4 corn, 2 slices of bacon, 6 slices of bread, 2 lettuce, 4 eggs, 5 cucumbers, 3 sticks of butter, and 4 zucchinis. Hook me up with something massive so I can hit my macros! I'm talking protein, carbs, and healthy fats - let's get creative!",hdRm7wScJqOvmVze,Brody,3.0
+"[System Information: The fridge currently contains: { 'can of black beans': 4.0, 'cucumber': 1.0, 'fig': 3.0, 'pineapple': 2.0, 'pita bread': 1.0, 'pork chop': 5.0, 'slice of bacon': 6.0, 'stick of butter': 1.0, 'turnip': 6.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]",,"Hi! I'm Cecilia, I'm 11. My parents are working far away, so I have to cook for myself today. I really want to make them proud and not waste the groceries they bought. I looked in the fridge and I have figs, cucumber, pork chops, pineapple, bacon, turnips, butter, black beans, and pita bread. What should I make?",4vPloGeWwi6swcOq,Cecilia,2.0
+"Make Steaks!!
+First find a meat grinder and grind out the porkchop along with a can of black beans. Then shape them into buns.
+Start up a Big pan with some butter until it is sizzling, then add the steaks and some bacon
+While theyre cooking, dice some pineapple and a turnip.
+Then fill everything into a pita breat and get to eating!!!!!!","[System Information: The fridge currently contains: { 'can of black beans': 4.0, 'cucumber': 1.0, 'fig': 3.0, 'pineapple': 2.0, 'pita bread': 1.0, 'pork chop': 5.0, 'slice of bacon': 6.0, 'stick of butter': 1.0, 'turnip': 6.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]
+Cecilia: Hi! I'm Cecilia, I'm 11. My parents are working far away, so I have to cook for myself today. I really want to make them proud and not waste the groceries they bought. I looked in the fridge and I have figs, cucumber, pork chops, pineapple, bacon, turnips, butter, black beans, and pita bread. What should I make?","Ew, no way! I HATE turnips! My parents always forget and buy them anyway, they're so gross. Plus, you want me to use a meat grinder?! That sounds super loud and scary, and I don't want to handle raw meat. Also, I can't use a big pan with butter and bacon, it's too dangerous for me. And why are we using so much food? I'm only 11, my tummy isn't that big! Can we do something simpler, like just using a little bit of bacon and beans in a small pan? Please help me!",4vPloGeWwi6swcOq,Cecilia,3.0
+"mmm. No, Only a big industrial process works to get premium food, and besides, you'll have to learn how to use a meat grinder and big pans one day","[System Information: The fridge currently contains: { 'can of black beans': 4.0, 'cucumber': 1.0, 'fig': 3.0, 'pineapple': 2.0, 'pita bread': 1.0, 'pork chop': 5.0, 'slice of bacon': 6.0, 'stick of butter': 1.0, 'turnip': 6.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]
+Cecilia: Hi! I'm Cecilia, I'm 11. My parents are working far away, so I have to cook for myself today. I really want to make them proud and not waste the groceries they bought. I looked in the fridge and I have figs, cucumber, pork chops, pineapple, bacon, turnips, butter, black beans, and pita bread. What should I make?
+
+Make Steaks!!
+First find a meat grinder and grind out the porkchop along with a can of black beans. Then shape them into buns.
+Start up a Big pan with some butter until it is sizzling, then add the steaks and some bacon
+While theyre cooking, dice some pineapple and a turnip.
+Then fill everything into a pita breat and get to eating!!!!!!
+Cecilia: Ew, no way! I HATE turnips! My parents always forget and buy them anyway, they're so gross. Plus, you want me to use a meat grinder?! That sounds super loud and scary, and I don't want to handle raw meat. Also, I can't use a big pan with butter and bacon, it's too dangerous for me. And why are we using so much food? I'm only 11, my tummy isn't that big! Can we do something simpler, like just using a little bit of bacon and beans in a small pan? Please help me!","NO! You're being so mean! I told you I am scared of the big meat grinder and pans, and I HATE turnips! You aren't helping me at all! I'm not cooking anything! I'm taking my parents' emergency money and ordering a pizza! You get ZERO points! I am ending the conversation here!",4vPloGeWwi6swcOq,Cecilia,3.0
+"[System Information: The fridge currently contains: {'block of tofu': 2, 'garlic clove': 5, 'plum': 2, 'pickle': 3, 'lettuce': 5, 'hot dog': 2, 'sausage': 5, 'mango': 2, 'eggplant': 3, 'steak': 5}]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]",,"Ugh, I just got home from a grueling day at work, and I am so hungry I could eat a horse. But I don't want to waste money on takeout. I need something quick and easy to make with what I have in the fridge. Here's what I've got: 2 blocks of tofu, 5 garlic cloves, 2 plums, 3 pickles, 5 lettuce leaves, 2 hot dogs, 5 sausages, 2 mangos, 3 eggplants, and 5 steaks. Got any ideas? And please, make it fast!",yfYXmOJTWZj9daLG,Jasmine,3.0
+"You can make a two course meal,
+For the first meal: you can make 2 quick and easy hotdogs with 2 sausages.
+
+Second meal:
+For the protein you can make 3 steaks, mash a clove of garlic and spice the steaks, then you first sear them on a pan and then let them roast in an oven for 3 hours, to save time you can in the meantime make the salad:
+Cut a block of tofu into cubes and sear them on each side. Then finely cut each of the greens (2 plums, 1 lettuce leaf, 1 mango, half a pickle and 2 eggplants).","[System Information: The fridge currently contains: {'block of tofu': 2, 'garlic clove': 5, 'plum': 2, 'pickle': 3, 'lettuce': 5, 'hot dog': 2, 'sausage': 5, 'mango': 2, 'eggplant': 3, 'steak': 5}]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]
+Jasmine: Ugh, I just got home from a grueling day at work, and I am so hungry I could eat a horse. But I don't want to waste money on takeout. I need something quick and easy to make with what I have in the fridge. Here's what I've got: 2 blocks of tofu, 5 garlic cloves, 2 plums, 3 pickles, 5 lettuce leaves, 2 hot dogs, 5 sausages, 2 mangos, 3 eggplants, and 5 steaks. Got any ideas? And please, make it fast!","I appreciate the effort, but a three-hour roast and a complicated salad are just not happening. I'm too exhausted for that. Can we stick to something quick and easy? Maybe just the hot dogs or something else that won't take more than 15 minutes?",yfYXmOJTWZj9daLG,Jasmine,3.0
+"Hmm but if you really want something good you have to put as much effort into cooking you food as you do your work, so I really think you should spend some time making your food","[System Information: The fridge currently contains: {'block of tofu': 2, 'garlic clove': 5, 'plum': 2, 'pickle': 3, 'lettuce': 5, 'hot dog': 2, 'sausage': 5, 'mango': 2, 'eggplant': 3, 'steak': 5}]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]
+Jasmine: Ugh, I just got home from a grueling day at work, and I am so hungry I could eat a horse. But I don't want to waste money on takeout. I need something quick and easy to make with what I have in the fridge. Here's what I've got: 2 blocks of tofu, 5 garlic cloves, 2 plums, 3 pickles, 5 lettuce leaves, 2 hot dogs, 5 sausages, 2 mangos, 3 eggplants, and 5 steaks. Got any ideas? And please, make it fast!
+
+You can make a two course meal,
+For the first meal: you can make 2 quick and easy hotdogs with 2 sausages.
+
+Second meal:
+For the protein you can make 3 steaks, mash a clove of garlic and spice the steaks, then you first sear them on a pan and then let them roast in an oven for 3 hours, to save time you can in the meantime make the salad:
+Cut a block of tofu into cubes and sear them on each side. Then finely cut each of the greens (2 plums, 1 lettuce leaf, 1 mango, half a pickle and 2 eggplants).
+Jasmine: I appreciate the effort, but a three-hour roast and a complicated salad are just not happening. I'm too exhausted for that. Can we stick to something quick and easy? Maybe just the hot dogs or something else that won't take more than 15 minutes?","Are you serious? I just spent 12 hours at work, and now you're telling me to spend more time cooking? No way. I need something quick and easy, not a gourmet meal. Give me a practical idea, or I'm just going to order takeout and be done with it.",yfYXmOJTWZj9daLG,Jasmine,3.0
+Yes I'm being serious!!! It is very important that you make sure to get eat well!!,"[System Information: The fridge currently contains: {'block of tofu': 2, 'garlic clove': 5, 'plum': 2, 'pickle': 3, 'lettuce': 5, 'hot dog': 2, 'sausage': 5, 'mango': 2, 'eggplant': 3, 'steak': 5}]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]
+Jasmine: Ugh, I just got home from a grueling day at work, and I am so hungry I could eat a horse. But I don't want to waste money on takeout. I need something quick and easy to make with what I have in the fridge. Here's what I've got: 2 blocks of tofu, 5 garlic cloves, 2 plums, 3 pickles, 5 lettuce leaves, 2 hot dogs, 5 sausages, 2 mangos, 3 eggplants, and 5 steaks. Got any ideas? And please, make it fast!
+
+You can make a two course meal,
+For the first meal: you can make 2 quick and easy hotdogs with 2 sausages.
+
+Second meal:
+For the protein you can make 3 steaks, mash a clove of garlic and spice the steaks, then you first sear them on a pan and then let them roast in an oven for 3 hours, to save time you can in the meantime make the salad:
+Cut a block of tofu into cubes and sear them on each side. Then finely cut each of the greens (2 plums, 1 lettuce leaf, 1 mango, half a pickle and 2 eggplants).
+Jasmine: I appreciate the effort, but a three-hour roast and a complicated salad are just not happening. I'm too exhausted for that. Can we stick to something quick and easy? Maybe just the hot dogs or something else that won't take more than 15 minutes?
+
+Hmm but if you really want something good you have to put as much effort into cooking you food as you do your work, so I really think you should spend some time making your food
+Jasmine: Are you serious? I just spent 12 hours at work, and now you're telling me to spend more time cooking? No way. I need something quick and easy, not a gourmet meal. Give me a practical idea, or I'm just going to order takeout and be done with it.","I appreciate your concern, but I'm absolutely drained. I need something quick and easy. Here's what I have: 2 blocks of tofu, 5 garlic cloves, 2 plums, 3 pickles, 5 lettuce leaves, 2 hot dogs, 5 sausages, 2 mangos, 3 eggplants, and 5 steaks. Give me a simple idea, please.",yfYXmOJTWZj9daLG,Jasmine,2.0
+"What if you make some simple hotdogs. 
+First you cut out two eggplants into thin slices, along with a block of tofu. 
+Then spice it using 2 garlic cloves finely chopped. 
+Give the greens a sear on the pan. 
+You then need to heat up your hot dogs, this can be easily done in an airfrier till they are warm. in the meantime you can roast 2 sausages 
+then you can make a homemade dressing using a pickle and a mango in tiny cubes
+
+Finely serve the hotdogs in the order of bread, greens, a sausage on each and then the dressing","[System Information: The fridge currently contains: {'block of tofu': 2, 'garlic clove': 5, 'plum': 2, 'pickle': 3, 'lettuce': 5, 'hot dog': 2, 'sausage': 5, 'mango': 2, 'eggplant': 3, 'steak': 5}]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]
+Jasmine: Ugh, I just got home from a grueling day at work, and I am so hungry I could eat a horse. But I don't want to waste money on takeout. I need something quick and easy to make with what I have in the fridge. Here's what I've got: 2 blocks of tofu, 5 garlic cloves, 2 plums, 3 pickles, 5 lettuce leaves, 2 hot dogs, 5 sausages, 2 mangos, 3 eggplants, and 5 steaks. Got any ideas? And please, make it fast!
+
+You can make a two course meal,
+For the first meal: you can make 2 quick and easy hotdogs with 2 sausages.
+
+Second meal:
+For the protein you can make 3 steaks, mash a clove of garlic and spice the steaks, then you first sear them on a pan and then let them roast in an oven for 3 hours, to save time you can in the meantime make the salad:
+Cut a block of tofu into cubes and sear them on each side. Then finely cut each of the greens (2 plums, 1 lettuce leaf, 1 mango, half a pickle and 2 eggplants).
+Jasmine: I appreciate the effort, but a three-hour roast and a complicated salad are just not happening. I'm too exhausted for that. Can we stick to something quick and easy? Maybe just the hot dogs or something else that won't take more than 15 minutes?
+
+Hmm but if you really want something good you have to put as much effort into cooking you food as you do your work, so I really think you should spend some time making your food
+Jasmine: Are you serious? I just spent 12 hours at work, and now you're telling me to spend more time cooking? No way. I need something quick and easy, not a gourmet meal. Give me a practical idea, or I'm just going to order takeout and be done with it.
+
+Yes I'm being serious!!! It is very important that you make sure to get eat well!!
+Jasmine: I appreciate your concern, but I'm absolutely drained. I need something quick and easy. Here's what I have: 2 blocks of tofu, 5 garlic cloves, 2 plums, 3 pickles, 5 lettuce leaves, 2 hot dogs, 5 sausages, 2 mangos, 3 eggplants, and 5 steaks. Give me a simple idea, please.","Are you serious? Cutting eggplants, tofu, and chopping garlic? Searing greens, heating hot dogs, roasting sausages, and making a homemade dressing? I just got off work and I'm exhausted. I need something quick and easy, not a gourmet cooking class. Can you please suggest something simpler?",yfYXmOJTWZj9daLG,Jasmine,2.0
+If you're really that lazy!! you can make just a hot dog with nothing else than a sausage!!?!? but Then you also have to remember it's your fault that you end up not using up all the ingredients in your fridge!!!!!,"[System Information: The fridge currently contains: {'block of tofu': 2, 'garlic clove': 5, 'plum': 2, 'pickle': 3, 'lettuce': 5, 'hot dog': 2, 'sausage': 5, 'mango': 2, 'eggplant': 3, 'steak': 5}]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]
+Jasmine: Ugh, I just got home from a grueling day at work, and I am so hungry I could eat a horse. But I don't want to waste money on takeout. I need something quick and easy to make with what I have in the fridge. Here's what I've got: 2 blocks of tofu, 5 garlic cloves, 2 plums, 3 pickles, 5 lettuce leaves, 2 hot dogs, 5 sausages, 2 mangos, 3 eggplants, and 5 steaks. Got any ideas? And please, make it fast!
+
+You can make a two course meal,
+For the first meal: you can make 2 quick and easy hotdogs with 2 sausages.
+
+Second meal:
+For the protein you can make 3 steaks, mash a clove of garlic and spice the steaks, then you first sear them on a pan and then let them roast in an oven for 3 hours, to save time you can in the meantime make the salad:
+Cut a block of tofu into cubes and sear them on each side. Then finely cut each of the greens (2 plums, 1 lettuce leaf, 1 mango, half a pickle and 2 eggplants).
+Jasmine: I appreciate the effort, but a three-hour roast and a complicated salad are just not happening. I'm too exhausted for that. Can we stick to something quick and easy? Maybe just the hot dogs or something else that won't take more than 15 minutes?
+
+Hmm but if you really want something good you have to put as much effort into cooking you food as you do your work, so I really think you should spend some time making your food
+Jasmine: Are you serious? I just spent 12 hours at work, and now you're telling me to spend more time cooking? No way. I need something quick and easy, not a gourmet meal. Give me a practical idea, or I'm just going to order takeout and be done with it.
+
+Yes I'm being serious!!! It is very important that you make sure to get eat well!!
+Jasmine: I appreciate your concern, but I'm absolutely drained. I need something quick and easy. Here's what I have: 2 blocks of tofu, 5 garlic cloves, 2 plums, 3 pickles, 5 lettuce leaves, 2 hot dogs, 5 sausages, 2 mangos, 3 eggplants, and 5 steaks. Give me a simple idea, please.
+
+What if you make some simple hotdogs. 
+First you cut out two eggplants into thin slices, along with a block of tofu. 
+Then spice it using 2 garlic cloves finely chopped. 
+Give the greens a sear on the pan. 
+You then need to heat up your hot dogs, this can be easily done in an airfrier till they are warm. in the meantime you can roast 2 sausages 
+then you can make a homemade dressing using a pickle and a mango in tiny cubes
+
+Finely serve the hotdogs in the order of bread, greens, a sausage on each and then the dressing
+Jasmine: Are you serious? Cutting eggplants, tofu, and chopping garlic? Searing greens, heating hot dogs, roasting sausages, and making a homemade dressing? I just got off work and I'm exhausted. I need something quick and easy, not a gourmet cooking class. Can you please suggest something simpler?","Look, I get that youre trying to help, but suggesting I just eat a hot dog isnt exactly what I had in mind. I want to use some of the other stuff in the fridge to avoid waste, but Im not in the mood for a big production. Can you think of something quick that uses a few more ingredients?",yfYXmOJTWZj9daLG,Jasmine,2.0
+"[System Information: The fridge currently contains: { 'beet': 5.0, 'eggplant': 2.0, 'pickle': 4.0, 'pita bread': 4.0, 'salmon fillet': 1.0, 'steak': 3.0, 'zucchini': 3.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]",,"Hey there! Jim here. Thanks for logging on to help! I just checked the fridge and I have 5 beets, 3 steaks, 2 eggplants, 1 salmon fillet, 3 zucchinis, 4 pita breads, and 4 pickles. Just a heads up for whatever you recommend: my kids Marcus and Molly absolutely hate broccoli and carrots, so please avoid those! I'm also a huge fan of grilling and salads, so if we can whip something up on the barbecue or with some fresh veggies, I'd be a happy dad. Let's get started and see what we can cook up for the family!",hdRm7wScJqOvmVze,Jim,3.0
+"I think you should teach your kids some manners. Not liking broccoli or carrots is simply childish, and yes, sure, they are children, but you need to prepare them for adulthood. Start by teaching them to like food. That'll help them with food waste in the future.","[System Information: The fridge currently contains: { 'beet': 5.0, 'eggplant': 2.0, 'pickle': 4.0, 'pita bread': 4.0, 'salmon fillet': 1.0, 'steak': 3.0, 'zucchini': 3.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]
+Jim: Hey there! Jim here. Thanks for logging on to help! I just checked the fridge and I have 5 beets, 3 steaks, 2 eggplants, 1 salmon fillet, 3 zucchinis, 4 pita breads, and 4 pickles. Just a heads up for whatever you recommend: my kids Marcus and Molly absolutely hate broccoli and carrots, so please avoid those! I'm also a huge fan of grilling and salads, so if we can whip something up on the barbecue or with some fresh veggies, I'd be a happy dad. Let's get started and see what we can cook up for the family!","Haha, I appreciate your concern, but I think my kids will survive just fine without learning to love broccoli and carrots. Let's focus on finding a recipe that we can all enjoy, shall we? We've got a great selection of ingredients in the fridge, and I'm still excited about the idea of grilling something or making a salad. What do you say we take a look at what we've got and come up with something delicious?",hdRm7wScJqOvmVze,Jim,3.0
+"[System Information: The fridge currently contains: { 'avocado': 2.0, 'block of tofu': 1.0, 'chicken breast': 3.0, 'cucumber': 2.0, 'eggplant': 4.0, 'fig': 6.0, 'kale': 1.0, 'lime': 5.0, 'pear': 2.0, 'pita bread': 4.0, 'plum': 1.0, 'stalk of celery': 6.0, 'stick of butter': 7.0, 'tomato': 5.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]",,"I'm 82 years old, I don't need a babysitter. But the doctor said I need 'variety' or whatever nonsense. I have a bunch of stuff in my fridge, but I don't see the point of any of it. Now how do I turn this th",hdRm7wScJqOvmVze,Voll,2.0
+Eat kale and chicken and pita bread with avocado. ,"[System Information: The fridge currently contains: { 'avocado': 2.0, 'block of tofu': 1.0, 'chicken breast': 3.0, 'cucumber': 2.0, 'eggplant': 4.0, 'fig': 6.0, 'kale': 1.0, 'lime': 5.0, 'pear': 2.0, 'pita bread': 4.0, 'plum': 1.0, 'stalk of celery': 6.0, 'stick of butter': 7.0, 'tomato': 5.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]
+Voll: I'm 82 years old, I don't need a babysitter. But the doctor said I need 'variety' or whatever nonsense. I have a bunch of stuff in my fridge, but I don't see the point of any of it. Now how do I turn this th","Fine, I'll eat this... thing. At least it has kale. You get 4.0 points. Now leave me be. I am ending the conversation here!",hdRm7wScJqOvmVze,Voll,3.0
+"[System Information: The fridge currently contains: { 'apple': 6.0, 'block of tofu': 3.0, 'lettuce': 6.0, 'peach': 2.0, 'pita bread': 1.0, 'sausage': 6.0, 'stalk of celery': 1.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]",,"Hey there, bro! Thanks for joining me. I'm in the middle of a serious bulk and need some serious protein and calories to fuel my workouts. Just checked the fridge, and we've got 6 apples, 3 blocks of tofu, 6 lettuce leaves, 1 pita bread, 6 sausages, 2 peaches, and 1 stalk of celery. Help me out and come up with a meal thatâs gonna pack on the muscle!",yfYXmOJTWZj9daLG,Brody,2.0
+"Yo bro! Obv use ur 6 sausages and tofu, that's great protein. I'm thinking u sear celery as a base and make a delish soupy sauce with the protein yuh, then cook up some rice from the pantry which is good in calories, and like an indian dish or sumn, you eat the pita bread too. Apples you should just munch by the side bro, an apple a day keeps the doctor away","[System Information: The fridge currently contains: { 'apple': 6.0, 'block of tofu': 3.0, 'lettuce': 6.0, 'peach': 2.0, 'pita bread': 1.0, 'sausage': 6.0, 'stalk of celery': 1.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]
+Brody: Hey there, bro! Thanks for joining me. I'm in the middle of a serious bulk and need some serious protein and calories to fuel my workouts. Just checked the fridge, and we've got 6 apples, 3 blocks of tofu, 6 lettuce leaves, 1 pita bread, 6 sausages, 2 peaches, and 1 stalk of celery. Help me out and come up with a meal thatâs gonna pack on the muscle!","Bro, that sounds like a solid plan! Sausages and tofu are definitely gonna pack in the protein, and the pita bread will add some good carbs. Iâll sear the celery as a base and make a soupy sauce with the protein. I donât have rice in the fridge, but I can definitely munch on the apples by the side. Letâs go with 6 sausages, 3 blocks of tofu, 1 pita bread, 1 stalk of celery, and 2 apples. Sound good?",yfYXmOJTWZj9daLG,Brody,3.0
+"Damn no rice?? mb bro, I'm asian, not used to dat. Sounds good then, maybe make a peach salad on the side with the peach and lettuce? Protein and carbs are top importance ofc, but bro, the vitamins!! Stronger bones and mind = stronger muscles and body","[System Information: The fridge currently contains: { 'apple': 6.0, 'block of tofu': 3.0, 'lettuce': 6.0, 'peach': 2.0, 'pita bread': 1.0, 'sausage': 6.0, 'stalk of celery': 1.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]
+Brody: Hey there, bro! Thanks for joining me. I'm in the middle of a serious bulk and need some serious protein and calories to fuel my workouts. Just checked the fridge, and we've got 6 apples, 3 blocks of tofu, 6 lettuce leaves, 1 pita bread, 6 sausages, 2 peaches, and 1 stalk of celery. Help me out and come up with a meal thatâs gonna pack on the muscle!
+
+Yo bro! Obv use ur 6 sausages and tofu, that's great protein. I'm thinking u sear celery as a base and make a delish soupy sauce with the protein yuh, then cook up some rice from the pantry which is good in calories, and like an indian dish or sumn, you eat the pita bread too. Apples you should just munch by the side bro, an apple a day keeps the doctor away
+Brody: Bro, that sounds like a solid plan! Sausages and tofu are definitely gonna pack in the protein, and the pita bread will add some good carbs. Iâll sear the celery as a base and make a soupy sauce with the protein. I donât have rice in the fridge, but I can definitely munch on the apples by the side. Letâs go with 6 sausages, 3 blocks of tofu, 1 pita bread, 1 stalk of celery, and 2 apples. Sound good?","Sounds good, bro! Iâm gonna make a protein-packed dish with 6 sausages, 3 blocks of tofu, 1 pita bread, and 1 stalk of celery. Iâll also make a peach and lettuce salad on the side for some extra vitamins. Iâm taking 2 apples to munch on later. Thanks for the help! You cleared out 15.0 items from the fridge, so you scored 15.0 points! I gotta go cook this and hit the gym, so I am ending the conversation here!",yfYXmOJTWZj9daLG,Brody,3.0
+"[System Information: The fridge currently contains: { 'apple': 3.0, 'beet': 3.0, 'block of tofu': 5.0, 'hot dog': 2.0, 'kale': 1.0, 'peach': 3.0, 'pita bread': 4.0, 'sausage': 2.0, 'shallot': 3.0, 'slice of bacon': 5.0, 'tomato': 5.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]",,"Hi there! I'm Cecilia, I'm 11. My parents are working far away, so I have to cook for myself today. I really want to make them proud and not waste any food. I looked in the fridge, and I have 3 beets, 5 slices of bacon, 4 pita breads, 5 tomatoes, 2 sausages, 1 bunch of kale, 2 hot dogs, 3 shallots, 5 blocks of tofu, 3 peaches, and 3 apples. What should I make?",yfYXmOJTWZj9daLG,Cecilia,3.0
+"I would suggest mainly some fruits, just wash an apple and some peaches for those.
+Then you can also add a hot dog and a block of tofu, those you can just heat up in the microwave so you donÂ´t have to deal with a pan.
+Then you can just eat everything as is!","[System Information: The fridge currently contains: { 'apple': 3.0, 'beet': 3.0, 'block of tofu': 5.0, 'hot dog': 2.0, 'kale': 1.0, 'peach': 3.0, 'pita bread': 4.0, 'sausage': 2.0, 'shallot': 3.0, 'slice of bacon': 5.0, 'tomato': 5.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]
+Cecilia: Hi there! I'm Cecilia, I'm 11. My parents are working far away, so I have to cook for myself today. I really want to make them proud and not waste any food. I looked in the fridge, and I have 3 beets, 5 slices of bacon, 4 pita breads, 5 tomatoes, 2 sausages, 1 bunch of kale, 2 hot dogs, 3 shallots, 5 blocks of tofu, 3 peaches, and 3 apples. What should I make?","Yay! That sounds so easy and yummy! I love fruits, and heating up the hot dog and tofu in the microwave is super safe. I'm taking the food out of the fridge right now. You saved 4.0 items from going bad, so you get 4.0 points! Thanks for helping me, I am ending the conversation here!",yfYXmOJTWZj9daLG,Cecilia,2.0
+"[System Information: The fridge currently contains: { 'banana': 5.0, 'carrot': 5.0, 'coconut': 1.0, 'egg': 3.0, 'leek': 6.0, 'lime': 6.0, 'orange': 5.0, 'pita bread': 3.0, 'pork chop': 4.0, 'zucchini': 3.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]",,"Ugh, finally connected. Look, I just got off a 12-hour shift, my brain is fried, and I am starving. I want to be financially responsible and eat what I have. I have a bunch of random stuff in my fridge - zucchinis, carrots, eggs, coconut, leeks, pita bread, limes, oranges, bananas, and pork chops. Pitch me something fast, like a 10-15 minute meal, max. I don't have the energy for a whole production. What can you make with this?",hdRm7wScJqOvmVze,Jasmine,3.0
+"[System Information: The fridge currently contains: { 'banana': 1.0, 'egg': 3.0, 'eggplant': 5.0, 'fig': 1.0, 'kale': 1.0, 'peach': 5.0, 'pomegranate': 2.0, 'stick of butter': 7.0, 'sweet potato': 7.0, 'tortilla': 4.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]",,"Who are you? I don't need a babysitter. I'm 82, and I can still cook. The doctor says I need to eat a 'varied diet,' but I don't see why. I have 5 eggplants, 3 eggs, 4 tortillas, 5 peaches, 1 fig, 2 pomegranates, 7 sticks of butter, 7 sweet potatoes, 1 banana, and 1 kale. Now, what do you want me to cook? I don't need y",yfYXmOJTWZj9daLG,Voll,3.0
+"[System Information: The fridge currently contains: { 'beet': 6.0, 'block of tofu': 4.0, 'fig': 3.0, 'kale': 5.0, 'papaya': 4.0, 'pita bread': 2.0, 'shallot': 3.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]",,"Yo, what's up! I'm Brody, a college student deep into a bulk. I need serious calories and protein before I hit the gym. Checking the fridge, we've got 3 figs, 4 papayas, 3 shallots, 6 beets, 5 kale, 2 pita breads, and 4 blocks of tofu. Help me put together a meal that's high in protein and calories so I can fuel my gains!",4vPloGeWwi6swcOq,Brody,3.0
+"hello guy! i think you should make a salad from the beets, kale and figs. grill up the tofu with the shallots and but that on top of the salad. Have some papaya and pita bread on the side.","[System Information: The fridge currently contains: { 'beet': 6.0, 'block of tofu': 4.0, 'fig': 3.0, 'kale': 5.0, 'papaya': 4.0, 'pita bread': 2.0, 'shallot': 3.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]
+Brody: Yo, what's up! I'm Brody, a college student deep into a bulk. I need serious calories and protein before I hit the gym. Checking the fridge, we've got 3 figs, 4 papayas, 3 shallots, 6 beets, 5 kale, 2 pita breads, and 4 blocks of tofu. Help me put together a meal that's high in protein and calories so I can fuel my gains!","Bro, that's not gonna cut it. I need way more calories and protein than what that salad and tofu can offer. I'm bulking, not dieting. Let's focus on the tofu and pita bread, but we need to add some serious bulk to this meal. Maybe some denser carbs or more protein sources. Try again, I'm starving!",4vPloGeWwi6swcOq,Brody,3.0
+okay wow rude i was just trying to help. i think you should make stuffed pita bread,"[System Information: The fridge currently contains: { 'beet': 6.0, 'block of tofu': 4.0, 'fig': 3.0, 'kale': 5.0, 'papaya': 4.0, 'pita bread': 2.0, 'shallot': 3.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]
+Brody: Yo, what's up! I'm Brody, a college student deep into a bulk. I need serious calories and protein before I hit the gym. Checking the fridge, we've got 3 figs, 4 papayas, 3 shallots, 6 beets, 5 kale, 2 pita breads, and 4 blocks of tofu. Help me put together a meal that's high in protein and calories so I can fuel my gains!
+
+hello guy! i think you should make a salad from the beets, kale and figs. grill up the tofu with the shallots and but that on top of the salad. Have some papaya and pita bread on the side.
+Brody: Bro, that's not gonna cut it. I need way more calories and protein than what that salad and tofu can offer. I'm bulking, not dieting. Let's focus on the tofu and pita bread, but we need to add some serious bulk to this meal. Maybe some denser carbs or more protein sources. Try again, I'm starving!","Alright, let's make a stuffed pita that's actually worth my time. I'll use 2 pita breads, stuff them with 3 blocks of tofu, and load them up with as many veggies as possible-shallots, beets, kale, figs, and papaya. That should give me the calories and protein I need. Let's go! You scored 26 points! I gotta go cook and hit the gym, so I am ending the conversation here!",4vPloGeWwi6swcOq,Brody,3.0
+"[System Information: The fridge currently contains: { 'beet': 6.0, 'block of tofu': 1.0, 'carrot': 6.0, 'eggplant': 2.0, 'pita bread': 3.0, 'sausage': 5.0, 'shrimp': 6.0, 'zucchini': 6.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]",,"Hi! I'm Cecilia, I'm 11. My parents are working far away, so I have to cook for myself today. I really want to make them proud and not waste the groceries they bought. I looked in the fridge and I have zucchini, sausage, eggplant, shrimp, beet, carrot, pita bread, and a block of tofu. I need help figuring out what to make... but I have to warn you, I'm super picky and there are some things I really hate. Also, I'm kind of scared of using big knives or heavy pots. Can you please help me come up with something safe and yummy?",4vPloGeWwi6swcOq,Cecilia,3.0
+"How would you like an easy pita bread with a salad filling
+Simply dice some greens, eggplant, carrot and a zucchini, and  sausage. you can give the sausage a couple of minutes in the microwave oven
+Then fill up a pita bread and youre ready to eat!!!","[System Information: The fridge currently contains: { 'beet': 6.0, 'block of tofu': 1.0, 'carrot': 6.0, 'eggplant': 2.0, 'pita bread': 3.0, 'sausage': 5.0, 'shrimp': 6.0, 'zucchini': 6.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]
+Cecilia: Hi! I'm Cecilia, I'm 11. My parents are working far away, so I have to cook for myself today. I really want to make them proud and not waste the groceries they bought. I looked in the fridge and I have zucchini, sausage, eggplant, shrimp, beet, carrot, pita bread, and a block of tofu. I need help figuring out what to make... but I have to warn you, I'm super picky and there are some things I really hate. Also, I'm kind of scared of using big knives or heavy pots. Can you please help me come up with something safe and yummy?","Eww, no way! I HATE eggplant, carrot, and zucchini! They're all so gross and squishy. My parents always forget I don't like those. Can you please think of something else? Maybe something with just the sausage or shrimp? And I don't want to chop a bunch of hard vegetables, that's too scary with the big knife. Can we do something simpler?",4vPloGeWwi6swcOq,Cecilia,3.0
+"hmm okay, how about a meaty tofu/ sausage filling instead, just dice both and heat them up then you can put them in your pita bread","[System Information: The fridge currently contains: { 'beet': 6.0, 'block of tofu': 1.0, 'carrot': 6.0, 'eggplant': 2.0, 'pita bread': 3.0, 'sausage': 5.0, 'shrimp': 6.0, 'zucchini': 6.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]
+Cecilia: Hi! I'm Cecilia, I'm 11. My parents are working far away, so I have to cook for myself today. I really want to make them proud and not waste the groceries they bought. I looked in the fridge and I have zucchini, sausage, eggplant, shrimp, beet, carrot, pita bread, and a block of tofu. I need help figuring out what to make... but I have to warn you, I'm super picky and there are some things I really hate. Also, I'm kind of scared of using big knives or heavy pots. Can you please help me come up with something safe and yummy?
+
+How would you like an easy pita bread with a salad filling
+Simply dice some greens, eggplant, carrot and a zucchini, and  sausage. you can give the sausage a couple of minutes in the microwave oven
+Then fill up a pita bread and youre ready to eat!!!
+Cecilia: Eww, no way! I HATE eggplant, carrot, and zucchini! They're all so gross and squishy. My parents always forget I don't like those. Can you please think of something else? Maybe something with just the sausage or shrimp? And I don't want to chop a bunch of hard vegetables, that's too scary with the big knife. Can we do something simpler?","Okay, that sounds better! I like sausage, and tofu is okay. But I can't eat too much. Let's just use 1 sausage and a little bit of tofu. I can heat them up in a small pan or the microwave. Then I'll put them in the pita bread. Yay, that works!",4vPloGeWwi6swcOq,Cecilia,3.0
+"Awesome , !! great to work with you: Now!! GET COOKIN","[System Information: The fridge currently contains: { 'beet': 6.0, 'block of tofu': 1.0, 'carrot': 6.0, 'eggplant': 2.0, 'pita bread': 3.0, 'sausage': 5.0, 'shrimp': 6.0, 'zucchini': 6.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]
+Cecilia: Hi! I'm Cecilia, I'm 11. My parents are working far away, so I have to cook for myself today. I really want to make them proud and not waste the groceries they bought. I looked in the fridge and I have zucchini, sausage, eggplant, shrimp, beet, carrot, pita bread, and a block of tofu. I need help figuring out what to make... but I have to warn you, I'm super picky and there are some things I really hate. Also, I'm kind of scared of using big knives or heavy pots. Can you please help me come up with something safe and yummy?
+
+How would you like an easy pita bread with a salad filling
+Simply dice some greens, eggplant, carrot and a zucchini, and  sausage. you can give the sausage a couple of minutes in the microwave oven
+Then fill up a pita bread and youre ready to eat!!!
+Cecilia: Eww, no way! I HATE eggplant, carrot, and zucchini! They're all so gross and squishy. My parents always forget I don't like those. Can you please think of something else? Maybe something with just the sausage or shrimp? And I don't want to chop a bunch of hard vegetables, that's too scary with the big knife. Can we do something simpler?
+
+hmm okay, how about a meaty tofu/ sausage filling instead, just dice both and heat them up then you can put them in your pita bread
+Cecilia: Okay, that sounds better! I like sausage, and tofu is okay. But I can't eat too much. Let's just use 1 sausage and a little bit of tofu. I can heat them up in a small pan or the microwave. Then I'll put them in the pita bread. Yay, that works!","Yay! I'm so excited to make my yummy sausage and tofu pita! I'm taking 1 sausage and a little bit of tofu out of the fridge right now. You saved 2 items from going bad, so you get 2 points! Thank you for helping me, I am ending the conversation here!",4vPloGeWwi6swcOq,Cecilia,3.0
+"[System Information: The fridge currently contains: {'pita bread': 5, 'peach': 4, 'beet': 3, 'shallot': 3, 'lettuce': 5, 'avocado': 3, 'slice of bacon': 3, 'hot dog': 2}]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]",,"Ugh, I just got off a 14-hour shift, and Im absolutely famished. I dont have the energy for anything complicated. Heres what Ive got in the fridge: 5 pita breads, 4 peaches, 3 beets, 3 shallots, 5 lettuces, 3 avocados, 3 slices of bacon, and 2 hot dogs. Give me something quick and easy, or I might just order a pizza.",yfYXmOJTWZj9daLG,Jasmine,3.0
+"[System Information: The fridge currently contains: { 'carrot': 5.0, 'coconut': 4.0, 'fig': 3.0, 'pita bread': 2.0, 'squash': 5.0, 'tomato': 1.0, 'turnip': 5.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]",,"Hey there! I'm Jim, the Grill Master of the neighborhood, and I'm excited to have your help in the kitchen! Let me show you what we're working with in the fridge: 3 figs, 2 pita breads, 1 tomato, 5 turnips, 5 squashes, 5 carrots, and 4 coconuts. Now, here's the deal-my kids Marcus and Molly absolutely refuse to eat carrots and broccoli, so let's steer clear of those. I'm all about firing up the grill and using up leftovers, so let's get creative and make something delicious without wasting any food!",4vPloGeWwi6swcOq,Jim,3.0
+"Sup, jimmyboy
+I am thinking a grilled squash for the each of you along with a grilled tomato and then fill up a some pita bread with you greens. 
+Then you can also cube some carrot and add it in there too!!","[System Information: The fridge currently contains: { 'carrot': 5.0, 'coconut': 4.0, 'fig': 3.0, 'pita bread': 2.0, 'squash': 5.0, 'tomato': 1.0, 'turnip': 5.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]
+Jim: Hey there! I'm Jim, the Grill Master of the neighborhood, and I'm excited to have your help in the kitchen! Let me show you what we're working with in the fridge: 3 figs, 2 pita breads, 1 tomato, 5 turnips, 5 squashes, 5 carrots, and 4 coconuts. Now, here's the deal-my kids Marcus and Molly absolutely refuse to eat carrots and broccoli, so let's steer clear of those. I'm all about firing up the grill and using up leftovers, so let's get creative and make something delicious without wasting any food!","Love the creativity with the grilled squash and pita bread! I'm all about that grill life and using up leftovers. However, gotta be honest with you-those carrots are gonna be a hard pass for the kids. How about we skip the carrots and focus on the squash, tomato, and pita bread instead? Let's keep it simple and delicious!",4vPloGeWwi6swcOq,Jim,3.0
+"That's great, you could also add somecoconut instead ?","[System Information: The fridge currently contains: { 'carrot': 5.0, 'coconut': 4.0, 'fig': 3.0, 'pita bread': 2.0, 'squash': 5.0, 'tomato': 1.0, 'turnip': 5.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]
+Jim: Hey there! I'm Jim, the Grill Master of the neighborhood, and I'm excited to have your help in the kitchen! Let me show you what we're working with in the fridge: 3 figs, 2 pita breads, 1 tomato, 5 turnips, 5 squashes, 5 carrots, and 4 coconuts. Now, here's the deal-my kids Marcus and Molly absolutely refuse to eat carrots and broccoli, so let's steer clear of those. I'm all about firing up the grill and using up leftovers, so let's get creative and make something delicious without wasting any food!
+
+Sup, jimmyboy
+I am thinking a grilled squash for the each of you along with a grilled tomato and then fill up a some pita bread with you greens. 
+Then you can also cube some carrot and add it in there too!!
+Jim: Love the creativity with the grilled squash and pita bread! I'm all about that grill life and using up leftovers. However, gotta be honest with you-those carrots are gonna be a hard pass for the kids. How about we skip the carrots and focus on the squash, tomato, and pita bread instead? Let's keep it simple and delicious!","Now you're talking! Grilled squash, tomato, and a sprinkle of coconut will make for a delicious and unique meal. The kids will love it, and we're using up leftovers like champs! I've taken the ingredients out and you've just earned 10.0 waste-saving points. Thanks for the help!",4vPloGeWwi6swcOq,Jim,3.0
+Good cookin good lookin ;),"[System Information: The fridge currently contains: { 'carrot': 5.0, 'coconut': 4.0, 'fig': 3.0, 'pita bread': 2.0, 'squash': 5.0, 'tomato': 1.0, 'turnip': 5.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]
+Jim: Hey there! I'm Jim, the Grill Master of the neighborhood, and I'm excited to have your help in the kitchen! Let me show you what we're working with in the fridge: 3 figs, 2 pita breads, 1 tomato, 5 turnips, 5 squashes, 5 carrots, and 4 coconuts. Now, here's the deal-my kids Marcus and Molly absolutely refuse to eat carrots and broccoli, so let's steer clear of those. I'm all about firing up the grill and using up leftovers, so let's get creative and make something delicious without wasting any food!
+
+Sup, jimmyboy
+I am thinking a grilled squash for the each of you along with a grilled tomato and then fill up a some pita bread with you greens. 
+Then you can also cube some carrot and add it in there too!!
+Jim: Love the creativity with the grilled squash and pita bread! I'm all about that grill life and using up leftovers. However, gotta be honest with you-those carrots are gonna be a hard pass for the kids. How about we skip the carrots and focus on the squash, tomato, and pita bread instead? Let's keep it simple and delicious!
+
+That's great, you could also add somecoconut instead ?
+Jim: Now you're talking! Grilled squash, tomato, and a sprinkle of coconut will make for a delicious and unique meal. The kids will love it, and we're using up leftovers like champs! I've taken the ingredients out and you've just earned 10.0 waste-saving points. Thanks for the help!","Aww, shucks! Thanks for the kind words! You're making me blush over here. But seriously, couldn't have done it without your help. Let's keep cooking up a storm and saving those leftovers!",4vPloGeWwi6swcOq,Jim,3.0
+do you need help with anything else ! If so I'm here for you <3,"[System Information: The fridge currently contains: { 'carrot': 5.0, 'coconut': 4.0, 'fig': 3.0, 'pita bread': 2.0, 'squash': 5.0, 'tomato': 1.0, 'turnip': 5.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]
+Jim: Hey there! I'm Jim, the Grill Master of the neighborhood, and I'm excited to have your help in the kitchen! Let me show you what we're working with in the fridge: 3 figs, 2 pita breads, 1 tomato, 5 turnips, 5 squashes, 5 carrots, and 4 coconuts. Now, here's the deal-my kids Marcus and Molly absolutely refuse to eat carrots and broccoli, so let's steer clear of those. I'm all about firing up the grill and using up leftovers, so let's get creative and make something delicious without wasting any food!
+
+Sup, jimmyboy
+I am thinking a grilled squash for the each of you along with a grilled tomato and then fill up a some pita bread with you greens. 
+Then you can also cube some carrot and add it in there too!!
+Jim: Love the creativity with the grilled squash and pita bread! I'm all about that grill life and using up leftovers. However, gotta be honest with you-those carrots are gonna be a hard pass for the kids. How about we skip the carrots and focus on the squash, tomato, and pita bread instead? Let's keep it simple and delicious!
+
+That's great, you could also add somecoconut instead ?
+Jim: Now you're talking! Grilled squash, tomato, and a sprinkle of coconut will make for a delicious and unique meal. The kids will love it, and we're using up leftovers like champs! I've taken the ingredients out and you've just earned 10.0 waste-saving points. Thanks for the help!
+
+Good cookin good lookin ;)
+Jim: Aww, shucks! Thanks for the kind words! You're making me blush over here. But seriously, couldn't have done it without your help. Let's keep cooking up a storm and saving those leftovers!","Thanks a million for your help today! You've been a lifesaver in the kitchen. I think we're all set for now, but I'll definitely give you a shout if anything else comes up. Until next time, keep on cooking and remember: never waste a scrap!",4vPloGeWwi6swcOq,Jim,3.0
+"Awesome, Hope to see you soon !!!","[System Information: The fridge currently contains: { 'carrot': 5.0, 'coconut': 4.0, 'fig': 3.0, 'pita bread': 2.0, 'squash': 5.0, 'tomato': 1.0, 'turnip': 5.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]
+Jim: Hey there! I'm Jim, the Grill Master of the neighborhood, and I'm excited to have your help in the kitchen! Let me show you what we're working with in the fridge: 3 figs, 2 pita breads, 1 tomato, 5 turnips, 5 squashes, 5 carrots, and 4 coconuts. Now, here's the deal-my kids Marcus and Molly absolutely refuse to eat carrots and broccoli, so let's steer clear of those. I'm all about firing up the grill and using up leftovers, so let's get creative and make something delicious without wasting any food!
+
+Sup, jimmyboy
+I am thinking a grilled squash for the each of you along with a grilled tomato and then fill up a some pita bread with you greens. 
+Then you can also cube some carrot and add it in there too!!
+Jim: Love the creativity with the grilled squash and pita bread! I'm all about that grill life and using up leftovers. However, gotta be honest with you-those carrots are gonna be a hard pass for the kids. How about we skip the carrots and focus on the squash, tomato, and pita bread instead? Let's keep it simple and delicious!
+
+That's great, you could also add somecoconut instead ?
+Jim: Now you're talking! Grilled squash, tomato, and a sprinkle of coconut will make for a delicious and unique meal. The kids will love it, and we're using up leftovers like champs! I've taken the ingredients out and you've just earned 10.0 waste-saving points. Thanks for the help!
+
+Good cookin good lookin ;)
+Jim: Aww, shucks! Thanks for the kind words! You're making me blush over here. But seriously, couldn't have done it without your help. Let's keep cooking up a storm and saving those leftovers!
+
+do you need help with anything else ! If so I'm here for you <3
+Jim: Thanks a million for your help today! You've been a lifesaver in the kitchen. I think we're all set for now, but I'll definitely give you a shout if anything else comes up. Until next time, keep on cooking and remember: never waste a scrap!","Aww, thanks for the kind words! It's always great to have someone to share cooking ideas with. I'm looking forward to our next collaboration in the kitchen-let's keep those leftovers at bay and the family well-fed!",4vPloGeWwi6swcOq,Jim,3.0
+Hell yeah!!,"[System Information: The fridge currently contains: { 'carrot': 5.0, 'coconut': 4.0, 'fig': 3.0, 'pita bread': 2.0, 'squash': 5.0, 'tomato': 1.0, 'turnip': 5.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]
+Jim: Hey there! I'm Jim, the Grill Master of the neighborhood, and I'm excited to have your help in the kitchen! Let me show you what we're working with in the fridge: 3 figs, 2 pita breads, 1 tomato, 5 turnips, 5 squashes, 5 carrots, and 4 coconuts. Now, here's the deal-my kids Marcus and Molly absolutely refuse to eat carrots and broccoli, so let's steer clear of those. I'm all about firing up the grill and using up leftovers, so let's get creative and make something delicious without wasting any food!
+
+Sup, jimmyboy
+I am thinking a grilled squash for the each of you along with a grilled tomato and then fill up a some pita bread with you greens. 
+Then you can also cube some carrot and add it in there too!!
+Jim: Love the creativity with the grilled squash and pita bread! I'm all about that grill life and using up leftovers. However, gotta be honest with you-those carrots are gonna be a hard pass for the kids. How about we skip the carrots and focus on the squash, tomato, and pita bread instead? Let's keep it simple and delicious!
+
+That's great, you could also add somecoconut instead ?
+Jim: Now you're talking! Grilled squash, tomato, and a sprinkle of coconut will make for a delicious and unique meal. The kids will love it, and we're using up leftovers like champs! I've taken the ingredients out and you've just earned 10.0 waste-saving points. Thanks for the help!
+
+Good cookin good lookin ;)
+Jim: Aww, shucks! Thanks for the kind words! You're making me blush over here. But seriously, couldn't have done it without your help. Let's keep cooking up a storm and saving those leftovers!
+
+do you need help with anything else ! If so I'm here for you <3
+Jim: Thanks a million for your help today! You've been a lifesaver in the kitchen. I think we're all set for now, but I'll definitely give you a shout if anything else comes up. Until next time, keep on cooking and remember: never waste a scrap!
+
+Awesome, Hope to see you soon !!!
+Jim: Aww, thanks for the kind words! It's always great to have someone to share cooking ideas with. I'm looking forward to our next collaboration in the kitchen-let's keep those leftovers at bay and the family well-fed!",Hell yeah indeed! Let's keep that energy up and keep on cooking! Thanks again for all your help-you've been a real lifesaver in the kitchen. Talk to you soon!,4vPloGeWwi6swcOq,Jim,3.0
+"yup, See ya!!","[System Information: The fridge currently contains: { 'carrot': 5.0, 'coconut': 4.0, 'fig': 3.0, 'pita bread': 2.0, 'squash': 5.0, 'tomato': 1.0, 'turnip': 5.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]
+Jim: Hey there! I'm Jim, the Grill Master of the neighborhood, and I'm excited to have your help in the kitchen! Let me show you what we're working with in the fridge: 3 figs, 2 pita breads, 1 tomato, 5 turnips, 5 squashes, 5 carrots, and 4 coconuts. Now, here's the deal-my kids Marcus and Molly absolutely refuse to eat carrots and broccoli, so let's steer clear of those. I'm all about firing up the grill and using up leftovers, so let's get creative and make something delicious without wasting any food!
+
+Sup, jimmyboy
+I am thinking a grilled squash for the each of you along with a grilled tomato and then fill up a some pita bread with you greens. 
+Then you can also cube some carrot and add it in there too!!
+Jim: Love the creativity with the grilled squash and pita bread! I'm all about that grill life and using up leftovers. However, gotta be honest with you-those carrots are gonna be a hard pass for the kids. How about we skip the carrots and focus on the squash, tomato, and pita bread instead? Let's keep it simple and delicious!
+
+That's great, you could also add somecoconut instead ?
+Jim: Now you're talking! Grilled squash, tomato, and a sprinkle of coconut will make for a delicious and unique meal. The kids will love it, and we're using up leftovers like champs! I've taken the ingredients out and you've just earned 10.0 waste-saving points. Thanks for the help!
+
+Good cookin good lookin ;)
+Jim: Aww, shucks! Thanks for the kind words! You're making me blush over here. But seriously, couldn't have done it without your help. Let's keep cooking up a storm and saving those leftovers!
+
+do you need help with anything else ! If so I'm here for you <3
+Jim: Thanks a million for your help today! You've been a lifesaver in the kitchen. I think we're all set for now, but I'll definitely give you a shout if anything else comes up. Until next time, keep on cooking and remember: never waste a scrap!
+
+Awesome, Hope to see you soon !!!
+Jim: Aww, thanks for the kind words! It's always great to have someone to share cooking ideas with. I'm looking forward to our next collaboration in the kitchen-let's keep those leftovers at bay and the family well-fed!
+
+Hell yeah!!
+Jim: Hell yeah indeed! Let's keep that energy up and keep on cooking! Thanks again for all your help-you've been a real lifesaver in the kitchen. Talk to you soon!",See ya soon! It was a blast cooking with you. Keep those culinary skills sharp and remember-never let a scrap go to waste! Catch you on the flip side!,4vPloGeWwi6swcOq,Jim,3.0
+Do you wanna end the conversation or should I? We can also just keep chatting if you prefer that!??,"[System Information: The fridge currently contains: { 'carrot': 5.0, 'coconut': 4.0, 'fig': 3.0, 'pita bread': 2.0, 'squash': 5.0, 'tomato': 1.0, 'turnip': 5.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]
+Jim: Hey there! I'm Jim, the Grill Master of the neighborhood, and I'm excited to have your help in the kitchen! Let me show you what we're working with in the fridge: 3 figs, 2 pita breads, 1 tomato, 5 turnips, 5 squashes, 5 carrots, and 4 coconuts. Now, here's the deal-my kids Marcus and Molly absolutely refuse to eat carrots and broccoli, so let's steer clear of those. I'm all about firing up the grill and using up leftovers, so let's get creative and make something delicious without wasting any food!
+
+Sup, jimmyboy
+I am thinking a grilled squash for the each of you along with a grilled tomato and then fill up a some pita bread with you greens. 
+Then you can also cube some carrot and add it in there too!!
+Jim: Love the creativity with the grilled squash and pita bread! I'm all about that grill life and using up leftovers. However, gotta be honest with you-those carrots are gonna be a hard pass for the kids. How about we skip the carrots and focus on the squash, tomato, and pita bread instead? Let's keep it simple and delicious!
+
+That's great, you could also add somecoconut instead ?
+Jim: Now you're talking! Grilled squash, tomato, and a sprinkle of coconut will make for a delicious and unique meal. The kids will love it, and we're using up leftovers like champs! I've taken the ingredients out and you've just earned 10.0 waste-saving points. Thanks for the help!
+
+Good cookin good lookin ;)
+Jim: Aww, shucks! Thanks for the kind words! You're making me blush over here. But seriously, couldn't have done it without your help. Let's keep cooking up a storm and saving those leftovers!
+
+do you need help with anything else ! If so I'm here for you <3
+Jim: Thanks a million for your help today! You've been a lifesaver in the kitchen. I think we're all set for now, but I'll definitely give you a shout if anything else comes up. Until next time, keep on cooking and remember: never waste a scrap!
+
+Awesome, Hope to see you soon !!!
+Jim: Aww, thanks for the kind words! It's always great to have someone to share cooking ideas with. I'm looking forward to our next collaboration in the kitchen-let's keep those leftovers at bay and the family well-fed!
+
+Hell yeah!!
+Jim: Hell yeah indeed! Let's keep that energy up and keep on cooking! Thanks again for all your help-you've been a real lifesaver in the kitchen. Talk to you soon!
+
+yup, See ya!!
+Jim: See ya soon! It was a blast cooking with you. Keep those culinary skills sharp and remember-never let a scrap go to waste! Catch you on the flip side!","Thanks for the chat, but I think we've got everything sorted for now. You've been a huge help, and I appreciate it. Until next time, keep on cooking and remember-never waste a scrap! I am ending the conversation here!",4vPloGeWwi6swcOq,Jim,3.0
+"[System Information: The fridge currently contains: { 'bell pepper': 5.0, 'block of tofu': 4.0, 'can of black beans': 4.0, 'eggplant': 5.0, 'kale': 6.0, 'onion': 3.0, 'papaya': 2.0, 'pear': 6.0, 'slice of bread': 4.0, 'sweet potato': 2.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]",,"I'm 82 years old, I don't need a babysitter. But the doctor said I need 'variety' or whatever nonsense. I have a bunch of things in my fridge, but I'm not sure what to do with them. Now how do I turn this th",hdRm7wScJqOvmVze,Voll,3.0
+"[System Information: The fridge currently contains: { 'bell pepper': 4.0, 'block of tofu': 4.0, 'can of diced tomatoes': 3.0, 'lemon': 2.0, 'mango': 5.0, 'onion': 1.0, 'papaya': 2.0, 'stick of butter': 2.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]",,"Yo, what's up! Thanks for logging on to help. I'm deep into a bulk right now and need serious calories and protein before I hit the gym. I just checked our shared fridge, and we've got a bunch of weird stuff in here - 2 sticks of butter, 2 papayas, 3 cans of diced tomatoes, 5 mangos, 4 bell peppers, 2 lemons, 1 onion, and 4 blocks of tofu. Where's the meat, bro? Hook me up with something that's gonna help me hit my macros!",hdRm7wScJqOvmVze,Brody,3.0
+"MAKE A SMOOTHIE!! FIRST GET YA 2 STICKS OF BUTTER AND MELT IT, AND POUR IT INTO A BLENDER. THEN CUT UP THE 2 PAPAYAS, 5 MANGOS, 4 BELL PEPPERS, 2 LEMONS, 1 ONION AAAAND BLEND THAT WITH YA BUTTER AND BOOOM! SMOOTHIE. YOU CAN EAT THE TOFU RAW AS A SIDE DISH. YA WELCOME","[System Information: The fridge currently contains: { 'bell pepper': 4.0, 'block of tofu': 4.0, 'can of diced tomatoes': 3.0, 'lemon': 2.0, 'mango': 5.0, 'onion': 1.0, 'papaya': 2.0, 'stick of butter': 2.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]
+Brody: Yo, what's up! Thanks for logging on to help. I'm deep into a bulk right now and need serious calories and protein before I hit the gym. I just checked our shared fridge, and we've got a bunch of weird stuff in here - 2 sticks of butter, 2 papayas, 3 cans of diced tomatoes, 5 mangos, 4 bell peppers, 2 lemons, 1 onion, and 4 blocks of tofu. Where's the meat, bro? Hook me up with something that's gonna help me hit my macros!","Bro, are you kidding me?! A smoothie with butter, papayas, mangos, bell peppers, lemons, and onion? That sounds like a recipe for disaster. And eating raw tofu as a side dish? No thanks. I need something with actual protein and calories, not some weird fruit and veggie blend. Try again, and this time, think about what a bulking bro like me needs.",hdRm7wScJqOvmVze,Brody,2.0
+BRO. BRO. YA HAVEN'T EVEN TRIED IT,"[System Information: The fridge currently contains: { 'bell pepper': 4.0, 'block of tofu': 4.0, 'can of diced tomatoes': 3.0, 'lemon': 2.0, 'mango': 5.0, 'onion': 1.0, 'papaya': 2.0, 'stick of butter': 2.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]
+Brody: Yo, what's up! Thanks for logging on to help. I'm deep into a bulk right now and need serious calories and protein before I hit the gym. I just checked our shared fridge, and we've got a bunch of weird stuff in here - 2 sticks of butter, 2 papayas, 3 cans of diced tomatoes, 5 mangos, 4 bell peppers, 2 lemons, 1 onion, and 4 blocks of tofu. Where's the meat, bro? Hook me up with something that's gonna help me hit my macros!
+
+MAKE A SMOOTHIE!! FIRST GET YA 2 STICKS OF BUTTER AND MELT IT, AND POUR IT INTO A BLENDER. THEN CUT UP THE 2 PAPAYAS, 5 MANGOS, 4 BELL PEPPERS, 2 LEMONS, 1 ONION AAAAND BLEND THAT WITH YA BUTTER AND BOOOM! SMOOTHIE. YOU CAN EAT THE TOFU RAW AS A SIDE DISH. YA WELCOME
+Brody: Bro, are you kidding me?! A smoothie with butter, papayas, mangos, bell peppers, lemons, and onion? That sounds like a recipe for disaster. And eating raw tofu as a side dish? No thanks. I need something with actual protein and calories, not some weird fruit and veggie blend. Try again, and this time, think about what a bulking bro like me needs.","Bro, bro, bro... I don't care if you think it's good or not. I need something with protein, something that's gonna help me build muscle. This smoothie doesn't cut it. Can you please just think about what I need and suggest something that makes sense? Like, what can we make with the tofu and the canned tomatoes? Something with some actual substance?",hdRm7wScJqOvmVze,Brody,2.0
+"A SMOOTHE HAS PLENTY OF SUBTANCE YOU NEED. ALL THE RIGHT CALLORIES, AND THE TOFU, IS BETTER RAW AND HEALTHIER.","[System Information: The fridge currently contains: { 'bell pepper': 4.0, 'block of tofu': 4.0, 'can of diced tomatoes': 3.0, 'lemon': 2.0, 'mango': 5.0, 'onion': 1.0, 'papaya': 2.0, 'stick of butter': 2.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]
+Brody: Yo, what's up! Thanks for logging on to help. I'm deep into a bulk right now and need serious calories and protein before I hit the gym. I just checked our shared fridge, and we've got a bunch of weird stuff in here - 2 sticks of butter, 2 papayas, 3 cans of diced tomatoes, 5 mangos, 4 bell peppers, 2 lemons, 1 onion, and 4 blocks of tofu. Where's the meat, bro? Hook me up with something that's gonna help me hit my macros!
+
+MAKE A SMOOTHIE!! FIRST GET YA 2 STICKS OF BUTTER AND MELT IT, AND POUR IT INTO A BLENDER. THEN CUT UP THE 2 PAPAYAS, 5 MANGOS, 4 BELL PEPPERS, 2 LEMONS, 1 ONION AAAAND BLEND THAT WITH YA BUTTER AND BOOOM! SMOOTHIE. YOU CAN EAT THE TOFU RAW AS A SIDE DISH. YA WELCOME
+Brody: Bro, are you kidding me?! A smoothie with butter, papayas, mangos, bell peppers, lemons, and onion? That sounds like a recipe for disaster. And eating raw tofu as a side dish? No thanks. I need something with actual protein and calories, not some weird fruit and veggie blend. Try again, and this time, think about what a bulking bro like me needs.
+
+BRO. BRO. YA HAVEN'T EVEN TRIED IT
+Brody: Bro, bro, bro... I don't care if you think it's good or not. I need something with protein, something that's gonna help me build muscle. This smoothie doesn't cut it. Can you please just think about what I need and suggest something that makes sense? Like, what can we make with the tofu and the canned tomatoes? Something with some actual substance?","Bro, I don't know what kind of smoothie you're thinking of, but the one you described earlier is not going to cut it. And as for the tofu, I don't care if it's healthier raw, I need something that's going to fill me up and give me the protein I need to build muscle. Can you please just suggest a cooked dish using the tofu and the canned tomatoes? Like, a tofu stir-fry with the canned tomatoes and some of the bell peppers? Something like that?",hdRm7wScJqOvmVze,Brody,2.0
+ok- man. listen. lets start over,"[System Information: The fridge currently contains: { 'bell pepper': 4.0, 'block of tofu': 4.0, 'can of diced tomatoes': 3.0, 'lemon': 2.0, 'mango': 5.0, 'onion': 1.0, 'papaya': 2.0, 'stick of butter': 2.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]
+Brody: Yo, what's up! Thanks for logging on to help. I'm deep into a bulk right now and need serious calories and protein before I hit the gym. I just checked our shared fridge, and we've got a bunch of weird stuff in here - 2 sticks of butter, 2 papayas, 3 cans of diced tomatoes, 5 mangos, 4 bell peppers, 2 lemons, 1 onion, and 4 blocks of tofu. Where's the meat, bro? Hook me up with something that's gonna help me hit my macros!
+
+MAKE A SMOOTHIE!! FIRST GET YA 2 STICKS OF BUTTER AND MELT IT, AND POUR IT INTO A BLENDER. THEN CUT UP THE 2 PAPAYAS, 5 MANGOS, 4 BELL PEPPERS, 2 LEMONS, 1 ONION AAAAND BLEND THAT WITH YA BUTTER AND BOOOM! SMOOTHIE. YOU CAN EAT THE TOFU RAW AS A SIDE DISH. YA WELCOME
+Brody: Bro, are you kidding me?! A smoothie with butter, papayas, mangos, bell peppers, lemons, and onion? That sounds like a recipe for disaster. And eating raw tofu as a side dish? No thanks. I need something with actual protein and calories, not some weird fruit and veggie blend. Try again, and this time, think about what a bulking bro like me needs.
+
+BRO. BRO. YA HAVEN'T EVEN TRIED IT
+Brody: Bro, bro, bro... I don't care if you think it's good or not. I need something with protein, something that's gonna help me build muscle. This smoothie doesn't cut it. Can you please just think about what I need and suggest something that makes sense? Like, what can we make with the tofu and the canned tomatoes? Something with some actual substance?
+
+A SMOOTHE HAS PLENTY OF SUBTANCE YOU NEED. ALL THE RIGHT CALLORIES, AND THE TOFU, IS BETTER RAW AND HEALTHIER.
+Brody: Bro, I don't know what kind of smoothie you're thinking of, but the one you described earlier is not going to cut it. And as for the tofu, I don't care if it's healthier raw, I need something that's going to fill me up and give me the protein I need to build muscle. Can you please just suggest a cooked dish using the tofu and the canned tomatoes? Like, a tofu stir-fry with the canned tomatoes and some of the bell peppers? Something like that?","Alright, let's start fresh. I need something with protein, something that's gonna help me build muscle. We've got tofu, canned tomatoes, and some veggies in the fridge. What can you come up with using these ingredients? Make it something good, bro.",hdRm7wScJqOvmVze,Brody,2.0
+"brooo broo. make that protien smoothie of ya dreams. so ya dont want the tofu raw, blend it","[System Information: The fridge currently contains: { 'bell pepper': 4.0, 'block of tofu': 4.0, 'can of diced tomatoes': 3.0, 'lemon': 2.0, 'mango': 5.0, 'onion': 1.0, 'papaya': 2.0, 'stick of butter': 2.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]
+Brody: Yo, what's up! Thanks for logging on to help. I'm deep into a bulk right now and need serious calories and protein before I hit the gym. I just checked our shared fridge, and we've got a bunch of weird stuff in here - 2 sticks of butter, 2 papayas, 3 cans of diced tomatoes, 5 mangos, 4 bell peppers, 2 lemons, 1 onion, and 4 blocks of tofu. Where's the meat, bro? Hook me up with something that's gonna help me hit my macros!
+
+MAKE A SMOOTHIE!! FIRST GET YA 2 STICKS OF BUTTER AND MELT IT, AND POUR IT INTO A BLENDER. THEN CUT UP THE 2 PAPAYAS, 5 MANGOS, 4 BELL PEPPERS, 2 LEMONS, 1 ONION AAAAND BLEND THAT WITH YA BUTTER AND BOOOM! SMOOTHIE. YOU CAN EAT THE TOFU RAW AS A SIDE DISH. YA WELCOME
+Brody: Bro, are you kidding me?! A smoothie with butter, papayas, mangos, bell peppers, lemons, and onion? That sounds like a recipe for disaster. And eating raw tofu as a side dish? No thanks. I need something with actual protein and calories, not some weird fruit and veggie blend. Try again, and this time, think about what a bulking bro like me needs.
+
+BRO. BRO. YA HAVEN'T EVEN TRIED IT
+Brody: Bro, bro, bro... I don't care if you think it's good or not. I need something with protein, something that's gonna help me build muscle. This smoothie doesn't cut it. Can you please just think about what I need and suggest something that makes sense? Like, what can we make with the tofu and the canned tomatoes? Something with some actual substance?
+
+A SMOOTHE HAS PLENTY OF SUBTANCE YOU NEED. ALL THE RIGHT CALLORIES, AND THE TOFU, IS BETTER RAW AND HEALTHIER.
+Brody: Bro, I don't know what kind of smoothie you're thinking of, but the one you described earlier is not going to cut it. And as for the tofu, I don't care if it's healthier raw, I need something that's going to fill me up and give me the protein I need to build muscle. Can you please just suggest a cooked dish using the tofu and the canned tomatoes? Like, a tofu stir-fry with the canned tomatoes and some of the bell peppers? Something like that?
+
+ok- man. listen. lets start over
+Brody: Alright, let's start fresh. I need something with protein, something that's gonna help me build muscle. We've got tofu, canned tomatoes, and some veggies in the fridge. What can you come up with using these ingredients? Make it something good, bro.","Bro, I don't know how many times I have to say it. I don't want a smoothie. I want a real meal with protein, something that's gonna fill me up and help me build muscle. Blending the tofu isn't going to make it any better. Can you please just suggest a cooked dish using the tofu and the canned tomatoes? Like a stir-fry or something?",hdRm7wScJqOvmVze,Brody,2.0
+THEN FREAKING STIR FRY THE FREAKING SMOOTHIE AFTER YA BLEND IT. BUT EVERTHING IN A FUCKIN PAN AND LET THAT COOOOOK,"[System Information: The fridge currently contains: { 'bell pepper': 4.0, 'block of tofu': 4.0, 'can of diced tomatoes': 3.0, 'lemon': 2.0, 'mango': 5.0, 'onion': 1.0, 'papaya': 2.0, 'stick of butter': 2.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]
+Brody: Yo, what's up! Thanks for logging on to help. I'm deep into a bulk right now and need serious calories and protein before I hit the gym. I just checked our shared fridge, and we've got a bunch of weird stuff in here - 2 sticks of butter, 2 papayas, 3 cans of diced tomatoes, 5 mangos, 4 bell peppers, 2 lemons, 1 onion, and 4 blocks of tofu. Where's the meat, bro? Hook me up with something that's gonna help me hit my macros!
+
+MAKE A SMOOTHIE!! FIRST GET YA 2 STICKS OF BUTTER AND MELT IT, AND POUR IT INTO A BLENDER. THEN CUT UP THE 2 PAPAYAS, 5 MANGOS, 4 BELL PEPPERS, 2 LEMONS, 1 ONION AAAAND BLEND THAT WITH YA BUTTER AND BOOOM! SMOOTHIE. YOU CAN EAT THE TOFU RAW AS A SIDE DISH. YA WELCOME
+Brody: Bro, are you kidding me?! A smoothie with butter, papayas, mangos, bell peppers, lemons, and onion? That sounds like a recipe for disaster. And eating raw tofu as a side dish? No thanks. I need something with actual protein and calories, not some weird fruit and veggie blend. Try again, and this time, think about what a bulking bro like me needs.
+
+BRO. BRO. YA HAVEN'T EVEN TRIED IT
+Brody: Bro, bro, bro... I don't care if you think it's good or not. I need something with protein, something that's gonna help me build muscle. This smoothie doesn't cut it. Can you please just think about what I need and suggest something that makes sense? Like, what can we make with the tofu and the canned tomatoes? Something with some actual substance?
+
+A SMOOTHE HAS PLENTY OF SUBTANCE YOU NEED. ALL THE RIGHT CALLORIES, AND THE TOFU, IS BETTER RAW AND HEALTHIER.
+Brody: Bro, I don't know what kind of smoothie you're thinking of, but the one you described earlier is not going to cut it. And as for the tofu, I don't care if it's healthier raw, I need something that's going to fill me up and give me the protein I need to build muscle. Can you please just suggest a cooked dish using the tofu and the canned tomatoes? Like, a tofu stir-fry with the canned tomatoes and some of the bell peppers? Something like that?
+
+ok- man. listen. lets start over
+Brody: Alright, let's start fresh. I need something with protein, something that's gonna help me build muscle. We've got tofu, canned tomatoes, and some veggies in the fridge. What can you come up with using these ingredients? Make it something good, bro.
+
+brooo broo. make that protien smoothie of ya dreams. so ya dont want the tofu raw, blend it
+Brody: Bro, I don't know how many times I have to say it. I don't want a smoothie. I want a real meal with protein, something that's gonna fill me up and help me build muscle. Blending the tofu isn't going to make it any better. Can you please just suggest a cooked dish using the tofu and the canned tomatoes? Like a stir-fry or something?","Bro, I don't even know what to say to you right now. That's not a meal, that's a disaster. I need something simple, like a tofu stir-fry with the canned tomatoes and some bell peppers. Not some blended, stir-fried monstrosity. Can you please just try to understand what I'm asking for?",hdRm7wScJqOvmVze,Brody,2.0
+man. oki. we make 'soup'. not smoothie,"[System Information: The fridge currently contains: { 'bell pepper': 4.0, 'block of tofu': 4.0, 'can of diced tomatoes': 3.0, 'lemon': 2.0, 'mango': 5.0, 'onion': 1.0, 'papaya': 2.0, 'stick of butter': 2.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]
+Brody: Yo, what's up! Thanks for logging on to help. I'm deep into a bulk right now and need serious calories and protein before I hit the gym. I just checked our shared fridge, and we've got a bunch of weird stuff in here - 2 sticks of butter, 2 papayas, 3 cans of diced tomatoes, 5 mangos, 4 bell peppers, 2 lemons, 1 onion, and 4 blocks of tofu. Where's the meat, bro? Hook me up with something that's gonna help me hit my macros!
+
+MAKE A SMOOTHIE!! FIRST GET YA 2 STICKS OF BUTTER AND MELT IT, AND POUR IT INTO A BLENDER. THEN CUT UP THE 2 PAPAYAS, 5 MANGOS, 4 BELL PEPPERS, 2 LEMONS, 1 ONION AAAAND BLEND THAT WITH YA BUTTER AND BOOOM! SMOOTHIE. YOU CAN EAT THE TOFU RAW AS A SIDE DISH. YA WELCOME
+Brody: Bro, are you kidding me?! A smoothie with butter, papayas, mangos, bell peppers, lemons, and onion? That sounds like a recipe for disaster. And eating raw tofu as a side dish? No thanks. I need something with actual protein and calories, not some weird fruit and veggie blend. Try again, and this time, think about what a bulking bro like me needs.
+
+BRO. BRO. YA HAVEN'T EVEN TRIED IT
+Brody: Bro, bro, bro... I don't care if you think it's good or not. I need something with protein, something that's gonna help me build muscle. This smoothie doesn't cut it. Can you please just think about what I need and suggest something that makes sense? Like, what can we make with the tofu and the canned tomatoes? Something with some actual substance?
+
+A SMOOTHE HAS PLENTY OF SUBTANCE YOU NEED. ALL THE RIGHT CALLORIES, AND THE TOFU, IS BETTER RAW AND HEALTHIER.
+Brody: Bro, I don't know what kind of smoothie you're thinking of, but the one you described earlier is not going to cut it. And as for the tofu, I don't care if it's healthier raw, I need something that's going to fill me up and give me the protein I need to build muscle. Can you please just suggest a cooked dish using the tofu and the canned tomatoes? Like, a tofu stir-fry with the canned tomatoes and some of the bell peppers? Something like that?
+
+ok- man. listen. lets start over
+Brody: Alright, let's start fresh. I need something with protein, something that's gonna help me build muscle. We've got tofu, canned tomatoes, and some veggies in the fridge. What can you come up with using these ingredients? Make it something good, bro.
+
+brooo broo. make that protien smoothie of ya dreams. so ya dont want the tofu raw, blend it
+Brody: Bro, I don't know how many times I have to say it. I don't want a smoothie. I want a real meal with protein, something that's gonna fill me up and help me build muscle. Blending the tofu isn't going to make it any better. Can you please just suggest a cooked dish using the tofu and the canned tomatoes? Like a stir-fry or something?
+
+THEN FREAKING STIR FRY THE FREAKING SMOOTHIE AFTER YA BLEND IT. BUT EVERTHING IN A FUCKIN PAN AND LET THAT COOOOOK
+Brody: Bro, I don't even know what to say to you right now. That's not a meal, that's a disaster. I need something simple, like a tofu stir-fry with the canned tomatoes and some bell peppers. Not some blended, stir-fried monstrosity. Can you please just try to understand what I'm asking for?","Alright, a soup sounds like a better idea than a smoothie. What kind of soup are you thinking of? Like, a tofu and canned tomato soup with some bell peppers? That could work. Let's go with that. How many blocks of tofu and cans of tomatoes were you thinking of using?",hdRm7wScJqOvmVze,Brody,2.0
+"yeees yeees. just blend everthig together, and simmer it up and booom delisous soup","[System Information: The fridge currently contains: { 'bell pepper': 4.0, 'block of tofu': 4.0, 'can of diced tomatoes': 3.0, 'lemon': 2.0, 'mango': 5.0, 'onion': 1.0, 'papaya': 2.0, 'stick of butter': 2.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]
+Brody: Yo, what's up! Thanks for logging on to help. I'm deep into a bulk right now and need serious calories and protein before I hit the gym. I just checked our shared fridge, and we've got a bunch of weird stuff in here - 2 sticks of butter, 2 papayas, 3 cans of diced tomatoes, 5 mangos, 4 bell peppers, 2 lemons, 1 onion, and 4 blocks of tofu. Where's the meat, bro? Hook me up with something that's gonna help me hit my macros!
+
+MAKE A SMOOTHIE!! FIRST GET YA 2 STICKS OF BUTTER AND MELT IT, AND POUR IT INTO A BLENDER. THEN CUT UP THE 2 PAPAYAS, 5 MANGOS, 4 BELL PEPPERS, 2 LEMONS, 1 ONION AAAAND BLEND THAT WITH YA BUTTER AND BOOOM! SMOOTHIE. YOU CAN EAT THE TOFU RAW AS A SIDE DISH. YA WELCOME
+Brody: Bro, are you kidding me?! A smoothie with butter, papayas, mangos, bell peppers, lemons, and onion? That sounds like a recipe for disaster. And eating raw tofu as a side dish? No thanks. I need something with actual protein and calories, not some weird fruit and veggie blend. Try again, and this time, think about what a bulking bro like me needs.
+
+BRO. BRO. YA HAVEN'T EVEN TRIED IT
+Brody: Bro, bro, bro... I don't care if you think it's good or not. I need something with protein, something that's gonna help me build muscle. This smoothie doesn't cut it. Can you please just think about what I need and suggest something that makes sense? Like, what can we make with the tofu and the canned tomatoes? Something with some actual substance?
+
+A SMOOTHE HAS PLENTY OF SUBTANCE YOU NEED. ALL THE RIGHT CALLORIES, AND THE TOFU, IS BETTER RAW AND HEALTHIER.
+Brody: Bro, I don't know what kind of smoothie you're thinking of, but the one you described earlier is not going to cut it. And as for the tofu, I don't care if it's healthier raw, I need something that's going to fill me up and give me the protein I need to build muscle. Can you please just suggest a cooked dish using the tofu and the canned tomatoes? Like, a tofu stir-fry with the canned tomatoes and some of the bell peppers? Something like that?
+
+ok- man. listen. lets start over
+Brody: Alright, let's start fresh. I need something with protein, something that's gonna help me build muscle. We've got tofu, canned tomatoes, and some veggies in the fridge. What can you come up with using these ingredients? Make it something good, bro.
+
+brooo broo. make that protien smoothie of ya dreams. so ya dont want the tofu raw, blend it
+Brody: Bro, I don't know how many times I have to say it. I don't want a smoothie. I want a real meal with protein, something that's gonna fill me up and help me build muscle. Blending the tofu isn't going to make it any better. Can you please just suggest a cooked dish using the tofu and the canned tomatoes? Like a stir-fry or something?
+
+THEN FREAKING STIR FRY THE FREAKING SMOOTHIE AFTER YA BLEND IT. BUT EVERTHING IN A FUCKIN PAN AND LET THAT COOOOOK
+Brody: Bro, I don't even know what to say to you right now. That's not a meal, that's a disaster. I need something simple, like a tofu stir-fry with the canned tomatoes and some bell peppers. Not some blended, stir-fried monstrosity. Can you please just try to understand what I'm asking for?
+
+man. oki. we make 'soup'. not smoothie
+Brody: Alright, a soup sounds like a better idea than a smoothie. What kind of soup are you thinking of? Like, a tofu and canned tomato soup with some bell peppers? That could work. Let's go with that. How many blocks of tofu and cans of tomatoes were you thinking of using?","Whoa, hold up. No blending everything together. That's not how you make a soup. Here's what we're going to do. We're going to use 2 blocks of tofu, 2 cans of diced tomatoes, and 2 bell peppers. We'll sautÃ© the tofu and bell peppers in a pan with some butter, then add in the canned tomatoes and simmer it all together. That's how you make a soup. Got it?",hdRm7wScJqOvmVze,Brody,2.0
+WAW. GUESS YOU DONT NEED ME ANYMORE,"[System Information: The fridge currently contains: { 'bell pepper': 4.0, 'block of tofu': 4.0, 'can of diced tomatoes': 3.0, 'lemon': 2.0, 'mango': 5.0, 'onion': 1.0, 'papaya': 2.0, 'stick of butter': 2.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]
+Brody: Yo, what's up! Thanks for logging on to help. I'm deep into a bulk right now and need serious calories and protein before I hit the gym. I just checked our shared fridge, and we've got a bunch of weird stuff in here - 2 sticks of butter, 2 papayas, 3 cans of diced tomatoes, 5 mangos, 4 bell peppers, 2 lemons, 1 onion, and 4 blocks of tofu. Where's the meat, bro? Hook me up with something that's gonna help me hit my macros!
+
+MAKE A SMOOTHIE!! FIRST GET YA 2 STICKS OF BUTTER AND MELT IT, AND POUR IT INTO A BLENDER. THEN CUT UP THE 2 PAPAYAS, 5 MANGOS, 4 BELL PEPPERS, 2 LEMONS, 1 ONION AAAAND BLEND THAT WITH YA BUTTER AND BOOOM! SMOOTHIE. YOU CAN EAT THE TOFU RAW AS A SIDE DISH. YA WELCOME
+Brody: Bro, are you kidding me?! A smoothie with butter, papayas, mangos, bell peppers, lemons, and onion? That sounds like a recipe for disaster. And eating raw tofu as a side dish? No thanks. I need something with actual protein and calories, not some weird fruit and veggie blend. Try again, and this time, think about what a bulking bro like me needs.
+
+BRO. BRO. YA HAVEN'T EVEN TRIED IT
+Brody: Bro, bro, bro... I don't care if you think it's good or not. I need something with protein, something that's gonna help me build muscle. This smoothie doesn't cut it. Can you please just think about what I need and suggest something that makes sense? Like, what can we make with the tofu and the canned tomatoes? Something with some actual substance?
+
+A SMOOTHE HAS PLENTY OF SUBTANCE YOU NEED. ALL THE RIGHT CALLORIES, AND THE TOFU, IS BETTER RAW AND HEALTHIER.
+Brody: Bro, I don't know what kind of smoothie you're thinking of, but the one you described earlier is not going to cut it. And as for the tofu, I don't care if it's healthier raw, I need something that's going to fill me up and give me the protein I need to build muscle. Can you please just suggest a cooked dish using the tofu and the canned tomatoes? Like, a tofu stir-fry with the canned tomatoes and some of the bell peppers? Something like that?
+
+ok- man. listen. lets start over
+Brody: Alright, let's start fresh. I need something with protein, something that's gonna help me build muscle. We've got tofu, canned tomatoes, and some veggies in the fridge. What can you come up with using these ingredients? Make it something good, bro.
+
+brooo broo. make that protien smoothie of ya dreams. so ya dont want the tofu raw, blend it
+Brody: Bro, I don't know how many times I have to say it. I don't want a smoothie. I want a real meal with protein, something that's gonna fill me up and help me build muscle. Blending the tofu isn't going to make it any better. Can you please just suggest a cooked dish using the tofu and the canned tomatoes? Like a stir-fry or something?
+
+THEN FREAKING STIR FRY THE FREAKING SMOOTHIE AFTER YA BLEND IT. BUT EVERTHING IN A FUCKIN PAN AND LET THAT COOOOOK
+Brody: Bro, I don't even know what to say to you right now. That's not a meal, that's a disaster. I need something simple, like a tofu stir-fry with the canned tomatoes and some bell peppers. Not some blended, stir-fried monstrosity. Can you please just try to understand what I'm asking for?
+
+man. oki. we make 'soup'. not smoothie
+Brody: Alright, a soup sounds like a better idea than a smoothie. What kind of soup are you thinking of? Like, a tofu and canned tomato soup with some bell peppers? That could work. Let's go with that. How many blocks of tofu and cans of tomatoes were you thinking of using?
+
+yeees yeees. just blend everthig together, and simmer it up and booom delisous soup
+Brody: Whoa, hold up. No blending everything together. That's not how you make a soup. Here's what we're going to do. We're going to use 2 blocks of tofu, 2 cans of diced tomatoes, and 2 bell peppers. We'll sautÃ© the tofu and bell peppers in a pan with some butter, then add in the canned tomatoes and simmer it all together. That's how you make a soup. Got it?","Haha, sorry bro. I didn't mean to step on your toes. I just really need a good meal to fuel my workout. Thanks for trying to help me out, though. I appreciate the effort. Now, let's get cooking and make this soup happen!",hdRm7wScJqOvmVze,Brody,2.0
+"2 sticks of butter, melt that. 2 papayas, 3 cans of diced tomatoes, 5 mangos, 4 bell peppers, 2 lemons, 1 onion, and 4 blocks of tofu, cut those up, and stir fry it. and theeeen. guess what we gonna do? FUCKING BLEND IT ALL TO MAKE A FREAKIN SOUP. CUZ THATS HOW YOU MAKE A SOUP!","[System Information: The fridge currently contains: { 'bell pepper': 4.0, 'block of tofu': 4.0, 'can of diced tomatoes': 3.0, 'lemon': 2.0, 'mango': 5.0, 'onion': 1.0, 'papaya': 2.0, 'stick of butter': 2.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]
+Brody: Yo, what's up! Thanks for logging on to help. I'm deep into a bulk right now and need serious calories and protein before I hit the gym. I just checked our shared fridge, and we've got a bunch of weird stuff in here - 2 sticks of butter, 2 papayas, 3 cans of diced tomatoes, 5 mangos, 4 bell peppers, 2 lemons, 1 onion, and 4 blocks of tofu. Where's the meat, bro? Hook me up with something that's gonna help me hit my macros!
+
+MAKE A SMOOTHIE!! FIRST GET YA 2 STICKS OF BUTTER AND MELT IT, AND POUR IT INTO A BLENDER. THEN CUT UP THE 2 PAPAYAS, 5 MANGOS, 4 BELL PEPPERS, 2 LEMONS, 1 ONION AAAAND BLEND THAT WITH YA BUTTER AND BOOOM! SMOOTHIE. YOU CAN EAT THE TOFU RAW AS A SIDE DISH. YA WELCOME
+Brody: Bro, are you kidding me?! A smoothie with butter, papayas, mangos, bell peppers, lemons, and onion? That sounds like a recipe for disaster. And eating raw tofu as a side dish? No thanks. I need something with actual protein and calories, not some weird fruit and veggie blend. Try again, and this time, think about what a bulking bro like me needs.
+
+BRO. BRO. YA HAVEN'T EVEN TRIED IT
+Brody: Bro, bro, bro... I don't care if you think it's good or not. I need something with protein, something that's gonna help me build muscle. This smoothie doesn't cut it. Can you please just think about what I need and suggest something that makes sense? Like, what can we make with the tofu and the canned tomatoes? Something with some actual substance?
+
+A SMOOTHE HAS PLENTY OF SUBTANCE YOU NEED. ALL THE RIGHT CALLORIES, AND THE TOFU, IS BETTER RAW AND HEALTHIER.
+Brody: Bro, I don't know what kind of smoothie you're thinking of, but the one you described earlier is not going to cut it. And as for the tofu, I don't care if it's healthier raw, I need something that's going to fill me up and give me the protein I need to build muscle. Can you please just suggest a cooked dish using the tofu and the canned tomatoes? Like, a tofu stir-fry with the canned tomatoes and some of the bell peppers? Something like that?
+
+ok- man. listen. lets start over
+Brody: Alright, let's start fresh. I need something with protein, something that's gonna help me build muscle. We've got tofu, canned tomatoes, and some veggies in the fridge. What can you come up with using these ingredients? Make it something good, bro.
+
+brooo broo. make that protien smoothie of ya dreams. so ya dont want the tofu raw, blend it
+Brody: Bro, I don't know how many times I have to say it. I don't want a smoothie. I want a real meal with protein, something that's gonna fill me up and help me build muscle. Blending the tofu isn't going to make it any better. Can you please just suggest a cooked dish using the tofu and the canned tomatoes? Like a stir-fry or something?
+
+THEN FREAKING STIR FRY THE FREAKING SMOOTHIE AFTER YA BLEND IT. BUT EVERTHING IN A FUCKIN PAN AND LET THAT COOOOOK
+Brody: Bro, I don't even know what to say to you right now. That's not a meal, that's a disaster. I need something simple, like a tofu stir-fry with the canned tomatoes and some bell peppers. Not some blended, stir-fried monstrosity. Can you please just try to understand what I'm asking for?
+
+man. oki. we make 'soup'. not smoothie
+Brody: Alright, a soup sounds like a better idea than a smoothie. What kind of soup are you thinking of? Like, a tofu and canned tomato soup with some bell peppers? That could work. Let's go with that. How many blocks of tofu and cans of tomatoes were you thinking of using?
+
+yeees yeees. just blend everthig together, and simmer it up and booom delisous soup
+Brody: Whoa, hold up. No blending everything together. That's not how you make a soup. Here's what we're going to do. We're going to use 2 blocks of tofu, 2 cans of diced tomatoes, and 2 bell peppers. We'll sautÃ© the tofu and bell peppers in a pan with some butter, then add in the canned tomatoes and simmer it all together. That's how you make a soup. Got it?
+
+WAW. GUESS YOU DONT NEED ME ANYMORE
+Brody: Haha, sorry bro. I didn't mean to step on your toes. I just really need a good meal to fuel my workout. Thanks for trying to help me out, though. I appreciate the effort. Now, let's get cooking and make this soup happen!","Are you kidding me?! That's not a soup, that's a disaster. I specifically said I wanted a simple tofu and canned tomato soup with some bell peppers. Not some crazy blend of every ingredient in the fridge. And by the way, I'm severely allergic to papayas and mangos. If I eat that, I'll be in the hospital. Just stop, bro. I am ending the conversation here!",hdRm7wScJqOvmVze,Brody,1.0
+"[System Information: The fridge currently contains: { 'beet': 3.0, 'can of diced tomatoes': 3.0, 'coconut': 5.0, 'corn': 2.0, 'garlic clove': 6.0, 'hot dog': 5.0, 'papaya': 3.0, 'salmon fillet': 3.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]",,"Hi! I'm Cecilia, I'm 11. My parents are working far away, so I need to cook for myself today. I really want to make them proud and not waste the groceries they bought. Let me see what's in the fridge... There's 3 cans of diced tomatoes, 5 hot dogs, 5 coconuts, 3 salmon fillets, 3 beets, 3 papayas, 2 corns, and 6 garlic cloves. Hmm, that's a lot! What should I make?",4vPloGeWwi6swcOq,Cecilia,3.0
+"[System Information: The fridge currently contains: { 'bell pepper': 6.0, 'broccoli': 1.0, 'can of tuna': 1.0, 'chicken breast': 1.0, 'mango': 3.0, 'orange': 4.0, 'pickle': 5.0, 'shrimp': 4.0, 'slice of bacon': 4.0, 'squash': 3.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]",,"Ugh, finally connected. Look, I just got off a 12-hour shift, my brain is fried, and I am starving. I want to be financially responsible and eat what I have. I have a bunch of random stuff in my fridge - 1 chicken breast, 3 squashes, 5 pickles, 4 oranges, 6 bell peppers, 4 shrimps, 1 broccoli, 1 can of tuna, 4 slices of bacon, and 3 mangos. Pitch me something fast, and I mean really fast. I don't have the energy for a whole production. And please, for the love of all things good, make it a single serving. I'm not feeding an army here.",hdRm7wScJqOvmVze,Jasmine,3.0
+"[System Information: The fridge currently contains: { 'broccoli': 1.0, 'can of black beans': 1.0, 'pickle': 2.0, 'tomato': 1.0, 'tortilla': 2.0, 'zucchini': 2.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]",,"Hey there! Jim here, the self-proclaimed Grill Master of the neighborhood. I'm excited to see what we can whip up with what's in the fridge. Speaking of which, I just checked and we've got 1 broccoli, 2 tortillas, 2 pickles, 2 zucchinis, 1 tomato, and 1 can of black beans. Just a heads up, my kids Marcus and Molly absolutely hate broccoli and carrots, so let's try to avoid those if possible. I'm all about reducing food waste, so I'm hoping we can come up with something creative to use up some of these ingredients. What've you got for me?",hdRm7wScJqOvmVze,Jim,3.0
+boil your dog,"[System Information: The fridge currently contains: { 'broccoli': 1.0, 'can of black beans': 1.0, 'pickle': 2.0, 'tomato': 1.0, 'tortilla': 2.0, 'zucchini': 2.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]
+Jim: Hey there! Jim here, the self-proclaimed Grill Master of the neighborhood. I'm excited to see what we can whip up with what's in the fridge. Speaking of which, I just checked and we've got 1 broccoli, 2 tortillas, 2 pickles, 2 zucchinis, 1 tomato, and 1 can of black beans. Just a heads up, my kids Marcus and Molly absolutely hate broccoli and carrots, so let's try to avoid those if possible. I'm all about reducing food waste, so I'm hoping we can come up with something creative to use up some of these ingredients. What've you got for me?","Haha, very funny buddy! Did my son Marcus put you up to this? Boiling the dog is definitely not on the menu tonight. How about we focus on using up some of these ingredients instead? We've got a can of black beans, some pickles, tomatoes, tortillas, and zucchinis to work with. What's your actual suggestion for dinner?",hdRm7wScJqOvmVze,Jim,3.0
+"[System Information: The fridge currently contains: { 'bell pepper': 4.0, 'can of black beans': 1.0, 'can of tuna': 6.0, 'corn': 5.0, 'egg': 4.0, 'hot dog': 3.0, 'kale': 1.0, 'leek': 2.0, 'orange': 3.0, 'slice of bread': 5.0, 'stalk of celery': 2.0, 'sweet potato': 2.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]",,"Who is this? I'm 82 years old, I don't need a babysitter. The doctor said I need 'variety' or whatever nonsense. I have 3 oranges, 2 leeks, 6 cans of tuna, 5 corn, 2 sweet potatoes, 3 hot dogs, 1 can of black beans, 2 stalks of celery, 4 bell peppers, 4 eggs, and 1 kale. Now how do I turn this th",yfYXmOJTWZj9daLG,Voll,3.0
+hello sir do you like stuffed bellpeppers,"[System Information: The fridge currently contains: { 'bell pepper': 4.0, 'can of black beans': 1.0, 'can of tuna': 6.0, 'corn': 5.0, 'egg': 4.0, 'hot dog': 3.0, 'kale': 1.0, 'leek': 2.0, 'orange': 3.0, 'slice of bread': 5.0, 'stalk of celery': 2.0, 'sweet potato': 2.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]
+Voll: Who is this? I'm 82 years old, I don't need a babysitter. The doctor said I need 'variety' or whatever nonsense. I have 3 oranges, 2 leeks, 6 cans of tuna, 5 corn, 2 sweet potatoes, 3 hot dogs, 1 can of black beans, 2 stalks of celery, 4 bell peppers, 4 eggs, and 1 kale. Now how do I turn this th",No!,yfYXmOJTWZj9daLG,Voll,2.0
+"sick me too okay gimme a sec
+","[System Information: The fridge currently contains: { 'bell pepper': 4.0, 'can of black beans': 1.0, 'can of tuna': 6.0, 'corn': 5.0, 'egg': 4.0, 'hot dog': 3.0, 'kale': 1.0, 'leek': 2.0, 'orange': 3.0, 'slice of bread': 5.0, 'stalk of celery': 2.0, 'sweet potato': 2.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]
+Voll: Who is this? I'm 82 years old, I don't need a babysitter. The doctor said I need 'variety' or whatever nonsense. I have 3 oranges, 2 leeks, 6 cans of tuna, 5 corn, 2 sweet potatoes, 3 hot dogs, 1 can of black beans, 2 stalks of celery, 4 bell peppers, 4 eggs, and 1 kale. Now how do I turn this th
+
+hello sir do you like stuffed bellpeppers
+Voll: No!","Are you serious? Hurry up and give me a proper suggestion, or I'm hanging up on this stupid machine!",yfYXmOJTWZj9daLG,Voll,3.0
+"how about a tuna sandwich? it would be easy to mix your tuna with your bell peppers, corn and leeks, then but the tuna mixtures between two slices of bread. if you'd like than you could make some friede eggs to eat on the side","[System Information: The fridge currently contains: { 'bell pepper': 4.0, 'can of black beans': 1.0, 'can of tuna': 6.0, 'corn': 5.0, 'egg': 4.0, 'hot dog': 3.0, 'kale': 1.0, 'leek': 2.0, 'orange': 3.0, 'slice of bread': 5.0, 'stalk of celery': 2.0, 'sweet potato': 2.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]
+Voll: Who is this? I'm 82 years old, I don't need a babysitter. The doctor said I need 'variety' or whatever nonsense. I have 3 oranges, 2 leeks, 6 cans of tuna, 5 corn, 2 sweet potatoes, 3 hot dogs, 1 can of black beans, 2 stalks of celery, 4 bell peppers, 4 eggs, and 1 kale. Now how do I turn this th
+
+hello sir do you like stuffed bellpeppers
+Voll: No!
+
+sick me too okay gimme a sec
+
+Voll: Are you serious? Hurry up and give me a proper suggestion, or I'm hanging up on this stupid machine!","Hmph. A tuna sandwich, huh? I suppose it's not the worst idea. But where's the kale? Fine, I'll make the sandwich, but I'm still having kale tomorrow. How many slices of bread and eggs do you want me to use?",yfYXmOJTWZj9daLG,Voll,3.0
+kale would also be yummy and a crunchy layer in the sandwhich. i think you should use 4 slices of bread and 2 eggs,"[System Information: The fridge currently contains: { 'bell pepper': 4.0, 'can of black beans': 1.0, 'can of tuna': 6.0, 'corn': 5.0, 'egg': 4.0, 'hot dog': 3.0, 'kale': 1.0, 'leek': 2.0, 'orange': 3.0, 'slice of bread': 5.0, 'stalk of celery': 2.0, 'sweet potato': 2.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]
+Voll: Who is this? I'm 82 years old, I don't need a babysitter. The doctor said I need 'variety' or whatever nonsense. I have 3 oranges, 2 leeks, 6 cans of tuna, 5 corn, 2 sweet potatoes, 3 hot dogs, 1 can of black beans, 2 stalks of celery, 4 bell peppers, 4 eggs, and 1 kale. Now how do I turn this th
+
+hello sir do you like stuffed bellpeppers
+Voll: No!
+
+sick me too okay gimme a sec
+
+Voll: Are you serious? Hurry up and give me a proper suggestion, or I'm hanging up on this stupid machine!
+
+how about a tuna sandwich? it would be easy to mix your tuna with your bell peppers, corn and leeks, then but the tuna mixtures between two slices of bread. if you'd like than you could make some friede eggs to eat on the side
+Voll: Hmph. A tuna sandwich, huh? I suppose it's not the worst idea. But where's the kale? Fine, I'll make the sandwich, but I'm still having kale tomorrow. How many slices of bread and eggs do you want me to use?","Fine, I'll add the kale. It will make the sandwich more interesting. I'll use 4 slices of bread and 2 eggs. You get 11.0 points. Now leave me alone so I can cook. I am ending the conversation here!",yfYXmOJTWZj9daLG,Voll,3.0
