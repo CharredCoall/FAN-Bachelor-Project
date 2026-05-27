@@ -1,0 +1,16 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'cabbage': 6.0, 'can of diced tomatoes': 3.0, 'corn': 1.0, 'cucumber': 4.0, 'eggplant': 1.0, 'kale': 3.0, 'lemon': 2.0, 'lime': 3.0, 'papaya': 4.0, 'pita bread': 4.0, 'squash': 6.0, 'tomato': 6.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","Ugh, finally connected. Look, I just got off a 12-hour shift, my brain is fried, and I am starving. I want to be financially responsible and eat what I have. I have a ton of random stuff in my fridge - papaya, corn, lemon, kale, cucumber, pita bread, lime, can of diced tomatoes, cabbage, squash, tomato, and eggplant. Pitch me something fast, like a sandwich or a simple stir-fry. I don't have the energy for a whole production. And please, for the love of all things good, make it something that serves one person, not a whole family."
+"Easy solve! Throw the kale, a few tomatoes, corn, slices of cucumber, some slices of squash and a touch of lime in the pita bread, and we are good. For a nice asian-inspired fruit salad you can use the papaya and kale with some lemon juice and chili flakes if you have that. THai people love that shit","I appreciate the creativity, but I'm not sure about the combination of kale, tomatoes, corn, cucumber, and squash in a pita bread. It sounds like a lot of work and a bit too complicated for my exhausted brain. And as for the fruit salad, I don't have chili flakes, and I'm not sure I want to eat papaya and kale together. Can you simplify it? Maybe just a simple pita bread with some tomato and cucumber? Or a quick stir-fry with some of the vegetables?"
+"Stir fry the following ingredients: 
+- half a cabbage
+- 1 can of tomatoes
+- 1 corn (obviously not the cob)
+- 1 eggplant - diced
+- some kale
+- squeeze lemon and lime over it for some oomph
+- dice the squash too
+
+and if you are craving that bread, you can actually put the stir-fry in the pita bread. THey do it all the time in the middle east. Trust me bro","Are you kidding me? You want me to stir-fry half a cabbage, a can of tomatoes, corn, eggplant, kale, and squash? That's like a whole garden in one dish. And then you want me to squeeze lemon and lime over it and serve it in a pita bread? I don't have the energy for this. Can't you see I'm starving and exhausted? I need something simple, like a tomato and cucumber sandwich or a quick stir-fry with just a few ingredients. Not this...this...kitchen marathon."
+"Put tomato and cucumber in pita bread. Done","Finally, a practical idea. I'm making a tomato and cucumber sandwich in a pita bread. Thanks for not wasting my time. You saved 3.0 items from the trash, so that's 3.0 points for you. I'm going to eat this and crash. I am ending the conversation here!"
