@@ -1,0 +1,6 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'can of tuna': 6.0, 'cucumber': 3.0, 'fig': 2.0, 'leek': 4.0, 'lettuce': 1.0, 'mango': 5.0, 'onion': 6.0, 'pita bread': 4.0, 'sausage': 3.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","Hey, what's up! I'm Brody, and I'm in the middle of a serious bulk. I need to pack in the calories and protein before I hit the gym. I just checked the fridge, and we've got 1 lettuce, 3 cucumbers, 4 leeks, 6 onions, 6 cans of tuna, 5 mangos, 2 figs, 3 sausages, and 4 pita breads. Help me out with a high-protein meal that will keep me fueled for my workout!"
+"dude your fridge is packed.
+cube a cucumber, cube an onion, cut up the lettuce, and open up 3 of those cans of tuna, and stuff that into the 4 pita breads, and you have dinner my friend","YEAH, BRO! That sounds perfect. Tuna, veggies, and pita bread-exactly what I need for my bulk. I'm gonna make those pitas and hit the gym hard. Thanks for the help! You cleared out 10 items from the fridge, so you scored 10 points! I gotta go cook and train, so I am ending the conversation here!"
