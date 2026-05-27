@@ -1,0 +1,9 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'apple': 7.0, 'avocado': 4.0, 'can of black beans': 5.0, 'garlic clove': 2.0, 'kale': 1.0, 'kiwi': 4.0, 'pineapple': 7.0, 'plum': 5.0, 'pork chop': 7.0, 'potato': 2.0, 'slice of bacon': 2.0, 'zucchini': 1.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","I'm 82 years old, and I don't need some stranger telling me what to eat. But the doctor says I need 'variety' or some such nonsense. Look at this fridge-garlic cloves, zucchini, bacon, black beans, plums, apples, pork chops, kiwis, pineapple, potatoes, avocados, and... kale. Now how do I turn this thi"
+"grate 1 garlic clove into a little olive oil, and add some salt and pepper and paprika. marinade two pork chops in it for at least 15 minutes. then cook them on the pan
+then strain and wash a can of beans, cut half the kale, cut half a pineapple, and cut an avocade. mix it all for a salad, and add some olive oil and vinegar and salt and pepper.
+cook the potatoes in the oven.","No!"
+"good to know that is not something for you. what about it do you not like?","Because I want something with more kale and less of that salad nonsense. Now stop wasting my time and suggest something decent!"
+"instead of making the salad, cut a whole kale into quaters. rub some olive oil over the kale and give it a good amount of salt and pepper, then roast it in the oven with the potatoes.","Alright, you've got some sense now. Roasted kale and potatoes, that's a proper meal. I'm getting the ingredients out now. You saved 3 items. Now leave me be so I can cook. I am ending the conversation here!"
