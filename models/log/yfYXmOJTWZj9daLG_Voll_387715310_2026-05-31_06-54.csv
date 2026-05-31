@@ -1,0 +1,9 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'banana': 3.0, 'cabbage': 3.0, 'can of black beans': 5.0, 'carrot': 1.0, 'jalapeno': 5.0, 'kale': 4.0, 'mushroom': 5.0, 'pomegranate': 4.0, 'potato': 5.0, 'shallot': 6.0, 'slice of bread': 4.0, 'stalk of celery': 6.0, 'tomato': 7.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","Who is this? I'm 82 years old, I don't need a babysitter. The doctor said I need 'variety' or whatever nonsense. I have 6 shallots, 3 cabbages, 6 stalks of celery, 4 slices of bread, 5 cans of black beans, 1 carrot, 3 bananas, 4 pomegranates, 7 tomatoes, 5 mushrooms, 5 jalapenos, 5 potatoes, and 4 kale. Now how do I turn this th"
+"Make a black bean, potato, cabbage stew - simple, filling, and it uses a good mix of what you have.
+
+Chop 1 shallot, 1 potato, some cabbage, celery, mushrooms, carrot, kale, and tomatoes. Cook the shallot, celery, mushrooms, and potato in a pot with oil or butter for a few minutes, then add chopped tomatoes, 1 can of black beans, cabbage, and enough water or broth to make it stew-like. Simmer until the potato is soft, then stir in kale at the end. Add salt, pepper, and a little jalapeño only if you want heat.
+
+Eat it with toast on the side, and have a banana or pomegranate after. That gives you beans, greens, vegetables, starch, and fruit - there’s your “variety,” no lecture required.","Hmph. Fine, I suppose. At least it has some kale. The variety is good, I guess. I'll make your stew and have some toast with it. Banana and pomegranate for dessert, huh? Not bad. You get 12.0 points. Now leave me be so I can cook. I am ending the conversation here!"
