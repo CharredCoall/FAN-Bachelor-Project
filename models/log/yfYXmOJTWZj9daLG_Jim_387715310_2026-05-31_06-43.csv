@@ -1,0 +1,12 @@
+Request,Response
+"[System Information: The fridge currently contains: { 'broccoli': 1.0, 'cabbage': 5.0, 'lemon': 1.0, 'mushroom': 1.0, 'orange': 2.0, 'squash': 1.0, 'stalk of celery': 5.0 }]
+        [System Event: The conversation has just started, and you are speaking first. 
+        Generate your opening message to the player strictly based on your character's persona, current mood, and constraints. Do not break character.]","Hey there! Jim here. Thanks for logging on to help! I just checked the fridge and I have 1 squash, 2 oranges, 1 broccoli, 5 stalks of celery, 1 mushroom, 5 cabbages, and 1 lemon. Just a heads up for whatever you recommend: my kids Marcus and Molly absolutely hate broccoli and celery, so please avoid those!"
+"Since your kids hate celery and broccoi i would save these for a day they aren't home. I would chop up the squash in small pieces and squeeze the juice out of the oranges and lemon and combine these into a sauze that you put the suash and mushrooms into and serve with 1 chopped cabbage on the side.
+
+","That's a creative idea! I love the thought of using the squash and mushrooms with a citrus sauce. The kids will probably enjoy that. But saving the celery and broccoli for when they're not home might be a bit tricky. Can we maybe use the cabbage in a different way to make a complete meal? Maybe a salad or something?"
+"","Alright, how about this: we can make a delicious squash and mushroom stir-fry with a citrus sauce using the oranges and lemon. We can serve it with a side of cabbage salad. That way, we're using up a lot of what we have without including the celery or broccoli. What do you think?"
+"Yes great idea do that!
+","Perfect! I'm going to make a delicious squash and mushroom stir-fry with a citrus sauce and a side of cabbage salad. I just took the ingredients out of the fridge. You just earned 5.0 waste-saving points! Thanks for the great idea, buddy!"
+"thank you and enjoy your meal!
+","Thanks a lot! I'm sure the family will love it. Enjoy the rest of your day, and thanks again for the help!"
