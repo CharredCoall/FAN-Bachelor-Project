@@ -66,6 +66,7 @@ def weighted_kappa(M):
 
 def run_iia():
 
+    #Combine datasets into Score matrix
     part1 = csv.reader(open("merged_dataset_part1.csv", mode='r', encoding='Latin-1'))
     part2 = csv.reader(open("merged_dataset_part2.csv", mode='r', encoding='Latin-1'))
 
@@ -77,19 +78,22 @@ def run_iia():
 
     M = np.zeros((N1 + N2,3))
 
-    for an in ["asger", "Franja", "natali"]:
+    #Iterate over all raters
+    for an, suf in [("asger/", "_asger"), ("franja/", "_franja"), ("natali/", "_natali"), ("judge_", "")]:
         i = 0
         for part in [1,2]:
-            with open(f"{an}/merged_dataset_part{part}_{an}.csv", mode='r', encoding='Latin-1') as path:
+            with open(f"{an}merged_dataset_part{part}{suf}.csv", mode='r', encoding='Latin-1') as path:
                 file = csv.reader(path)
                 next(file, None)
+                #Count scores of all rows 
                 for row in file:
-                    if row[-1] != '':
-                        M[i,int(row[-1])-1] += 1
+                    if row[-1] != '': #Ignore if no score was given
+                        M[i,int(row[-1][0])-1] += 1
                         i += 1 
 
-    M = M[~np.all(M == 0, axis=1)]
+    M = M[~np.all(M < 3, axis=1)] #Remove rows where not everyone scored
 
+    #Calculate and report fleiss kappa and kirpendorfs alpha 
     print(fleiss_kappa(M))
     print(weighted_kappa(M))
 
