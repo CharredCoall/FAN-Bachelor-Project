@@ -166,6 +166,7 @@ def graphResults(fullSet, Score, outputFolder):
     #Sort Overall scores
     Mu = np.sort(Mu)
 
+    
     #Create Plot 1!
     #Plotting average score per length along with frequency of length (to show how significant the score of that length is)
     fig, ax1 = plt.subplots(figsize=(8, 6))
@@ -200,6 +201,47 @@ def graphResults(fullSet, Score, outputFolder):
     #Save graph
     plt.savefig(f"{outputFolder}/Length")
     plt.close()
+
+    if max_length > 20:
+        #Create Plot 1!
+        #Plotting average score per length along with frequency of length (to show how significant the score of that length is)
+        fig, ax1 = plt.subplots(figsize=(8, 6))
+
+        #Uses a dual yaxis plot
+        ax2 = ax1.twinx()
+
+        max_length = np.max(np.where(LengthFreq[:20] > 0)) + 1
+        LengthFreq = LengthFreq[:max_length]
+        LengthMu = LengthMu[:max_length]
+
+        #Plots average and frequency
+        avglengthplt = ax1.plot(np.arange(max_length) + 1, LengthMu)
+        frqlengthplt = ax2.plot(np.arange(max_length) + 1, LengthFreq, color="red")
+
+        #Set ticks and limits, such that y axes match
+        #plt.xticks(np.arange(max_length) + 1)
+
+        freqScaling = np.ceil(np.max(LengthFreq)/8)
+
+        ax2.tick_params(axis='y', labelcolor="red", zorder=1)
+        ax2.set_yticks(np.append([1], np.arange(8) * freqScaling + freqScaling ))
+        ax1.set_yticks(np.arange(9) * (2/8) + 1)
+        ax2.set_ylim((0,8 * freqScaling))
+        ax1.set_ylim((1,3))
+        ax1.grid()
+        ax2.grid()
+
+        #Set labels and legends
+        ax2.legend(avglengthplt + frqlengthplt, ["Avg. score per length", "Frq of length"], loc='upper right', framealpha=1.0, edgecolor='black', fancybox=False)
+        ax1.set_ylabel("Average score")
+        ax2.set_ylabel("Frequency", color="red")
+        plt.xlabel("Conversation Length")
+        plt.title("Average score over length of conversation")
+        
+        #Save graph
+        plt.savefig(f"{outputFolder}/Length(%outliers)")
+        plt.close()
+
 
     #Create Plot 2!
     #Plotting Average score for each character over length of conversation (of lengths in [1,6])
