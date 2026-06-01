@@ -35,8 +35,10 @@ def graphResults(fullSet, Score, qData):
 
     max_length = 0
     counter = 0
+    convos = 0
     for row in fullSet:
         if row[-5] == "":
+            convos += 1
             max_length = np.max([max_length, counter])
             counter = 0
         counter += 1
@@ -53,11 +55,20 @@ def graphResults(fullSet, Score, qData):
 
     ImperfectionScore = np.zeros(2)
     ImperfectionSum = np.zeros(2)
+
+    rowRating = np.zeros(convos)
+    Enjoyment = np.zeros(convos)
+    InCharacterScore = np.zeros(convos)
+
+    ratingPerEnjoyment = np.zeros(6)
+    ratingPerEnjoymentCount = np.zeros(6)
     
 
     #Initialize counters for keeping track of sentence length
     temp = []
     counter = 0
+    convoIdx = 0
+    lastQIdx = 0
 
     #Calculating all stats
     for row, scores in zip(fullSet, Score):
@@ -65,7 +76,8 @@ def graphResults(fullSet, Score, qData):
         modelIdx = model_keys.index(row[-3])
         characterIdx = characters.index(row[-2])
         qIdx = [x[1] for x in qData].index(row[0])
-        Imperfect = int(qData[qIdx][3] != "No" and row[-2] in qData[qIdx][5].split(";"))
+        Imperfect = int(qData[qIdx][3] == "Yes" and row[-2] in qData[qIdx][5].split(";"))
+
     
         #Increment frequency counters
         modelCount[modelIdx] += 1
@@ -77,6 +89,7 @@ def graphResults(fullSet, Score, qData):
         characterScore[characterIdx] += wScores
         modelCharacterScore[modelIdx, characterIdx] += wScores
         ImperfectionScore[Imperfect] += wScores
+        ratingPerEnjoyment[int(qData[qIdx][7+characterIdx])] += wScores
         
         #Sum ratings
         sum = np.sum(scores)
@@ -84,6 +97,7 @@ def graphResults(fullSet, Score, qData):
         characterSum[characterIdx] += sum
         modelCharacterSum[modelIdx, characterIdx] += sum
         ImperfectionSum[Imperfect] += sum
+        ratingPerEnjoymentCount[int(qData[qIdx][7+characterIdx])] += sum
 
         #If row is the first in a message, record stats over length for previous message
         if row[-5] == "":
@@ -105,9 +119,15 @@ def graphResults(fullSet, Score, qData):
                 characterLengthSum[characterIdx][counter-1] += sum
                 modelLengthSum[modelIdx][counter-1] += sum
 
+                rowRating[convoIdx] = score/sum
+                Enjoyment[convoIdx] = qData[lastQIdx][7+characterIdx]
+                InCharacterScore[convoIdx] = qData[lastQIdx][characterIdx - 7]
+                convoIdx += 1
+
             #Reset lenght counters
             counter = 0
             temp = []
+            lastQIdx = qIdx
 
         temp.append(scores)
         counter += 1
@@ -130,6 +150,10 @@ def graphResults(fullSet, Score, qData):
         LengthSum[counter-1] += sum
         characterLengthSum[characterIdx][counter-1] += sum
         modelLengthSum[modelIdx][counter-1] += sum
+        
+        rowRating[convoIdx] = score/sum
+        Enjoyment[convoIdx] = qData[lastQIdx][7+characterIdx]
+        InCharacterScore[convoIdx] = qData[lastQIdx][characterIdx - 7]
 
     #Calculate averages
     LengthMu = LengthScore/np.max([LengthSum, np.ones(len(LengthSum))], axis=0)
@@ -139,6 +163,7 @@ def graphResults(fullSet, Score, qData):
     modelMu = modelScore/modelSum
     modelCharacterMu = modelCharacterScore/modelCharacterSum
     ImperfectionMu = ImperfectionScore/ImperfectionSum
+    ratingPerEnjoymentMu = ratingPerEnjoyment/ratingPerEnjoymentCount
 
     #Only calculates overall score when score is only given by one rater
     if singleRater:
@@ -182,7 +207,7 @@ def graphResults(fullSet, Score, qData):
     plt.title("Average score over length of conversation")
     
     #Save graph
-    plt.savefig(f"{outputFolder}/Length")
+    plt.savefig(f"{outputFolder}/exp2_Length")
     plt.close()
 
     if max_length > 20:
@@ -222,7 +247,7 @@ def graphResults(fullSet, Score, qData):
         plt.title("Average score over length of conversation")
         
         #Save graph
-        plt.savefig(f"{outputFolder}/Length(%outliers)")
+        plt.savefig(f"{outputFolder}/exp2_Length(%outliers)")
         plt.close()
 
 
@@ -240,7 +265,7 @@ def graphResults(fullSet, Score, qData):
     plt.xlabel("Conversation Length")
 
     #Save graph
-    plt.savefig(f"{outputFolder}/CharacterLength")
+    plt.savefig(f"{outputFolder}/exp2_CharacterLength")
     plt.close()
 
     #Create Plot 3!
@@ -258,7 +283,7 @@ def graphResults(fullSet, Score, qData):
     plt.xlabel("Conversation Length")
 
     #Save graph
-    plt.savefig(f"{outputFolder}/ModelLength")
+    plt.savefig(f"{outputFolder}/exp2_ModelLength")
     plt.close()
 
     #Create Plot 4!
@@ -268,7 +293,7 @@ def graphResults(fullSet, Score, qData):
     plt.title("Frequency of Characters")
 
     #Save graph
-    plt.savefig(f"{outputFolder}/CharacterFreq.png")
+    plt.savefig(f"{outputFolder}/exp2_CharacterFreq.png")
     plt.close()
 
     #Create Plot 5!
@@ -279,7 +304,7 @@ def graphResults(fullSet, Score, qData):
     plt.title("Score over all Characters")
 
     #Save graph
-    plt.savefig(f"{outputFolder}/Character.png")
+    plt.savefig(f"{outputFolder}/exp2_Character.png")
     plt.close()
 
     #Create Plot 6!
@@ -289,7 +314,7 @@ def graphResults(fullSet, Score, qData):
     plt.title("Frequency of models")
 
     #Save graph
-    plt.savefig(f"{outputFolder}/ModelFreq.png")
+    plt.savefig(f"{outputFolder}/exp2_ModelFreq.png")
     plt.close()
 
     #Create Plot 7!
@@ -300,7 +325,7 @@ def graphResults(fullSet, Score, qData):
     plt.title("Score over all models")
 
     #Save graph
-    plt.savefig(f"{outputFolder}/Model.png")
+    plt.savefig(f"{outputFolder}/exp2_Model.png")
     plt.close()
 
     #Create Plot 8!
@@ -318,7 +343,7 @@ def graphResults(fullSet, Score, qData):
     plt.title("Score over cross of models and Characters")
 
     #Save graph
-    plt.savefig(f"{outputFolder}/ModelCharacter.png")
+    plt.savefig(f"{outputFolder}/exp2_ModelCharacter.png")
     plt.close()
 
     #Create plot 9!
@@ -343,7 +368,7 @@ def graphResults(fullSet, Score, qData):
     plt.title("Score over cross of models and Characters (Sorted)")
 
     #Save graph
-    plt.savefig(f"{outputFolder}/ModelCharacterSorted.png")
+    plt.savefig(f"{outputFolder}/exp2_ModelCharacterSorted.png")
     plt.close()
 
     #Create plot 10!
@@ -356,7 +381,7 @@ def graphResults(fullSet, Score, qData):
     plt.title("Score over all responses (sorted)")
 
     #Save graph
-    plt.savefig(f"{outputFolder}/Score.png")
+    plt.savefig(f"{outputFolder}/exp2_Score.png")
     plt.close()
 
     #Create Plot 11!
@@ -367,7 +392,45 @@ def graphResults(fullSet, Score, qData):
     plt.title("Score over Imperfection")
 
     #Save graph
-    plt.savefig(f"{outputFolder}/Imperfection.png")
+    plt.savefig(f"{outputFolder}/exp2_Imperfection.png")
+    plt.close()
+
+    #Create Plot 12!
+    #Scatter plot over rating to enjoyment
+    plt.scatter(Enjoyment, rowRating)
+    a, b = np.polyfit(Enjoyment, rowRating, 1)
+    plt.plot(a * np.arange(6) + b)
+    plt.ylabel("Score")
+    plt.xlabel("Enjoyment")
+    plt.title("Score over Enjoyment")
+
+    #Save graph
+    plt.savefig(f"{outputFolder}/exp2_RatingToEnjoyment.png")
+    plt.close()
+
+    #Create Plot 13!
+    #Scatter plot over rating to enjoyment
+    plt.scatter(InCharacterScore, rowRating)
+    a, b = np.polyfit(InCharacterScore, rowRating, 1)
+    plt.plot(a * np.arange(6) + b)
+    plt.ylabel("Score")
+    plt.xlabel("How well did the model stay in character")
+    plt.title("Score over Staying in character")
+
+    #Save graph
+    plt.savefig(f"{outputFolder}/exp2_InCharacterRating.png")
+    plt.close()
+
+    #Create Plot 14!
+    #Plotting Average model score per playerEnjoyment
+    plt.bar(np.arange(6), ratingPerEnjoymentMu)
+    plt.ylabel("Average Score")
+    plt.xlabel("Enjoyment")
+    plt.ylim((2,3))
+    plt.title("Average Score over Enjoyment")
+
+    #Save graph
+    plt.savefig(f"{outputFolder}/exp2_EnjoymentAverageScore.png")
     plt.close()
 
 
