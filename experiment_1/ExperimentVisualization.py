@@ -179,10 +179,13 @@ def graphResults(fullSet, Score, outputFolder):
 
     #Set ticks and limits, such that y axes match
     #plt.xticks(np.arange(max_length) + 1)
+
+    freqScaling = np.ceil(np.max(LengthFreq)/8)
+
     ax2.tick_params(axis='y', labelcolor="red", zorder=1)
-    ax2.set_yticks(np.append([1], np.arange(8) * 6 + 6 ))
+    ax2.set_yticks(np.append([1], np.arange(8) * freqScaling + freqScaling ))
     ax1.set_yticks(np.arange(9) * (2/8) + 1)
-    ax2.set_ylim((0,48))
+    ax2.set_ylim((0,8 * freqScaling))
     ax1.set_ylim((1,3))
     ax1.grid()
     ax2.grid()
