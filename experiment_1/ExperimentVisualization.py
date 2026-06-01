@@ -79,6 +79,12 @@ def graphResults(fullSet, Score, outputFolder):
     modelLengthScore = np.zeros((3, max_length))
     modelLengthSum = np.zeros((3, max_length))
 
+    characterLength = np.zeros(5)
+    characterLengthCount = np.zeros(5)
+
+    modelLength = np.zeros(3)
+    modelLengthCount = np.zeros(3)
+
     #Initialize counters for keeping track of sentence length
     temp = []
     counter = 0
@@ -123,6 +129,12 @@ def graphResults(fullSet, Score, outputFolder):
                 characterLengthSum[characterIdx][counter-1] += sum
                 modelLengthSum[modelIdx][counter-1] += sum
 
+                #Add length and counts for average length
+                characterLength[characterIdx] += counter - 1
+                modelLength[modelIdx] += counter - 1
+                characterLengthCount[characterIdx] += 1
+                modelLengthCount[modelIdx] += 1
+
             #Reset lenght counters
             counter = 0
             temp = []
@@ -151,11 +163,13 @@ def graphResults(fullSet, Score, outputFolder):
 
     #Calculate averages
     LengthMu = LengthScore/np.max([LengthSum, np.ones(len(LengthSum))], axis=0)
-    characterLengthMu = characterLengthScore/np.max([characterLengthSum, np.ones_like(characterLengthSum)], axis=0)
-    modelLengthMu = modelLengthScore/np.max([modelLengthSum, np.ones_like(modelLengthSum)], axis=0)
+    characterCrossLengthMu = characterLengthScore/np.max([characterLengthSum, np.ones_like(characterLengthSum)], axis=0)
+    modelCrossLengthMu = modelLengthScore/np.max([modelLengthSum, np.ones_like(modelLengthSum)], axis=0)
     characterMu = characterScore/characterSum
     modelMu = modelScore/modelSum
     modelCharacterMu = modelCharacterScore/modelCharacterSum
+    characterLengthMu = characterLength/characterLengthCount
+    modelLengthMu = modelLength/modelLengthCount
 
     #Only calculates overall score when score is only given by one rater
     if singleRater:
@@ -199,7 +213,7 @@ def graphResults(fullSet, Score, outputFolder):
     plt.title("Average score over length of conversation")
     
     #Save graph
-    plt.savefig(f"{outputFolder}/Length")
+    plt.savefig(f"{outputFolder}_scores/{outputFolder}_Length")
     plt.close()
 
     if max_length > 20:
@@ -239,7 +253,7 @@ def graphResults(fullSet, Score, outputFolder):
         plt.title("Average score over length of conversation")
         
         #Save graph
-        plt.savefig(f"{outputFolder}/Length(%outliers)")
+        plt.savefig(f"{outputFolder}_scores/{outputFolder}_Length(%outliers)")
         plt.close()
 
 
@@ -247,7 +261,7 @@ def graphResults(fullSet, Score, outputFolder):
     #Plotting Average score for each character over length of conversation (of lengths in [1,6])
     #Plot for each character
     for i in np.arange(5):
-        plt.bar(np.arange(6) * 8 + 1 + i, characterLengthMu[i][:6], label=characters[i])
+        plt.bar(np.arange(6) * 8 + 1 + i, characterCrossLengthMu[i][:6], label=characters[i])
     
     #Set tick, labels and legends
     plt.xticks(np.arange(6) * 8 + 3, np.arange(6) + 1)
@@ -257,14 +271,14 @@ def graphResults(fullSet, Score, outputFolder):
     plt.xlabel("Conversation Length")
 
     #Save graph
-    plt.savefig(f"{outputFolder}/CharacterLength")
+    plt.savefig(f"{outputFolder}_scores/{outputFolder}_CharacterLength")
     plt.close()
 
     #Create Plot 3!
     #Plotting Average score for each model over length of conversation (of lengths in [1,6])
     #Plot for each model
     for i in np.arange(3):
-        plt.bar(np.arange(6) * 8 + 1 + i, modelLengthMu[i][:6], label=models[i])
+        plt.bar(np.arange(6) * 8 + 1 + i, modelCrossLengthMu[i][:6], label=models[i])
 
     #Set tick, labels and legends
     plt.xticks(np.arange(6) * 8 + 2, labels=np.arange(6) + 1)
@@ -275,7 +289,7 @@ def graphResults(fullSet, Score, outputFolder):
     plt.xlabel("Conversation Length")
 
     #Save graph
-    plt.savefig(f"{outputFolder}/ModelLength")
+    plt.savefig(f"{outputFolder}_scores/{outputFolder}_ModelLength")
     plt.close()
 
     #Create Plot 4!
@@ -285,7 +299,7 @@ def graphResults(fullSet, Score, outputFolder):
     plt.title("Frequency of Characters")
 
     #Save graph
-    plt.savefig(f"{outputFolder}/CharacterFreq.png")
+    plt.savefig(f"{outputFolder}_scores/{outputFolder}_CharacterFreq.png")
     plt.close()
 
     #Create Plot 5!
@@ -296,7 +310,7 @@ def graphResults(fullSet, Score, outputFolder):
     plt.title("Score over all Characters")
 
     #Save graph
-    plt.savefig(f"{outputFolder}/Character.png")
+    plt.savefig(f"{outputFolder}_scores/{outputFolder}_Character.png")
     plt.close()
 
     #Create Plot 6!
@@ -306,7 +320,7 @@ def graphResults(fullSet, Score, outputFolder):
     plt.title("Frequency of models")
 
     #Save graph
-    plt.savefig(f"{outputFolder}/ModelFreq.png")
+    plt.savefig(f"{outputFolder}_scores/{outputFolder}_ModelFreq.png")
     plt.close()
 
     #Create Plot 7!
@@ -317,7 +331,7 @@ def graphResults(fullSet, Score, outputFolder):
     plt.title("Score over all models")
 
     #Save graph
-    plt.savefig(f"{outputFolder}/Model.png")
+    plt.savefig(f"{outputFolder}_scores/{outputFolder}_Model.png")
     plt.close()
 
     #Create Plot 8!
@@ -335,7 +349,7 @@ def graphResults(fullSet, Score, outputFolder):
     plt.title("Score over cross of models and Characters")
 
     #Save graph
-    plt.savefig(f"{outputFolder}/ModelCharacter.png")
+    plt.savefig(f"{outputFolder}_scores/{outputFolder}_ModelCharacter.png")
     plt.close()
 
     #Create plot 9!
@@ -360,7 +374,7 @@ def graphResults(fullSet, Score, outputFolder):
     plt.title("Score over cross of models and Characters (Sorted)")
 
     #Save graph
-    plt.savefig(f"{outputFolder}/ModelCharacterSorted.png")
+    plt.savefig(f"{outputFolder}_scores/{outputFolder}_ModelCharacterSorted.png")
     plt.close()
 
     #Create plot 10!
@@ -373,9 +387,28 @@ def graphResults(fullSet, Score, outputFolder):
     plt.title("Score over all responses (sorted)")
 
     #Save graph
-    plt.savefig(f"{outputFolder}/Score.png")
+    plt.savefig(f"{outputFolder}_scores/{outputFolder}_Score.png")
     plt.close()
 
+    #Create Plot 11!
+    #Plotting Average length over characters
+    plt.bar(characters, characterLengthMu, label=characters, color=["red", "blue", "green", "yellow", "orange"])
+    plt.ylabel("Average Length")
+    plt.title("Length over characters")
+
+    #Save graph
+    plt.savefig(f"{outputFolder}_scores/{outputFolder}_CharacterAvgLength.png")
+    plt.close()
+
+    #Create Plot 12!
+    #Plotting Average length over models
+    plt.bar(models, modelLengthMu, label=models, color=["red", "blue", "green"])
+    plt.ylabel("Average Length")
+    plt.title("Length over models")
+
+    #Save graph
+    plt.savefig(f"{outputFolder}_scores/{outputFolder}_ModelAvgLength.png")
+    plt.close()
 
 #Plots the graphs for combinations of our own scores and the models scores    
 #Initializes data
@@ -420,22 +453,22 @@ realMu = countDataScore(realdata)
 cfullSet = fullSet[~np.all(cMu == 0, axis=1)]
 cMu = cMu[~np.all(cMu == 0, axis=1)]
 
-graphResults(cfullSet, cMu, "combined_scores")
+graphResults(cfullSet, cMu, "combined")
 
 #Process and plot our graphs
 ofullSet = fullSet[~np.all(oMu == 0, axis=1)]
 oMu = oMu[~np.all(oMu == 0, axis=1)]
 
-graphResults(ofullSet, oMu, "our_scores")
+graphResults(ofullSet, oMu, "our")
 
 #Process and plot models graphs
 mfullSet = fullSet[~np.all(mMu == 0, axis=1)]
 mMu = mMu[~np.all(mMu == 0, axis=1)]
 
-graphResults(mfullSet, mMu, "model_scores")
+graphResults(mfullSet, mMu, "model")
 
 #Process and plot real data
 realdata = realdata[~np.all(realMu == 0, axis=1)]
 realMu = realMu[~np.all(realMu == 0, axis=1)]
 
-graphResults(realdata, realMu, "data_scores")
+graphResults(realdata, realMu, "data")
