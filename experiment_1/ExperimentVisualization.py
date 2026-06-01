@@ -37,6 +37,13 @@ def countModelScore(length, cumN):
                         Score[i + cumN[part - 1],int(row[-1][0])-1] += 1
     return Score
 
+#Counting the score of llm on real data
+def countDataScore(npdata):
+    Score = np.zeros((len(npdata), 3))
+    for i, row in enumerate(npdata):
+        if row[-1] != '':
+            Score[i, int(row[-1][0]) - 1] += 1
+    return Score
 
 #Producing all graphs for selection of fullSet and Score 
 def graphResults(fullSet, Score, outputFolder):
@@ -57,7 +64,7 @@ def graphResults(fullSet, Score, outputFolder):
     max_length = 0
     counter = 0
     for row in fullSet:
-        if row[1] == "":
+        if row[-5] == "":
             max_length = np.max([max_length, counter])
             counter = 0
         counter += 1
@@ -97,7 +104,7 @@ def graphResults(fullSet, Score, outputFolder):
         modelCharacterSum[modelIdx, characterIdx] += np.sum(scores)
 
         #If row is the first in a message, record stats over length for previous message
-        if row[1] == "":
+        if row[-5] == "":
             if counter > 0: #Ensure there was a previous message
                 #Calculating total score and sum of previous message
                 score = np.sum(np.array(temp) * (np.arange(3) + 1))
@@ -171,7 +178,7 @@ def graphResults(fullSet, Score, outputFolder):
     frqlengthplt = ax2.plot(np.arange(max_length) + 1, LengthFreq, color="red")
 
     #Set ticks and limits, such that y axes match
-    plt.xticks(np.arange(max_length) + 1)
+    #plt.xticks(np.arange(max_length) + 1)
     ax2.tick_params(axis='y', labelcolor="red", zorder=1)
     ax2.set_yticks(np.append([1], np.arange(8) * 6 + 6 ))
     ax1.set_yticks(np.arange(9) * (2/8) + 1)
@@ -350,10 +357,19 @@ cumN = np.cumsum(np.append([0], N[:-1]))
 #Gets the full length of the dataset
 length = np.sum(N)
 
+realdata = []
+
+#Gets real data
+with open(f"judge_merged_dataset_full.csv", mode='r', encoding='Latin-1') as path:
+        file = csv.reader(path)
+        next(file, None)
+        realdata = np.fromiter(file, dtype=np.ndarray)
+
 #Count scores
 oMu = countOurScore(length, cumN) 
 mMu = countModelScore(length, cumN)
 cMu = oMu + mMu
+realMu = countDataScore(realdata)
 
 #Process and plot combined graphs
 cfullSet = fullSet[~np.all(cMu == 0, axis=1)]
@@ -372,3 +388,9 @@ mfullSet = fullSet[~np.all(mMu == 0, axis=1)]
 mMu = mMu[~np.all(mMu == 0, axis=1)]
 
 graphResults(mfullSet, mMu, "model_scores")
+
+#Process and plot real data
+realdata = realdata[~np.all(realMu == 0, axis=1)]
+realMu = realMu[~np.all(realMu == 0, axis=1)]
+
+graphResults(realdata, realMu, "data_scores")
