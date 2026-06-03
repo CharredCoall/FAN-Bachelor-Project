@@ -26,9 +26,15 @@ def graphResults(fullSet, Score, qData):
     modelSum = np.zeros(3)
     modelCount = np.zeros(3)
 
+    modelEnjoyment = np.zeros(3)
+    modelImperfection = np.zeros(3)
+
     characterScore = np.zeros(5)
     characterSum = np.zeros(5)
     characterCount = np.zeros(5)
+
+    characterEnjoyment = np.zeros(5)
+    characterImperfection = np.zeros(5)
 
     modelCharacterScore = np.zeros((3,5))
     modelCharacterSum = np.zeros((3,5))
@@ -63,6 +69,9 @@ def graphResults(fullSet, Score, qData):
     ratingPerEnjoyment = np.zeros(6)
     ratingPerEnjoymentCount = np.zeros(6)
     
+    ImperfectionEnjoyment = np.zeros(2)
+    ImperfectionEnjoymentSum = np.zeros(2)
+
     characterConvos = np.zeros(5)
 
     LengthEnjoymentScore = np.zeros(max_length)
@@ -74,6 +83,7 @@ def graphResults(fullSet, Score, qData):
     lastQIdx = 0
     lastCharacterIdx = 0
     lastModelIdx = 0
+    lastImperfect = 0
 
     #Calculating all stats
     for row, scores in zip(fullSet, Score):
@@ -95,6 +105,8 @@ def graphResults(fullSet, Score, qData):
         modelCharacterScore[modelIdx, characterIdx] += wScores
         ImperfectionScore[Imperfect] += wScores
         ratingPerEnjoyment[int(qData[qIdx][7+characterIdx])] += wScores
+        modelEnjoyment[modelIdx] += int(qData[qIdx][7+characterIdx])
+        modelImperfection[modelIdx] += Imperfect
         
         #Sum ratings
         sum = np.sum(scores)
@@ -114,12 +126,16 @@ def graphResults(fullSet, Score, qData):
                 #Increment frequency counter
                 LengthFreq[counter-1] += 1
                 characterConvos[lastCharacterIdx] += 1
+                ImperfectionEnjoymentSum[lastImperfect] += 1
 
                 #Add score of previous message
                 LengthScore[counter-1] += score
                 characterLengthScore[lastCharacterIdx][counter-1] += score
                 modelLengthScore[lastModelIdx][counter-1] += score
                 LengthEnjoymentScore[counter-1] += int(qData[lastQIdx][7+lastCharacterIdx])
+                ImperfectionEnjoyment[lastImperfect] += int(qData[lastQIdx][7+lastCharacterIdx])
+                characterEnjoyment[lastCharacterIdx] += int(qData[lastQIdx][7+lastCharacterIdx])
+                characterImperfection[lastCharacterIdx] += lastImperfect
 
                 #Add sum of previous message
                 LengthSum[counter-1] += sum
@@ -137,6 +153,7 @@ def graphResults(fullSet, Score, qData):
             lastQIdx = qIdx
             lastCharacterIdx = characterIdx
             lastModelIdx = modelIdx
+            lastImperfect = Imperfect
 
         temp.append(scores)
         counter += 1
@@ -150,12 +167,16 @@ def graphResults(fullSet, Score, qData):
         #Increment frequency counter
         LengthFreq[counter-1] += 1
         characterConvos[lastCharacterIdx] += 1
+        ImperfectionEnjoymentSum[lastImperfect] += 1
 
         #Add score of previous message
         LengthScore[counter-1] += score
         characterLengthScore[lastCharacterIdx][counter-1] += score
         modelLengthScore[lastModelIdx][counter-1] += score
         LengthEnjoymentScore[counter-1] += int(qData[lastQIdx][7+lastCharacterIdx])
+        ImperfectionEnjoyment[lastImperfect] += int(qData[lastQIdx][7+lastCharacterIdx])
+        characterEnjoyment[lastCharacterIdx] += int(qData[lastQIdx][7+lastCharacterIdx])
+        characterImperfection[lastCharacterIdx] += lastImperfect
 
         #Add sum of previous message
         LengthSum[counter-1] += sum
@@ -176,6 +197,11 @@ def graphResults(fullSet, Score, qData):
     ImperfectionMu = ImperfectionScore/ImperfectionSum
     ratingPerEnjoymentMu = ratingPerEnjoyment/ratingPerEnjoymentCount
     LengthEnjoymentMu = LengthEnjoymentScore/np.max([LengthFreq, np.ones_like(LengthFreq)], axis=0)
+    ImperfectionEnjoymentMu = ImperfectionEnjoyment/ImperfectionEnjoymentSum
+    characterEnjoymentMu = characterEnjoyment/characterConvos
+    characterImperfectionMu = characterImperfection/characterConvos
+    modelEnjoymentMu = modelEnjoyment/modelCount
+    modelImperfectionMu = modelImperfection/modelCount
 
     #Only calculates overall score when score is only given by one rater
     if singleRater:
@@ -353,6 +379,28 @@ def graphResults(fullSet, Score, qData):
     plt.savefig(f"{outputFolder}/exp2_Character.png")
     plt.close()
 
+    #Create Plot 5!
+    #Plotting average enjoyment of each character
+    plt.bar(characters, characterEnjoymentMu, label=characters, color=["red", "blue", "green", "yellow", "orange"])
+    plt.ylabel("Average Enjoyment")
+    plt.ylim((0,5))
+    plt.title("Enjoyment over all Characters")
+
+    #Save graph
+    plt.savefig(f"{outputFolder}/exp2_CharacterEnjoyment.png")
+    plt.close()
+
+    #Create Plot 5!
+    #Plotting average enjoyment of each character
+    plt.bar(characters, characterImperfectionMu, label=characters, color=["red", "blue", "green", "yellow", "orange"])
+    plt.ylabel("Average Imperfections")
+    plt.ylim((0,1))
+    plt.title("Imperfection over all Characters")
+
+    #Save graph
+    plt.savefig(f"{outputFolder}/exp2_CharacterImperfection.png")
+    plt.close()
+
     #Create Plot 6!
     #Plotting frequency of models
     plt.bar(models, modelCount, label=models, color=["red", "blue", "green"])
@@ -372,6 +420,28 @@ def graphResults(fullSet, Score, qData):
 
     #Save graph
     plt.savefig(f"{outputFolder}/exp2_Model.png")
+    plt.close()
+
+    #Create Plot 7!
+    #Plotting Average enjoyment of each model
+    plt.bar(models, modelEnjoymentMu, label=models, color=["red", "blue", "green"])
+    plt.ylabel("Average Enjoyment")
+    plt.ylim((0,5))
+    plt.title("Enjoyment over all models")
+
+    #Save graph
+    plt.savefig(f"{outputFolder}/exp2_ModelEnjoyment.png")
+    plt.close()
+
+    #Create Plot 7!
+    #Plotting Average Imperfections of each model
+    plt.bar(models, modelImperfectionMu, label=models, color=["red", "blue", "green"])
+    plt.ylabel("Average Imperfection")
+    plt.ylim((0,1))
+    plt.title("Imperfection over all models")
+
+    #Save graph
+    plt.savefig(f"{outputFolder}/exp2_ModelImperfection.png")
     plt.close()
 
     #Create Plot 8!
@@ -439,6 +509,17 @@ def graphResults(fullSet, Score, qData):
 
     #Save graph
     plt.savefig(f"{outputFolder}/exp2_Imperfection.png")
+    plt.close()
+
+    #Create Plot 11!
+    #Plotting Average Enjoyment of whether model experienced imperfections
+    plt.bar(["No/Maybe", "Yes"], ImperfectionEnjoymentMu, label=["No/Maybe", "Yes"], color=["red", "green"])
+    plt.ylabel("Average Enjoyment")
+    plt.ylim((0,5))
+    plt.title("Enjoyment over Imperfection")
+
+    #Save graph
+    plt.savefig(f"{outputFolder}/exp2_EnjoymentImperfection.png")
     plt.close()
 
     #Create Plot 12!
