@@ -91,11 +91,11 @@ def run_iia():
                         M[i,int(row[-1][0])-1] += 1
                         i += 1 
 
-    M = M[~np.all(M < 3, axis=1)] #Remove rows where not everyone scored
+    M = M[np.sum(M, axis=1) > 2] #Remove rows where not everyone scored
 
     #Calculate and report fleiss kappa and kirpendorfs alpha 
-    print(fleiss_kappa(M))
-    print(weighted_kappa(M))
+    print("Fleiss' Kappa:", fleiss_kappa(M))
+    print("Kirpendorff's Alpha:", weighted_kappa(M))
 
 
 if __name__ == "__main__":

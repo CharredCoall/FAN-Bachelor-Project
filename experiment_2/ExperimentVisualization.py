@@ -63,12 +63,17 @@ def graphResults(fullSet, Score, qData):
     ratingPerEnjoyment = np.zeros(6)
     ratingPerEnjoymentCount = np.zeros(6)
     
+    characterConvos = np.zeros(5)
+
+    LengthEnjoymentScore = np.zeros(max_length)
 
     #Initialize counters for keeping track of sentence length
     temp = []
     counter = 0
     convoIdx = 0
     lastQIdx = 0
+    lastCharacterIdx = 0
+    lastModelIdx = 0
 
     #Calculating all stats
     for row, scores in zip(fullSet, Score):
@@ -108,26 +113,30 @@ def graphResults(fullSet, Score, qData):
 
                 #Increment frequency counter
                 LengthFreq[counter-1] += 1
+                characterConvos[lastCharacterIdx] += 1
 
                 #Add score of previous message
                 LengthScore[counter-1] += score
-                characterLengthScore[characterIdx][counter-1] += score
-                modelLengthScore[modelIdx][counter-1] += score
+                characterLengthScore[lastCharacterIdx][counter-1] += score
+                modelLengthScore[lastModelIdx][counter-1] += score
+                LengthEnjoymentScore[counter-1] += int(qData[lastQIdx][7+lastCharacterIdx])
 
                 #Add sum of previous message
                 LengthSum[counter-1] += sum
-                characterLengthSum[characterIdx][counter-1] += sum
-                modelLengthSum[modelIdx][counter-1] += sum
+                characterLengthSum[lastCharacterIdx][counter-1] += sum
+                modelLengthSum[lastModelIdx][counter-1] += sum
 
                 rowRating[convoIdx] = score/sum
-                Enjoyment[convoIdx] = qData[lastQIdx][7+characterIdx]
-                InCharacterScore[convoIdx] = qData[lastQIdx][characterIdx - 7]
+                Enjoyment[convoIdx] = qData[lastQIdx][7+lastCharacterIdx]
+                InCharacterScore[convoIdx] = qData[lastQIdx][lastCharacterIdx - 7]
                 convoIdx += 1
 
             #Reset lenght counters
             counter = 0
             temp = []
             lastQIdx = qIdx
+            lastCharacterIdx = characterIdx
+            lastModelIdx = modelIdx
 
         temp.append(scores)
         counter += 1
@@ -140,20 +149,22 @@ def graphResults(fullSet, Score, qData):
 
         #Increment frequency counter
         LengthFreq[counter-1] += 1
+        characterConvos[lastCharacterIdx] += 1
 
         #Add score of previous message
         LengthScore[counter-1] += score
-        characterLengthScore[characterIdx][counter-1] += score
-        modelLengthScore[modelIdx][counter-1] += score
+        characterLengthScore[lastCharacterIdx][counter-1] += score
+        modelLengthScore[lastModelIdx][counter-1] += score
+        LengthEnjoymentScore[counter-1] += int(qData[lastQIdx][7+lastCharacterIdx])
 
         #Add sum of previous message
         LengthSum[counter-1] += sum
-        characterLengthSum[characterIdx][counter-1] += sum
-        modelLengthSum[modelIdx][counter-1] += sum
-        
+        characterLengthSum[lastCharacterIdx][counter-1] += sum
+        modelLengthSum[lastModelIdx][counter-1] += sum
+
         rowRating[convoIdx] = score/sum
-        Enjoyment[convoIdx] = qData[lastQIdx][7+characterIdx]
-        InCharacterScore[convoIdx] = qData[lastQIdx][characterIdx - 7]
+        Enjoyment[convoIdx] = qData[lastQIdx][7+lastCharacterIdx]
+        InCharacterScore[convoIdx] = qData[lastQIdx][lastCharacterIdx - 7]
 
     #Calculate averages
     LengthMu = LengthScore/np.max([LengthSum, np.ones(len(LengthSum))], axis=0)
@@ -164,6 +175,7 @@ def graphResults(fullSet, Score, qData):
     modelCharacterMu = modelCharacterScore/modelCharacterSum
     ImperfectionMu = ImperfectionScore/ImperfectionSum
     ratingPerEnjoymentMu = ratingPerEnjoyment/ratingPerEnjoymentCount
+    LengthEnjoymentMu = LengthEnjoymentScore/np.max([LengthFreq, np.ones_like(LengthFreq)], axis=0)
 
     #Only calculates overall score when score is only given by one rater
     if singleRater:
@@ -250,6 +262,40 @@ def graphResults(fullSet, Score, qData):
         plt.savefig(f"{outputFolder}/exp2_Length(%outliers)")
         plt.close()
 
+    #Create Plot 2!
+    #Plotting average score per length along with frequency of length (to show how significant the score of that length is)
+    fig, ax1 = plt.subplots(figsize=(8, 6))
+
+    #Uses a dual yaxis plot
+    ax2 = ax1.twinx()
+
+    #Plots average and frequency
+    avglengthplt = ax1.plot(np.arange(max_length-1) + 2, LengthEnjoymentMu[1:])
+    frqlengthplt = ax2.plot(np.arange(max_length-1) + 2, LengthFreq[1:], color="red")
+
+    #Set ticks and limits, such that y axes match
+    #plt.xticks(np.arange(max_length) + 1)
+
+    freqScaling = np.ceil(np.max(LengthFreq)/10)
+
+    ax2.tick_params(axis='y', labelcolor="red", zorder=1)
+    ax2.set_yticks(np.append([1], np.arange(11) * freqScaling  ))
+    ax1.set_yticks(np.arange(11) * 0.5)
+    ax2.set_ylim((0,10 * freqScaling))
+    ax1.set_ylim((0,5))
+    ax1.grid()
+    ax2.grid()
+
+    #Set labels and legends
+    ax2.legend(avglengthplt + frqlengthplt, ["Avg. Enjoyment per length", "Frq of length"], loc='upper right', framealpha=1.0, edgecolor='black', fancybox=False)
+    ax1.set_ylabel("Average Enjoyment")
+    ax2.set_ylabel("Frequency", color="red")
+    plt.xlabel("Conversation Length")
+    plt.title("Average Enjoyment over length of conversation")
+    
+    #Save graph
+    plt.savefig(f"{outputFolder}/exp2_LengthEnjoyment")
+    plt.close()
 
     #Create Plot 2!
     #Plotting Average score for each character over length of conversation (of lengths in [1,6])
