@@ -176,7 +176,13 @@ def run_judge(CSV_PATH):
 
 if __name__ == "__main__":
     files = [
-        os.path.join(SCRIPT_DIR, "merged_dataset_full.csv")
+        os.path.join(SCRIPT_DIR, "merged_dataset_part1.csv"),
+        os.path.join(SCRIPT_DIR, "merged_dataset_part2.csv"),
+        os.path.join(SCRIPT_DIR, "merged_dataset_part3.csv"),
+        os.path.join(SCRIPT_DIR, "merged_dataset_part4.csv"),
+        os.path.join(SCRIPT_DIR, "merged_dataset_part5.csv"),
+        os.path.join(SCRIPT_DIR, "merged_dataset_part6.csv"),
+        os.path.join(SCRIPT_DIR, "merged_dataset_part7.csv")
     ]
     for i, file in enumerate(files):
         print(f"\n--- Running judge on file {i+1}/{len(files)} ---")

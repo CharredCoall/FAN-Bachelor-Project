@@ -85,9 +85,13 @@ def graphResults(fullSet, Score, outputFolder):
     modelLength = np.zeros(3)
     modelLengthCount = np.zeros(3)
 
+    characterConvos = np.zeros(5)
+
     #Initialize counters for keeping track of sentence length
     temp = []
     counter = 0
+    lastCharacterIdx = 0
+    lastModelIdx = 0
 
     #Calculating all stats
     for row, scores in zip(fullSet, Score):
@@ -118,26 +122,29 @@ def graphResults(fullSet, Score, outputFolder):
 
                 #Increment frequency counter
                 LengthFreq[counter-1] += 1
+                characterConvos[lastCharacterIdx] += 1
 
                 #Add score of previous message
                 LengthScore[counter-1] += score
-                characterLengthScore[characterIdx][counter-1] += score
-                modelLengthScore[modelIdx][counter-1] += score
+                characterLengthScore[lastCharacterIdx][counter-1] += score
+                modelLengthScore[lastModelIdx][counter-1] += score
 
                 #Add sum of previous message
                 LengthSum[counter-1] += sum
-                characterLengthSum[characterIdx][counter-1] += sum
-                modelLengthSum[modelIdx][counter-1] += sum
+                characterLengthSum[lastCharacterIdx][counter-1] += sum
+                modelLengthSum[lastModelIdx][counter-1] += sum
 
                 #Add length and counts for average length
-                characterLength[characterIdx] += counter - 1
-                modelLength[modelIdx] += counter - 1
-                characterLengthCount[characterIdx] += 1
-                modelLengthCount[modelIdx] += 1
+                characterLength[lastCharacterIdx] += counter - 1
+                modelLength[lastModelIdx] += counter - 1
+                characterLengthCount[lastCharacterIdx] += 1
+                modelLengthCount[lastModelIdx] += 1
 
             #Reset lenght counters
             counter = 0
             temp = []
+            lastCharacterIdx = characterIdx
+            lastModelIdx = modelIdx
 
         temp.append(scores)
         counter += 1
@@ -261,7 +268,7 @@ def graphResults(fullSet, Score, outputFolder):
     #Plotting Average score for each character over length of conversation (of lengths in [1,6])
     #Plot for each character
     for i in np.arange(5):
-        plt.bar(np.arange(6) * 8 + 1 + i, characterCrossLengthMu[i][:6], label=characters[i])
+        plt.bar(np.arange(6) * 8 + 1 + i, characterCrossLengthMu[i][:6], label=characters[i], color=["red", "blue", "green", "yellow", "orange"][i])
     
     #Set tick, labels and legends
     plt.xticks(np.arange(6) * 8 + 3, np.arange(6) + 1)
@@ -315,7 +322,7 @@ def graphResults(fullSet, Score, outputFolder):
 
     #Create Plot 6!
     #Plotting frequency of models
-    plt.bar(models, modelCount, label=models, color=["red", "blue", "green"])
+    plt.bar(models, modelCount, label=models, color=["blue", "orange", "green"])
     plt.ylabel("Frequency")
     plt.title("Frequency of models")
 
@@ -325,7 +332,7 @@ def graphResults(fullSet, Score, outputFolder):
 
     #Create Plot 7!
     #Plotting Average score of each model
-    plt.bar(models, modelMu, label=models, color=["red", "blue", "green"])
+    plt.bar(models, modelMu, label=models, color=["blue", "orange", "green"])
     plt.ylabel("Average Score")
     plt.ylim((2,3))
     plt.title("Score over all models")
@@ -402,12 +409,22 @@ def graphResults(fullSet, Score, outputFolder):
 
     #Create Plot 12!
     #Plotting Average length over models
-    plt.bar(models, modelLengthMu, label=models, color=["red", "blue", "green"])
+    plt.bar(models, modelLengthMu, label=models, color=["blue", "orange", "green"])
     plt.ylabel("Average Length")
     plt.title("Length over models")
 
     #Save graph
     plt.savefig(f"{outputFolder}_scores/{outputFolder}_ModelAvgLength.png")
+    plt.close()
+
+    #Create Plot 13!
+    #Plotting number of convos for each character
+    plt.bar(characters, characterConvos, label=characters, color=["red", "blue", "green", "yellow", "orange"])
+    plt.ylabel("# of conversations")
+    plt.title("Conversations per character")
+
+    #Save graph
+    plt.savefig(f"{outputFolder}_scores/{outputFolder}_CharacterConvos.png")
     plt.close()
 
 #Plots the graphs for combinations of our own scores and the models scores    
