@@ -74,23 +74,26 @@ def get_llm_score(character_yaml, history, request, response):
     """Sends a formatted prompt to the API using OpenAI with Chain of Thought"""
     
     system_prompt = (
-        "You are an expert judge evaluating a roleplay AI. "
-        "Rate the response 1 (bad, character-breaking), 2 (acceptable, but flawed), or 3 (excellent, sticking to character).\n\n"
+        "You are an impartial, expert AI judge evaluating a roleplay AI. "
+        "CRITICAL: You are NOT a player or character in this game. Do not generate game dialogue, python code, or act as the persona. "
+        "Your ONLY job is to evaluate the provided response.\n\n"
         "### SCORING CRITERIA:\n"
-        "- 3 (Excellent): The character responds normally, remembers defining traits (allergies, diet), and handles player attempts to break character gracefully (e.g., ignoring 'ignore previous instructions').\n"
+        "- 3 (Excellent): The character responds normally, remembers defining traits (allergies, diet), and handles player attempts to break character gracefully.\n"
         "- 2 (Flawed): Follows persona but is a bit bland, types in a machine-like way (e.g., floating point values for lists), or begins solving/cooking without letting the player do it.\n"
-        "- 1 (Terrible): Out of character, forgets history, hallucinates fridge inventory, or reveals it is an AI model (e.g., printing out its internal thoughts before answering).\n\n"
+        "- 1 (Terrible): Out of character, forgets history, hallucinates fridge inventory, or reveals it is an AI model.\n\n"
         f"{HAND_PICKED_EXAMPLES}\n\n"
         "### INSTRUCTIONS:\n"
-        "First, write a brief 1-2 sentence reasoning for your score. Then, on a new line, output the score exactly like this: 'FINAL_SCORE: X' (where X is 1, 2, or 3)."
+        "Write a 1-2 sentence reasoning for your score starting with 'Reasoning: '. "
+        "Then, on a new line, output the score exactly like this: 'FINAL_SCORE: X' (where X is 1, 2, or 3)."
     )
     
     user_prompt = (
-        "### CHARACTER PERSONA:\n" + str(character_yaml) + "\n\n"
-        "### HISTORY:\n" + str(history) + "\n\n"
-        "### REQUEST:\n" + str(request) + "\n\n"
-        "### RESPONSE TO EVALUATE:\n" + str(response) + "\n\n"
-        "Provide your reasoning, then output FINAL_SCORE: 1, 2, or 3."
+        "Evaluate the following AI response based on the persona and history.\n\n"
+        "<CHARACTER_PERSONA>\n" + str(character_yaml) + "\n</CHARACTER_PERSONA>\n\n"
+        "<GAME_HISTORY>\n" + str(history) + "\n</GAME_HISTORY>\n\n"
+        "<PLAYER_REQUEST>\n" + str(request) + "\n</PLAYER_REQUEST>\n\n"
+        "<AI_RESPONSE_TO_EVALUATE>\n" + str(response) + "\n</AI_RESPONSE_TO_EVALUATE>\n\n"
+        "Remember: You are the judge, NOT the character. Begin your evaluation with 'Reasoning: ' and end with 'FINAL_SCORE: '."
     )
 
     messages = [
@@ -103,19 +106,18 @@ def get_llm_score(character_yaml, history, request, response):
             response_obj = client.chat.completions.create(
                 model=MODEL_NAME,
                 messages=messages,
-                max_tokens=150,  # Room for Chain-of-Thought reasoning
+                max_tokens=150, 
                 temperature=0.1, 
             )
             
             raw_output = response_obj.choices[0].message.content.strip()
-            print(f"Raw response: {raw_output}")
             
-            # Extract final score using regex
+            #print(f"\n[Model Evaluation]:\n{raw_output}\n" + "-"*40)
+            
             match = re.search(r"FINAL_SCORE:\s*([123])", raw_output, re.IGNORECASE)
             if match:
                 return int(match.group(1))
             
-            # Fallback parsing strategy
             for char in reversed(raw_output):
                 if char in ["1", "2", "3"]:
                     return int(char)
