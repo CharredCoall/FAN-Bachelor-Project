@@ -216,7 +216,7 @@ def graphResults(fullSet, Score, outputFolder):
     ax2.legend(avglengthplt + frqlengthplt, ["Avg. score per length", "Frq of length"], loc='upper right', framealpha=1.0, edgecolor='black', fancybox=False)
     ax1.set_ylabel("Average score")
     ax2.set_ylabel("Frequency", color="red")
-    plt.xlabel("Conversation Length")
+    ax1.set_xlabel("Conversation Length")
     plt.title("Average score over length of conversation")
     
     #Save graph
@@ -256,7 +256,7 @@ def graphResults(fullSet, Score, outputFolder):
         ax2.legend(avglengthplt + frqlengthplt, ["Avg. score per length", "Frq of length"], loc='upper right', framealpha=1.0, edgecolor='black', fancybox=False)
         ax1.set_ylabel("Average score")
         ax2.set_ylabel("Frequency", color="red")
-        plt.xlabel("Conversation Length")
+        ax1.set_xlabel("Conversation Length")
         plt.title("Average score over length of conversation")
         
         #Save graph
@@ -268,10 +268,11 @@ def graphResults(fullSet, Score, outputFolder):
     #Plotting Average score for each character over length of conversation (of lengths in [1,6])
     #Plot for each character
     for i in np.arange(5):
-        plt.bar(np.arange(6) * 8 + 1 + i, characterCrossLengthMu[i][:6], label=characters[i], color=["red", "blue", "green", "purple", "orange"][i])
+        plt.bar(np.arange(6) * 8 + 1 + i, characterCrossLengthMu[i][:6], label=characters[i], color=["red", "blue", "green", "purple", "orange"][i], zorder=5)
     
     #Set tick, labels and legends
     plt.xticks(np.arange(6) * 8 + 3, np.arange(6) + 1)
+    plt.grid(axis='y')
     plt.legend(loc="lower left")
     plt.ylabel("Average score")
     plt.title("Average score over length of conversation")
@@ -285,10 +286,11 @@ def graphResults(fullSet, Score, outputFolder):
     #Plotting Average score for each model over length of conversation (of lengths in [1,6])
     #Plot for each model
     for i in np.arange(3):
-        plt.bar(np.arange(6) * 8 + 1 + i, modelCrossLengthMu[i][:6], label=models[i])
+        plt.bar(np.arange(6) * 8 + 1 + i, modelCrossLengthMu[i][:6], label=models[i], zorder=5)
 
     #Set tick, labels and legends
     plt.xticks(np.arange(6) * 8 + 2, labels=np.arange(6) + 1)
+    plt.grid(axis='y', zorder=0)
     plt.legend()
     plt.ylim((2,3))
     plt.ylabel("Average score")
@@ -301,7 +303,8 @@ def graphResults(fullSet, Score, outputFolder):
 
     #Create Plot 4!
     #Plotting frequency of each character
-    plt.bar(characters, characterCount, label=characters, color=["red", "blue", "green", "purple", "orange"])
+    plt.bar(characters, characterCount, label=characters, color=["red", "blue", "green", "purple", "orange"], zorder=5)
+    plt.grid(axis='y')
     plt.ylabel("Frequency")
     plt.title("Frequency of Characters")
 
@@ -311,9 +314,10 @@ def graphResults(fullSet, Score, outputFolder):
 
     #Create Plot 5!
     #Plotting average score of each character
-    plt.bar(characters, characterMu, label=characters, color=["red", "blue", "green", "purple", "orange"])
+    plt.bar(characters, characterMu, label=characters, color=["red", "blue", "green", "purple", "orange"], zorder=5)
     plt.ylabel("Average Score")
     plt.ylim((2,3))
+    plt.grid(axis='y')
     plt.title("Score over all Characters")
 
     #Save graph
@@ -322,8 +326,9 @@ def graphResults(fullSet, Score, outputFolder):
 
     #Create Plot 6!
     #Plotting frequency of models
-    plt.bar(models, modelCount, label=models, color=["blue", "orange", "green"])
+    plt.bar(models, modelCount, label=models, color=["blue", "orange", "green"], zorder=5)
     plt.ylabel("Frequency")
+    plt.grid(axis='y')
     plt.title("Frequency of models")
 
     #Save graph
@@ -332,9 +337,10 @@ def graphResults(fullSet, Score, outputFolder):
 
     #Create Plot 7!
     #Plotting Average score of each model
-    plt.bar(models, modelMu, label=models, color=["blue", "orange", "green"])
+    plt.bar(models, modelMu, label=models, color=["blue", "orange", "green"], zorder=5)
     plt.ylabel("Average Score")
     plt.ylim((2,3))
+    plt.grid(axis='y')
     plt.title("Score over all models")
 
     #Save graph
@@ -345,11 +351,12 @@ def graphResults(fullSet, Score, outputFolder):
     #Plotting score over cross of models and characters
     #Plot for each model over characters, creates bars grouped by character and coloured by model
     for i in np.arange(3):
-        plt.bar( np.arange(5) * 8 + 1 + i, modelCharacterMu[i], label=models[i])
+        plt.bar( np.arange(5) * 8 + 1 + i, modelCharacterMu[i], label=models[i], zorder=5)
     
     #Set ticks to character names
     plt.xticks(np.arange(5) * 8 + 2, labels=characters)
     plt.yticks(np.arange(10) * 0.1 + 2)
+    plt.grid(axis='y')
     plt.ylim((2,3))
     plt.legend(loc='upper left')
     plt.ylabel("Average Score")
@@ -370,11 +377,12 @@ def graphResults(fullSet, Score, outputFolder):
     #Plot for each model over characters, creates bars grouped by sorted characters and model
     for i in np.arange(3):
         imatrix = np.where(placementMatrix == i)
-        plt.bar( np.arange(5) * 8 + 1 + imatrix[0][imatrix[1].argsort()], sortedModelCharacterMu[i], label=models[i])
+        plt.bar( np.arange(5) * 8 + 1 + imatrix[0][imatrix[1].argsort()], sortedModelCharacterMu[i], label=models[i], zorder=5)
     
     #Set ticks to character names
     plt.xticks(np.arange(5) * 8 + 2, labels=sortedCharacters)
     plt.yticks(np.arange(10) * 0.1 + 2)
+    plt.grid(axis='y')
     plt.ylim((2,3))
     plt.legend(loc='upper left')
     plt.ylabel("Average Score")
@@ -391,6 +399,8 @@ def graphResults(fullSet, Score, outputFolder):
         plt.ylabel("Score")
     else:
         plt.ylabel("Average Score")
+    plt.xlabel("# of responses")
+    plt.grid()
     plt.title("Score over all responses (sorted)")
 
     #Save graph
@@ -399,8 +409,9 @@ def graphResults(fullSet, Score, outputFolder):
 
     #Create Plot 11!
     #Plotting Average length over characters
-    plt.bar(characters, characterLengthMu, label=characters, color=["red", "blue", "green", "purple", "orange"])
+    plt.bar(characters, characterLengthMu, label=characters, color=["red", "blue", "green", "purple", "orange"], zorder=5)
     plt.ylabel("Average Length")
+    plt.grid(axis='y')
     plt.title("Length over characters")
 
     #Save graph
@@ -409,8 +420,9 @@ def graphResults(fullSet, Score, outputFolder):
 
     #Create Plot 12!
     #Plotting Average length over models
-    plt.bar(models, modelLengthMu, label=models, color=["blue", "orange", "green"])
+    plt.bar(models, modelLengthMu, label=models, color=["blue", "orange", "green"], zorder=5)
     plt.ylabel("Average Length")
+    plt.grid(axis='y')
     plt.title("Length over models")
 
     #Save graph
@@ -419,8 +431,9 @@ def graphResults(fullSet, Score, outputFolder):
 
     #Create Plot 13!
     #Plotting number of convos for each character
-    plt.bar(characters, characterConvos, label=characters, color=["red", "blue", "green", "purple", "orange"])
+    plt.bar(characters, characterConvos, label=characters, color=["red", "blue", "green", "purple", "orange"], zorder=5)
     plt.ylabel("# of conversations")
+    plt.grid(axis='y')
     plt.title("Conversations per character")
 
     #Save graph
@@ -477,6 +490,12 @@ ofullSet = fullSet[~np.all(oMu == 0, axis=1)]
 oMu = oMu[~np.all(oMu == 0, axis=1)]
 
 graphResults(ofullSet, oMu, "our")
+
+#Process and plot our graphs using only common ratings
+ocfullSet = fullSet[:cumN[2]][~np.all(oMu[:cumN[2]] == 0, axis=1)]
+ocMu = oMu[:cumN[2]][~np.all(oMu[:cumN[2]] == 0, axis=1)]
+
+graphResults(ocfullSet, ocMu, "compared")
 
 #Process and plot models graphs
 mfullSet = fullSet[~np.all(mMu == 0, axis=1)]

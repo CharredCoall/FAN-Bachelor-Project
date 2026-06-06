@@ -241,7 +241,7 @@ def graphResults(fullSet, Score, qData):
     ax2.legend(avglengthplt + frqlengthplt, ["Avg. score per length", "Frq of length"], loc='upper right', framealpha=1.0, edgecolor='black', fancybox=False)
     ax1.set_ylabel("Average score")
     ax2.set_ylabel("Frequency", color="red")
-    plt.xlabel("Conversation Length")
+    ax1.set_xlabel("Conversation Length")
     plt.title("Average score over length of conversation")
     
     #Save graph
@@ -281,7 +281,7 @@ def graphResults(fullSet, Score, qData):
         ax2.legend(avglengthplt + frqlengthplt, ["Avg. score per length", "Frq of length"], loc='upper right', framealpha=1.0, edgecolor='black', fancybox=False)
         ax1.set_ylabel("Average score")
         ax2.set_ylabel("Frequency", color="red")
-        plt.xlabel("Conversation Length")
+        ax1.set_xlabel("Conversation Length")
         plt.title("Average score over length of conversation")
         
         #Save graph
@@ -316,7 +316,7 @@ def graphResults(fullSet, Score, qData):
     ax2.legend(avglengthplt + frqlengthplt, ["Avg. Enjoyment per length", "Frq of length"], loc='upper right', framealpha=1.0, edgecolor='black', fancybox=False)
     ax1.set_ylabel("Average Enjoyment")
     ax2.set_ylabel("Frequency", color="red")
-    plt.xlabel("Conversation Length")
+    ax1.set_xlabel("Conversation Length")
     plt.title("Average Enjoyment over length of conversation")
     
     #Save graph
@@ -435,9 +435,11 @@ def graphResults(fullSet, Score, qData):
 
     #Create Plot 7!
     #Plotting Average Imperfections of each model
-    plt.bar(models, modelImperfectionMu, label=models, color=["red", "blue", "green"])
-    plt.ylabel("Average Imperfection")
-    plt.ylim((0,1))
+    plt.bar(models, modelImperfectionMu * 100, label=models, color=["red", "blue", "green"], zorder=5)
+    plt.ylabel("% of responses with Imperfection")
+    plt.ylim((0,30))
+    plt.yticks(np.arange(7) * 5)
+    plt.grid(axis='y')
     plt.title("Imperfection over all models")
 
     #Save graph
@@ -494,6 +496,7 @@ def graphResults(fullSet, Score, qData):
         plt.ylabel("Score")
     else:
         plt.ylabel("Average Score")
+    plt.xlabel("# of responses")
     plt.title("Score over all responses (sorted)")
 
     #Save graph
@@ -502,8 +505,9 @@ def graphResults(fullSet, Score, qData):
 
     #Create Plot 11!
     #Plotting Average score of whether model experienced imperfections
-    plt.bar(["No/Maybe", "Yes"], ImperfectionMu, label=["No/Maybe", "Yes"], color=["red", "green"])
+    plt.bar(["No/Maybe", "Yes"], ImperfectionMu, label=["No/Maybe", "Yes"], color=["green", "red"], zorder=5)
     plt.ylabel("Average Score")
+    plt.grid(axis='y')
     plt.ylim((2,3))
     plt.title("Score over Imperfection")
 
@@ -513,8 +517,10 @@ def graphResults(fullSet, Score, qData):
 
     #Create Plot 11!
     #Plotting Average Enjoyment of whether model experienced imperfections
-    plt.bar(["No/Maybe", "Yes"], ImperfectionEnjoymentMu, label=["No/Maybe", "Yes"], color=["red", "green"])
+    plt.bar(["No/Maybe", "Yes"], ImperfectionEnjoymentMu, label=["No/Maybe", "Yes"], color=["green", "red"], zorder=5)
     plt.ylabel("Average Enjoyment")
+    plt.xlabel("Did you experience any imperfections with this character?")
+    plt.grid(axis='y')
     plt.ylim((0,5))
     plt.title("Enjoyment over Imperfection")
 
