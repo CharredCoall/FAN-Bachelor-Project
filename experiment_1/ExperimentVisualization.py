@@ -268,7 +268,7 @@ def graphResults(fullSet, Score, outputFolder):
     #Plotting Average score for each character over length of conversation (of lengths in [1,6])
     #Plot for each character
     for i in np.arange(5):
-        plt.bar(np.arange(6) * 8 + 1 + i, characterCrossLengthMu[i][:6], label=characters[i], color=["red", "blue", "green", "yellow", "orange"][i])
+        plt.bar(np.arange(6) * 8 + 1 + i, characterCrossLengthMu[i][:6], label=characters[i], color=["red", "blue", "green", "purple", "orange"][i])
     
     #Set tick, labels and legends
     plt.xticks(np.arange(6) * 8 + 3, np.arange(6) + 1)
@@ -301,7 +301,7 @@ def graphResults(fullSet, Score, outputFolder):
 
     #Create Plot 4!
     #Plotting frequency of each character
-    plt.bar(characters, characterCount, label=characters, color=["red", "blue", "green", "yellow", "orange"])
+    plt.bar(characters, characterCount, label=characters, color=["red", "blue", "green", "purple", "orange"])
     plt.ylabel("Frequency")
     plt.title("Frequency of Characters")
 
@@ -311,7 +311,7 @@ def graphResults(fullSet, Score, outputFolder):
 
     #Create Plot 5!
     #Plotting average score of each character
-    plt.bar(characters, characterMu, label=characters, color=["red", "blue", "green", "yellow", "orange"])
+    plt.bar(characters, characterMu, label=characters, color=["red", "blue", "green", "purple", "orange"])
     plt.ylabel("Average Score")
     plt.ylim((2,3))
     plt.title("Score over all Characters")
@@ -399,7 +399,7 @@ def graphResults(fullSet, Score, outputFolder):
 
     #Create Plot 11!
     #Plotting Average length over characters
-    plt.bar(characters, characterLengthMu, label=characters, color=["red", "blue", "green", "yellow", "orange"])
+    plt.bar(characters, characterLengthMu, label=characters, color=["red", "blue", "green", "purple", "orange"])
     plt.ylabel("Average Length")
     plt.title("Length over characters")
 
@@ -419,7 +419,7 @@ def graphResults(fullSet, Score, outputFolder):
 
     #Create Plot 13!
     #Plotting number of convos for each character
-    plt.bar(characters, characterConvos, label=characters, color=["red", "blue", "green", "yellow", "orange"])
+    plt.bar(characters, characterConvos, label=characters, color=["red", "blue", "green", "purple", "orange"])
     plt.ylabel("# of conversations")
     plt.title("Conversations per character")
 
