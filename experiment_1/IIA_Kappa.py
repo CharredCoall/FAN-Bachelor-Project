@@ -95,7 +95,7 @@ def run_iia():
 
     #Calculate and report fleiss kappa and kirpendorfs alpha 
     print("Fleiss' Kappa:", fleiss_kappa(M))
-    print("Kirpendorff's Alpha:", weighted_kappa(M))
+    print("Kripendorff's Alpha:", weighted_kappa(M))
 
 
 if __name__ == "__main__":
