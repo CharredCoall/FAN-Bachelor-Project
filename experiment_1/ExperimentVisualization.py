@@ -207,8 +207,11 @@ def graphResults(fullSet, Score, outputFolder):
     ax2.tick_params(axis='y', labelcolor="red", zorder=1)
     ax2.set_yticks(np.append([1], np.arange(8) * freqScaling + freqScaling ))
     ax1.set_yticks(np.arange(9) * (2/8) + 1)
+    ax1.set_xticks(np.arange(max_length) + 1)
+    ax2.set_xticks(np.arange(max_length) + 1)
     ax2.set_ylim((0,8 * freqScaling))
     ax1.set_ylim((1,3))
+
     ax1.grid()
     ax2.grid()
 
@@ -249,6 +252,8 @@ def graphResults(fullSet, Score, outputFolder):
         ax1.set_yticks(np.arange(9) * (2/8) + 1)
         ax2.set_ylim((0,8 * freqScaling))
         ax1.set_ylim((1,3))
+        ax1.set_xticks(np.arange(max_length) + 1)
+        ax2.set_xticks(np.arange(max_length) + 1)
         ax1.grid()
         ax2.grid()
 
@@ -260,7 +265,7 @@ def graphResults(fullSet, Score, outputFolder):
         plt.title("Average score over length of conversation")
         
         #Save graph
-        plt.savefig(f"{outputFolder}_scores/{outputFolder}_Length(%outliers)")
+        plt.savefig(f"{outputFolder}_scores/{outputFolder}_Length(noOutliers)")
         plt.close()
 
 
