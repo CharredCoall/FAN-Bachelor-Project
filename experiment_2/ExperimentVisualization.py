@@ -360,7 +360,7 @@ def graphResults(fullSet, Score, qData):
 
     #Create Plot 4!
     #Plotting frequency of each character
-    plt.bar(characters, characterCount, label=characters, color=["red", "blue", "green", "yellow", "orange"])
+    plt.bar(characters, characterCount, label=characters, color=["red", "blue", "green", "purple", "orange"])
     plt.ylabel("Frequency")
     plt.title("Frequency of Characters")
 
@@ -370,7 +370,7 @@ def graphResults(fullSet, Score, qData):
 
     #Create Plot 5!
     #Plotting average score of each character
-    plt.bar(characters, characterMu, label=characters, color=["red", "blue", "green", "yellow", "orange"])
+    plt.bar(characters, characterMu, label=characters, color=["red", "blue", "green", "purple", "orange"])
     plt.ylabel("Average Score")
     plt.ylim((2,3))
     plt.title("Score over all Characters")
@@ -381,7 +381,7 @@ def graphResults(fullSet, Score, qData):
 
     #Create Plot 5!
     #Plotting average enjoyment of each character
-    plt.bar(characters, characterEnjoymentMu, label=characters, color=["red", "blue", "green", "yellow", "orange"])
+    plt.bar(characters, characterEnjoymentMu, label=characters, color=["red", "blue", "green", "purple", "orange"])
     plt.ylabel("Average Enjoyment")
     plt.ylim((0,5))
     plt.title("Enjoyment over all Characters")
@@ -392,7 +392,7 @@ def graphResults(fullSet, Score, qData):
 
     #Create Plot 5!
     #Plotting average enjoyment of each character
-    plt.bar(characters, characterImperfectionMu, label=characters, color=["red", "blue", "green", "yellow", "orange"])
+    plt.bar(characters, characterImperfectionMu, label=characters, color=["red", "blue", "green", "purple", "orange"])
     plt.ylabel("Average Imperfections")
     plt.ylim((0,1))
     plt.title("Imperfection over all Characters")
