@@ -48,6 +48,7 @@ def countDataScore(npdata):
 #Producing all graphs for selection of fullSet and Score 
 def graphResults(fullSet, Score, outputFolder):
     singleRater = np.sum(Score) == len(Score)
+    raters = int(np.max(np.sum(Score, axis=1)))
 
     # Initialize counts and sums
     modelScore = np.zeros(3)
@@ -87,6 +88,8 @@ def graphResults(fullSet, Score, outputFolder):
 
     characterConvos = np.zeros(5)
 
+    agreeance = np.zeros(raters)
+
     #Initialize counters for keeping track of sentence length
     temp = []
     counter = 0
@@ -107,6 +110,9 @@ def graphResults(fullSet, Score, outputFolder):
         modelScore[modelIdx] += np.sum(scores * (np.arange(3) + 1))
         characterScore[characterIdx] += np.sum(scores * (np.arange(3) + 1))
         modelCharacterScore[modelIdx, characterIdx] += np.sum(scores * (np.arange(3) + 1))
+
+        if np.sum(scores) == raters:
+            agreeance[int(np.max(scores)) - 1] += 1
         
         #Sum ratings
         modelSum[modelIdx] += np.sum(scores)
@@ -445,6 +451,19 @@ def graphResults(fullSet, Score, outputFolder):
     plt.savefig(f"{outputFolder}_scores/{outputFolder}_CharacterConvos.png")
     plt.close()
 
+    #Create Plot ??!!
+    #Plotting frequency of how many raters agree on each response
+    plt.bar(np.arange(raters), agreeance, label=np.append([0], np.arange(2, raters + 1)), zorder=5)
+    plt.ylabel("# of times x number of raters agreed")
+    plt.xlabel("# of raters agreeing")
+    plt.xticks(np.arange(raters), np.append([0], np.arange(2, raters + 1)))
+    plt.grid(axis='y')
+    plt.title("Frequency of agreement")
+
+    #Save graph
+    plt.savefig(f"{outputFolder}_scores/{outputFolder}_AgreementFrequency.png")
+    plt.close()
+
 #Plots the graphs for combinations of our own scores and the models scores    
 #Initializes data
 fullSet = []
@@ -495,12 +514,6 @@ ofullSet = fullSet[~np.all(oMu == 0, axis=1)]
 oMu = oMu[~np.all(oMu == 0, axis=1)]
 
 graphResults(ofullSet, oMu, "our")
-
-#Process and plot our graphs using only common ratings
-ocfullSet = fullSet[:cumN[2]][~np.all(oMu[:cumN[2]] == 0, axis=1)]
-ocMu = oMu[:cumN[2]][~np.all(oMu[:cumN[2]] == 0, axis=1)]
-
-graphResults(ocfullSet, ocMu, "compared")
 
 #Process and plot models graphs
 mfullSet = fullSet[~np.all(mMu == 0, axis=1)]
