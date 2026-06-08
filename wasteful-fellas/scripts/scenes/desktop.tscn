@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c6yrxw5htidt6"]
 
 [ext_resource type="Texture2D" uid="uid://crirfntjncgti" path="res://art/wallpaper_placeholder.png" id="1_fgoco"]
-[ext_resource type="Script" uid="uid://dt0nvgifvalji" path="res://scripts/scenes/GameManager.gd" id="1_nd18o"]
+[ext_resource type="Script" uid="uid://dt0nvgifvalji" path="res://scripts/GameManager.gd" id="1_nd18o"]
 [ext_resource type="Texture2D" uid="uid://bqkd53kw1ml2y" path="res://art/home_button.png" id="2_1ovop"]
 [ext_resource type="Texture2D" uid="uid://dxape1mb8kkh3" path="res://art/browser_button.png" id="3_ff6s3"]
 [ext_resource type="Texture2D" uid="uid://dxk1ybnasuwot" path="res://art/recycle_button.png" id="4_qrswn"]
@@ -24,7 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://c20sgf3f2kytr" path="res://art/NPC icons/voll_icon.png" id="19_drj1u"]
 [ext_resource type="Texture2D" uid="uid://8e362q5jrglu" path="res://art/ReFridge.png" id="22_h6wof"]
 [ext_resource type="Texture2D" uid="uid://ba2ue0tr35vwj" path="res://art/speaker_icon.png" id="23_jcjvk"]
-[ext_resource type="Script" uid="uid://chri1bgs61lba" path="res://scripts/scenes/DisplaySessionId.gd" id="24_7xkin"]
+[ext_resource type="Script" uid="uid://chri1bgs61lba" path="res://scripts/DisplaySessionId.gd" id="24_7xkin"]
 
 [sub_resource type="Gradient" id="Gradient_lexak"]
 colors = PackedColorArray(0.05490196, 0.14117648, 0.3372549, 0.7921569, 1, 1, 1, 0)

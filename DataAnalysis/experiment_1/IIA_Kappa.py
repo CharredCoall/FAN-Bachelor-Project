@@ -2,8 +2,6 @@ import numpy as np
 import csv
 
 
-
-
 def fleiss_kappa(M):
     """Computes Fleiss' kappa for group of annotators.
     :param M: a matrix of shape (:attr:'N', :attr:'k') with 'N' = number of subjects and 'k' = the number of categories.

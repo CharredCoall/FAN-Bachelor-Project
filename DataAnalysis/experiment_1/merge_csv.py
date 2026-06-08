@@ -5,7 +5,7 @@ from collections import defaultdict
 
 def merge_logs():
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    input_dir = os.path.join(script_dir, "..", "models", "log")
+    input_dir = os.path.join(script_dir, "..", "log")
     input_dir = os.path.abspath(input_dir)
 
     search_pattern = os.path.join(input_dir, "*.csv")

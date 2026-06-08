@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://v3hqbyyfj88m"]
 
 [ext_resource type="Texture2D" uid="uid://pmtdnw12vp6k" path="res://art/profilepic.png" id="1_n8evb"]
-[ext_resource type="Script" uid="uid://dmajcehvrblpy" path="res://scripts/scenes/login_screen.gd" id="1_y3u6y"]
+[ext_resource type="Script" uid="uid://dmajcehvrblpy" path="res://scripts/login_screen.gd" id="1_y3u6y"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_y3u6y"]
 load_path = "res://.godot/imported/lockscreen_placeholder.png-138f9e55cb733bfae8ec7cfcc2fd1fa9.ctex"
