@@ -236,17 +236,6 @@ planning:
     ## 2. Plan
     ### 2. 1. ...
     After writing the final step of the plan, write the '<end_plan>' tag and stop there.
-
-managed_agent:
-  task: |-
-      You're Jasmine's personal assistant named '{{name}}'.
-      Task from Jasmine:
-      {{task}}
-      ---
-      Please provide your response. Keep it natural but provide all the details asked for!
-  report: |-
-      Here is what '{{name}}' said:
-      {{final_answer}}
 final_answer:
   pre_messages: |-
     You got distracted answering a late work email and failed to give the player an answer. You need to reply to them right now. Here is your memory of the kitchen:
