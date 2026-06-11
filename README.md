@@ -5,7 +5,7 @@ This repository contains all source code, data and data processing for the Bache
 
 ## Instructions to test game
 ### While the server is running
-it is enough to simply download the appropriate build for your system under [releases](releases). 
+it is enough to simply download the appropriate build for your system under [releases](https://github.com/CharredCoall/FAN-Bachelor-Project/releases). 
 
 (You can check if the server is running [here](https://wastefulfellas-dkdsd4bkhrepf8ec.swedencentral-01.azurewebsites.net), if it is running, the site will reply with "Hello from Azure")
 
