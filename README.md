@@ -3,6 +3,12 @@
 
 This repository contains all source code, data and data processing for the Bachelor project of The Fan Club!
 
+## Game description
+The objective of "Wasteful Fellas" is that the player is working for the company, ReFridge, selling mealplans to reduce food waste. The department the player works for provides a chat service, where the player, a certified mealplanner, create customized plans for clients that contact the player. Players' task is to, through conversation, learn about these clients, so that the player can provide meal ideas or recipes suiting their needs and wants, while using as many ingredients from the fridge as possible. This is done by learning about them, their likes and dislikes, potential allergies and lifestyle. If the player does not accommodate their recommendations to the client's preferences, or the player treats them in a way that does not align with the character's temper, they will not make the meal and might end the conversation preemptively. 
+
+When the player has gotten the customer to use something from their fridge, the player will be given points based on how many ingredients they ended up using, and thereby the amount of food waste reduced.
+When the conversation has ended, the player will then be dealt a new customer. This customer may have more troublesome eating habits or personality traits, and more ingredients in their fridge, varying the difficulty of the given task with each client.
+
 ## Instructions to test game
 ### While the server is running
 it is enough to simply download the appropriate build for your system under [releases](https://github.com/CharredCoall/FAN-Bachelor-Project/releases). 
