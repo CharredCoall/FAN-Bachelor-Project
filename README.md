@@ -5,7 +5,9 @@ This repository contains all source code, data and data processing for the Bache
 
 ## Instructions to test game
 ### While the server is running
-it is enough to simply download the appropriate build for your system under releases. (You can check if the server is running [here](https://wastefulfellas-dkdsd4bkhrepf8ec.swedencentral-01.azurewebsites.net), if it is running, the site will reply with "Hello from Azure")
+it is enough to simply download the appropriate build for your system under [releases](releases). 
+
+(You can check if the server is running [here](https://wastefulfellas-dkdsd4bkhrepf8ec.swedencentral-01.azurewebsites.net), if it is running, the site will reply with "Hello from Azure")
 
 ### After the server has been shut down
 (Since logs are uploaded directly to this GitHub, Logging will not work unless the function "end_convo" in [main.py](models/main.py) is rewritten. This does not affect gameplay.)
@@ -43,6 +45,7 @@ Contains the final outputs of the game in different formats
 ### models
 Contains the server section of the game.
 [main.py](models/main.py) runs the server itself and handles communication between the game and [app.py](models/local_agent/app.py).
+
 [app.py](models/local_agent/app.py) handles conversations with the agents and their avaiable tools.
 
 ### wasteful-fellas
