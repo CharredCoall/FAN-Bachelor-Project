@@ -397,7 +397,7 @@ def graphResults(fullSet, Score, outputFolder):
     plt.ylim((2,3))
     plt.legend(loc='upper left')
     plt.ylabel("Average consistency Score")
-    plt.title("Constency score over cross of models and Characters (Sorted)")
+    plt.title("Consistency score over cross of models and Characters (Sorted)")
 
     #Save graph
     plt.savefig(f"{outputFolder}_scores/{outputFolder}_ModelCharacterSorted.png")
