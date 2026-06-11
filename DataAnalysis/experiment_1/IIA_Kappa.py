@@ -77,7 +77,7 @@ def run_iia():
     M = np.zeros((N1 + N2,3))
 
     #Iterate over all raters
-    for an, suf in [("asger/", "_asger"), ("franja/", "_franja"), ("natali/", "_natali"), ("judge_", "")]:
+    for an, suf in [("asger/", "_asger"), ("franja/", "_franja"), ("natali/", "_natali"), ("judge_", "")][:2]:
         i = 0
         for part in [1,2]:
             with open(f"{an}merged_dataset_part{part}{suf}.csv", mode='r', encoding='Latin-1') as path:

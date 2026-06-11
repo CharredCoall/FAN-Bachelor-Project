@@ -223,10 +223,10 @@ def graphResults(fullSet, Score, outputFolder):
 
     #Set labels and legends
     ax2.legend(avglengthplt + frqlengthplt, ["Avg. score per length", "Frq of length"], loc='upper right', framealpha=1.0, edgecolor='black', fancybox=False)
-    ax1.set_ylabel("Average score")
+    ax1.set_ylabel("Average consistency score")
     ax2.set_ylabel("Frequency", color="red")
     ax1.set_xlabel("Conversation Length")
-    plt.title("Average score over length of conversation")
+    plt.title("Average consistency score over length of conversation")
     
     #Save graph
     plt.savefig(f"{outputFolder}_scores/{outputFolder}_Length")
@@ -264,11 +264,11 @@ def graphResults(fullSet, Score, outputFolder):
         ax2.grid()
 
         #Set labels and legends
-        ax2.legend(avglengthplt + frqlengthplt, ["Avg. score per length", "Frq of length"], loc='upper right', framealpha=1.0, edgecolor='black', fancybox=False)
-        ax1.set_ylabel("Average score")
+        ax2.legend(avglengthplt + frqlengthplt, ["Avg. consistency score per length", "Frq of length"], loc='upper right', framealpha=1.0, edgecolor='black', fancybox=False)
+        ax1.set_ylabel("Average consistency score")
         ax2.set_ylabel("Frequency", color="red")
         ax1.set_xlabel("Conversation Length")
-        plt.title("Average score over length of conversation")
+        plt.title("Average consistency score over length of conversation")
         
         #Save graph
         plt.savefig(f"{outputFolder}_scores/{outputFolder}_Length(noOutliers)")
@@ -285,8 +285,8 @@ def graphResults(fullSet, Score, outputFolder):
     plt.xticks(np.arange(6) * 8 + 3, np.arange(6) + 1)
     plt.grid(axis='y')
     plt.legend(loc="lower left")
-    plt.ylabel("Average score")
-    plt.title("Average score over length of conversation")
+    plt.ylabel("Average consistency score")
+    plt.title("Average consistency score over length of conversation")
     plt.xlabel("Conversation Length")
 
     #Save graph
@@ -304,8 +304,8 @@ def graphResults(fullSet, Score, outputFolder):
     plt.grid(axis='y', zorder=0)
     plt.legend()
     plt.ylim((2,3))
-    plt.ylabel("Average score")
-    plt.title("Average score over length of conversation")
+    plt.ylabel("Average consistency score")
+    plt.title("Average consistency score over length of conversation")
     plt.xlabel("Conversation Length")
 
     #Save graph
@@ -326,10 +326,10 @@ def graphResults(fullSet, Score, outputFolder):
     #Create Plot 5!
     #Plotting average score of each character
     plt.bar(characters, characterMu, label=characters, color=["red", "blue", "green", "purple", "orange"], zorder=5)
-    plt.ylabel("Average Score")
+    plt.ylabel("Average consistency Score")
     plt.ylim((2,3))
     plt.grid(axis='y')
-    plt.title("Score over all Characters")
+    plt.title("Consistency score over all Characters")
 
     #Save graph
     plt.savefig(f"{outputFolder}_scores/{outputFolder}_Character.png")
@@ -349,10 +349,10 @@ def graphResults(fullSet, Score, outputFolder):
     #Create Plot 7!
     #Plotting Average score of each model
     plt.bar(models, modelMu, label=models, color=["blue", "orange", "green"], zorder=5)
-    plt.ylabel("Average Score")
+    plt.ylabel("Average consistency Score")
     plt.ylim((2,3))
     plt.grid(axis='y')
-    plt.title("Score over all models")
+    plt.title("Consistency Score over all models")
 
     #Save graph
     plt.savefig(f"{outputFolder}_scores/{outputFolder}_Model.png")
@@ -370,8 +370,8 @@ def graphResults(fullSet, Score, outputFolder):
     plt.grid(axis='y')
     plt.ylim((2,3))
     plt.legend(loc='upper left')
-    plt.ylabel("Average Score")
-    plt.title("Score over cross of models and Characters")
+    plt.ylabel("Average consistency Score")
+    plt.title("Consistency Score over cross of models and Characters")
 
     #Save graph
     plt.savefig(f"{outputFolder}_scores/{outputFolder}_ModelCharacter.png")
@@ -396,8 +396,8 @@ def graphResults(fullSet, Score, outputFolder):
     plt.grid(axis='y')
     plt.ylim((2,3))
     plt.legend(loc='upper left')
-    plt.ylabel("Average Score")
-    plt.title("Score over cross of models and Characters (Sorted)")
+    plt.ylabel("Average consistency Score")
+    plt.title("Constency score over cross of models and Characters (Sorted)")
 
     #Save graph
     plt.savefig(f"{outputFolder}_scores/{outputFolder}_ModelCharacterSorted.png")
@@ -407,12 +407,12 @@ def graphResults(fullSet, Score, outputFolder):
     #Plot of the overall score of each row, sorted by score
     plt.plot(Mu)
     if singleRater:
-        plt.ylabel("Score")
+        plt.ylabel("Consistency Score")
     else:
-        plt.ylabel("Average Score")
-    plt.xlabel("# of responses")
+        plt.ylabel("Average consistency Score")
+    plt.xlabel("indices of responses (sorted by consistency score)")
     plt.grid()
-    plt.title("Score over all responses (sorted)")
+    plt.title("Consistency score over all responses (sorted)")
 
     #Save graph
     plt.savefig(f"{outputFolder}_scores/{outputFolder}_Score.png")

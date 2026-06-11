@@ -241,10 +241,10 @@ def graphResults(fullSet, Score, qData):
 
     #Set labels and legends
     ax2.legend(avglengthplt + frqlengthplt, ["Avg. score per length", "Frq of length"], loc='upper right', framealpha=1.0, edgecolor='black', fancybox=False)
-    ax1.set_ylabel("Average score")
+    ax1.set_ylabel("Average consistency score")
     ax2.set_ylabel("Frequency", color="red")
     ax1.set_xlabel("Conversation Length")
-    plt.title("Average score over length of conversation")
+    plt.title("Average consistency score over length of conversation")
     
     #Save graph
     plt.savefig(f"{outputFolder}/exp2_Length")
@@ -282,11 +282,11 @@ def graphResults(fullSet, Score, qData):
         ax2.grid()
 
         #Set labels and legends
-        ax2.legend(avglengthplt + frqlengthplt, ["Avg. score per length", "Frq of length"], loc='upper right', framealpha=1.0, edgecolor='black', fancybox=False)
-        ax1.set_ylabel("Average score")
+        ax2.legend(avglengthplt + frqlengthplt, ["Avg. consistency score per length", "Frq of length"], loc='upper right', framealpha=1.0, edgecolor='black', fancybox=False)
+        ax1.set_ylabel("Average consistency score")
         ax2.set_ylabel("Frequency", color="red")
         ax1.set_xlabel("Conversation Length")
-        plt.title("Average score over length of conversation")
+        plt.title("Average consistency score over length of conversation")
         
         #Save graph
         plt.savefig(f"{outputFolder}/exp2_Length(%outliers)")
@@ -338,8 +338,8 @@ def graphResults(fullSet, Score, qData):
     #Set tick, labels and legends
     plt.xticks(np.arange(6) * 8 + 3, np.arange(6) + 1)
     plt.legend(loc="lower left")
-    plt.ylabel("Average score")
-    plt.title("Average score over length of conversation")
+    plt.ylabel("Average consistency score")
+    plt.title("Average consistency score over length of conversation")
     plt.xlabel("Conversation Length")
 
     #Save graph
@@ -356,8 +356,8 @@ def graphResults(fullSet, Score, qData):
     plt.xticks(np.arange(6) * 8 + 2, labels=np.arange(6) + 1)
     plt.legend()
     plt.ylim((2,3))
-    plt.ylabel("Average score")
-    plt.title("Average score over length of conversation")
+    plt.ylabel("Average consistency score")
+    plt.title("Average consistency score over length of conversation")
     plt.xlabel("Conversation Length")
 
     #Save graph
@@ -377,9 +377,9 @@ def graphResults(fullSet, Score, qData):
     #Create Plot 5!
     #Plotting average score of each character
     plt.bar(characters, characterMu, label=characters, color=["red", "blue", "green", "purple", "orange"])
-    plt.ylabel("Average Score")
+    plt.ylabel("Average consistency Score")
     plt.ylim((2,3))
-    plt.title("Score over all Characters")
+    plt.title("Consistency score over all Characters")
 
     #Save graph
     plt.savefig(f"{outputFolder}/exp2_Character.png")
@@ -420,9 +420,9 @@ def graphResults(fullSet, Score, qData):
     #Create Plot 7!
     #Plotting Average score of each model
     plt.bar(models, modelMu, label=models, color=["red", "blue", "green"])
-    plt.ylabel("Average Score")
+    plt.ylabel("Average consistency Score")
     plt.ylim((2,3))
-    plt.title("Score over all models")
+    plt.title("Consistency score over all models")
 
     #Save graph
     plt.savefig(f"{outputFolder}/exp2_Model.png")
@@ -463,8 +463,8 @@ def graphResults(fullSet, Score, qData):
     plt.yticks(np.arange(10) * 0.1 + 2)
     plt.ylim((2,3))
     plt.legend(loc='upper left')
-    plt.ylabel("Average Score")
-    plt.title("Score over cross of models and Characters")
+    plt.ylabel("Average consistency Score")
+    plt.title("Consistency score over cross of models and Characters")
 
     #Save graph
     plt.savefig(f"{outputFolder}/exp2_ModelCharacter.png")
@@ -488,8 +488,8 @@ def graphResults(fullSet, Score, qData):
     plt.yticks(np.arange(10) * 0.1 + 2)
     plt.ylim((2,3))
     plt.legend(loc='upper left')
-    plt.ylabel("Average Score")
-    plt.title("Score over cross of models and Characters (Sorted)")
+    plt.ylabel("Average consistency Score")
+    plt.title("Consistency score over cross of models and Characters (Sorted)")
 
     #Save graph
     plt.savefig(f"{outputFolder}/exp2_ModelCharacterSorted.png")
@@ -501,8 +501,8 @@ def graphResults(fullSet, Score, qData):
     if singleRater:
         plt.ylabel("Score")
     else:
-        plt.ylabel("Average Score")
-    plt.xlabel("# of responses")
+        plt.ylabel("Average consistency Score")
+    plt.xlabel("indices of responses (sorted by consistency score)")
     plt.title("Score over all responses (sorted)")
 
     #Save graph
@@ -512,10 +512,10 @@ def graphResults(fullSet, Score, qData):
     #Create Plot 11!
     #Plotting Average score of whether model experienced imperfections
     plt.bar(["No/Maybe", "Yes"], ImperfectionMu, label=["No/Maybe", "Yes"], color=["green", "red"], zorder=5)
-    plt.ylabel("Average Score")
+    plt.ylabel("Average consistency Score")
     plt.grid(axis='y')
     plt.ylim((2,3))
-    plt.title("Score over Imperfection")
+    plt.title("Consistency score over Imperfection")
 
     #Save graph
     plt.savefig(f"{outputFolder}/exp2_Imperfection.png")
@@ -539,9 +539,9 @@ def graphResults(fullSet, Score, qData):
     plt.scatter(Enjoyment, rowRating)
     a, b = np.polyfit(Enjoyment, rowRating, 1)
     plt.plot(a * np.arange(6) + b)
-    plt.ylabel("Score")
+    plt.ylabel("Consistency Score")
     plt.xlabel("Enjoyment")
-    plt.title("Score over Enjoyment")
+    plt.title("Consistency Score over Enjoyment")
 
     #Save graph
     plt.savefig(f"{outputFolder}/exp2_RatingToEnjoyment.png")
@@ -552,7 +552,7 @@ def graphResults(fullSet, Score, qData):
     plt.scatter(InCharacterScore, rowRating)
     a, b = np.polyfit(InCharacterScore, rowRating, 1)
     plt.plot(a * np.arange(6) + b)
-    plt.ylabel("Score")
+    plt.ylabel("Consistency Score")
     plt.xlabel("How well did the model stay in character")
     plt.title("Score over Staying in character")
 
@@ -563,10 +563,10 @@ def graphResults(fullSet, Score, qData):
     #Create Plot 14!
     #Plotting Average model score per playerEnjoyment
     plt.bar(np.arange(6), ratingPerEnjoymentMu)
-    plt.ylabel("Average Score")
+    plt.ylabel("Average Consistency Score")
     plt.xlabel("Enjoyment")
     plt.ylim((2,3))
-    plt.title("Average Score over Enjoyment")
+    plt.title("Average Consistency Score over Enjoyment")
 
     #Save graph
     plt.savefig(f"{outputFolder}/exp2_EnjoymentAverageScore.png")
