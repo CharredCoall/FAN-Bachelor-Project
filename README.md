@@ -21,7 +21,7 @@ it is enough to simply download the appropriate build for your system under [rel
 #### Requirements
 - Python 3.10+ (older versions may work) with requirements from "[requirements](models/requirements.txt)"
 - Godot v4 (or newer)
-- OS environment variable for hugging face api with permission to run "smolagents" agents, under the name "HF_API_TOKEN"
+- OS environment variable for HuggingFace api with "finegrained" permission, under the name "HF_API_TOKEN"
 
 #### Steps
 - Download the repository
